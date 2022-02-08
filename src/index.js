@@ -2,6 +2,9 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 
 ReactDOM.render(
-    <h1>Phantom powere by CodeBandits</h1>,
+    <div>
+        <h1>Phantom</h1>
+        <p>powered by CodeBandits</p>
+    </div>,
   document.getElementById('root')
 );
