@@ -15,5 +15,9 @@
   "bugs": {
     "url": "https://github.com/atlp-rwanda/phantom-fe-codebandits/issues"
   },
-  "homepage": "https://github.com/atlp-rwanda/phantom-fe-codebandits#readme"
+  "homepage": "https://github.com/atlp-rwanda/phantom-fe-codebandits#readme",
+  "dependencies": {
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2"
+  }
 }
