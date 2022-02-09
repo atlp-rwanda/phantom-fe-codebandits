@@ -24,7 +24,9 @@
     "coverageReporters": [
       "text-summary"
     ]
+   
   },
+  
   "repository": {
     "type": "git",
     "url": "git+https://github.com/atlp-rwanda/phantom-fe-codebandits.git"
