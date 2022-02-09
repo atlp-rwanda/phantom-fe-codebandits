@@ -5,6 +5,9 @@ This is a project which aims at addressing a problem of commuters in Kigali who 
 ## Getting Started
 
 These instructions will get you a copy of the project up and running on your local machine for development and testing purposes.
+## Pipeline
+- Staging app [linked here](https://phantom-codebandits-staging.herokuapp.com/) use the `develop` branch
+- Production app [linked here](https://phantom-codebandits-pro.herokuapp.com/) use `main` branch.
 
 ### Prerequisites
 
