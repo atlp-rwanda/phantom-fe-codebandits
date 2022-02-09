@@ -1,11 +1,28 @@
 import React from "react";
 import './app.css'
+import { useSelector, useDispatch } from "react-redux";
+import {
+  decrement,
+  increment,
+  reset,
+} from './redux/reducers/counterReducer.js'
 
 const App = ()=> {
+
+    const counter = useSelector((state) => state?.counter);
+    console.log(counter)
+    const dispatch = useDispatch();
+
     return(
-        <div className='centered'>
+        <div className='wrapper'>
             <h1>Phantom</h1>
-            <p>powered by CodeBandits</p>
+            <p>Powered by Codebandits</p>
+            <div className="counter">
+                <button onClick={() => dispatch(decrement())}>-</button>
+                <h3 className="counter-value">{counter?.value}</h3>
+                <button onClick={() => dispatch(increment())}>+</button>
+                <button className="reset" onClick={() => dispatch(reset())}>Reset</button>
+            </div>
         </div>
     )
 }
