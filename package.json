@@ -4,6 +4,10 @@
   "description": "",
   "main": "index.js",
   "type": "module",
+  "engines": {
+    "npm": "8.x",
+    "node": "16.x"
+  },
   "scripts": {
     "start": "webpack serve",
     "build": "webpack",
