@@ -11,7 +11,10 @@ on:
       - develop
       - ch-setup-ci-github-actions-cp-27
   pull_request:
-    branches: [ develop, main ]
+    branches:
+      - main
+      - develop
+      - ch-setup-ci-github-actions-cp-27
 
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
