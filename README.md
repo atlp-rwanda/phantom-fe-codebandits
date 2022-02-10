@@ -1,3 +1,4 @@
+[![CI](https://github.com/atlp-rwanda/phantom-fe-codebandits/actions/workflows/main.yml/badge.svg)](https://github.com/atlp-rwanda/phantom-fe-codebandits/actions/workflows/main.yml)
 # Phantom
 
 This is a project which aims at addressing a problem of commuters in Kigali who spend a long time at the bus stations or in queues waiting for buses to come. This application will allow simulating bus movements and enabling passengers to track their locations & movements.

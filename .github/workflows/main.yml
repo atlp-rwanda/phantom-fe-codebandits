@@ -1,6 +1,6 @@
 # This is a basic workflow to help you get started with Actions
 
-name: Continous Intregration for the Phantom project
+name: CI
 
 # Controls when the workflow will run
 on:
@@ -42,12 +42,11 @@ jobs:
         run: npm install
 
       # Runs a set of commands using the runners shell
-      - name: Run a tests
-        run: npm run test --if-exist
-      - name: build
-        run: npm run build
+      # to added after the merge of test PR
+      # - name: Run a tests
+      #   run: npm run test --if-exist
   deploy:
-    # deploy to github
+    # deploy to heroku dev pipeline
     concurrency: heroku_deployment
     runs-on: ubuntu-latest
     needs: [build]
