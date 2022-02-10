@@ -10,7 +10,6 @@ import {
 const App = ()=> {
 
     const counter = useSelector((state) => state?.counter);
-    console.log(counter)
     const dispatch = useDispatch();
 
     return(
@@ -19,7 +18,7 @@ const App = ()=> {
             <p>Powered by Codebandits</p>
             <div className="counter">
                 <button onClick={() => dispatch(decrement())}>-</button>
-                <h3 className="counter-value">{counter?.value}</h3>
+                <h3 className="counter-value">{counter.value}</h3>
                 <button onClick={() => dispatch(increment())}>+</button>
                 <button className="reset" onClick={() => dispatch(reset())}>Reset</button>
             </div>
