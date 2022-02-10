@@ -10,8 +10,7 @@
   },
   "scripts": {
     "start": "webpack serve",
-    "build": "webpack",
-    "heroku": "node "
+    "build": "webpack"
   },
   "repository": {
     "type": "git",
