@@ -1,7 +1,29 @@
-.centered {
+.wrapper {
   height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+}
+
+h1 {
+  margin-bottom: 0;
+}
+
+p, .counter {
+  padding-bottom: 2rem;
+}
+
+.counter {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.counter-value {
+  margin: 0 8px;
+}
+
+.reset {
+  margin-left: 15px;
 }
