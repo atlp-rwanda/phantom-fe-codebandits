@@ -5,17 +5,11 @@ import {
     Route 
 } from 'react-router-dom';
 import ReactDOM from 'react-dom';
-import { configureStore } from '@reduxjs/toolkit';
 import { Provider } from 'react-redux';
+import { store } from './redux/store.js';
 
-import { counterReducer } from './redux/reducers/counterReducer.js'
+
 import App from './App.js'
-
-const store = configureStore({
-    reducer: {
-        counter: counterReducer
-    }
-});
 
 ReactDOM.render(
     <Provider store={store}>
