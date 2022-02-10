@@ -105,6 +105,7 @@ describe('COunter component', ()=>{
 import App from "../src/App";
 
 describe("Test App Entry Point", () => {
+    
   it("Should have a header tag with Phantom", () => {
     const wrapper = shallow(<App />);
 
