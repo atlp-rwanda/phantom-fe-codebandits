@@ -9,7 +9,9 @@
     "build": "webpack",
     "prepare": "husky install",
     "format": "npx pretty-quick",
-    "lint": "npx eslint src/*.{js, jsx} --fix"
+    "lint": "npx eslint src/*.{js, jsx} --fix",
+    "test": "jest --coverage --watch",
+    "coverage": "jest --coverage"
   },
   "jest": {
     "snapshotSerializers": [
@@ -21,11 +23,11 @@
     "moduleNameMapper": {
       "\\.(css|scss)$": "identity-obj-proxy"
     },
-    "coverageReporters": ["text-summary"],
+    "coverageReporters": ["text-summary", "lcov"],
     "collectCoverage": true
-    
+
   },
-  
+
   "repository": {
     "type": "git",
     "url": "git+https://github.com/atlp-rwanda/phantom-fe-codebandits.git"
