@@ -43,6 +43,7 @@ jobs:
 
       # Runs a set of commands using the runners shell
       # to added after the merge of test PR
+<<<<<<< HEAD
       - name: Run a test and generate coverage
         run: npm run coverage
       - name: Genrating coveralls report
@@ -53,6 +54,10 @@ jobs:
         uses: paambaati/codeclimate-action@v2.5.7
         env:
           CC_TEST_REPORTER_ID: ${{ secrets.CC_TEST_REPORTER_ID}}
+=======
+      # - name: Run a tests
+      #   run: npm run test --if-exist
+>>>>>>> 8df2190 (ch-(setup-ci)-remove non-existent test script)
   deploy:
     # deploy to heroku dev pipeline
     concurrency: heroku_deployment
