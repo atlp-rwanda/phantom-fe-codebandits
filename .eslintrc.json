@@ -17,6 +17,26 @@
   },
   "plugins": ["react"],
   "rules": {
-    "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx"] }]
-  }
+    "import/extensions": [
+      "error",
+      "ignorePackages",
+      {
+        "js": "always",
+        "jsx": "always"
+      }
+   ],
+    "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx"] }],
+    "func-style": ["error", "declaration", { "allowArrowFunctions": true }]
+  },
+  "prettier/prettier": [
+    "error", 
+    {
+      "bracketSpacing": true,
+      "semi": true,
+      "singleQuote": true,
+      "trailingComma": "none",
+      "printWidth": 80,
+      "tabWidth": 2
+    }
+  ]
 }
