@@ -17,6 +17,25 @@
   },
   "plugins": ["react"],
   "rules": {
+    "import/extensions": [
+      "error",
+      "ignorePackages",
+      {
+        "js": "always",
+        "jsx": "always"
+      }
+   ],
     "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx"] }]
-  }
+  },
+  "prettier/prettier": [
+    "error", 
+    {
+      "bracketSpacing": true,
+      "semi": true,
+      "singleQuote": true,
+      "trailingComma": "none",
+      "printWidth": 80,
+      "tabWidth": 2
+    }
+  ]
 }
