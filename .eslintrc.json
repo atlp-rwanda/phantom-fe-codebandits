@@ -5,7 +5,7 @@
     },
     "extends": [
         "plugin:react/recommended",
-        "airbnb"
+        "airbnb","plugin:prettier/recommended"
     ],
     "parserOptions": {
         "ecmaFeatures": {
@@ -26,9 +26,9 @@
               "js": "always",
               "jsx": "always"
             }
-         ],
-         "func-style": ["error", "declaration", { "allowArrowFunctions": true }],
-         "no-underscore-dangle": ["error", { "allow": ["__filename", "__dirname"] }],
-         "comma-dangle": ["error", "never"]
+        ],
+        "func-style": ["error", "declaration", { "allowArrowFunctions": true }],
+        "no-underscore-dangle": ["error", { "allow": ["__filename", "__dirname"] }],
+        "comma-dangle": ["error", "never"]
     }
 }
