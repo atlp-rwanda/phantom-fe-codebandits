@@ -1,7 +1,11 @@
 import React from 'react';
 import './app.css';
 import { useSelector, useDispatch } from 'react-redux';
-import { decrement, increment, reset } from './redux/reducers/counterReducer.js';
+import {
+  decrement,
+  increment,
+  reset
+} from './redux/reducers/counterReducer.js';
 
 function App() {
   const { value } = useSelector((state) => state?.counter);
