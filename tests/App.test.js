@@ -1,95 +1,54 @@
-import React from "react";
-import { mount, render, shallow } from "enzyme";
-import { Provider } from "react-redux";
-import renderer from "react-test-renderer";
-import configureStore from "redux-mock-store";
+import React from 'react';
+import { mount, render, shallow } from 'enzyme';
+import { Provider } from 'react-redux';
+import { configureStore } from '@reduxjs/toolkit';
 
-import App from "../src/App";
-import { counterReducer } from "../src/redux/reducers/counterReducer";
-import reducer, { store } from "../src/redux/store";
-import { increment } from "../src/redux/reducers/counterReducer";
+import App from '../src/App';
+import {
+  counterReducer,
+  decrement,
+  increment,
+  reset
+} from '../src/redux/reducers/counterReducer';
 
-// import App from '.';
+const store = configureStore({ reducer: { counter: counterReducer } });
 
-const mockStore = configureStore({});
+const wrapper = mount(
+  <Provider store={store}>
+    <App></App>
+  </Provider>
+);
 
+describe('App test', () => {
+  it('It should have a h1 tag with Phantom', () => {
+    expect(wrapper.find('h1').text()).toEqual('Phantom');
+  });
 
-
-
-
-describe("", () => {
-  let store;
-  let wrapper;
-
-  beforeEach(() => {
-    store = mockStore({ value: 0 });
-          wrapper = renderer.create(
-      <Provider store={store}>
-        <App/>
-      </Provider>
-    );
+  it('It should have a p tag with Powered by Codebandits', () => {
+    expect(wrapper.find('p').text()).toEqual('Powered by Codebandits');
   });
 });
 
-
-
-describe('COunter component', ()=>{
-  it('renders the count', ()=>{
-
-    const action = {
-      dispatch: jest.fn(),
-      value: 3,
-    }
-
-    const wrapper = shallow(<App {...action} />)
-    expect(wrapper.find('h3')).toEqual(3)
-  })
-
-  it('dispatches the right action for incrementing', ()=>{
-
-    const action = {
-      dispatch: jest.fn(),
-      value: 3,
-    }
-
-    const wrapper = shallow(<App {...action} />);
-    wrapper.find('button.increment').simulate('click');
-
-    expect(action.dispatch).toHaveBeenCalledWith(counterReducer(action.value))
-  })
-
-  it('dispatches the right action for decrementing', ()=>{
-
-    const action = {
-      dispatch: jest.fn(),
-      value: 3,
-    }
-
-    const wrapper = shallow(<App {...action} />);
-    wrapper.find('button.decrement').simulate('click');
-
-    expect(action.dispatch).toHaveBeenCalledWith(counterReducer(action.value))
-  })
-
-})
-
-
-
-
-
-import App from "../src/App";
-
-describe("Test App Entry Point", () => {
-    
-  it("Should have a header tag with Phantom", () => {
-    const wrapper = shallow(<App />);
-
-    expect(wrapper.find("h1").text()).toEqual("Phantom");
+describe('Test App State', () => {
+  it('Should display the default state', () => {
+    expect(wrapper.find('h3').text()).toBe('0');
   });
 
-  it("Should have a p tag with powered by CodeBandits", () => {
-    const wrapper = shallow(<App />);
+  it('Should dispatch Increment action and update state', () => {
+    wrapper.find('#increment').simulate('click');
+    store.dispatch(increment);
+    expect(wrapper.find('h3').text()).toBe('1');
+  });
 
-    expect(wrapper.find("p").text()).toEqual("powered by CodeBandits");
+  it('Should dispatch decrement action and update state', () => {
+    wrapper.find('#decrement').simulate('click');
+    store.dispatch(decrement);
+    expect(wrapper.find('h3').text()).toBe('0');
+  });
+
+  it('Should dispatch Reset action and update state', () => {
+    wrapper.find('#reset').simulate('click');
+    store.dispatch(reset);
+    expect(wrapper.find('h3').text()).toBe('0');
   });
 });
