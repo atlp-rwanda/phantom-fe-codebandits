@@ -52,7 +52,7 @@ jobs:
       - name: Publish to codeclimate
         uses: paambaati/codeclimate-action@v2.5.7
         env:
-          CC_TEST_REPORTER_ID: ${{ secrets.CC_TEST_REPORTER_ID}}
+          CC_TEST_REPORTER_ID: ${{ secrets.CC_REPORT_ID}}
   deploy:
     # deploy to heroku dev pipeline
     concurrency: heroku_deployment
