@@ -18,5 +18,5 @@
 - Body: 
     Family: [Open Sans](https://fonts.google.com/specimen/Open+Sans)
     Size: 16px
-    Weight: 40
+    Weight: 300
      
