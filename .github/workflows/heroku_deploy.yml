@@ -41,7 +41,7 @@ jobs:
     # deploy to heroku dev pipeline
     concurrency: 
       group: heroku_deployment
-      cancel-in-progress: true
+      cancel-in-progress: false
     runs-on: ubuntu-latest
     environment: development
     needs: [build]
