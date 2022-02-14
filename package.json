@@ -9,7 +9,7 @@
     "build": "webpack",
     "prepare": "husky install",
     "format": "npx pretty-quick",
-    "lint": "npx eslint src/*.js --fix"
+    "lint": "npx eslint src/*.{js, jsx} --fix"
   },
   "repository": {
     "type": "git",
