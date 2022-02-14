@@ -9,8 +9,8 @@
     "build": "webpack",
     "prepare": "husky install",
     "format": "npx pretty-quick",
-    "lint": "npx eslint src/*.{js, jsx} --fix",
-    "test": "jest --watch",
+    "lint": "npx eslint src/*.j{s,sx} --fix",
+    "test": "jest",
     "coverage": "jest --coverage"
   },
   "jest": {

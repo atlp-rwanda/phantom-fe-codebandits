@@ -16,11 +16,19 @@ function App() {
       <h1>Phantom</h1>
       <p>Powered by Codebandits</p>
       <div className="counter">
-        <button id="decrement" type="button" onClick={() => dispatch(decrement())}>
+        <button
+          id="decrement"
+          type="button"
+          onClick={() => dispatch(decrement())}
+        >
           -
         </button>
         <h3 className="counter-value">{value}</h3>
-        <button id="increment" type="button" onClick={() => dispatch(increment())}>
+        <button
+          id="increment"
+          type="button"
+          onClick={() => dispatch(increment())}
+        >
           +
         </button>
         <button
