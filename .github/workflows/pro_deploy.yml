@@ -17,7 +17,6 @@ jobs:
     runs-on: ubuntu-latest
 
     # Steps represent a sequence of tasks that will be executed as part of the job
-    concurrency: test_environment
     steps:
       - uses: actions/checkout@v2
       # setup the node development environment
