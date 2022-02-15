@@ -41,7 +41,6 @@
   },
   "dependencies": {
     "@reduxjs/toolkit": "^1.7.2",
-    "component-connector": "^1.0.5",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
     "react-redux": "^7.2.6",
@@ -52,11 +51,7 @@
     "@babel/preset-env": "^7.16.11",
     "@babel/preset-react": "^7.16.7",
     "@wojtekmaj/enzyme-adapter-react-17": "^0.6.6",
-    "babel-jest": "^27.5.1",
-    "babel-loader": "^8.2.3",
-    "css-loader": "^6.6.0",
     "enzyme": "^3.11.0",
-    "enzyme-adapter-react-16": "^1.15.6",
     "enzyme-to-json": "^3.6.2",
     "eslint": "^8.8.0",
     "eslint-config-airbnb": "^19.0.4",
@@ -71,15 +66,9 @@
     "lint-staged": "^12.3.3",
     "prettier": "^2.5.1",
     "pretty-quick": "^3.1.3",
-    "identity-obj-proxy": "^3.0.0",
     "jest": "^27.5.1",
     "jsdom": "^16.7.0",
-    "jsdom-global": "^3.0.2",
-    "redux-mock-store": "^1.5.4",
-    "style-loader": "^3.3.1",
-    "webpack": "^5.68.0",
-    "webpack-cli": "^4.9.2",
-    "webpack-dev-server": "^4.7.4"
+    "webpack": "^5.68.0"
   },
   "lint-staged": {
     "*.js": "eslint --fix",
