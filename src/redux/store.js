@@ -2,7 +2,7 @@ import { configureStore } from '@reduxjs/toolkit';
 import { counterReducer } from './reducers/counterReducer.js';
 
 export const store = configureStore({
-    reducer: {
-        counter: counterReducer
-    }
+  reducer: {
+    counter: counterReducer
+  }
 });
