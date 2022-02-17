@@ -1,4 +1,4 @@
-import { increment, decrement, reset } from '../counterReducer';
+import { increment, decrement, reset } from '../counterReducer.js';
 
 describe('Action Tests', () => {
   it('should create an Increment Action', () => {

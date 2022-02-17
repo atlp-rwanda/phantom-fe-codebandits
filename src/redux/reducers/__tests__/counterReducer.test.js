@@ -1,4 +1,9 @@
-import { counterReducer, increment, decrement, reset } from '../counterReducer';
+import {
+  counterReducer,
+  increment,
+  decrement,
+  reset
+} from '../counterReducer.js';
 
 describe('Counter reducer Tests', () => {
   it('Should display a Default Value', () => {

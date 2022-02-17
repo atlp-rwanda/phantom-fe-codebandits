@@ -1,15 +1,15 @@
 import React from 'react';
-import { mount, render, shallow } from 'enzyme';
+import { mount } from 'enzyme';
 import { Provider } from 'react-redux';
 import { configureStore } from '@reduxjs/toolkit';
 
-import App from '../src/App';
+import App from '../src/App.js';
 import {
   counterReducer,
   decrement,
   increment,
   reset
-} from '../src/redux/reducers/counterReducer';
+} from '../src/redux/reducers/counterReducer.js';
 
 const store = configureStore({ reducer: { counter: counterReducer } });
 
