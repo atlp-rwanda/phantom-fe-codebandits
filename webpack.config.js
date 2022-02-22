@@ -21,7 +21,7 @@ const config = {
   module: {
     rules: [
       {
-        test: /\.?js$/,
+        test: /\.(jsx|js)$/,
         exclude: /node_modules/,
         use: {
           loader: 'babel-loader',
@@ -33,6 +33,10 @@ const config = {
       {
         test: /\.css$/i,
         use: ['style-loader', 'css-loader', 'postcss-loader']
+      },
+      {
+        test: /\.(png|jp(e*)g|svg|gif)$/,
+        use: ['file-loader']
       }
     ]
   },

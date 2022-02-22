@@ -27,7 +27,12 @@
               "jsx": "always"
             }
         ],
-        "func-style": ["error", "declaration", { "allowArrowFunctions": true }],
+        "react/function-component-definition": ["error", {
+            "namedComponents": ["function-declaration", "function-expression", "arrow-function"],
+            "unnamedComponents": ["function-expression", "arrow-function"]
+          }],
+        "react/prop-types": "off",
+        "import/no-extraneous-dependencies": "off",
         "no-underscore-dangle": ["error", { "allow": ["__filename", "__dirname"] }],
         "comma-dangle": ["error", "never"]
     }
