@@ -1,5 +1,5 @@
 import React from 'react';
-import Button from './Button.jsx';
+import Button from './Button.js';
 import phantom from '../assets/phantom.png';
 
 const Header = () => {
