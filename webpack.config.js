@@ -14,6 +14,7 @@ const config = {
     static: {
       directory: path.join(__dirname, 'public')
     },
+    historyApiFallback: true,
     compress: true,
     port: 3000,
     watchFiles: ['./src/**/*.{js,jsx, css, scss}']
