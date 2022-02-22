@@ -15,7 +15,8 @@ const config = {
       directory: path.join(__dirname, 'public')
     },
     compress: true,
-    port: 3000
+    port: 3000,
+    watchFiles: ['./src/**/*.{js,jsx, css, scss}']
   },
   module: {
     rules: [
@@ -31,7 +32,7 @@ const config = {
       },
       {
         test: /\.css$/i,
-        use: ['style-loader', 'css-loader']
+        use: ['style-loader', 'css-loader', 'postcss-loader']
       }
     ]
   },
@@ -40,7 +41,7 @@ const config = {
       template: path.join(__dirname, 'public', 'index.html')
     })
   ],
-  mode: 'development'
+  mode: process.env.NODE_ENV || 'development'
 };
 
 export default config;
