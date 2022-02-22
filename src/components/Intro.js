@@ -4,7 +4,7 @@ import bus from '../assets/bus.png';
 
 const Intro = () => {
   return (
-    <div className="flex">
+    <div className="flex flex-col xl:flex-row">
       <div>
         <h1 className="flex flex-col text-5xl font-medium mx-28 mt-24">
           <span>Track bus location,</span>

@@ -3,6 +3,7 @@ import Header from '../components/Header.js';
 import Intro from '../components/Intro.js';
 import Card from '../components/Card.js';
 import globe from '../assets/globe.svg';
+import Footer from '../components/Footer.js';
 // import locator from '../assets/locator.svg';
 
 const LandingPage = () => {
@@ -11,10 +12,10 @@ const LandingPage = () => {
       <Header />
       <Intro />
       <div className="flex flex-col items-center">
-        <h1 className="text-4xl font-extrabold mt-16 text-center">
+        <h1 className="text-4xl font-raleway font-extrabold mt-28 xl:mt-44 mb-10 text-center">
           How this Works
         </h1>
-        <div className=" flex my-12">
+        <div className=" flex flex-col xl:flex-row mt-12 mb-32">
           <Card
             image={globe}
             alt="globe"
@@ -26,7 +27,7 @@ const LandingPage = () => {
             alt="globe"
             title="1. Start"
             text="Click the starting button, to begin tracking buses"
-            styles="mx-32"
+            styles="my-28 xl:my-0 xl:mx-32"
           />
           <Card
             image={globe}
@@ -36,6 +37,7 @@ const LandingPage = () => {
           />
         </div>
       </div>
+      <Footer />
     </div>
   );
 };

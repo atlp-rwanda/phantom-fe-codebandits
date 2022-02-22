@@ -5,8 +5,12 @@ import phantom from '../assets/phantom.png';
 const Header = () => {
   return (
     <div className="flex border-b-4 pb-4">
-      <img src={phantom} alt="Phantom" className="w-60 ml-20 mt-10" />
-      <div className="flex ml-auto mr-20">
+      <img
+        src={phantom}
+        alt="Phantom"
+        className="w-44 xl:w-60 ml-8 xl:ml-20 mt-10"
+      />
+      <div className="hidden md:flex xl:flex ml-auto mr-20">
         <Button
           name="For operators"
           styles="bg-blue-600 text-white rounded-xl mt-10 ml-6"
