@@ -6,7 +6,7 @@ const Intro = () => {
   return (
     <div className="flex flex-col items-center xl:flex-row">
       <div>
-        <h1 className="flex flex-col w-max text-3xl xl:text-5xl xl:text-5xl font-raleway font-extrabold mx-14 xl:mx-28 mt-12 xl:mt-32">
+        <h1 className="flex flex-col text-3xl xl:text-5xl font-raleway font-extrabold mx-12 xl:mx-28 mt-12 xl:mt-32">
           <span>Track bus location,</span>
           <span className="ml-4">Save your time.</span>
         </h1>
