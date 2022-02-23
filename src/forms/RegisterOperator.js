@@ -1,8 +1,30 @@
-import React from 'react';
+import React, {useState } from 'react';
 import Button from '../components/Button.js';
 import buses from '../images/buses.jpg'
+import Input from '../components/Input.js';
+import Label from '../components/Label.js';
+import { validateOperator } from '../components/Input.js';
 
 function RegisterOperator() {
+
+ 
+const onSubmit = (e) => {
+  e.preventDefault();
+  const Data = new FormData(e.target);
+  console.log(Data.entries());
+};
+
+const operatorFormElements = [
+  {
+    name: this.name,
+    placeholder: this.placeholder,
+    type: this.type,
+    onchange: validateOperator
+
+  }
+]
+
+
   return (
     <div>
       <div className="font-sans antialiased bg-grey-lightest">
@@ -16,82 +38,34 @@ function RegisterOperator() {
                 Register Operator
               </div>
 
-              <form action="">
+              <form onSubmit={onSubmit}>
                 <div className="py-4 px-8">
                   <div className="flex mb-4">
                     <div className="w-1/2 mr-1">
-                      <label
-                        className="block text-grey-darker text-sm font-bold mb-2"
-                        htmlFor="first_name"
-                      >
-                        First Name
-                      </label>
-
-                      <input
-                        className="appearance-none border rounded w-full py-2 px-3 text-grey-darker bg-gray-200"
-                        id="firstName"
-                        type="text"
-                        placeholder="Enter operator first name"
-                      />
+                    <Label name="First Name" htmlFor="first_name" />
+                    <Input type="text" placeholder="Enter operator first name" id="firstName" />
                     </div>
-                    <div className="w-1/2 mr-1">
-                      <label
-                        className="block text-grey-darker text-sm font-bold mb-2"
-                        htmlFor="last_name"
-                      >
-                        Last Name
-                      </label>
 
-                      <input
-                        className="appearance-none border rounded w-full py-2 px-3 text-grey-darker bg-gray-200"
-                        id="lastName"
-                        type="text"
-                        placeholder="Enter operator last name"
-                      />
+                    <div className="w-1/2 mr-1">
+                    <Label name="Last Name" htmlFor="last_name" />
+                    <Input type="text" placeholder="Enter operator last name" id="lastName" />
                     </div>
                   </div>
 
                   <div className="flex mb-4">
                     <div className="w-1/2 mr-1">
-                      <label
-                        className="block text-grey-darker text-sm font-bold mb-2"
-                        htmlFor="email"
-                      >
-                        Email
-                      </label>
-
-                      <input
-                        className="appearance-none border rounded w-full py-2 px-3 text-grey-darker bg-gray-200"
-                        id="email"
-                        type="text"
-                        placeholder="Enter operator email"
-                      />
+                    <Label name="Email" htmlFor="email" />
+                    <Input type="email" placeholder="Enter operator email" id="email" /> 
                     </div>
                     <div className="w-1/2 mr-1">
-                      <label
-                        className="block text-grey-darker text-sm font-bold mb-2"
-                        htmlFor="mobile_number"
-                      >
-                        Mobile Number
-                      </label>
-
-                      <input
-                        className="appearance-none border rounded w-full py-2 px-3 text-grey-darker bg-gray-200"
-                        id="mobileNumber"
-                        type="text"
-                        placeholder="Enter operator Mobile number"
-                      />
+                    <Label name="Mobile Number" htmlFor="mobile_number" />
+                    <Input type="text" placeholder="Enter operator mobile number" id="mobileNumber" />
                     </div>
                   </div>
 
                   <div className="flex mb-4">
                   <div className="w-1/2 mr-1">
-                      <label
-                        className="block text-grey-darker text-sm font-bold mb-2"
-                        htmlFor="company"
-                      >
-                        Company
-                      </label>
+                  <Label name="Company" htmlFor="company" />
                       <select
                         name=""
                         id="company"
@@ -105,46 +79,20 @@ function RegisterOperator() {
                       </select>
                     </div>
                     <div className="w-1/2 mr-1">
-                      <label
-                        className="block text-grey-darker text-sm font-bold mb-2"
-                        htmlFor="address"
-                      >
-                        Address
-                      </label>
-
-                      <input
-                        className="appearance-none border rounded w-full py-2 px-3 text-grey-darker bg-gray-200"
-                        id="firstName"
-                        type="text"
-                        placeholder="Enter operator working adress"
-                      />
+                    <Label name="Address" htmlFor="address" />
+                    <Input type="text" placeholder="Enter operator working adress" id="address" />  
                     </div>
                   </div>
 
                   <div className="mb-4">
                     <div className="w-full mr-1">
-                      <label
-                        className="block text-grey-darker text-sm font-bold mb-2"
-                        htmlFor="nationalId"
-                      >
-                        National ID
-                      </label>
-
-                      <input
-                        className="appearance-none border rounded w-full py-2 px-3 text-grey-darker bg-gray-200"
-                        id="firstName"
-                        type="text"
-                        placeholder="Enter operator national ID number "
-                      />
+                    <Label name="National Id" htmlFor="national_id" />
+                    <Input type="text" placeholder="Enter operator national ID number" id="nationalId" />
                     </div>
                   </div>
 
                   <div className="flex justify-center align">
-                    <Button
-                      name="Register Operator"
-                      type="submit"
-                      styles="bg-blue-500 hover:bg-blue-700 font-bold py-2 px-4 rounded-xl m-2 text-white"
-                    />
+                    <Button name="Register Operator" type="submit"/>
                   </div>
                 </div>
               </form>

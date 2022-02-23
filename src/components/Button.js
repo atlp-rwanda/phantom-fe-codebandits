@@ -12,10 +12,17 @@ const Button = ({ name, styles }) => {
     </div>
   );
 };
-export function ButtonA({name, onClick, styles, type }) {
+
+export function ButtonA({ name, onClick, styles, type }) {
   return (
     <div>
-      <button  type={type} onClick={onClick} className={`${styles}`}>{name}</button>
+      <button
+        type={type}
+        onClick={onClick}
+        className={`${styles} bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded-xl m-2 `}
+      >
+        {name}
+      </button>
     </div>
   );
 }
