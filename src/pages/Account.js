@@ -37,6 +37,7 @@ const Account = () => {
           <h1 className="font-bold">
             This is the notification board for logged in user
           </h1>
+
           <Link
             to="/dashboard/driver/register"
             className="m-2 py-1 px-3 bg-primary rounded-md"

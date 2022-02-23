@@ -27,6 +27,4 @@ export function ButtonA({ name, onClick, styles, type }) {
   );
 }
 
-
-
 export default Button;

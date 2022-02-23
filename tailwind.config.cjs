@@ -11,7 +11,8 @@ module.exports = {
         hover: '#053A80',
         hover2: '#f3f7fc',
         background: '#fafafa',
-        hovercancel: '#9B1A1B'
+        hovercancel: '#9B1A1B',
+        red: '#de3929'
       },
       boxShadow: {
         main: '0px 0px 6px 4px rgba(0, 0, 0, 0.1)'

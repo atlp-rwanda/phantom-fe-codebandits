@@ -14,11 +14,19 @@ describe('Account', () => {
   it('should render the account page', () => {
     const elem = renderer
       .create(
+<<<<<<< HEAD:src/pages/tests/Account.test.js
         <div>
           <BrowserRouter>
             <Account />
           </BrowserRouter>
         </div>
+=======
+        <Provider store={store}>
+          <BrowserRouter>
+            <Account />
+          </BrowserRouter>
+        </Provider>
+>>>>>>> 10d962d (Add the driver page):src/pages/__test__/Account.test.js
       )
       .toJSON();
     expect(elem).toMatchSnapshot();
