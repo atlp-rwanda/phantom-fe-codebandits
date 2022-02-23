@@ -1,44 +1,36 @@
 import React from 'react';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faCoffee } from '@fortawesome/free-solid-svg-icons';
 import busMapImg from '../assets/busMap.png';
+import Input from '../components/Input.js';
+import { Header } from '../components/Dummy.js';
+import { Footer } from '../components/Dummy.js';
+
 const Login = () => {
   return (
-    <div className="font-rale flex flex-col">
-      <header className="w-full h-12 flex  items-center shadow-sm">
-        <h2 className="font-bold text-primary text-center">Phanthom nav bar</h2>
-      </header>
-      <section className="flex w-fit items-center justify-center p-4 m-10 shadow-md">
-        <div className="w-1/2">
+    <div>
+      <Header />
+      <main className="grid grid-cols-2 items-center w-full justify-center shadow-md">
+        <section>
           <img
             src={busMapImg}
-            alt="Vector image of bus on map"
-            className="object-cover w-fit hidden sm:block"
+            alt="vector image of a bus on map"
+            className="w-full object-cover"
           />
-        </div>
-        <form className="flex flex-col  p-10 self-center sm:shadow-md">
+        </section>
+        <section className="">
           <h2 className="text-3xl mb-10 text-center">Login</h2>
-          <input
-            type="email"
-            d
-            placeholder="Email"
-            className="rounded-md mb-5 p-1 border-2 w-full"
-          />
-          <input
-            type="password"
-            placeholder="Password"
-            className="rounded-md mb-2 p-1 border-2 w-fit"
-          />
-          <h4 className="text-primary text-right">forgot password?</h4>
-          <button
-            className="bg-primary px-3 py-1 rounded-md text-white w-fit mx-auto hover:bg-hover transition-all "
-            type="submit"
-          >
-            Login
-          </button>
-        </form>
-      </section>
-      <footer className="w-full h-12 flex  items-center shadow-sm">
-        <h2 className="font-bold text-primary text-center">Phanthom Footer</h2>
-      </footer>
+          <form className="flex flex-col  p-10 self-center sm:shadow-md">
+            <Input name="email" placeholder="Enter email" />
+            <Input name="password" placeholder="Enter password" />
+            <h4 className="text-primary text-right">forgot password?</h4>
+            <button className="bg-primary px-3 py-1 rounded-md text-white w-fit mx-auto hover:bg-hover transition-all ">
+              Login
+            </button>
+          </form>
+        </section>
+      </main>
+      <Footer />
     </div>
   );
 };
