@@ -2,7 +2,6 @@ import { mount } from 'enzyme';
 import React from 'react';
 import { BrowserRouter, MemoryRouter } from 'react-router-dom';
 import renderer from 'react-test-renderer';
-
 import Account from '../Account.js';
 
 const mockedUsedNavigate = jest.fn();
@@ -30,12 +29,12 @@ describe('Account functionality tests', () => {
   const logoutMock = jest.fn();
   const wrapper = mount(
     <MemoryRouter>
-      <Account  logout={logoutMock()}/>
+      <Account logout={logoutMock()} />
     </MemoryRouter>
   );
   const logoutBtn = wrapper.find('button');
   it('should call logout function when logout button clicked', () => {
     logoutBtn.simulate('click');
-    expect(logoutMock).toHaveBeenCalled()
+    expect(logoutMock).toHaveBeenCalled();
   });
 });

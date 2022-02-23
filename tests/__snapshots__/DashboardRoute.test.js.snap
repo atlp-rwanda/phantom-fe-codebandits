@@ -1,0 +1,3 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Dashboard route testing Should render the dashboard routes 1`] = `null`;
