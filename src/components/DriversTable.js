@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React, { useMemo, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { useGlobalFilter, usePagination, useTable } from 'react-table';
@@ -19,16 +18,6 @@ const LinkBus = ({ row }) => {
 
   return 'None';
 };
-=======
-import React, { useMemo } from 'react';
-import { Link } from 'react-router-dom';
-import { useGlobalFilter, usePagination, useTable } from 'react-table';
-import driversDB from '../database/driversDB.json';
-import Button from './Button.js';
-import ManageDropdown from './ManageDropdown.js';
-import SearchFilter from './SearchFilter.js';
-import CheckRole from './utils/CheckRoles.js';
->>>>>>> 753acfa (adds crud operations for buses)
 
 const tableColumns = [
   {
@@ -45,35 +34,19 @@ const tableColumns = [
   },
   {
     Header: 'Assigned Bus',
-<<<<<<< HEAD
     accessor: 'assigned_bus',
     Cell: ({ row }) => <LinkBus row={row} />
-=======
-    accessor: 'assigned_bus'
-  },
-  {
-    Header: 'Assigned Route',
-    accessor: 'assigned_route'
->>>>>>> 753acfa (adds crud operations for buses)
   },
   {
     Header: 'Management',
     accessor: 'management',
-<<<<<<< HEAD
     Cell: ({ row }) => <ManageDropdown row={row} />
-=======
-    Cell: ({ row }) => <ManageDropdown id={row.original.email} />
->>>>>>> 753acfa (adds crud operations for buses)
   }
 ];
 
 const DriversTable = () => {
   const columns = useMemo(() => tableColumns, []);
-<<<<<<< HEAD
   const data = useMemo(() => database.drivers, []);
-=======
-  const data = useMemo(() => driversDB, []);
->>>>>>> 753acfa (adds crud operations for buses)
   const {
     getTableProps,
     getTableBodyProps,
@@ -98,22 +71,12 @@ const DriversTable = () => {
     useGlobalFilter,
     usePagination
   );
-<<<<<<< HEAD
   const [open, setOpen] = useState(false);
-=======
->>>>>>> 753acfa (adds crud operations for buses)
 
   const { globalFilter, pageIndex, pageSize } = state;
 
   return (
     <>
-<<<<<<< HEAD
-      <section className="flex justify-between content-center pb-7 overflow-x-auto">
-        <SearchFilter filter={globalFilter} setfilter={setGlobalFilter} />
-        <CheckRole
-          children={
-            <Link to="driver/register">
-=======
       <section className="flex justify-between content-center pb-7">
         <SearchFilter
           filter={globalFilter}
@@ -122,8 +85,7 @@ const DriversTable = () => {
         />
         <CheckRole
           children={
-            <Link to="/dashboard/driver/register">
->>>>>>> 753acfa (adds crud operations for buses)
+            <Link to="driver/register">
               <Button
                 name={'Register new'}
                 styles={'bg-primary text-white py-1 text-xs'}
@@ -133,14 +95,10 @@ const DriversTable = () => {
           role={['operator']}
         ></CheckRole>
       </section>
-<<<<<<< HEAD
       <table
         {...getTableProps()}
         className="w-full overflow-x-scroll font-raleway"
       >
-=======
-      <table {...getTableProps()} className="w-full">
->>>>>>> 753acfa (adds crud operations for buses)
         <thead>
           {headerGroups.map((headerGroup) => (
             <tr {...headerGroup.getHeaderGroupProps()} className="pb-10 ">
@@ -174,7 +132,6 @@ const DriversTable = () => {
             );
           })}
         </tbody>
-<<<<<<< HEAD
       </table>
       <table className=" mt-3 flex justify-center w-full bg-gray-300 bg-opacity-20 ">
         <tfoot>
@@ -199,37 +156,12 @@ const DriversTable = () => {
                   onClick={() => nextPage()}
                   disabled={!canNextPage}
                   className="mx-2 font-bold font-raleway cursor-pointer"
-=======
-        <tfoot>
-          <tr className="pagination mt-3 pt-3">
-            <td colSpan={5}>
-              <div className="w-full justify-end">
-                <button
-                  className="mr-2"
-                  onClick={() => gotoPage(0)}
-                  disabled={!canPreviousPage}
-                >
-                  {'<<'}
-                </button>{' '}
-                <button
-                  className="mr-2"
-                  onClick={() => previousPage()}
-                  disabled={!canPreviousPage}
-                >
-                  Previous
-                </button>{' '}
-                <button
-                  className="mr-2"
-                  onClick={() => nextPage()}
-                  disabled={!canNextPage}
->>>>>>> 753acfa (adds crud operations for buses)
                 >
                   Next
                 </button>{' '}
                 <button
                   onClick={() => gotoPage(pageCount - 1)}
                   disabled={!canNextPage}
-<<<<<<< HEAD
                   className="mx-2 rounded-circle font-bold flex items-center justify-center bg-primary h-[30px] w-[60px] cursor-pointer"
                 >
                   {'|>'}
@@ -268,41 +200,6 @@ const DriversTable = () => {
                     ))}
                   </select>
                 </div>
-=======
-                >
-                  {'>>'}
-                </button>{' '}
-                <span>
-                  Page{' '}
-                  <strong>
-                    {pageIndex + 1} of {pageOptions.length}
-                  </strong>{' '}
-                </span>
-                <span>
-                  | Go to page:{' '}
-                  <input
-                    type="number"
-                    defaultValue={pageIndex + 1}
-                    onChange={(e) => {
-                      const pageNumber = e.target.value
-                        ? Number(e.target.value) - 1
-                        : 0;
-                      gotoPage(pageNumber);
-                    }}
-                    style={{ width: '50px' }}
-                  />
-                </span>{' '}
-                <select
-                  value={pageSize}
-                  onChange={(e) => setPageSize(Number(e.target.value))}
-                >
-                  {[10, 25, 50].map((pageSize) => (
-                    <option key={pageSize} value={pageSize}>
-                      Show {pageSize}
-                    </option>
-                  ))}
-                </select>
->>>>>>> 753acfa (adds crud operations for buses)
               </div>
             </td>
           </tr>

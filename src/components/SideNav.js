@@ -13,22 +13,15 @@ import { logoutUser } from '../redux/reducers/authReducer.js';
 import CheckRole from '../utils/CheckRoles.js';
 import { ButtonA as Button } from './Button.js';
 import SideNavLink from './SideNavLink.js';
-import { useDispatch } from 'react-redux';
-import { logoutUser } from '../redux/reducers/authReducer.js';
 
 
 const SideNav = ({ styles }) => {
   const dispatch = useDispatch()
   const navigate = useNavigate();
-  const dispatch = useDispatch();
   const { authenticated, user } = useSelector((state) => state?.auth);
   const logout = () => {
     dispatch(logoutUser());
     toast('You are logged out', { type: 'success' });
-<<<<<<< HEAD
-=======
-    dispatch(logoutUser())
->>>>>>> 753acfa (adds crud operations for buses)
     navigate('/');
   };
 
@@ -60,7 +53,6 @@ const SideNav = ({ styles }) => {
         </div>
         <div className="font-raleway w-full">
           <ul className="mb-2">
-<<<<<<< HEAD
             <SideNavLink
               image={dashIcon}
               linkTo="/dashboard/main"
@@ -71,10 +63,6 @@ const SideNav = ({ styles }) => {
               linkTo="/dashboard/management"
               name="Management"
             />
-=======
-            <SideNavLink image={dashIcon} linkTo="/account" name="Dashboard" />
-            <SideNavLink image={manageIcon} linkTo="management" name="Management" />
->>>>>>> 753acfa (adds crud operations for buses)
             <SideNavLink
               image={profileIcon}
               linkTo="profile"
