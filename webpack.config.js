@@ -17,7 +17,9 @@ const config = {
     historyApiFallback: true,
     compress: true,
     port: 3000,
-    watchFiles: ['./src/**/*.{js,jsx, css, scss}']
+    watchFiles: ['./src/**/*.{js,jsx, css, scss}'],
+    historyApiFallback: true,
+    hot: true
   },
   module: {
     rules: [
@@ -33,6 +35,7 @@ const config = {
       },
       {
         test: /\.css$/i,
+
         use: ['style-loader', 'css-loader', 'postcss-loader']
       },
       {

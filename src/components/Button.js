@@ -12,5 +12,12 @@ const Button = ({ name, styles }) => {
     </div>
   );
 };
+export function ButtonA({name, onClick, styles, type }) {
+  return (
+    <div>
+      <button  type={type} onClick={onClick} className={`${styles}`}>{name}</button>
+    </div>
+  );
+}
 
 export default Button;

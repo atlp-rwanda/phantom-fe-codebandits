@@ -8,30 +8,29 @@ import Account from './pages/Account.js';
 import LandingPage from './pages/LandingPage.js';
 import Login from './pages/Login.js';
 import { store } from './redux/store.js';
-import { useLoader } from './useLoader.js';
-import SkeletonScreen from './components/SkeletonScreen.js';
+import {
+  RegisterDriverPage,
+  RegisterOperatorPage
+} from './pages/RegisterPages.js';
 
 function App() {
   const { loading } = useLoader();
 
   return (
-    <div className="App">
-      {loading && <SkeletonScreen />}
-      {!loading && (
-        <div>
-          <Provider store={store}>
-            <BrowserRouter>
-              <Header />
-              <Routes>
-                <Route path="/" element={<LandingPage />} />
-                <Route path="/login" element={<Login />} />
-                <Route path="/account" element={<Account />} />
-              </Routes>
-              <Footer />
-            </BrowserRouter>
-          </Provider>
-        </div>
-      )}
+    <div>
+      <Provider store={store}>
+        <BrowserRouter>
+          <Header />
+          <Routes>
+            <Route path="/" element={<LandingPage />} />
+            <Route path="/login" element={<Login />} />
+            <Route path="/account" element={<Account />} />
+            <Route path="/register-operator" element={<RegisterOperatorPage />} />
+        <Route path="/register-driver" element={<RegisterDriverPage />} />
+          </Routes>
+          <Footer />
+        </BrowserRouter>
+      </Provider>
     </div>
   );
 }
