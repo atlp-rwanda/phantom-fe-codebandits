@@ -8,7 +8,8 @@ module.exports = {
       },
       colors: {
         primary: '#1B73E8',
-        hover: '#2f78d8',
+        hover: '#4e8bda',
+        hover2: '#f3f7fc',
         background: '#fafafa'
       }
     }
