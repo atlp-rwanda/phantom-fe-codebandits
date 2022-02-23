@@ -2,8 +2,3 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-
-
-.btn {
-    color: #f3f7fc;
-}
