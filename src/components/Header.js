@@ -22,7 +22,7 @@ const Header = () => {
         />
         <h2 className="mt-12 ml-4 py-2 px-4">Language</h2>
       </div>
-      <div className="md:hidden xl:hidden ml-auto mr-20 mt-12">
+      <div className="md:hidden xl:hidden ml-auto mr-12 mt-12">
         <Burger />
         <Burger />
         <Burger />
