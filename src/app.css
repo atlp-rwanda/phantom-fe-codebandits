@@ -6,3 +6,10 @@
 #root {
     background-color: #fafafa;
 }
+
+
+.required::after {
+  content: "*";
+  color: rgb(201, 35, 35);
+  font-weight: bold;
+}

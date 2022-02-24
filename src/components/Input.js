@@ -1,11 +1,9 @@
 import React, { useState } from 'react';
-const [formValues, setFormValues] = useState();
 
-
-const Input = ({ name, placeholder, icon, onChange }) => {
+const Input = ({ name, placeholder }) => {
   return (
-    <div className="flex flex-col">
-      <label htmlFor={name} className="capitalize mb-3 font-semibold">
+    <>
+      <label htmlFor={name} className="capitalize mb-2 font-semibold">
         {name}
       </label>
       <input
@@ -13,11 +11,9 @@ const Input = ({ name, placeholder, icon, onChange }) => {
         id={name}
         name={name}
         placeholder={placeholder}
-        onChange={onChange}
-        className="rounded-md mb-5 p-2 border-2 w-full"
+        className="rounded-md mb-2 p-2 border-2 w-full"
       />
-      <p className="text-red-500 hidden"></p>
-    </div>
+    </>
   );
 };
 

@@ -18,7 +18,6 @@ export const Header = () => {
     </div>
   );
 };
-
 export const Footer = () => {
   return (
     <footer className="flex bg-primary text-background text-white font-sans font-sm py-4 mt-auto items-center">
