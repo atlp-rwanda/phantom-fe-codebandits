@@ -1,8 +1,6 @@
 import React from 'react';
-import Header from '../components/Header.js';
 import Intro from '../components/Intro.js';
 import Card from '../components/Card.js';
-import Footer from '../components/Footer.js';
 import start from '../assets/start.png';
 import globe from '../assets/globe.svg';
 import locator from '../assets/locator.png';
@@ -10,7 +8,6 @@ import locator from '../assets/locator.png';
 const LandingPage = () => {
   return (
     <div>
-      <Header />
       <Intro />
       <div className="flex flex-col items-center">
         <h1 className="text-4xl font-raleway font-extrabold mt-28 xl:mt-44 mb-10 text-center">
@@ -39,7 +36,6 @@ const LandingPage = () => {
           />
         </div>
       </div>
-      <Footer />
     </div>
   );
 };
