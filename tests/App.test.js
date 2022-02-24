@@ -1,25 +1,19 @@
 /* eslint-disable no-undef */
 import React from 'react';
 import { shallow } from 'enzyme';
-import { Provider } from 'react-redux';
-import { configureStore } from '@reduxjs/toolkit';
 
 import App from '../src/App.js';
-import { counterReducer } from '../src/redux/reducers/counterReducer.js';
-
-const store = configureStore({ reducer: { counter: counterReducer } });
 
 const wrapper = shallow(<App />);
 
-describe('Landing page test', () => {
+describe('App test', () => {
   it('renders without crashing', () => {
-    shallow(
-      <Provider store={store}>
-        <App />
-      </Provider>
-    );
+    shallow(<App />);
   });
-  it('contains the Landing Page child component', () => {
-    expect(wrapper.find('LandingPage').length).toEqual(1);
+  it('contains the Footer child component', () => {
+    expect(wrapper.find('Footer').length).toEqual(1);
+  });
+  it('contains the Header child component', () => {
+    expect(wrapper.find('Header').length).toEqual(1);
   });
 });
