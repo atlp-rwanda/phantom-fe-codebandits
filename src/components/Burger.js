@@ -4,6 +4,8 @@ const Burger = () => {
   return (
     <div>
       <div className="h-1 w-7 bg-primary mt-1" />
+      <div className="h-1 w-7 bg-primary mt-1" />
+      <div className="h-1 w-7 bg-primary mt-1" />
     </div>
   );
 };

@@ -33,6 +33,9 @@
           }],
         "react/prop-types": "off",
         "import/no-extraneous-dependencies": "off",
+        "no-param-reassign": "off",
+        "no-plusplus":"off",
+        "import/prefer-default-export":"off",
         "no-underscore-dangle": ["error", { "allow": ["__filename", "__dirname"] }],
         "comma-dangle": ["error", "never"]
     }

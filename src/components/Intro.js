@@ -16,10 +16,10 @@ const Intro = () => {
         </p>
         <Button
           name="Start"
-          styles="bg-primary hover:bg-hover text-white rounded-3xl mt-12 px-12 py-2 ml-28 md:ml-52 xl:ml-64"
+          styles="bg-primary hover:bg-hover text-white rounded-3xl mt-12 px-12 xl:px-12 py-2 ml-28 md:ml-52 xl:ml-64"
         />
       </div>
-      <div className="w-full px-20 lg:w-96 xl:w-96 lg:ml-auto xl:ml-auto lg:mr-36 xl:mr-36 lg:px-0 xl:px-0 mt-28">
+      <div className="w-full px-20 lg:w-80 xl:w-96 lg:ml-auto xl:ml-auto lg:mr-36 xl:mr-36 lg:px-0 xl:px-0 mt-28">
         <img src={bus} alt="Bus" />
       </div>
     </div>

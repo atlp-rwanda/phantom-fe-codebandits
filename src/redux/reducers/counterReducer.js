@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 import { createAction, createReducer } from '@reduxjs/toolkit';
 
 export const increment = createAction('increment/counter');
