@@ -90,21 +90,18 @@ function RegisterOperator() {
       <div className="font-sans antialiased bg-grey-lightest">
         <div className="w-full bg-grey-lightest ">
           <div className="container mx-auto py-8 grid grid-cols-2">
-            <div className="border">
-              <img
-                src={busMap}
-                alt=" Bus IMG"
-                className="w-full h-full object-cover"
+            <div className="">
+              <img src={busMap} alt=" Bus IMG" className="w-full h-full object-cover"
               />
             </div>
             <div className="w-5/6 lg:w-2/2 mx-auto bg-white rounded shadow p-8">
               <div className="py-4 px-8 text-black text-xl font-bold">
-                Register Operator
+               <h1 className='text-xl'>Register Operator</h1> 
               </div>
               <form onSubmit={handleSubmit}>
                 <div className="py-4 px-8">
                   <div className="flex mb-4">
-                    <div className="w-1/2 mr-1 flex flex-col">
+                    <div className="w-1/2 mr-3 flex flex-col">
                       <Input
                         type="text"
                         name="FirstName"
@@ -117,7 +114,7 @@ function RegisterOperator() {
                       <p className="text-red-800">{formErrors.FirstName}</p>
                     </div>
 
-                    <div className="w-1/2 mr-1 flex flex-col">
+                    <div className="w-1/2 mr-3 flex flex-col">
                       <Input
                         type="text"
                         name="LastName"
@@ -132,7 +129,7 @@ function RegisterOperator() {
                   </div>
 
                   <div className="flex mb-4">
-                    <div className="w-1/2 mr-1 flex flex-col">
+                    <div className="w-1/2 mr-3 flex flex-col">
                       <Input
                         type="text"
                         name="Email"
@@ -145,7 +142,7 @@ function RegisterOperator() {
                       <p className="text-red-800">{formErrors.Email}</p>
                     </div>
 
-                    <div className="w-1/2 mr-1 flex flex-col ">
+                    <div className="w-1/2 mr-3 flex flex-col ">
                       <Input
                         type="text"
                         name="MobileNumber"
@@ -160,7 +157,7 @@ function RegisterOperator() {
                   </div>
 
                   <div className="flex mb-4">
-                    <div className="w-1/2 mr-1">
+                    <div className="w-1/2 mr-3">
                       <label
                         htmlFor="company"
                         name="Company"
@@ -182,7 +179,7 @@ function RegisterOperator() {
                         <option value="">KIGALI BUS SERVICES</option>
                       </select>
                     </div>
-                    <div className="w-1/2 mr-1 flex flex-col">
+                    <div className="w-1/2 mr-3 flex flex-col">
                       <Input
                         type="text"
                         name="Address"
@@ -197,7 +194,7 @@ function RegisterOperator() {
                   </div>
 
                   <div className="mb-4">
-                    <div className="w-full mr-1 flex flex-col">
+                    <div className="w-full mr-3 flex flex-col">
                       <Input
                         type="text"
                         name="NationalId"

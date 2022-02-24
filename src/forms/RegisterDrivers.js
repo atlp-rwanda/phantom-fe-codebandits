@@ -86,8 +86,8 @@ function RegisterDrivers() {
       <div className="font-sans antialiased bg-grey-lightest">
         <div className="w-full bg-grey-lightest">
           <div className="container mx-auto py-8 flex">
-            <div className="border">
-              <img   src={busMap}  alt=" Bus IMG" className="w-full h-full object-cover"
+            <div className=" max-h-full">
+              <img   src={busMap}  alt=" Bus IMG" className="w-full max-w-sm  h-full object-cover md:h-full md:w-70"
               />
             </div>
             <div className="w-5/6 lg:w-2/2 mx-auto bg-white rounded shadow p-8">
