@@ -1,0 +1,54 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`MobileMenu should render Mobile menu 1`] = `
+<div
+  className="undefined flex flex-col font-raleway md:hidden lg:hidden xl:hidden border px-4 py-2 mr-6"
+>
+  <div>
+    <button
+      className="bg-primary hover:bg-hover text-white rounded-xl mt-2 px-3 py-2 rounded-xl py-3 px-5"
+      type="button"
+    >
+      For operators
+    </button>
+  </div>
+  <div>
+    <button
+      className="border border-primary bg-background hover:bg-hover2 text-primary rounded-xl mt-2 px-6 py-2 rounded-xl py-3 px-5"
+      type="button"
+    >
+      Track Bus
+    </button>
+  </div>
+  <div>
+    <button
+      className="undefined flex py-2 px-4 text-lg"
+      onClick={[Function]}
+      type="button"
+    >
+      <h1>
+        English
+      </h1>
+      <img
+        alt="dropdown"
+        className="w-3 mt-3 ml-2"
+        src={null}
+      />
+    </button>
+    <ul
+      className=""
+    >
+      <li
+        className="hidden absolute py-2 ml-4"
+      >
+        French
+      </li>
+      <li
+        className="hidden absolute py-2 ml-4 top-64 lg:top-32 lx:top-32 bg-background"
+      >
+        Kinyarwanda
+      </li>
+    </ul>
+  </div>
+</div>
+`;

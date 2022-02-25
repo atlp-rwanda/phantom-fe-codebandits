@@ -1,12 +1,17 @@
-/* eslint-disable no-undef */
 import React from 'react';
-import { shallow } from 'enzyme';
+import { BrowserRouter } from 'react-router-dom';
+import renderer from 'react-test-renderer';
 import Footer from '../Footer.js';
 
-const wrapper = shallow(<Footer />);
-
 describe('Footer', () => {
-  it('contains two sections', () => {
-    expect(wrapper.children().length).toEqual(2);
+  it('should render Footer', () => {
+    const elem = renderer
+      .create(
+        <BrowserRouter>
+          <Footer />
+        </BrowserRouter>
+      )
+      .toJSON();
+    expect(elem).toMatchSnapshot();
   });
 });

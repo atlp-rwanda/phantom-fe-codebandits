@@ -1,0 +1,136 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Header should render Header 1`] = `
+<div
+  className="flex bg-background border-b-4 pb-4 sticky top-0"
+>
+  <div>
+    <img
+      alt="Phantom"
+      className="w-44 xl:w-60 ml-8 xl:ml-20 mt-7 mb-2"
+      src={null}
+    />
+  </div>
+  <div
+    className="hidden md:flex xl:flex ml-auto mr-20"
+  >
+    <div>
+      <button
+        className="bg-primary hover:bg-hover text-white rounded-xl mt-7 ml-6 rounded-xl py-3 px-5"
+        type="button"
+      >
+        For operators
+      </button>
+    </div>
+    <div>
+      <button
+        className="border border-primary bg-background hover:bg-hover2 text-primary rounded-xl mt-7 ml-6 px-6 rounded-xl py-3 px-5"
+        type="button"
+      >
+        Track Bus
+      </button>
+    </div>
+    <div>
+      <button
+        className="mt-8 flex py-2 px-4 text-lg"
+        onClick={[Function]}
+        type="button"
+      >
+        <h1>
+          English
+        </h1>
+        <img
+          alt="dropdown"
+          className="w-3 mt-3 ml-2"
+          src={null}
+        />
+      </button>
+      <ul
+        className=""
+      >
+        <li
+          className="hidden absolute py-2 ml-4"
+        >
+          French
+        </li>
+        <li
+          className="hidden absolute py-2 ml-4 top-64 lg:top-32 lx:top-32 bg-background"
+        >
+          Kinyarwanda
+        </li>
+      </ul>
+    </div>
+  </div>
+  <div
+    className="flex flex-col absolute right-0 bg-background px-2"
+  >
+    <button
+      className="md:hidden xl:hidden ml-auto mr-12 mt-8"
+      onClick={[Function]}
+      type="button"
+    >
+      <div>
+        <div
+          className="h-1 w-7 bg-primary mt-1"
+        />
+        <div
+          className="h-1 w-7 bg-primary mt-1"
+        />
+        <div
+          className="h-1 w-7 bg-primary mt-1"
+        />
+      </div>
+    </button>
+    <div
+      className="hidden flex flex-col font-raleway md:hidden lg:hidden xl:hidden border px-4 py-2 mr-6"
+    >
+      <div>
+        <button
+          className="bg-primary hover:bg-hover text-white rounded-xl mt-2 px-3 py-2 rounded-xl py-3 px-5"
+          type="button"
+        >
+          For operators
+        </button>
+      </div>
+      <div>
+        <button
+          className="border border-primary bg-background hover:bg-hover2 text-primary rounded-xl mt-2 px-6 py-2 rounded-xl py-3 px-5"
+          type="button"
+        >
+          Track Bus
+        </button>
+      </div>
+      <div>
+        <button
+          className="undefined flex py-2 px-4 text-lg"
+          onClick={[Function]}
+          type="button"
+        >
+          <h1>
+            English
+          </h1>
+          <img
+            alt="dropdown"
+            className="w-3 mt-3 ml-2"
+            src={null}
+          />
+        </button>
+        <ul
+          className=""
+        >
+          <li
+            className="hidden absolute py-2 ml-4"
+          >
+            French
+          </li>
+          <li
+            className="hidden absolute py-2 ml-4 top-64 lg:top-32 lx:top-32 bg-background"
+          >
+            Kinyarwanda
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+`;

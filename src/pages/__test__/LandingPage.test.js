@@ -1,7 +1,6 @@
-/* eslint-disable no-undef */
-
 import React from 'react';
 import { shallow } from 'enzyme';
+import renderer from 'react-test-renderer';
 
 import LandingPage from '../LandingPage.js';
 
@@ -16,5 +15,12 @@ describe('Landing page test', () => {
   });
   it('contains the Intro child component', () => {
     expect(wrapper.find('Intro').length).toEqual(1);
+  });
+});
+
+describe('LandingPage', () => {
+  it('should render LandingPage', () => {
+    const elem = renderer.create(<LandingPage />).toJSON();
+    expect(elem).toMatchSnapshot();
   });
 });

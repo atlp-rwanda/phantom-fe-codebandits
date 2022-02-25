@@ -1,12 +1,10 @@
-/* eslint-disable no-undef */
 import React from 'react';
-import { shallow } from 'enzyme';
+import renderer from 'react-test-renderer';
 import Header from '../Header.js';
 
-const wrapper = shallow(<Header />);
-
 describe('Header', () => {
-  it('contains three sections', () => {
-    expect(wrapper.children().length).toEqual(3);
+  it('should render Header', () => {
+    const elem = renderer.create(<Header />).toJSON();
+    expect(elem).toMatchSnapshot();
   });
 });

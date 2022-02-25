@@ -1,12 +1,10 @@
-/* eslint-disable no-undef */
 import React from 'react';
-import { mount } from 'enzyme';
+import renderer from 'react-test-renderer';
 import Burger from '../Burger.js';
 
-const wrapper = mount(<Burger />);
-
 describe('Burger', () => {
-  it('contains one element ', () => {
-    expect(wrapper.children().length).toEqual(1);
+  it('should render Burger', () => {
+    const elem = renderer.create(<Burger />).toJSON();
+    expect(elem).toMatchSnapshot();
   });
 });

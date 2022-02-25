@@ -1,17 +1,21 @@
 import React, { useState } from 'react';
 import Button from './Button.js';
 import Burger from './Burger.js';
+import xmark from '../assets/xmark.svg';
 import phantom from '../assets/phantom.png';
 import LanguageButton from './LanguageButton.js';
 import MobileMenu from './MobileMenu.js';
 
 const Header = () => {
   const [style, setStyle] = useState('hidden');
+  const [icon, setIcon] = useState(<Burger />);
   const handleToggleMenu = () => {
     if (style === 'hidden') {
       setStyle('flex');
+      setIcon(<img src={xmark} alt="x mark" className="w-6" />);
     } else {
       setStyle('hidden');
+      setIcon(<Burger />);
     }
   };
   return (
@@ -37,10 +41,10 @@ const Header = () => {
       <div className="flex flex-col absolute right-0 bg-background px-2">
         <button
           type="button"
-          className="md:hidden xl:hidden ml-auto mr-12 mt-12"
+          className="md:hidden xl:hidden ml-auto mr-12 mt-8"
           onClick={handleToggleMenu}
         >
-          <Burger />
+          {icon}
         </button>
         <MobileMenu styles={style} />
       </div>
