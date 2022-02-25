@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link, useNavigate } from 'react-router-dom';
+import { Link,useNavigate } from 'react-router-dom';
 import { toast } from 'react-toastify';
 
 const Account = () => {
@@ -37,6 +37,8 @@ const Account = () => {
           <h1 className="font-bold">
             This is the notification board for logged in user
           </h1>
+          <Link to="/register-driver" className="m-2">Register Driver</Link>
+          <Link to="/register-operator" className="m-2">Register Operator</Link>
         </section>
       </main>
     </div>

@@ -25,8 +25,11 @@ function App() {
             <Route path="/" element={<LandingPage />} />
             <Route path="/login" element={<Login />} />
             <Route path="/account" element={<Account />} />
-            <Route path="/register-operator" element={<RegisterOperatorPage />} />
-           <Route path="/register-driver" element={<RegisterDriverPage />} />
+            <Route
+              path="/register-operator"
+              element={<RegisterOperatorPage />}
+            />
+            <Route path="/register-driver" element={<RegisterDriverPage />} />
           </Routes>
           <Footer />
         </BrowserRouter>
