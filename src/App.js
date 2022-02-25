@@ -1,11 +1,13 @@
 import React from 'react';
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import { Provider } from 'react-redux';
-import { store } from './redux/store.js';
-import Header from './components/Header.js';
-import LandingPage from './pages/LandingPage.js';
-import Footer from './components/Footer.js';
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import './app.css';
+import Footer from './components/Footer.js';
+import Header from './components/Header.js';
+import Account from './pages/Account.js';
+import LandingPage from './pages/LandingPage.js';
+import Login from './pages/Login.js';
+import { store } from './redux/store.js';
 
 function App() {
   return (
@@ -15,6 +17,8 @@ function App() {
           <Header />
           <Routes>
             <Route path="/" element={<LandingPage />} />
+            <Route path="/login" element={<Login />} />
+            <Route path="/account" element={<Account />} />
           </Routes>
           <Footer />
         </BrowserRouter>

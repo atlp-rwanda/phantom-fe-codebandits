@@ -5,11 +5,16 @@
 
 #root {
     background-color: #fafafa;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    z-index: 1;
+    position: relative;
 }
 
 
 .required::after {
-  content: "*";
-  color: rgb(201, 35, 35);
-  font-weight: bold;
+    content: "*";
+    color: rgb(201, 35, 35);
+    font-weight: bold;
 }

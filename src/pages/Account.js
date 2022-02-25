@@ -1,17 +1,15 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import { toast } from 'react-toastify';
-import { Footer, Header } from '../components/Dummy.js';
 
 const Account = () => {
   let navigate = useNavigate();
   const logout = () => {
-    toast('You are logged out', {type:"success"});
+    toast('You are logged out', { type: 'success' });
     navigate('/login');
   };
   return (
     <div>
-      <Header />
       <main className="flex flex-row">
         <aside className="bg-gray-400 w-3/10 py-20 px-3">
           <ul>
@@ -39,7 +37,6 @@ const Account = () => {
           </h1>
         </section>
       </main>
-      <Footer />
     </div>
   );
 };

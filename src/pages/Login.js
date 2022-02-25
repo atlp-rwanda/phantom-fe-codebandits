@@ -3,7 +3,6 @@ import { useForm } from 'react-hook-form';
 import { useNavigate } from 'react-router-dom';
 import { toast } from 'react-toastify';
 import busMapImg from '../assets/busMap.png';
-import { Footer, Header } from '../components/Dummy.js';
 
 const Login = () => {
   let navigate = useNavigate();
@@ -32,9 +31,8 @@ const Login = () => {
   }, [attempts]);
 
   return (
-    <div>
-      <Header />
-      <main className="flex flex-col  md:flex-row items-center w-full justify-center shadow-md relative h-full pb-20 md:pb-1 md:pt-1 pt-10">
+    <div className=" z-0 h-full">
+      <main className="min-h-[70vh] flex flex-col  md:flex-row items-center w-full justify-center shadow-md relative h-full pb-20 md:pb-1 md:pt-1 pt-10">
         <section className="max-w-sm mt-[-60px] md:flex md:items-center md:justify-center md:mx-auto md:mt-[auto] xl:ml-64">
           <img
             src={busMapImg}
@@ -108,7 +106,6 @@ const Login = () => {
           </form>
         </section>
       </main>
-      <Footer />
     </div>
   );
 };

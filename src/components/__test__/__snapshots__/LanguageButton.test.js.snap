@@ -12,20 +12,20 @@ exports[`LanguageButton should render LanguageButton 1`] = `
     </h1>
     <img
       alt="dropdown"
-      className="w-3 mt-3 ml-2"
+      className="w-3 mt-3 ml-2 h-2"
       src={null}
     />
   </button>
   <ul
-    className=""
+    className=" z-10"
   >
     <li
-      className="hidden absolute py-2 ml-4"
+      className="hidden absolute py-2 ml-4 w-fit bg-background w-full  cursor-pointer"
     >
       French
     </li>
     <li
-      className="hidden absolute py-2 ml-4 top-64 lg:top-32 lx:top-32 bg-background"
+      className="hidden absolute py-2 ml-4 w-fit top-64 md:top-28 lg:top-28 xl:top-28 bg-background cursor-pointer"
     >
       Kinyarwanda
     </li>
