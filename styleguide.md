@@ -7,7 +7,7 @@
 
 - Primary color: #1B73E8
 - Hover color: #2f78d8
-- Background color: ##fafafa
+- Background color: #fafafa
 
 ## Font
 

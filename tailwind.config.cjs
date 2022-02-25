@@ -3,12 +3,14 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        rale: ['Raleway', 'sans-serif'],
+        raleway: ['Raleway', 'sans-serif'],
         sans: ['Open Sans', 'sans-serif']
       },
       colors: {
         primary: '#1B73E8',
-        hover: '#2f78d8'
+        hover: '#053A80',
+        hover2: '#f3f7fc',
+        background: '#fafafa'
       }
     }
   },
