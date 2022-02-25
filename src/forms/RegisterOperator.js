@@ -184,7 +184,6 @@ function RegisterOperator() {
               </form>
             </div>
         </div>
-  
   );
 }
 
