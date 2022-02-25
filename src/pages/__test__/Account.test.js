@@ -1,14 +1,14 @@
 import React from 'react';
 import { BrowserRouter } from 'react-router-dom';
 import renderer from 'react-test-renderer';
-import MobileMenu from '../MobileMenu.js';
+import Account from '../Account.js';
 
-describe('MobileMenu', () => {
-  it('should render Mobile menu', () => {
+describe('Account', () => {
+  it('should render Account', () => {
     const elem = renderer
       .create(
         <BrowserRouter>
-          <MobileMenu />
+          <Account />
         </BrowserRouter>
       )
       .toJSON();

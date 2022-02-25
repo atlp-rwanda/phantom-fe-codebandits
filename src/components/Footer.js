@@ -4,7 +4,7 @@ import codebandits from '../assets/codebandits.png';
 
 const Footer = () => {
   return (
-    <footer className="flex bg-primary xl:justify-center md:text-xl text-background font-sans font-sm py-8 lg:py-2 xl:py-2">
+    <footer className="flex bg-primary xl:justify-center md:text-xl text-background font-sans font-sm py-8 lg:py-2 xl:py-2 mt-auto">
       <div className="flex flex-col lg:flex-row xl:flex-row px-12 text-center items-center">
         <img
           src={codebandits}
@@ -29,7 +29,7 @@ const Footer = () => {
           Terms of use
         </Link>
         <Link
-          to="/#"
+          to="/login"
           className="xl:ml-28 lg:ml-12 mt-2 text-md hover:font-bold"
         >
           Administration

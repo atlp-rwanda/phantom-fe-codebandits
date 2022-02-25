@@ -1,8 +1,9 @@
 import React, { useState } from 'react';
-import Button from './Button.js';
-import Burger from './Burger.js';
-import xmark from '../assets/xmark.svg';
+import { Link } from 'react-router-dom';
 import phantom from '../assets/phantom.png';
+import xmark from '../assets/xmark.svg';
+import Burger from './Burger.js';
+import Button from './Button.js';
 import LanguageButton from './LanguageButton.js';
 import MobileMenu from './MobileMenu.js';
 
@@ -11,7 +12,7 @@ const Header = () => {
   const [icon, setIcon] = useState(<Burger />);
   const handleToggleMenu = () => {
     if (style === 'hidden') {
-      setStyle('flex');
+      setStyle('flex z-50');
       setIcon(<img src={xmark} alt="x mark" className="w-6" />);
     } else {
       setStyle('hidden');
@@ -19,19 +20,24 @@ const Header = () => {
     }
   };
   return (
-    <div className="flex bg-background border-b-4 pb-4 sticky top-0">
+    <div className="flex bg-background border-b-4 pb-4 sticky top-0 z-20">
       <div>
-        <img
-          src={phantom}
-          alt="Phantom"
-          className="w-44 xl:w-60 ml-8 xl:ml-20 mt-7 mb-2"
-        />
+        <Link to="/">
+          <img
+            src={phantom}
+            alt="Phantom"
+            className="w-44 xl:w-60 ml-8 xl:ml-20 mt-7 mb-2"
+          />
+        </Link>
       </div>
       <div className="hidden md:flex xl:flex ml-auto mr-20">
-        <Button
-          name="For operators"
-          styles="bg-primary hover:bg-hover text-white rounded-xl mt-7 ml-6"
-        />
+        <Link to="/login">
+          <Button
+            name="For operators"
+            styles="bg-primary hover:bg-hover text-white rounded-xl mt-7 ml-6"
+          />
+        </Link>
+
         <Button
           name="Track Bus"
           styles="border border-primary bg-background hover:bg-hover2 text-primary rounded-xl mt-7 ml-6 px-6"
