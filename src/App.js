@@ -53,12 +53,16 @@ function App() {
           <Provider store={store}>
             <BrowserRouter>
               <Routes>
+<<<<<<< HEAD
                 <Route path="/" element={<LandingPage />} />
                 <Route path="/dashboard/*" element={<DashboardRoute />} />
                 <Route path="/login" element={<Login />} />
                 <Route path="/tracking-page" element={<TrackingPage />} />
                 <Route path="/public-profile" element={<PublicProfile />} />
                 <Route path="/account" element={<Account />} />
+=======
+                <Route exact={false} path="/" element={<MainRoutes />} />
+>>>>>>> 3737ce0 (Add the click outside functionality)
                 <Route
                   exact={false}
                   path="/dashboard/*"
