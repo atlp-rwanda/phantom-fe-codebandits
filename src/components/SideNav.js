@@ -14,9 +14,8 @@ import CheckRole from '../utils/CheckRoles.js';
 import { ButtonA as Button } from './Button.js';
 import SideNavLink from './SideNavLink.js';
 
-
 const SideNav = ({ styles }) => {
-  const dispatch = useDispatch()
+  const dispatch = useDispatch();
   const navigate = useNavigate();
   const { authenticated, user } = useSelector((state) => state?.auth);
   const logout = () => {
@@ -63,11 +62,7 @@ const SideNav = ({ styles }) => {
               linkTo="/dashboard/management"
               name="Management"
             />
-            <SideNavLink
-              image={profileIcon}
-              linkTo="profile"
-              name="Profile"
-            />
+            <SideNavLink image={profileIcon} linkTo="profile" name="Profile" />
             <SideNavLink
               image={notificationIcon}
               linkTo="/dashboard/notifications"

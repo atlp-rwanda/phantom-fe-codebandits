@@ -32,12 +32,18 @@ exports[`Login snapshot test should render Login 1`] = `
         <p
           className="font-bold text-sm font-raleway"
 <<<<<<< HEAD
+<<<<<<< HEAD
         />
 =======
         >
           
         </p>
 >>>>>>> 753acfa (adds crud operations for buses)
+=======
+        >
+          
+        </p>
+>>>>>>> c2588e0 (adds crud operations for buses)
         <p
           className="font-bold text-sm py-1"
         >

@@ -9,13 +9,7 @@
   {
     "name": "Mugisha Lambert",
     "email": "ctruswell1@histats.com",
-<<<<<<< HEAD
     "license": "1195510237288508"
-=======
-    "license": "1195510237288508",
-    "assigned_bus": "RAB482E",
-    "assigned_route": "Nyabugogo-Kimironko"
->>>>>>> 753acfa (adds crud operations for buses)
   },
   {
     "name": "Mugisha Lambert",
@@ -35,12 +29,8 @@
     "name": "Mugisha Lambert",
     "email": "sfilde4@livejournal.com",
     "license": "1197907904314586",
-<<<<<<< HEAD
     "assigned_bus": "RAB513E"
-=======
-    "assigned_bus": "RAB513E",
-    "assigned_route": "Nyabugogo-Kimironko"
->>>>>>> 753acfa (adds crud operations for buses)
+
   },
   {
     "name": "Mugisha Lambert",
@@ -67,12 +57,8 @@
     "name": "Mugisha Lambert",
     "email": "cattle8@cmu.edu",
     "license": "1196851209448122",
-<<<<<<< HEAD
     "assigned_bus": "RAB439E"
-=======
-    "assigned_bus": "RAB439E",
-    "assigned_route": "Nyabugogo-Kimironko"
->>>>>>> 753acfa (adds crud operations for buses)
+
   },
   {
     "name": "Mugisha Lambert",

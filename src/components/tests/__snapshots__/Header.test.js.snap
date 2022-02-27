@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`MobileMenu should render Mobile menu 1`] = `
+exports[`Header should render Header 1`] = `
 <div
   className="flex bg-background border-b-4 pb-4 sticky top-0 z-20"
 >
@@ -11,11 +11,7 @@ exports[`MobileMenu should render Mobile menu 1`] = `
     >
       <img
         alt="Phantom"
-<<<<<<< HEAD
-        className="w-44 xl:w-48 ml-8 xl:ml-20 mt-4"
-=======
         className="w-44 xl:w-60 ml-8 xl:ml-20 mt-7 mb-2"
->>>>>>> c2588e0 (adds crud operations for buses)
         src="phantom.png"
       />
     </a>
@@ -29,11 +25,7 @@ exports[`MobileMenu should render Mobile menu 1`] = `
     >
       <div>
         <button
-<<<<<<< HEAD
-          className="bg-primary hover:bg-hover text-white rounded-xl mt-5 ml-6 rounded-xl py-2 text-base md:text-sm px-5"
-=======
           className="bg-primary hover:bg-hover text-white rounded-xl mt-7 ml-6 rounded-xl py-3 text-base md:text-sm lg:text-lg xl:text-lg px-5"
->>>>>>> c2588e0 (adds crud operations for buses)
           type="submit"
         >
           For operators
@@ -41,20 +33,12 @@ exports[`MobileMenu should render Mobile menu 1`] = `
       </div>
     </a>
     <a
-<<<<<<< HEAD
-      href="/tracking-page"
-=======
       href="/track"
->>>>>>> c2588e0 (adds crud operations for buses)
       onClick={[Function]}
     >
       <div>
         <button
-<<<<<<< HEAD
-          className="border border-primary bg-background hover:bg-hover2 text-primary rounded-xl mt-5 ml-6 px-6 rounded-xl py-2 text-base md:text-sm px-5"
-=======
           className="border border-primary bg-background hover:bg-hover2 text-primary rounded-xl mt-7 ml-6 px-6 rounded-xl py-3 text-base md:text-sm lg:text-lg xl:text-lg px-5"
->>>>>>> c2588e0 (adds crud operations for buses)
           type="submit"
         >
           Track Bus
@@ -63,11 +47,7 @@ exports[`MobileMenu should render Mobile menu 1`] = `
     </a>
     <div>
       <select
-<<<<<<< HEAD
-        className="bg-background border outline-none md:ml-6 lg:ml-6 xl:ml-6 mt-5 flex py-2 px-4 text-sm hover:font-bold"
-=======
         className=" md:mt-8 bg-background border outline-none md:ml-6 lg:ml-6 xl:ml-6 lg:mt-8 xl:mt-8 flex py-2 px-4 text-lg hover:font-bold"
->>>>>>> c2588e0 (adds crud operations for buses)
       >
         <option
           className=" border-none bg-background w-full cursor-pointer"
@@ -91,11 +71,7 @@ exports[`MobileMenu should render Mobile menu 1`] = `
     className="flex flex-col absolute right-0 bg-background px-2"
   >
     <button
-<<<<<<< HEAD
-      className="md:hidden xl:hidden ml-auto mr-12 mt-5"
-=======
       className="md:hidden xl:hidden ml-auto mr-12 mt-8"
->>>>>>> c2588e0 (adds crud operations for buses)
       id="toggle"
       onClick={[Function]}
       type="button"

@@ -1,0 +1,496 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`OperatorProfile should render the OperatorProfile component 1`] = `
+<div
+  className="flex h-full font-sans antialiased bg-grey-lightest w-full"
+>
+  <section>
+    <div
+      className="relative z-10"
+    >
+      <main
+        className="hidden md:flex lg:flex xl:flex flex text-sm"
+      >
+        <aside
+          className="border-r-2 h-full sticky top-0 px-8 py-4 bg-gray-100 transition-transform"
+        >
+          <div
+            className=" mb-6"
+          >
+            <span
+              className="rounded-full mx-auto flex items-center justify-center h-12 w-12 mb-5"
+            >
+              <img
+                alt="Image"
+                className="rounded-full object-cover h-12 w-12"
+                src="profileImg.jpg"
+              />
+            </span>
+            <div
+              className="text-center font-black text-md"
+            >
+              <h1>
+                NGABO Patrick
+              </h1>
+              <div>
+                <h1
+                  className="font-bold"
+                >
+                  Operator
+                </h1>
+              </div>
+            </div>
+          </div>
+          <div>
+            <h2
+              className="mb-2 text-lg font-black"
+            >
+              Account
+            </h2>
+            <ul
+              className="mb-2"
+            >
+              <div
+                className="flex justify-center items-center hover:bg-gray-200 py-1"
+              >
+                <img
+                  alt="icon"
+                  className="w-6"
+                  src="dashboardIcon.png"
+                />
+                <a
+                  className="py-1 px-2 font-bold my-1  cursor-pointer w-full"
+                  href="/account"
+                  onClick={[Function]}
+                >
+                  <li>
+                    Dashboard
+                  </li>
+                </a>
+              </div>
+              <div
+                className="flex justify-center items-center hover:bg-gray-200 py-1"
+              >
+                <img
+                  alt="icon"
+                  className="w-6"
+                  src="manageIcon.png"
+                />
+                <a
+                  className="py-1 px-2 font-bold my-1  cursor-pointer w-full"
+                  href="/management"
+                  onClick={[Function]}
+                >
+                  <li>
+                    Management
+                  </li>
+                </a>
+              </div>
+              <div
+                className="flex justify-center items-center hover:bg-gray-200 py-1"
+              >
+                <img
+                  alt="icon"
+                  className="w-6"
+                  src="profileIcon.png"
+                />
+                <a
+                  className="py-1 px-2 font-bold my-1  cursor-pointer w-full"
+                  href="/profile"
+                  onClick={[Function]}
+                >
+                  <li>
+                    Profile
+                  </li>
+                </a>
+              </div>
+              <div
+                className="flex justify-center items-center hover:bg-gray-200 py-1"
+              >
+                <img
+                  alt="icon"
+                  className="w-6"
+                  src="notificationIcon.png"
+                />
+                <a
+                  aria-current="page"
+                  className="py-1 px-2 font-bold my-1  cursor-pointer w-full active"
+                  href="/#p"
+                  onClick={[Function]}
+                >
+                  <li>
+                    Notifications
+                  </li>
+                </a>
+              </div>
+              <div
+                className="flex justify-center items-center hover:bg-gray-200 py-1"
+              >
+                <img
+                  alt="icon"
+                  className="w-6"
+                  src="supportIcon.png"
+                />
+                <a
+                  aria-current="page"
+                  className="py-1 px-2 font-bold my-1  cursor-pointer w-full active"
+                  href="/#p"
+                  onClick={[Function]}
+                >
+                  <li>
+                    Support
+                  </li>
+                </a>
+              </div>
+              <div
+                className="flex justify-center items-center hover:bg-gray-200 py-1"
+              >
+                <img
+                  alt="icon"
+                  className="w-6"
+                  src="settingIcon.png"
+                />
+                <a
+                  aria-current="page"
+                  className="py-1 px-2 font-bold my-1  cursor-pointer w-full active"
+                  href="/#p"
+                  onClick={[Function]}
+                >
+                  <li>
+                    Settings
+                  </li>
+                </a>
+              </div>
+            </ul>
+            <div>
+              <button
+                className="bg-red px-6 py-1 hover:bg-red-600 bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded-xl m-2 "
+                onClick={[Function]}
+                type="submit"
+              >
+                Logout
+              </button>
+            </div>
+          </div>
+        </aside>
+      </main>
+      <div
+        className="flex"
+      >
+        <button
+          className="md:hidden lg:hidden xl:hidden"
+          onClick={[Function]}
+          type="button"
+        >
+          <div>
+            <div
+              className="ml-2 bg-black h-1 w-7 bg-primary mt-1"
+            />
+            <div
+              className="ml-2 bg-black h-1 w-7 bg-primary mt-1"
+            />
+            <div
+              className="ml-2 bg-black h-1 w-7 bg-primary mt-1"
+            />
+          </div>
+        </button>
+      </div>
+    </div>
+  </section>
+  <section
+    className="mx-auto items-center w-full h-full p-8 top-8 right-2 "
+  >
+    <h1
+      className="font-black text-2xl"
+    >
+      Profile
+    </h1>
+    <div
+      className="bg-white rounded p-4 w-full shadow-md min-h-[70vh] mt-6 pb-10"
+    >
+      <div>
+        <div
+          className="flex flex-col tex-center md:flex-row lg:flex-row xl:flex-row items-center justify-center bg-gray-100 mb-10 h-80 md:h-60 lg:h-60 xl:h-60 pb-10"
+        >
+          <span
+            className="w-20 h-20 my-8 md:w-24 lg:w-24 xl:w-24 md:h-24 lg:h-24 xl:h-24 mr-6"
+          >
+            <div
+              className="relative"
+            >
+              <label
+                htmlFor=""
+              >
+                <img
+                  alt="profile-img"
+                  className=" rounded-full object-cover w-20 h-20 md:w-24 lg:w-24 xl:w-24 md:h-24 lg:h-24 xl:h-24"
+                  id="profile-img"
+                  src="profileImg.jpg"
+                />
+                <div
+                  className="hidden absolute bg-gray-100 rounded-full w-5 h-5 left-7 md:left-10 lg:left-10 xl:left-20 top-7 md:top-8 lg:top-16 xl:top-18 cursor-pointer"
+                >
+                  <img
+                    alt=""
+                    className="w-3 h-3 m-1"
+                    src="camera-solid.svg"
+                  />
+                </div>
+              </label>
+            </div>
+            <input
+              accept=".jpg, .jpeg, .png"
+              id="photo-upload"
+              onChange={[Function]}
+              type="file"
+            />
+          </span>
+          <div
+            className="h-20 flex flex-col items-center md:items-baseline lg:items-baseline xl:items-baseline"
+          >
+            <h1
+              className="font-black text-lg md:text-3xl lg:text-3xl xl:text-3xl text-3xl"
+            >
+              Patrick
+               
+              NGABO
+            </h1>
+            <h2
+              className="font-bold text-sm md:text-base lg:text-base xl:text-base text-base"
+            >
+              Operator
+               at 
+              Kigali Bus Service (KBS)
+            </h2>
+            <h3>
+              patrickngabo@gmail.com
+            </h3>
+            <div
+              className=""
+            >
+              <div>
+                <button
+                  className="flex text-white text-sm md:text-base lg:text-base xl:text-base mt-4 px-4 md:px-6 lg:px-6 xl:px-6 bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded-xl m-2 "
+                  onClick={[Function]}
+                >
+                  Edit profile
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div
+        className="flex flex-col items-center"
+      >
+        <section
+          className="flex flex-col items-center lg:flex-row xl:flex-row"
+        >
+          <div
+            className="ml-8"
+          >
+            <div
+              className="mb-4 block font-raleway"
+            >
+              <div
+                className="undefined mb-2 block font-raleway"
+              >
+                <label
+                  className="block text-grey-darker text-sm font-bold font-rale mb-2"
+                  htmlFor="FirstName"
+                >
+                  First Name
+                </label>
+                <input
+                  className="font-rale border-none rounded w-full py-2 px-3 text-grey-darker outline-hidden bg-white text-md appearance-none border font-rale rounded w-full py-2 px-3 text-grey-darker bg-gray-200 text-md outline-hidden"
+                  defaultValue="Patrick"
+                  disabled={true}
+                  id="firstName"
+                  name="FirstName"
+                />
+              </div>
+            </div>
+            <div
+              className="mb-4 block font-raleway"
+            >
+              <div
+                className="undefined mb-2 block font-raleway"
+              >
+                <label
+                  className="block text-grey-darker text-sm font-bold font-rale mb-2"
+                  htmlFor="LastName"
+                >
+                  Last name 
+                </label>
+                <input
+                  className="font-rale border-none rounded w-full py-2 px-3 text-grey-darker outline-hidden bg-white text-md appearance-none border font-rale rounded w-full py-2 px-3 text-grey-darker bg-gray-200 text-md outline-hidden"
+                  defaultValue="NGABO"
+                  disabled={true}
+                  id="lastName"
+                  name="LastName"
+                  type="text"
+                />
+              </div>
+            </div>
+            <div
+              className="mb-4 block font-raleway"
+            >
+              <div
+                className="undefined mb-2 block font-raleway"
+              >
+                <label
+                  className="block text-grey-darker text-sm font-bold font-rale mb-2"
+                  htmlFor="dateOfBirth"
+                >
+                  Date Of Birth
+                </label>
+                <input
+                  className="font-rale border-none rounded w-full py-2 px-3 text-grey-darker outline-hidden bg-white text-md appearance-none border font-rale rounded w-full py-2 px-3 text-grey-darker bg-gray-200 text-md outline-hidden"
+                  defaultValue="12/06/1997"
+                  disabled={true}
+                  id="dateOfBirth"
+                  name="dateOfBirth"
+                  type="date"
+                />
+              </div>
+            </div>
+            <div
+              className="mb-5 block font-raleway"
+            >
+              <div
+                className="undefined mb-2 block font-raleway"
+              >
+                <label
+                  className="block text-grey-darker text-sm font-bold font-rale mb-2"
+                  htmlFor="email"
+                >
+                  Email
+                </label>
+                <input
+                  className="font-rale border-none rounded w-full py-2 px-3 text-grey-darker outline-hidden bg-white text-md border-none appearance-none border font-rale rounded w-full py-2 px-3 text-grey-darker bg-gray-200 text-md outline-hidden"
+                  defaultValue="patrickngabo@gmail.com"
+                  disabled={true}
+                  id="email"
+                  name="email"
+                  type="email"
+                />
+              </div>
+            </div>
+          </div>
+          <div
+            className="pl-10 lg:pl-24 xl:pl-24"
+          >
+            <div
+              className="mb-4 block font-raleway"
+            >
+              <div
+                className="undefined mb-2 block font-raleway"
+              >
+                <label
+                  className="block text-grey-darker text-sm font-bold font-rale mb-2"
+                  htmlFor="company"
+                >
+                  Company
+                </label>
+                <input
+                  className="font-rale border-none rounded w-full py-2 px-3 text-grey-darker outline-hidden bg-white text-md border-none appearance-none border font-rale rounded w-full py-2 px-3 text-grey-darker bg-gray-200 text-md outline-hidden"
+                  defaultValue="Kigali Bus Service (KBS)"
+                  disabled={true}
+                  id="company"
+                  name="company"
+                  type="text"
+                />
+              </div>
+            </div>
+            <div
+              className="mb-4 block font-raleway"
+            >
+              <div
+                className="undefined mb-2 block font-raleway"
+              >
+                <label
+                  className="block text-grey-darker text-sm font-bold font-rale mb-2"
+                  htmlFor="mobileNumber"
+                >
+                  Mobile Number 
+                </label>
+                <input
+                  className="font-rale border-none rounded w-full py-2 px-3 text-grey-darker outline-hidden bg-white text-md appearance-none border font-rale rounded w-full py-2 px-3 text-grey-darker bg-gray-200 text-md outline-hidden"
+                  defaultValue="0789989655"
+                  disabled={true}
+                  id="company"
+                  name="company"
+                  type="text"
+                />
+              </div>
+            </div>
+            <div
+              className="mb-4 block font-raleway"
+            >
+              <div
+                className="undefined mb-2 block font-raleway"
+              >
+                <label
+                  className="block text-grey-darker text-sm font-bold font-rale mb-2"
+                  htmlFor="nationalId"
+                >
+                  National ID
+                </label>
+                <input
+                  className="font-rale border-none rounded w-full py-2 px-3 text-grey-darker outline-hidden bg-white text-md border-none appearance-none border font-rale rounded w-full py-2 px-3 text-grey-darker bg-gray-200 text-md outline-hidden"
+                  defaultValue="1199780020002120"
+                  disabled={true}
+                  id="nationalId"
+                  name="nationalid"
+                  type="text"
+                />
+              </div>
+            </div>
+            <div
+              className="mb-4 block font-raleway"
+            >
+              <div
+                className="undefined mb-2 block font-raleway"
+              >
+                <label
+                  className="block text-grey-darker text-sm font-bold font-rale mb-2"
+                  htmlFor="address"
+                >
+                  Address
+                </label>
+                <input
+                  className="font-rale border-none rounded w-full py-2 px-3 text-grey-darker outline-hidden bg-white text-md appearance-none border font-rale rounded w-full py-2 px-3 text-grey-darker bg-gray-200 text-md outline-hidden"
+                  defaultValue="Kacyiru, Kigali"
+                  disabled={true}
+                  id="address"
+                  name="address"
+                  type="text"
+                />
+              </div>
+            </div>
+          </div>
+        </section>
+        <div
+          className="flex"
+        >
+          <div>
+            <button
+              className="hidden bg-red text-white px-10 ml-8 mt-16 bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded-xl m-2 "
+            >
+              cancel
+            </button>
+          </div>
+          <div>
+            <button
+              className="hidden text-white px-10 ml-8 mt-16 bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded-xl m-2 "
+              onClick={[Function]}
+            >
+              Save
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
+`;

@@ -14,9 +14,16 @@ describe('SideBar', () => {
       .create(
         <Provider store={store}>
           <MemoryRouter>
+<<<<<<< HEAD
             <SideBar />
           </MemoryRouter>
         </Provider>
+=======
+          <SideBar />
+        </MemoryRouter> 
+        </Provider>
+       
+>>>>>>> c2588e0 (adds crud operations for buses)
       )
       .toJSON();
     expect(elem).toMatchSnapshot();
@@ -27,9 +34,16 @@ describe('SideBar', () => {
     const component = mount(
       <Provider store={store}>
         <MemoryRouter>
+<<<<<<< HEAD
           <SideBar />
         </MemoryRouter>
       </Provider>
+=======
+        <SideBar logout={logout()} />
+      </MemoryRouter>
+      </Provider>
+      
+>>>>>>> c2588e0 (adds crud operations for buses)
     );
     const button = component.find('#button');
     button.simulate('click');
