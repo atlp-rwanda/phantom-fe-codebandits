@@ -10,12 +10,17 @@ import supportIcon from '../images/supportIcon.png';
 import profileImg from '../images/profileImg.jpg';
 import { ButtonA as Button } from './Button.js';
 import SideNavLink from './SideNavLink.js';
+import { useDispatch } from 'react-redux';
+import { logoutUser } from '../redux/reducers/authReducer.js';
+
 
 const SideNav = ({ styles }) => {
+  const dispatch = useDispatch()
   const navigate = useNavigate();
   const logout = () => {
     toast('You are logged out', { type: 'success' });
-    navigate('/login');
+    dispatch(logoutUser())
+    navigate('/');
   };
 
   return (
@@ -40,10 +45,10 @@ const SideNav = ({ styles }) => {
           <h2 className="mb-2 text-lg font-black">Account</h2>
           <ul className="mb-2">
             <SideNavLink image={dashIcon} linkTo="/account" name="Dashboard" />
-            <SideNavLink image={manageIcon} linkTo="#p" name="Management" />
+            <SideNavLink image={manageIcon} linkTo="management" name="Management" />
             <SideNavLink
               image={profileIcon}
-              linkTo="/dashboard/profile"
+              linkTo="profile"
               name="Profile"
             />
             <SideNavLink

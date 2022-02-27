@@ -1,0 +1,352 @@
+[
+  {
+    "plate_number": "RAV828K",
+    "bus_type": "Coaster",
+    "seats": "30",
+    "driver": "Sarge Cockayne",
+    "assigned_route": "Nyabugogo-Kimironko"
+  },
+  {
+    "plate_number": "RAD396U",
+    "bus_type": "Coaster",
+    "seats": "30",
+    "driver": "Elvera Tunnacliffe",
+    "assigned_route": "Nyabugogo-Kimironko"
+  },
+  {
+    "plate_number": "RAN684C",
+    "bus_type": "Coaster",
+    "seats": "30",
+    "driver": "Abie Jeacocke",
+    "assigned_route": "Nyabugogo-Kimironko"
+  },
+  {
+    "plate_number": "RAJ504V",
+    "bus_type": "Coaster",
+    "seats": "30",
+    "driver": "Karrah Gosnall",
+    "assigned_route": "Nyabugogo-Kimironko"
+  },
+  {
+    "plate_number": "RAY618Q",
+    "bus_type": "Coaster",
+    "seats": "30",
+    "driver": "Ade Rockhall",
+    "assigned_route": "Nyabugogo-Kimironko"
+  },
+  {
+    "plate_number": "RAS568Z",
+    "bus_type": "Coaster",
+    "seats": "30",
+    "driver": "Burk Penbarthy",
+    "assigned_route": "Nyabugogo-Kimironko"
+  },
+  {
+    "plate_number": "RAB487U",
+    "bus_type": "Coaster",
+    "seats": "30",
+    "driver": "Geraldine Vasichev",
+    "assigned_route": "Nyabugogo-Kimironko"
+  },
+  {
+    "plate_number": "RAD332R",
+    "bus_type": "Coaster",
+    "seats": "30",
+    "driver": "Dael Shenfisch",
+    "assigned_route": "Nyabugogo-Kimironko"
+  },
+  {
+    "plate_number": "RAU403A",
+    "bus_type": "Coaster",
+    "seats": "30",
+    "driver": "Artemas Gwyer",
+    "assigned_route": "Nyabugogo-Kimironko"
+  },
+  {
+    "plate_number": "RAC503R",
+    "bus_type": "Coaster",
+    "seats": "30",
+    "driver": "Naoma Grevatt",
+    "assigned_route": "Nyabugogo-Kimironko"
+  },
+  {
+    "plate_number": "RAY302S",
+    "bus_type": "Coaster",
+    "seats": "30",
+    "driver": "Debor Braunes",
+    "assigned_route": "Nyabugogo-Kimironko"
+  },
+  {
+    "plate_number": "RAN725S",
+    "bus_type": "Coaster",
+    "seats": "30",
+    "driver": "Denna Randalston",
+    "assigned_route": "Nyabugogo-Kimironko"
+  },
+  {
+    "plate_number": "RAP892K",
+    "bus_type": "Coaster",
+    "seats": "30",
+    "driver": "Hastings Padkin",
+    "assigned_route": "Nyabugogo-Kimironko"
+  },
+  {
+    "plate_number": "RAZ749C",
+    "bus_type": "Coaster",
+    "seats": "30",
+    "driver": "Aaron Noseworthy",
+    "assigned_route": "Nyabugogo-Kimironko"
+  },
+  {
+    "plate_number": "RAJ117Y",
+    "bus_type": "Coaster",
+    "seats": "30",
+    "driver": "Dyanne Canada",
+    "assigned_route": "Nyabugogo-Kimironko"
+  },
+  {
+    "plate_number": "RAE805N",
+    "bus_type": "Coaster",
+    "seats": "30",
+    "driver": "Rickey Ferebee",
+    "assigned_route": "Nyabugogo-Kimironko"
+  },
+  {
+    "plate_number": "RAP953L",
+    "bus_type": "Coaster",
+    "seats": "30",
+    "driver": "Bill Josefer",
+    "assigned_route": "Nyabugogo-Kimironko"
+  },
+  {
+    "plate_number": "RAG770L",
+    "bus_type": "Coaster",
+    "seats": "30",
+    "driver": "Brander Kynaston",
+    "assigned_route": "Nyabugogo-Kimironko"
+  },
+  {
+    "plate_number": "RAA064M",
+    "bus_type": "Coaster",
+    "seats": "30",
+    "driver": "Maxy Pauluzzi",
+    "assigned_route": "Nyabugogo-Kimironko"
+  },
+  {
+    "plate_number": "RAA812N",
+    "bus_type": "Coaster",
+    "seats": "30",
+    "driver": "Robby Sympson",
+    "assigned_route": "Nyabugogo-Kimironko"
+  },
+  {
+    "plate_number": "RAC980Y",
+    "bus_type": "Coaster",
+    "seats": "30",
+    "driver": "Omar Niemetz",
+    "assigned_route": "Nyabugogo-Kimironko"
+  },
+  {
+    "plate_number": "RAB271P",
+    "bus_type": "Coaster",
+    "seats": "30",
+    "driver": "Maxim Jupp",
+    "assigned_route": "Nyabugogo-Kimironko"
+  },
+  {
+    "plate_number": "RAD581L",
+    "bus_type": "Coaster",
+    "seats": "30",
+    "driver": "Mariska Harnwell",
+    "assigned_route": "Nyabugogo-Kimironko"
+  },
+  {
+    "plate_number": "RAO200E",
+    "bus_type": "Coaster",
+    "seats": "30",
+    "driver": "Zane Ridhole",
+    "assigned_route": "Nyabugogo-Kimironko"
+  },
+  {
+    "plate_number": "RAB728P",
+    "bus_type": "Coaster",
+    "seats": "30",
+    "driver": "Alejandra Baxendale",
+    "assigned_route": "Nyabugogo-Kimironko"
+  },
+  {
+    "plate_number": "RAM911H",
+    "bus_type": "Coaster",
+    "seats": "30",
+    "driver": "Aleda Barde",
+    "assigned_route": "Nyabugogo-Kimironko"
+  },
+  {
+    "plate_number": "RAM792X",
+    "bus_type": "Coaster",
+    "seats": "30",
+    "driver": "Hussein Gilson",
+    "assigned_route": "Nyabugogo-Kimironko"
+  },
+  {
+    "plate_number": "RAU884M",
+    "bus_type": "Coaster",
+    "seats": "30",
+    "driver": "Carilyn Oakwell",
+    "assigned_route": "Nyabugogo-Kimironko"
+  },
+  {
+    "plate_number": "RAT200A",
+    "bus_type": "Coaster",
+    "seats": "30",
+    "driver": "Carlin Golda",
+    "assigned_route": "Nyabugogo-Kimironko"
+  },
+  {
+    "plate_number": "RAB783A",
+    "bus_type": "Coaster",
+    "seats": "30",
+    "driver": "Marnia Hawkey",
+    "assigned_route": "Nyabugogo-Kimironko"
+  },
+  {
+    "plate_number": "RAC916G",
+    "bus_type": "Coaster",
+    "seats": "30",
+    "driver": "Adora Hallett",
+    "assigned_route": "Nyabugogo-Kimironko"
+  },
+  {
+    "plate_number": "RAG029V",
+    "bus_type": "Coaster",
+    "seats": "30",
+    "driver": "Nancey Wellsman",
+    "assigned_route": "Nyabugogo-Kimironko"
+  },
+  {
+    "plate_number": "RAO842D",
+    "bus_type": "Coaster",
+    "seats": "30",
+    "driver": "Odie Caddell",
+    "assigned_route": "Nyabugogo-Kimironko"
+  },
+  {
+    "plate_number": "RAV177X",
+    "bus_type": "Coaster",
+    "seats": "30",
+    "driver": "Cos Whiteoak",
+    "assigned_route": "Nyabugogo-Kimironko"
+  },
+  {
+    "plate_number": "RAH343H",
+    "bus_type": "Coaster",
+    "seats": "30",
+    "driver": "Fonzie Birckmann",
+    "assigned_route": "Nyabugogo-Kimironko"
+  },
+  {
+    "plate_number": "RAL864F",
+    "bus_type": "Coaster",
+    "seats": "30",
+    "driver": "Erskine Muckle",
+    "assigned_route": "Nyabugogo-Kimironko"
+  },
+  {
+    "plate_number": "RAK466W",
+    "bus_type": "Coaster",
+    "seats": "30",
+    "driver": "Perla Dickings",
+    "assigned_route": "Nyabugogo-Kimironko"
+  },
+  {
+    "plate_number": "RAB259Z",
+    "bus_type": "Coaster",
+    "seats": "30",
+    "driver": "Ginger Cumine",
+    "assigned_route": "Nyabugogo-Kimironko"
+  },
+  {
+    "plate_number": "RAI566B",
+    "bus_type": "Coaster",
+    "seats": "30",
+    "driver": "Jamaal Boord",
+    "assigned_route": "Nyabugogo-Kimironko"
+  },
+  {
+    "plate_number": "RAJ336Y",
+    "bus_type": "Coaster",
+    "seats": "30",
+    "driver": "Dionne Cracoe",
+    "assigned_route": "Nyabugogo-Kimironko"
+  },
+  {
+    "plate_number": "RAV137T",
+    "bus_type": "Coaster",
+    "seats": "30",
+    "driver": "Tandy Fernez",
+    "assigned_route": "Nyabugogo-Kimironko"
+  },
+  {
+    "plate_number": "RAZ280E",
+    "bus_type": "Coaster",
+    "seats": "30",
+    "driver": "Daren Catherine",
+    "assigned_route": "Nyabugogo-Kimironko"
+  },
+  {
+    "plate_number": "RAR631S",
+    "bus_type": "Coaster",
+    "seats": "30",
+    "driver": "Brietta Whether",
+    "assigned_route": "Nyabugogo-Kimironko"
+  },
+  {
+    "plate_number": "RAH487S",
+    "bus_type": "Coaster",
+    "seats": "30",
+    "driver": "Tonie Emeline",
+    "assigned_route": "Nyabugogo-Kimironko"
+  },
+  {
+    "plate_number": "RAA664R",
+    "bus_type": "Coaster",
+    "seats": "30",
+    "driver": "Hubey Degli Abbati",
+    "assigned_route": "Nyabugogo-Kimironko"
+  },
+  {
+    "plate_number": "RAW390H",
+    "bus_type": "Coaster",
+    "seats": "30",
+    "driver": "Zorina Elms",
+    "assigned_route": "Nyabugogo-Kimironko"
+  },
+  {
+    "plate_number": "RAA831H",
+    "bus_type": "Coaster",
+    "seats": "30",
+    "driver": "Dorice Ferens",
+    "assigned_route": "Nyabugogo-Kimironko"
+  },
+  {
+    "plate_number": "RAB354K",
+    "bus_type": "Coaster",
+    "seats": "30",
+    "driver": "Saundra Harse",
+    "assigned_route": "Nyabugogo-Kimironko"
+  },
+  {
+    "plate_number": "RAL348A",
+    "bus_type": "Coaster",
+    "seats": "30",
+    "driver": "Belle Bleesing",
+    "assigned_route": "Nyabugogo-Kimironko"
+  },
+  {
+    "plate_number": "RAT337N",
+    "bus_type": "Coaster",
+    "seats": "30",
+    "driver": "Gerik Duplain",
+    "assigned_route": "Nyabugogo-Kimironko"
+  }
+]

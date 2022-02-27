@@ -1,8 +1,10 @@
 import React from 'react';
+import { useSelector } from 'react-redux';
 import { Link } from 'react-router-dom';
 import codebandits from '../assets/codebandits.png';
 
 const Footer = () => {
+  const { authenticated, user } = useSelector((state) => state?.auth);
   return (
     <footer className="flex bg-primary z-20 xl:justify-center md:text-xl text-background font-sans font-sm py-8 lg:py-2 xl:py-2 mt-auto">
       <div className="flex flex-col lg:flex-row xl:flex-row px-12 text-center items-center">
@@ -29,7 +31,7 @@ const Footer = () => {
           Terms of use
         </Link>
         <Link
-          to="/login"
+          to={!authenticated ? '/login' : '/dashboard'}
           className="xl:ml-28 lg:ml-12 mt-2 text-md hover:font-bold"
         >
           Administration
