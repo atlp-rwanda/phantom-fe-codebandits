@@ -85,6 +85,7 @@
     "leaflet-moving-marker": "^0.3.0",
     "leaflet-routing-machine": "^3.2.12",
     "leaflet.polyline.snakeanim": "^0.2.0",
+    "json-server": "^0.17.0",
     "react": "^17.0.2",
     "react-avatar-editor": "^12.0.0",
     "react-content-loader": "^6.1.0",

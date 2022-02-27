@@ -6,6 +6,7 @@ const Button = ({ name, styles, onClick }) => {
       <button
         type="submit"
         className={`${styles} rounded-xl py-2 text-base md:text-sm px-5`}
+        onClick={onClick}
       >
         {name}
       </button>

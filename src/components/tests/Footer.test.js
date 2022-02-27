@@ -8,11 +8,18 @@ import Footer from '../Footer.js';
 
 const wrapper = mount(
   <Provider store={store}>
+<<<<<<< HEAD
     <BrowserRouter>
     <Footer />
   </BrowserRouter>
   </Provider>
   
+=======
+  <BrowserRouter>
+  <Footer />
+</BrowserRouter>
+</Provider>
+>>>>>>> 753acfa (adds crud operations for buses)
 );
 
 describe('Footer', () => {

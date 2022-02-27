@@ -1,0 +1,13 @@
+{
+  "buses": [
+    {
+      "busType": "Minibus",
+      "company": "KBS",
+      "seats": "20",
+      "plateNumber": "RAB1234",
+      "driver": "No driver",
+      "route": "No route",
+      "id": 1
+    }
+  ]
+}

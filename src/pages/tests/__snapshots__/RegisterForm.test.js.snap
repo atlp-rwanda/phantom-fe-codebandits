@@ -8,6 +8,7 @@ exports[`Registration Operators Should render the driver form 1`] = `
     className="block bg-white rounded  p-2 w-full lg:max-w-3xl shadow-lg min-h-[70vh] mr-4"
   >
     <div
+<<<<<<< HEAD
       className="py-4 px-8 text-black font-bold lg:px-4 md:px-4 "
     >
       <h1
@@ -23,6 +24,12 @@ exports[`Registration Operators Should render the driver form 1`] = `
     >
       <div
         className="py-4 px-4  w-full  lg:mx-auto "
+=======
+      className="py-8  md:flex md:justify-center"
+    >
+      <div
+        className="block bg-white rounded  p-2 w-full lg:max-w-3xl shadow-lg min-h-[70vh] mr-4"
+>>>>>>> 753acfa (adds crud operations for buses)
       >
         <div
           className="block mb-4 xl:flex md:grid md:grid-cols-2 md:gap-2"
@@ -304,6 +311,7 @@ exports[`Registration Operators Should render the operator form 1`] = `
     className="block bg-white rounded  p-2 w-full lg:max-w-3xl shadow-lg min-h-[70vh] mr-4"
   >
     <div
+<<<<<<< HEAD
       className="py-4 px-8 text-black font-bold lg:px-4 md:px-4 "
     >
       <h1
@@ -319,6 +327,12 @@ exports[`Registration Operators Should render the operator form 1`] = `
     >
       <div
         className="py-4 px-4  w-full  lg:mx-auto "
+=======
+      className="py-8  md:flex md:justify-center"
+    >
+      <div
+        className="block bg-white rounded  p-2 w-full lg:max-w-3xl shadow-lg min-h-[70vh] mr-4"
+>>>>>>> 753acfa (adds crud operations for buses)
       >
         <div
           className="block mb-4 xl:flex md:grid md:grid-cols-2 md:gap-2"
