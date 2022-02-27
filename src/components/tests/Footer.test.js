@@ -1,22 +1,29 @@
 import React from 'react';
+import { Provider } from 'react-redux';
 import { BrowserRouter } from 'react-router-dom';
 import { mount } from 'enzyme';
 import renderer from 'react-test-renderer';
+import { store } from '../../redux/store.js';
 import Footer from '../Footer.js';
 
 const wrapper = mount(
+  <Provider store={store}>
   <BrowserRouter>
-    <Footer />
-  </BrowserRouter>
+  <Footer />
+</BrowserRouter>
+</Provider>
 );
 
 describe('Footer', () => {
   it('should render Footer', () => {
     const footer = renderer
       .create(
-        <BrowserRouter>
+        <Provider store={store}>
+          <BrowserRouter>
           <Footer />
         </BrowserRouter>
+        </Provider>
+        
       )
       .toJSON();
     expect(footer).toMatchSnapshot();

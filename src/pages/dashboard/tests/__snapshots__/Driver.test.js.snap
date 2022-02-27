@@ -8,17 +8,8 @@ exports[`Driver Registration  Should render only the driver form 1`] = `
     className="w-full bg-grey-lightest "
   >
     <div
-      className="py-8  md:flex"
+      className="py-8  md:flex md:justify-center"
     >
-      <div
-        className="mr-2 hidden lg:block md:w-1/2"
-      >
-        <img
-          alt=" Bus IMG"
-          className=" h-50  w-full max-w-lg md:w-70 md:w-full lg:mx-auto lg:h-full"
-          src="busMap.png"
-        />
-      </div>
       <div
         className="block bg-white rounded  p-2 w-full lg:max-w-3xl shadow-lg min-h-[70vh] mr-4"
       >

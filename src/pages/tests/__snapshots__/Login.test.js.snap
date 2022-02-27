@@ -30,6 +30,11 @@ exports[`Login snapshot test should render Login 1`] = `
           Login
         </h2>
         <p
+          className="font-bold text-sm font-raleway"
+        >
+          
+        </p>
+        <p
           className="font-bold text-sm py-1"
         >
           
@@ -83,7 +88,6 @@ exports[`Login snapshot test should render Login 1`] = `
         </a>
         <button
           className="bg-primary px-5 py-2 rounded-md text-white w-fit mx-auto hover:bg-hover transition-all hover:transition-all"
-          id="login-btn"
         >
           Login
         </button>

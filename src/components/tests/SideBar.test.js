@@ -3,14 +3,19 @@ import renderer from 'react-test-renderer';
 import { mount } from 'enzyme';
 import { MemoryRouter } from 'react-router-dom';
 import SideBar from '../SideBar.js';
+import { Provider } from 'react-redux';
+import { store } from '../../redux/store.js';
 
 describe('SideBar', () => {
   it('should render the SideBar component', () => {
     const elem = renderer
       .create(
-        <MemoryRouter>
-          <SideBar />)
-        </MemoryRouter>
+        <Provider store={store}>
+          <MemoryRouter>
+          <SideBar />
+        </MemoryRouter> 
+        </Provider>
+       
       )
       .toJSON();
     expect(elem).toMatchSnapshot();
@@ -19,9 +24,12 @@ describe('SideBar', () => {
   it('It should test the logout function', () => {
     const logout = jest.fn();
     const component = mount(
-      <MemoryRouter>
+      <Provider store={store}>
+        <MemoryRouter>
         <SideBar logout={logout()} />
       </MemoryRouter>
+      </Provider>
+      
     );
     const button = component.find('#logout');
     button.simulate('click');
