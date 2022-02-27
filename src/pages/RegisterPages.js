@@ -6,11 +6,9 @@ function RegisterOperatorPage() {
   return <RegisterOperator />;
 }
 
-function RegisterDriverPage(){
-  return <RegisterDrivers />
+function RegisterDriverPage() {
+  return <RegisterDrivers />;
 }
 
-
-
-export  {RegisterOperatorPage};
-export { RegisterDriverPage}
+export { RegisterOperatorPage };
+export { RegisterDriverPage };

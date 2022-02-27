@@ -77,9 +77,8 @@ exports[`DriverProfile should render the DriverProfile component 1`] = `
                   src="manageIcon.png"
                 />
                 <a
-                  aria-current="page"
-                  className="py-1 px-2 font-bold my-1  cursor-pointer w-full active"
-                  href="/#p"
+                  className="py-1 px-2 font-bold my-1  cursor-pointer w-full"
+                  href="/management"
                   onClick={[Function]}
                 >
                   <li>
@@ -97,7 +96,7 @@ exports[`DriverProfile should render the DriverProfile component 1`] = `
                 />
                 <a
                   className="py-1 px-2 font-bold my-1  cursor-pointer w-full"
-                  href="/dashboard/profile"
+                  href="/profile"
                   onClick={[Function]}
                 >
                   <li>

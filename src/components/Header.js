@@ -1,14 +1,27 @@
-import React, { forwardRef } from 'react';
+import React, { forwardRef, useState } from 'react';
+import { useSelector } from 'react-redux';
 import { Link } from 'react-router-dom';
-import Button from './Button.js';
-import Burger from './Burger.js';
-import MobileMenu from './MobileMenu.js';
-import LanguageButton from './LanguageButton.js';
 import phantom from '../assets/phantom.png';
 import xmark from '../assets/xmark.svg';
+import Burger from './Burger.js';
+import Button from './Button.js';
+import LanguageButton from './LanguageButton.js';
+import MobileMenu from './MobileMenu.js';
 import withClickOutside from './WithClickOutside.js';
 
 const Header = forwardRef(({ open, setOpen }, ref) => {
+  const { authenticated, user } = useSelector((state) => state?.auth);
+  const [style, setStyle] = useState('hidden');
+  const [icon, setIcon] = useState(<Burger />);
+  const handleToggleMenu = () => {
+    if (style === 'hidden') {
+      setStyle('flex z-50');
+      setIcon(<img src={xmark} alt="x mark" className="w-6" />);
+    } else {
+      setStyle('hidden');
+      setIcon(<Burger />);
+    }
+  };
   return (
     <div className="flex bg-background border-b-4 pb-4 sticky top-0 z-20">
       <div>
@@ -21,13 +34,13 @@ const Header = forwardRef(({ open, setOpen }, ref) => {
         </Link>
       </div>
       <div className="hidden md:flex xl:flex ml-auto mr-20">
-        <Link to="/login">
+        <Link to={!authenticated ? '/login' : '/dashboard'}>
           <Button
-            name="For operators"
+            name={!authenticated ? 'For operators' : 'Dashboard'}
             styles="bg-primary hover:bg-hover text-white rounded-xl mt-5 ml-6"
           />
         </Link>
-
+      
         <Link to="/tracking-page">
           <Button
             name="Track Bus"

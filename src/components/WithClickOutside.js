@@ -1,4 +1,4 @@
-import React, { useState, useRef, useEffect, useCallback } from 'react';
+import React, { useCallback, useEffect, useRef, useState } from 'react';
 import { useLocation } from 'react-router-dom';
 
 const WithClickOutside = (WrappedComponent) => {
@@ -23,9 +23,8 @@ const WithClickOutside = (WrappedComponent) => {
     }, []);
 
     useEffect(() => {
-      setOpen(false);
+      open && setOpen(false);
     }, [location.key]);
-
     const [newRef] = setRef();
 
     return <WrappedComponent open={open} setOpen={setOpen} ref={newRef} />;

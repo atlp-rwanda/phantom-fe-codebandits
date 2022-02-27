@@ -1,11 +1,12 @@
 import React from 'react';
 
-const Button = ({ name, styles }) => {
+const Button = ({ name, styles, onClick }) => {
   return (
     <div>
       <button
         type="submit"
         className={`${styles} rounded-xl py-2 text-base md:text-sm px-5`}
+        onClick={onClick}
       >
         {name}
       </button>

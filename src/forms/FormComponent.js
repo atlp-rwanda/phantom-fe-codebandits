@@ -3,7 +3,6 @@ import { List } from 'react-content-loader';
 import { useForm } from 'react-hook-form';
 import { useNavigate } from 'react-router-dom';
 import { ButtonA as Button } from '../components/Button.js';
-import busMap from '../images/busMap.png';
 import LabelComponent from '../components/LabelComponent.js';
 export const FormComponent = ({ type, inputs = [], callback, redirect }) => {
   const navigate = useNavigate();
@@ -27,14 +26,7 @@ export const FormComponent = ({ type, inputs = [], callback, redirect }) => {
   return (
     <div className="font-sans antialiased bg-grey-lightest">
       <div className="w-full bg-grey-lightest ">
-        <div className="py-8  md:flex">
-          <div className="mr-2 hidden lg:block md:w-1/2">
-            <img
-              src={busMap}
-              alt=" Bus IMG"
-              className=" h-50  w-full max-w-lg md:w-70 md:w-full lg:mx-auto lg:h-full"
-            />
-          </div>
+        <div className="py-8  md:flex md:justify-center">
           <div className="block bg-white rounded  p-2 w-full lg:max-w-3xl shadow-lg min-h-[70vh] mr-4">
             {loading ? (
               <div className="flex items-center justify-center mx-auto h-full w-full">

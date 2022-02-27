@@ -1,5 +1,6 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
+import { toast } from 'react-toastify';
 import SideBar from '../components/SideBar.js';
 
 const Account = () => {
@@ -29,14 +30,12 @@ const Account = () => {
               </Link>
             </div>
             <div className="flex">
-              <div>
-                <Link
-                  to="/dashboard/operator/register"
-                  className="m-2 py-1 px-3 bg-primary rounded-md"
-                >
-                  Register Operator
-                </Link>
-              </div>
+              <Link
+                to="/dashboard/operator/register"
+                className="m-2 py-1 px-3 bg-primary rounded-md"
+              >
+                Register Operator
+              </Link>
               <Link
                 to="/dashboard/operator/update"
                 className="m-2 py-1 px-3 bg-gray-500 rounded-md"
