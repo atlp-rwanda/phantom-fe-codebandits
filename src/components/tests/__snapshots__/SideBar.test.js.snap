@@ -3,6 +3,7 @@
 exports[`SideBar should render the SideBar component 1`] = `
 <div
 <<<<<<< HEAD
+<<<<<<< HEAD
   className="relative z-10 md:z-0 h-full "
 >
   <main
@@ -45,6 +46,22 @@ exports[`SideBar should render the SideBar component 1`] = `
           className="rounded-full mx-auto flex items-center justify-center h-12 w-12 mb-5"
         >
 >>>>>>> c2588e0 (adds crud operations for buses)
+=======
+  className="relative z-10"
+>
+  <main
+    className="hidden md:flex lg:flex xl:flex flex text-sm"
+  >
+    <aside
+      className="border-r-2 h-full sticky top-0 px-8 py-4 bg-gray-100 transition-transform"
+    >
+      <div
+        className=" mb-6"
+      >
+        <span
+          className="rounded-full mx-auto flex items-center justify-center h-12 w-12 mb-5"
+        >
+>>>>>>> 3737ce0 (Add the click outside functionality)
           <img
             alt="Image"
             className="rounded-full object-cover h-12 w-12"
@@ -52,6 +69,7 @@ exports[`SideBar should render the SideBar component 1`] = `
           />
         </span>
         <div
+<<<<<<< HEAD
 <<<<<<< HEAD
           className="text-center font-black text-lg"
         >
@@ -200,6 +218,49 @@ exports[`SideBar should render the SideBar component 1`] = `
               </li>
             </a>
           </div>
+=======
+          className="text-center font-black text-md"
+        >
+          <h1>
+            NGABO Patrick
+          </h1>
+          <div>
+            <h1
+              className="font-bold"
+            >
+              Operator
+            </h1>
+          </div>
+        </div>
+      </div>
+      <div>
+        <h2
+          className="mb-2 text-lg font-black"
+        >
+          Account
+        </h2>
+        <ul
+          className="mb-2"
+        >
+          <div
+            className="flex justify-center items-center hover:bg-gray-200 py-1"
+          >
+            <img
+              alt="icon"
+              className="w-6"
+              src="dashboardIcon.png"
+            />
+            <a
+              className="py-1 px-2 font-bold my-1  cursor-pointer w-full"
+              href="/account"
+              onClick={[Function]}
+            >
+              <li>
+                Dashboard
+              </li>
+            </a>
+          </div>
+>>>>>>> 3737ce0 (Add the click outside functionality)
           <div
             className="flex justify-center items-center hover:bg-gray-200 py-1"
           >
@@ -297,7 +358,10 @@ exports[`SideBar should render the SideBar component 1`] = `
         <div>
           <button
             className="bg-red px-6 py-1 hover:bg-red-600 bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded-xl m-2 "
+<<<<<<< HEAD
 >>>>>>> c2588e0 (adds crud operations for buses)
+=======
+>>>>>>> 3737ce0 (Add the click outside functionality)
             onClick={[Function]}
             type="submit"
           >
@@ -312,6 +376,7 @@ exports[`SideBar should render the SideBar component 1`] = `
   >
     <button
       className="md:hidden lg:hidden xl:hidden"
+<<<<<<< HEAD
 <<<<<<< HEAD
       id="button"
       onClick={[Function]}
@@ -329,6 +394,8 @@ exports[`SideBar should render the SideBar component 1`] = `
         <div
           className=" ml-2 bg-black h-1 w-7 bg-primary mt-1"
 =======
+=======
+>>>>>>> 3737ce0 (Add the click outside functionality)
       onClick={[Function]}
       type="button"
     >
@@ -341,7 +408,10 @@ exports[`SideBar should render the SideBar component 1`] = `
         />
         <div
           className="ml-2 bg-black h-1 w-7 bg-primary mt-1"
+<<<<<<< HEAD
 >>>>>>> c2588e0 (adds crud operations for buses)
+=======
+>>>>>>> 3737ce0 (Add the click outside functionality)
         />
       </div>
     </button>

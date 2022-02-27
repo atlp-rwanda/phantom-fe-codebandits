@@ -33,6 +33,7 @@ exports[`Login snapshot test should render Login 1`] = `
           className="font-bold text-sm font-raleway"
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
         />
 =======
         >
@@ -44,6 +45,11 @@ exports[`Login snapshot test should render Login 1`] = `
           
         </p>
 >>>>>>> c2588e0 (adds crud operations for buses)
+=======
+        >
+          
+        </p>
+>>>>>>> 3737ce0 (Add the click outside functionality)
         <p
           className="font-bold text-sm py-1"
         >

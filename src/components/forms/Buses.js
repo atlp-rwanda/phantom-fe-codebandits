@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React, { useState } from 'react';
 import Button from '../Button.js';
 import { useForm } from 'react-hook-form';
@@ -6,10 +7,19 @@ import busesDB from '../../database/busesDB.json';
 
 const Buses = ({ formTitle, formAction }) => {
   const [plateNumber, setPlateNumber] = useState(null);
+=======
+import React from 'react';
+import Button from '../Button.js';
+import { useForm } from 'react-hook-form';
+import { toast } from 'react-toastify';
+
+const Buses = ({ formTitle, successToastMessage }) => {
+>>>>>>> 3737ce0 (Add the click outside functionality)
   const {
     register,
     handleSubmit,
     formState: { errors }
+<<<<<<< HEAD
   } = useForm({
     reValidateMode: 'onChange',
     mode: 'onChange'
@@ -30,6 +40,11 @@ const Buses = ({ formTitle, formAction }) => {
 
   const handlePlateNumber = (e) => {
     console.log(e.target.value);
+=======
+  } = useForm();
+  const onValid = () => {
+    toast({ successToastMessage }, { type: 'success' });
+>>>>>>> 3737ce0 (Add the click outside functionality)
   };
   const inputClassStyles = 'rounded-sm px-3 py-3 mb-2 bg-[#EFEFEF]';
   return (
@@ -45,6 +60,7 @@ const Buses = ({ formTitle, formAction }) => {
         <select
           name="busType"
           id="busType"
+<<<<<<< HEAD
           {...register('busType')}
           className={inputClassStyles}
         >
@@ -52,6 +68,17 @@ const Buses = ({ formTitle, formAction }) => {
           <option value="Coaster">Coaster</option>
           <option value="Minibus">Minibus</option>
           <option value="Big Bus">Big Bus</option>
+=======
+          className={inputClassStyles}
+          {...register('busType', {
+            required: 'Bus type is required'
+          })}
+        >
+          <option hidden>Select bus type</option>
+          <option value="coaster">Coaster</option>
+          <option value="minibus">Minibus</option>
+          <option value="bigBus">Big Bus</option>
+>>>>>>> 3737ce0 (Add the click outside functionality)
         </select>
         <p className="text-red-800">
           {errors?.busType && errors.busType.message}
@@ -59,6 +86,7 @@ const Buses = ({ formTitle, formAction }) => {
         <label htmlFor="busType" className="font-bold mb-2">
           Company
         </label>
+<<<<<<< HEAD
         <select
           name="company"
           id="company"
@@ -69,6 +97,13 @@ const Buses = ({ formTitle, formAction }) => {
           <option value="KBS">Kigali Bus Service</option>
           <option value="Royal_express">Royal Express</option>
           <option value="Virunga_express">Virunga Express</option>
+=======
+        <select name="company" id="busType" className={inputClassStyles}>
+          <option hidden>Select company</option>
+          <option value="kbs">Kigali Bus Service</option>
+          <option value="royal_express">Royal Express</option>
+          <option value="virunga_express">Virunga Express</option>
+>>>>>>> 3737ce0 (Add the click outside functionality)
         </select>
         <label htmlFor="seats" className="font-bold mb-2">
           Seats
@@ -98,11 +133,18 @@ const Buses = ({ formTitle, formAction }) => {
           className={inputClassStyles}
           name="plateNumber"
           {...register('plateNumber', {
+<<<<<<< HEAD
             onChange: handlePlateNumber,
             required: 'Bus plate number is required',
             pattern: {
               value: /^[A-Za-z0-9]*$/,
               message: 'Enter a valid plate number'
+=======
+            required: 'Bus plate number is required',
+            pattern: {
+              value: /^\d*$/,
+              message: 'Enter a valid number'
+>>>>>>> 3737ce0 (Add the click outside functionality)
             }
           })}
         />
