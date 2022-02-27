@@ -1,24 +1,14 @@
-import React, { useState } from 'react';
+import React, { forwardRef } from 'react';
 import { Link } from 'react-router-dom';
+import Button from './Button.js';
+import Burger from './Burger.js';
+import MobileMenu from './MobileMenu.js';
+import LanguageButton from './LanguageButton.js';
 import phantom from '../assets/phantom.png';
 import xmark from '../assets/xmark.svg';
-import Burger from './Burger.js';
-import Button from './Button.js';
-import LanguageButton from './LanguageButton.js';
-import MobileMenu from './MobileMenu.js';
+import withClickOutside from './WithClickOutside.js';
 
-const Header = () => {
-  const [style, setStyle] = useState('hidden');
-  const [icon, setIcon] = useState(<Burger />);
-  const handleToggleMenu = () => {
-    if (style === 'hidden') {
-      setStyle('flex z-50');
-      setIcon(<img src={xmark} alt="x mark" className="w-6" />);
-    } else {
-      setStyle('hidden');
-      setIcon(<Burger />);
-    }
-  };
+const Header = forwardRef(({ open, setOpen }, ref) => {
   return (
     <div className="flex bg-background border-b-4 pb-4 sticky top-0 z-20">
       <div>
@@ -44,18 +34,23 @@ const Header = () => {
         />
         <LanguageButton styles="mt-8" />
       </div>
-      <div className="flex flex-col absolute right-0 bg-background px-2">
+      <section
+        ref={ref}
+        className="flex flex-col absolute right-0 bg-background px-2"
+      >
         <button
           type="button"
           className="md:hidden xl:hidden ml-auto mr-12 mt-8"
-          onClick={handleToggleMenu}
+          onClick={() => setOpen(!open)}
         >
-          {icon}
+          {!open && <Burger />}
+          {open && <img src={xmark} alt="xmark" className="w-6 mb-2" />}
         </button>
-        <MobileMenu styles={style} />
-      </div>
+
+        {open && <MobileMenu />}
+      </section>
     </div>
   );
-};
+});
 
-export default Header;
+export default withClickOutside(Header);

@@ -60,7 +60,7 @@ exports[`LandingPage should render LandingPage 1`] = `
       className=" flex flex-col lg:flex-row xl:flex-row mt-12 mb-32"
     >
       <div
-        className="xl:justify-start xl:pt-2 border w-52 h-52 px-4 text-center flex flex-col justify-center items-center rounded-lg shadow-md hover:bg-hover2"
+        className="xl:justify-start xl:pt-2 border w-52 h-52 px-4 text-center flex flex-col justify-center items-center rounded-lg shadow-md"
       >
         <img
           alt="start"
@@ -79,7 +79,7 @@ exports[`LandingPage should render LandingPage 1`] = `
         </p>
       </div>
       <div
-        className="my-28 lg:my-0 xl:my-0 lg:mx-32 xl:mx-32 border w-52 h-52 px-4 text-center flex flex-col justify-center items-center rounded-lg shadow-md hover:bg-hover2"
+        className="my-28 lg:my-0 xl:my-0 lg:mx-32 xl:mx-32 border w-52 h-52 px-4 text-center flex flex-col justify-center items-center rounded-lg shadow-md"
       >
         <img
           alt="locator"
@@ -98,7 +98,7 @@ exports[`LandingPage should render LandingPage 1`] = `
         </p>
       </div>
       <div
-        className="undefined border w-52 h-52 px-4 text-center flex flex-col justify-center items-center rounded-lg shadow-md hover:bg-hover2"
+        className="undefined border w-52 h-52 px-4 text-center flex flex-col justify-center items-center rounded-lg shadow-md"
       >
         <img
           alt="globe"

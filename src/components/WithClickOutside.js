@@ -1,6 +1,6 @@
 import React, { useState, useRef, useEffect } from 'react';
 
-const Wrapper = (WrappedComponent) => {
+const WithClickOutside = (WrappedComponent) => {
   const Component = () => {
     const [open, setOpen] = useState(false);
 
@@ -21,4 +21,4 @@ const Wrapper = (WrappedComponent) => {
   return Component;
 };
 
-export default Wrapper;
+export default WithClickOutside;

@@ -1,29 +1,22 @@
-import React, { useState } from 'react';
+import React, { forwardRef } from 'react';
 import dropdown from '../assets/dropdown.png';
 import LanguageDropdown from './LanguageDropdown.js';
+import withClickOutside from './WithClickOutside.js';
 
-const LanguageButton = ({ styles }) => {
-  const [style, setStyle] = useState('hidden');
-  const handleDropdown = () => {
-    if (style === 'hidden') {
-      setStyle('flex');
-    } else {
-      setStyle('hidden');
-    }
-  };
+const LanguageButton = forwardRef(({ open, setOpen, styles }, ref) => {
   return (
-    <div>
+    <div ref={ref}>
       <button
         type="button"
-        onClick={handleDropdown}
-        className={`${styles} flex py-2 px-4 text-lg`}
+        className={`${styles} lg:mt-8 xl:mt-8 flex py-2 px-4 text-lg hover:font-bold`}
+        onClick={() => setOpen(!open)}
       >
         <h1>English</h1>
         <img src={dropdown} alt="dropdown" className="w-3 mt-3 ml-2 h-2" />
       </button>
-      <LanguageDropdown styles={`${style} absolute py-2 ml-4 w-fit`} />
+      {open && <LanguageDropdown styles="absolute py-2 ml-4 w-fit" />}
     </div>
   );
-};
+});
 
-export default LanguageButton;
+export default withClickOutside(LanguageButton);

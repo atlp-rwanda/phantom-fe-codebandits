@@ -1,0 +1,5 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<WithClickOutside /> functions test the Component function 1`] = `[MockFunction]`;
+
+exports[`withClickOutside should render withClickOutside 1`] = `null`;
