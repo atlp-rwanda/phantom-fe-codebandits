@@ -16,6 +16,7 @@ export const LabelComponent = ({ name, htmlFor }) => {
     </label>
   );
 };
+export const sleep = (ms) => new Promise((resolve) => setTimeout(resolve, ms));
 
 function RegisterOperator() {
   let navigate = useNavigate();
@@ -36,6 +37,7 @@ function RegisterOperator() {
       navigate('/dashboard/operator');
     }, 3000);
   };
+  
 
   const onErrors = () => {};
 

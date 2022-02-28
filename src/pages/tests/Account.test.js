@@ -9,11 +9,11 @@ describe('Account', () => {
   it('should render Account', () => {
     const elem = renderer
       .create(
-        <div>
+        <Provider store={store}>
           <BrowserRouter>
             <Account />
           </BrowserRouter>
-        </div>
+        </Provider>
       )
       .toJSON();
     expect(elem).toMatchSnapshot();
