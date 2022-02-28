@@ -1,13 +1,10 @@
-import React, { useState, useEffect } from 'react';
-import validator from 'validator';
-import { ButtonA as Button } from '../components/Button.js';
-import buses from '../images/buses.jpg';
-import Input from '../components/Input.js';
-import busMap from '../images/busMap.png';
-import { useForm } from 'react-hook-form';
-import { toast } from 'react-toastify';
-import { useNavigate } from 'react-router-dom';
+import React, { useState } from 'react';
 import { List } from 'react-content-loader';
+import { useForm } from 'react-hook-form';
+import { useNavigate } from 'react-router-dom';
+import { toast } from 'react-toastify';
+import { ButtonA as Button } from '../components/Button.js';
+import busMap from '../images/busMap.png';
 
 export const LabelComponent = ({ name, htmlFor }) => {
   return (
@@ -36,7 +33,7 @@ function RegisterOperator() {
     setTimeout(async () => {
       setloading(false);
       toast('The new operator has been added');
-      navigate('/dahboard/operator');
+      navigate('/dashboard/operator');
     }, 3000);
   };
 

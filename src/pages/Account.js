@@ -38,14 +38,14 @@ const Account = () => {
             This is the notification board for logged in user
           </h1>
           <Link
-            to="/register-driver"
+            to="/dashboard/driver/register"
             className="m-2 py-1 px-3 bg-primary rounded-md"
           >
             Register Driver
           </Link>
           <Link
-            to="/register-operator"
-            className="m-2 py-1 px-3 bg-cancel rounded-md"
+            to="/dashboard/operator/register"
+            className="m-2 py-1 px-3 bg-gray-500 rounded-md"
           >
             Register Operator
           </Link>
