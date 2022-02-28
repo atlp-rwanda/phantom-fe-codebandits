@@ -17,7 +17,7 @@ exports[`Login should render Login 1`] = `
       <img
         alt="vector image of a bus on map"
         className="w-full object-cover "
-        src={null}
+        src="busMap.png"
       />
     </section>
     <section

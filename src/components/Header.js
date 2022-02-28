@@ -40,6 +40,7 @@ const Header = forwardRef(({ open, setOpen }, ref) => {
       >
         <button
           type="button"
+          id="toggle"
           className="md:hidden xl:hidden ml-auto mr-12 mt-8"
           onClick={() => setOpen(!open)}
         >

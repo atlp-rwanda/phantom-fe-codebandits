@@ -44,7 +44,7 @@ exports[`LandingPage should render LandingPage 1`] = `
     >
       <img
         alt="Bus"
-        src={null}
+        src="bus.png"
       />
     </div>
   </div>
@@ -65,7 +65,7 @@ exports[`LandingPage should render LandingPage 1`] = `
         <img
           alt="start"
           className="w-12 mt-4"
-          src={null}
+          src="start.png"
         />
         <h3
           className="font-raley mt-2 font-extrabold text-sm"
@@ -84,7 +84,7 @@ exports[`LandingPage should render LandingPage 1`] = `
         <img
           alt="locator"
           className="w-12 mt-4"
-          src={null}
+          src="locator.png"
         />
         <h3
           className="font-raley mt-2 font-extrabold text-sm"
@@ -103,7 +103,7 @@ exports[`LandingPage should render LandingPage 1`] = `
         <img
           alt="globe"
           className="w-12 mt-4"
-          src={null}
+          src="globe.svg"
         />
         <h3
           className="font-raley mt-2 font-extrabold text-sm"

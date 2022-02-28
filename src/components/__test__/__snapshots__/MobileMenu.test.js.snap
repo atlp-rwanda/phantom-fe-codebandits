@@ -37,7 +37,7 @@ exports[`MobileMenu should render Mobile menu 1`] = `
       <img
         alt="dropdown"
         className="w-3 mt-3 ml-2 h-2"
-        src={null}
+        src="dropdown.png"
       />
     </button>
   </div>

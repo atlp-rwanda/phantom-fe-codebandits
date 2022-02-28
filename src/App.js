@@ -13,13 +13,12 @@ import { store } from './redux/store.js';
 function App() {
   const [loading, setLoading] = useState(false);
 
-  // Load this effect on mount
   useEffect(() => {
     setLoading(true);
     const timer = setTimeout(() => {
       setLoading(false);
     }, 3000);
-    // Cancel the timer while unmounting
+
     return () => clearTimeout(timer);
   }, []);
 

@@ -26,15 +26,28 @@
       "<rootDir>/tests/setupTests.js"
     ],
     "moduleNameMapper": {
-      "\\.(css|scss|png|jpg|svg)$": "identity-obj-proxy"
+      "\\.(css|scss)$": "identity-obj-proxy"
+    },
+    "transform": {
+      "\\.(js|jsx)$": "babel-jest",
+      "\\.(jpg|jpeg|png|svg)$": "<rootDir>/config/jest/fileMock.js"
     },
     "coverageReporters": [
-      "text-summary",
-      "lcov"
+      "json",
+      "lcov",
+      "text"
+    ],
+    "collectCoverageFrom": [
+      "src/**/*.{js,jsx}"
+    ],
+    "coveragePathIgnorePatterns":[
+      "<rootDir>/src/index.js",
+      "<rootDir>/src/server.js"
     ],
     "collectCoverage": true,
     "testEnvironment": "jsdom"
   },
+  
   "repository": {
     "type": "git",
     "url": "git+https://github.com/atlp-rwanda/phantom-fe-codebandits.git"

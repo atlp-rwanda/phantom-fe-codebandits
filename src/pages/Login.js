@@ -5,7 +5,7 @@ import { toast } from 'react-toastify';
 import busMapImg from '../assets/busMap.png';
 
 const Login = () => {
-  let navigate = useNavigate();
+  const navigate = useNavigate();
   const [err, setErr] = useState('');
   const [attempts, setAttempts] = useState(0);
   const {
@@ -93,7 +93,7 @@ const Login = () => {
             </h4>
             {attempts > 5 ? (
               <button
-                disabled={true}
+                disabled
                 className="bg-red-500 px-5 py-2 rounded-md text-white w-fit mx-auto hover:bg-red-900 transition-all hover:transition-all"
               >
                 Unlock in 5 minutes

@@ -12,7 +12,7 @@ exports[`Header should render Header 1`] = `
       <img
         alt="Phantom"
         className="w-44 xl:w-60 ml-8 xl:ml-20 mt-7 mb-2"
-        src={null}
+        src="phantom.png"
       />
     </a>
   </div>
@@ -52,7 +52,7 @@ exports[`Header should render Header 1`] = `
         <img
           alt="dropdown"
           className="w-3 mt-3 ml-2 h-2"
-          src={null}
+          src="dropdown.png"
         />
       </button>
     </div>
@@ -62,6 +62,7 @@ exports[`Header should render Header 1`] = `
   >
     <button
       className="md:hidden xl:hidden ml-auto mr-12 mt-8"
+      id="toggle"
       onClick={[Function]}
       type="button"
     >

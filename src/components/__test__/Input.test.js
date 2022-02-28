@@ -1,10 +1,10 @@
 import React from 'react';
 import renderer from 'react-test-renderer';
-import Card from '../Card.js';
+import Input from '../Input.js';
 
-describe('Card', () => {
-  it('should render Card', () => {
-    const elem = renderer.create(<Card />).toJSON();
+describe('Input', () => {
+  it('should render Input', () => {
+    const elem = renderer.create(<Input />).toJSON();
     expect(elem).toMatchSnapshot();
   });
 });

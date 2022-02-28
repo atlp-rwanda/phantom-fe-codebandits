@@ -1,5 +1,6 @@
 import React from 'react';
-import { BrowserRouter } from 'react-router-dom';
+import { mount } from 'enzyme';
+import { MemoryRouter } from 'react-router-dom';
 import renderer from 'react-test-renderer';
 import Header from '../Header.js';
 
@@ -7,11 +8,44 @@ describe('Header', () => {
   it('should render Header', () => {
     const elem = renderer
       .create(
-        <BrowserRouter>
+        <MemoryRouter>
           <Header />
-        </BrowserRouter>
+        </MemoryRouter>
       )
       .toJSON();
     expect(elem).toMatchSnapshot();
+  });
+
+  // it('It should test the setOpen function', () => {
+  //   const setOpen = jest.fn();
+  //   const wrapper = mount(
+  //     <MemoryRouter>
+  //       <Header setOpen={setOpen} />
+  //     </MemoryRouter>
+  //   );
+  //   const button = wrapper.find('#toggle');
+  //   button.simulate('click');
+  //   expect(setOpen).toBeCalledTimes(1);
+  // });
+
+  it('It should test the open status', () => {
+    const open = true;
+    const wrapper = mount(
+      <MemoryRouter>
+        <Header open={open} />
+      </MemoryRouter>
+    );
+    const img = wrapper.find('img');
+    expect(img.length).toEqual(2);
+  });
+  it('It should test the not open status', () => {
+    const open = false;
+    const wrapper = mount(
+      <MemoryRouter>
+        <Header open={open} />
+      </MemoryRouter>
+    );
+    const img = wrapper.find('img');
+    expect(img.length).toEqual(2);
   });
 });
