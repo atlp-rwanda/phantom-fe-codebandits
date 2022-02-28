@@ -34,7 +34,7 @@ exports[`Intro should render Intro 1`] = `
     <div>
       <button
         className="bg-primary hover:bg-hover text-white rounded-3xl mt-12 px-12 xl:px-12 py-2 ml-28 md:ml-48 xl:ml-64 rounded-xl py-3 text-base md:text-sm lg:text-lg xl:text-lg px-5"
-        type="button"
+        type="submit"
       >
         Start
       </button>

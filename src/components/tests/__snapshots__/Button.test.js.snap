@@ -4,7 +4,7 @@ exports[`Button it should render Button 1`] = `
 <div>
   <button
     className="undefined rounded-xl py-3 text-base md:text-sm lg:text-lg xl:text-lg px-5"
-    type="button"
+    type="submit"
   />
 </div>
 `;

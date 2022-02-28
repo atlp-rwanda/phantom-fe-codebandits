@@ -1,11 +1,11 @@
 import React from 'react';
 
-const Burger = () => {
+const Burger = ({ styles }) => {
   return (
     <div>
-      <div className="h-1 w-7 bg-primary mt-1" />
-      <div className="h-1 w-7 bg-primary mt-1" />
-      <div className="h-1 w-7 bg-primary mt-1" />
+      <div className={`${styles} h-1 w-7 bg-primary mt-1`} />
+      <div className={`${styles} h-1 w-7 bg-primary mt-1`} />
+      <div className={`${styles} h-1 w-7 bg-primary mt-1`} />
     </div>
   );
 };

@@ -13,7 +13,7 @@ exports[`MobileMenu should render Mobile menu 1`] = `
         <div>
           <button
             className="bg-primary hover:bg-hover text-white text-md rounded-xl my-2 px-8 py-3 rounded-xl py-3 text-base md:text-sm lg:text-lg xl:text-lg px-5"
-            type="button"
+            type="submit"
           >
             For operators
           </button>
@@ -24,7 +24,7 @@ exports[`MobileMenu should render Mobile menu 1`] = `
   <div>
     <button
       className="border border-primary bg-background hover:bg-hover2 text-primary rounded-xl mt-2 mb-4 px-11 py-3 rounded-xl py-3 text-base md:text-sm lg:text-lg xl:text-lg px-5"
-      type="button"
+      type="submit"
     >
       Track Bus
     </button>
@@ -34,17 +34,17 @@ exports[`MobileMenu should render Mobile menu 1`] = `
       className=" md:mt-8 bg-background border outline-none md:ml-6 lg:ml-6 xl:ml-6 lg:mt-8 xl:mt-8 flex py-2 px-4 text-lg hover:font-bold"
     >
       <option
-        className=" border-none bg-background w-full cursor-pointer hover:font-bold"
+        className=" border-none bg-background w-full cursor-pointer"
       >
         English
       </option>
       <option
-        className=" border-none bg-background w-full cursor-pointer hover:font-bold"
+        className=" border-none bg-background w-full cursor-pointer"
       >
         French
       </option>
       <option
-        className=" border-none bg-background cursor-pointer hover:font-bold"
+        className=" border-none bg-background cursor-pointer"
       >
         Kinyarwanda
       </option>

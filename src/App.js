@@ -6,7 +6,8 @@ import 'react-toastify/dist/ReactToastify.css';
 import './app.css';
 import Footer from './components/Footer.js';
 import Header from './components/Header.js';
-import SkeletonScreen from './components/SkeletonScreen.js';
+import SideBar from './components/SideBar.js';
+import SkeletonScreen from './components/SkeletonUIs/SkeletonScreen.js';
 import DashboardRoute from './DashboardRoutes.js';
 import Account from './pages/Account.js';
 import AccountRouter from './pages/accounts/AccountRouter.js';
@@ -36,6 +37,7 @@ function App() {
                   path="/accounts/*"
                   element={<AccountRouter />}
                 />
+                <Route path="/sidebar" element={<SideBar />} />
               </Routes>
               <Footer />
             </BrowserRouter>

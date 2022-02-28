@@ -4,11 +4,12 @@ import React from 'react';
 import { Provider } from 'react-redux';
 import { BrowserRouter } from 'react-router-dom';
 import renderer from 'react-test-renderer';
+import LabelComponent from '../../components/LabelComponent.js';
 import Driver from '../../pages/dashboard/Driver.js';
 import Operator from '../../pages/dashboard/Operator.js';
+import RegisterDriver from '../../pages/forms/RegisterDrivers.js';
+import RegisterOperator from '../../pages/forms/RegisterOperator.js';
 import { store } from '../../redux/store.js';
-import RegisterDriver from '../RegisterDrivers.js';
-import RegisterOperator, { LabelComponent } from '../RegisterOperator.js';
 
 describe('Registration', () => {
   describe('Operators', () => {

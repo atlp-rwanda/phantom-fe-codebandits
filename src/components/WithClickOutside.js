@@ -1,23 +1,31 @@
-import React, { useCallback, useEffect, useRef, useState } from 'react';
+import React, { useState, useRef, useEffect, useCallback } from 'react';
 import { useLocation } from 'react-router-dom';
 
 const WithClickOutside = (WrappedComponent) => {
   const Component = () => {
-    let location = useLocation();
     const [open, setOpen] = useState(false);
-    const ref = useRef(null);
-    const handleClickOutside = (e) => {
-      !ref.current.contains(e.target) && setOpen(false);
-    };
-    const setRef = useCallback((node) => {
-      ref.current && document.addEventListener('mousedown', handleClickOutside);
+    const location = useLocation();
 
+    const ref = useRef(null);
+
+    const clickOutside = () => {
+      const handleClickOutside = (event) => {
+        if (ref.current && !ref.current.contains(event.target)) {
+          setOpen(false);
+        }
+      };
+      document.addEventListener('mousedown', handleClickOutside);
+    };
+
+    const setRef = useCallback(() => {
+      clickOutside();
       return [ref];
     }, []);
 
     useEffect(() => {
-      open && setOpen(false);
+      setOpen(false);
     }, [location.key]);
+
     const [newRef] = setRef();
 
     return <WrappedComponent open={open} setOpen={setOpen} ref={newRef} />;

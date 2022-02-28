@@ -4,7 +4,7 @@ import codebandits from '../assets/codebandits.png';
 
 const Footer = () => {
   return (
-    <footer className="flex bg-primary xl:justify-center md:text-xl text-background font-sans font-sm py-8 lg:py-2 xl:py-2 mt-auto">
+    <footer className="flex bg-primary z-20 xl:justify-center md:text-xl text-background font-sans font-sm py-8 lg:py-2 xl:py-2 mt-auto">
       <div className="flex flex-col lg:flex-row xl:flex-row px-12 text-center items-center">
         <img
           src={codebandits}
