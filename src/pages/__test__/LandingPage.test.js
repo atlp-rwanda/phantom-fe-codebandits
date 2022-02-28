@@ -9,9 +9,6 @@ describe('Landing page test', () => {
   it('renders without crashing', () => {
     shallow(<LandingPage />);
   });
-});
-
-describe('LandingPage', () => {
   it('should render LandingPage', () => {
     const elem = renderer
       .create(

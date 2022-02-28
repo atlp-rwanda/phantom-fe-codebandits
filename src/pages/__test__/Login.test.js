@@ -20,9 +20,6 @@ describe('Login', () => {
       .toJSON();
     expect(elem).toMatchSnapshot();
   });
-});
-
-describe('<Login /> functions', () => {
   it('test the onValid function', () => {
     const onValid = jest.fn(wrapper.getInstance(), 'onValid');
     expect(onValid).toMatchSnapshot();

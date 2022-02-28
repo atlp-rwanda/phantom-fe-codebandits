@@ -6,7 +6,11 @@ import Burger from '../Burger.js';
 
 describe('Burger Component', () => {
   it('should have three horizontal lines', () => {
-    const wrapper = shallow(<Burger />);
+    const wrapper = shallow(
+      <MemoryRouter>
+        <Burger />
+      </MemoryRouter>
+    );
     const value = wrapper.children().length;
     expect(value).toEqual(3);
   });
