@@ -8,7 +8,7 @@ const LanguageButton = forwardRef(({ open, setOpen, styles }, ref) => {
     <div ref={ref}>
       <button
         type="button"
-        className={`${styles} lg:mt-8 xl:mt-8 flex py-2 px-4 text-lg hover:font-bold`}
+        className={`${styles} md:mt-8 lg:mt-8 xl:mt-8 flex py-2 px-4 text-lg hover:font-bold`}
         onClick={() => setOpen(!open)}
       >
         <h1>English</h1>
