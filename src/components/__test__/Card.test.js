@@ -3,8 +3,8 @@ import renderer from 'react-test-renderer';
 import Card from '../Card.js';
 
 describe('Card', () => {
-  it('should render Card', () => {
-    const elem = renderer.create(<Card />).toJSON();
-    expect(elem).toMatchSnapshot();
+  it('should render the Card component', () => {
+    const card = renderer.create(<Card />).toJSON();
+    expect(card).toMatchSnapshot();
   });
 });

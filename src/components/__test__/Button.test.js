@@ -9,9 +9,9 @@ const button = {
 };
 
 describe('Button', () => {
-  it('should render Button', () => {
-    const elem = renderer.create(<Button />).toJSON();
-    expect(elem).toMatchSnapshot();
+  it('it should render Button', () => {
+    const btn = renderer.create(<Button />).toJSON();
+    expect(btn).toMatchSnapshot();
   });
 });
 

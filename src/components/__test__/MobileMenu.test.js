@@ -5,13 +5,13 @@ import MobileMenu from '../MobileMenu.js';
 
 describe('MobileMenu', () => {
   it('should render Mobile menu', () => {
-    const elem = renderer
+    const mobileMenu = renderer
       .create(
         <BrowserRouter>
           <MobileMenu />
         </BrowserRouter>
       )
       .toJSON();
-    expect(elem).toMatchSnapshot();
+    expect(mobileMenu).toMatchSnapshot();
   });
 });

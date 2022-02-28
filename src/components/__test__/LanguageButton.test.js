@@ -6,8 +6,8 @@ import LanguageButton from '../LanguageButton.js';
 
 describe('LanguageButton', () => {
   it('should render LanguageButton', () => {
-    const elem = renderer.create(<LanguageButton />).toJSON();
-    expect(elem).toMatchSnapshot();
+    const LanguageBtn = renderer.create(<LanguageButton />).toJSON();
+    expect(LanguageBtn).toMatchSnapshot();
   });
   it('It should test the setOpen function', () => {
     const setOpen = jest.fn();

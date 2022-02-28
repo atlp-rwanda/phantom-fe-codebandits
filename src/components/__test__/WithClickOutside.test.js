@@ -6,8 +6,8 @@ const wrapper = renderer.create(<WithClickOutside />);
 
 describe('withClickOutside', () => {
   it('should render withClickOutside', () => {
-    const elem = renderer.create(<WithClickOutside />).toJSON();
-    expect(elem).toMatchSnapshot();
+    const withClickOutside = renderer.create(<WithClickOutside />).toJSON();
+    expect(withClickOutside).toMatchSnapshot();
   });
 });
 

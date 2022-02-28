@@ -4,7 +4,7 @@ import Input from '../Input.js';
 
 describe('Input', () => {
   it('should render Input', () => {
-    const elem = renderer.create(<Input />).toJSON();
-    expect(elem).toMatchSnapshot();
+    const input = renderer.create(<Input />).toJSON();
+    expect(input).toMatchSnapshot();
   });
 });

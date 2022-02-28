@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Button should render Button 1`] = `
+exports[`Button it should render Button 1`] = `
 <div>
   <button
     className="undefined rounded-xl py-3 px-5"

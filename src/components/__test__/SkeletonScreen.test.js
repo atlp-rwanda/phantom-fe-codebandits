@@ -4,7 +4,7 @@ import SkeletonScreen from '../SkeletonScreen.js';
 
 describe('SkeletonScreen', () => {
   it('should render SkeletonScreen', () => {
-    const elem = renderer.create(<SkeletonScreen />).toJSON();
-    expect(elem).toMatchSnapshot();
+    const skelUI = renderer.create(<SkeletonScreen />).toJSON();
+    expect(skelUI).toMatchSnapshot();
   });
 });

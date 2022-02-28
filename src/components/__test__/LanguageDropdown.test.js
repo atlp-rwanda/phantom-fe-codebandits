@@ -10,7 +10,7 @@ describe('LanguageDropdown', () => {
     expect(wrapper.children().length).toEqual(2);
   });
   it('should render Language Dropdown', () => {
-    const elem = renderer.create(<LanguageDropdown />).toJSON();
-    expect(elem).toMatchSnapshot();
+    const LanguageDpdn = renderer.create(<LanguageDropdown />).toJSON();
+    expect(LanguageDpdn).toMatchSnapshot();
   });
 });

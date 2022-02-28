@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Card should render Card 1`] = `
+exports[`Card should render the Card component 1`] = `
 <div
   className="undefined border w-52 h-52 px-4 text-center flex flex-col justify-center items-center rounded-lg shadow-md"
 >

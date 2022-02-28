@@ -6,14 +6,14 @@ import Header from '../Header.js';
 
 describe('Header', () => {
   it('should render Header', () => {
-    const elem = renderer
+    const header = renderer
       .create(
         <MemoryRouter>
           <Header />
         </MemoryRouter>
       )
       .toJSON();
-    expect(elem).toMatchSnapshot();
+    expect(header).toMatchSnapshot();
   });
 
   it('It should test the setOpen function', () => {
