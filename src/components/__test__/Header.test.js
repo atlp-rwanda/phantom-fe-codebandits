@@ -18,12 +18,12 @@ describe('Header', () => {
 
   it('It should test the setOpen function', () => {
     const setOpen = jest.fn();
-    const wrapper = mount(
+    const component = mount(
       <MemoryRouter>
         <Header setOpen={setOpen()} />
       </MemoryRouter>
     );
-    const button = wrapper.find('#toggle');
+    const button = component.find('#toggle');
     button.simulate('click');
     expect(setOpen).toBeCalledTimes(1);
   });

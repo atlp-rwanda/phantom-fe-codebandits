@@ -1,7 +1,5 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`<Account /> functions test the logout function 1`] = `[MockFunction]`;
-
 exports[`Account should render Account 1`] = `
 <div>
   <main

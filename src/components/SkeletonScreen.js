@@ -6,9 +6,9 @@ const SkeletonScreen = () => {
       <header className="flex border-b-4 flex-row items-center h-full justify-center pb-6">
         <div className=" w-44 xl:w-60 ml-8 xl:ml-20 mt-7 mb-2 bg-gray-300 h-12 rounded-md " />
         <div className="hidden md:flex xl:flex ml-auto mr-20">
-          <div className="w-32 bg-gray-300 h-12 rounded-xl mt-7 ml-6 " />
-          <div className="w-32 bg-gray-300 h-12 rounded-xl mt-7 ml-6 px-6 " />
-          <div className="w-24 bg-gray-300 h-6 rounded-xl mt-12 ml-6 px-6 " />
+          <span className="w-32 bg-gray-300 h-12 rounded-xl mt-7 ml-6 " />
+          <span className="w-32 bg-gray-300 h-12 rounded-xl mt-7 ml-6 px-6 " />
+          <span className="w-24 bg-gray-300 h-6 rounded-xl mt-12 ml-6 px-6 " />
         </div>
         <div className="w-8 h-6 bg-gray-300 md:hidden xl:hidden ml-auto mr-12 mt-4" />
       </header>
