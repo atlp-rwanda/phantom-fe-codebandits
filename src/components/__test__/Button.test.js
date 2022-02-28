@@ -13,9 +13,6 @@ describe('Button', () => {
     const btn = renderer.create(<Button />).toJSON();
     expect(btn).toMatchSnapshot();
   });
-});
-
-describe('Button', () => {
   it('accepts button props', () => {
     const wrapper = mount(<Button props={button} />);
     expect(wrapper.props().props).toEqual(button);

@@ -1,5 +1,6 @@
 import React from 'react';
 import { BrowserRouter } from 'react-router-dom';
+import { shallow } from 'enzyme';
 import renderer from 'react-test-renderer';
 import Footer from '../Footer.js';
 
@@ -13,5 +14,14 @@ describe('Footer', () => {
       )
       .toJSON();
     expect(footer).toMatchSnapshot();
+  });
+  it('contains one child elements element', () => {
+    const wrapper = shallow(
+      <BrowserRouter>
+        <Footer />
+      </BrowserRouter>
+    );
+    const value = wrapper.children().length;
+    expect(value).toEqual(1);
   });
 });
