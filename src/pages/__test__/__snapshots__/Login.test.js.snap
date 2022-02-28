@@ -1,7 +1,5 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`<Login /> functions test the onErros function 1`] = `[MockFunction]`;
-
 exports[`<Login /> functions test the onValid function 1`] = `[MockFunction]`;
 
 exports[`Login should render Login 1`] = `

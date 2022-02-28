@@ -27,8 +27,4 @@ describe('<Login /> functions', () => {
     const onValid = jest.fn(wrapper.getInstance(), 'onValid');
     expect(onValid).toMatchSnapshot();
   });
-  it('test the onErros function', () => {
-    const onErros = jest.fn(wrapper.getInstance(), 'onErros');
-    expect(onErros).toMatchSnapshot();
-  });
 });

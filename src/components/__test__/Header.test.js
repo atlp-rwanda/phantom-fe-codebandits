@@ -38,14 +38,4 @@ describe('Header', () => {
     const img = wrapper.find('img');
     expect(img.length).toEqual(2);
   });
-  it('It should test the not open status', () => {
-    const open = false;
-    const wrapper = mount(
-      <MemoryRouter>
-        <Header open={open} />
-      </MemoryRouter>
-    );
-    const img = wrapper.find('img');
-    expect(img.length).toEqual(2);
-  });
 });
