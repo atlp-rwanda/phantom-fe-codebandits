@@ -10,7 +10,5 @@ function RegisterDriverPage(){
   return <RegisterDrivers />
 }
 
-
-
 export  {RegisterOperatorPage};
 export { RegisterDriverPage}

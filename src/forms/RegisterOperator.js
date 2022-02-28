@@ -85,11 +85,7 @@ function RegisterOperator() {
   };
 
   return (
-    <div>
-   
-      <div className="font-sans antialiased bg-grey-lightest">
-        <div className="w-full bg-grey-lightest ">
-          <div className="py-8  md:flex">
+    <div className='font-sans antialiased bg-grey-lightest py-8  md:flex'>
             <div className="mr-2 hidden lg:block md:w-1/2">
               <img src={busMap} alt=" Bus IMG" className=" h-50  w-full max-w-lg md:w-70 md:w-full lg:mx-auto lg:h-full" />
             </div>
@@ -108,23 +104,14 @@ function RegisterOperator() {
                     <div className="ml-1 xl:w-1/2">
                       <Input type="text" name="LastName"  labelName="Last Name"  placeholder="Enter operator last name" id="lastName"
                         value={formValues.LastName}
-                        onChange={handleChange}
-                      />
+                        onChange={handleChange} />
                       <p className="text-red-800">{formErrors.LastName}</p>
                     </div>
                   </div>
 
                   <div className="block mb-4 xl:flex md:grid md:grid-cols-2  md:gap-2">
                     <div className="mr-1 xl:w-1/2">
-                      <Input
-                        type="text"
-                        name="Email"
-                        labelName="Email"
-                        placeholder="Enter operator email"
-                        id="email"
-                        value={formValues.Email}
-                        onChange={handleChange}
-                      />
+                      <Input type="text"  name="Email"  labelName="Email"  placeholder="Enter operator email" id="email" value={formValues.Email} onChange={handleChange} />
                       <p className="text-red-800">{formErrors.Email}</p>
                     </div>
 
@@ -157,9 +144,7 @@ function RegisterOperator() {
                         placeholder="Select operator company"
                         className="appearance-none border rounded w-full py-2 px-3 text-grey-darker bg-gray-200"
                       >
-                        <option className="text-grey-darker">
-                          Select company
-                        </option>
+                        <option className="text-grey-darker">Select company</option>
                         <option value="">Royal Express Limited </option>
                         <option value=""> City Express Limited </option>
                         <option value="">KIGALI BUS SERVICES</option>
@@ -198,10 +183,8 @@ function RegisterOperator() {
                 </div>
               </form>
             </div>
-          </div>
         </div>
-      </div>
-    </div>
+  
   );
 }
 
