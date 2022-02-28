@@ -1,7 +1,5 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`<Login /> functions test the onValid function 1`] = `[MockFunction]`;
-
 exports[`Login should render Login 1`] = `
 <div
   className=" z-0 h-full"
@@ -86,3 +84,5 @@ exports[`Login should render Login 1`] = `
   </main>
 </div>
 `;
+
+exports[`Login test the onValid function 1`] = `[MockFunction]`;
