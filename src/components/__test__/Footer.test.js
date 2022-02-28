@@ -1,8 +1,14 @@
 import React from 'react';
 import { BrowserRouter } from 'react-router-dom';
-import { shallow } from 'enzyme';
+import { mount } from 'enzyme';
 import renderer from 'react-test-renderer';
 import Footer from '../Footer.js';
+
+const wrapper = mount(
+  <BrowserRouter>
+    <Footer />
+  </BrowserRouter>
+);
 
 describe('Footer', () => {
   it('should render Footer', () => {
@@ -16,11 +22,6 @@ describe('Footer', () => {
     expect(footer).toMatchSnapshot();
   });
   it('contains one child elements element', () => {
-    const wrapper = shallow(
-      <BrowserRouter>
-        <Footer />
-      </BrowserRouter>
-    );
     const value = wrapper.children().length;
     expect(value).toEqual(1);
   });
