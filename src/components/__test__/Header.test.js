@@ -16,17 +16,17 @@ describe('Header', () => {
     expect(elem).toMatchSnapshot();
   });
 
-  // it('It should test the setOpen function', () => {
-  //   const setOpen = jest.fn();
-  //   const wrapper = mount(
-  //     <MemoryRouter>
-  //       <Header setOpen={setOpen} />
-  //     </MemoryRouter>
-  //   );
-  //   const button = wrapper.find('#toggle');
-  //   button.simulate('click');
-  //   expect(setOpen).toBeCalledTimes(1);
-  // });
+  it('It should test the setOpen function', () => {
+    const setOpen = jest.fn();
+    const wrapper = mount(
+      <MemoryRouter>
+        <Header setOpen={setOpen()} />
+      </MemoryRouter>
+    );
+    const button = wrapper.find('#toggle');
+    button.simulate('click');
+    expect(setOpen).toBeCalledTimes(1);
+  });
 
   it('It should test the open status', () => {
     const open = true;

@@ -1,26 +1,18 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import { Provider } from 'react-redux';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import './app.css';
 import Footer from './components/Footer.js';
 import Header from './components/Header.js';
-import SkeletonScreen from './components/SkeletonScreen.js';
 import Account from './pages/Account.js';
 import LandingPage from './pages/LandingPage.js';
 import Login from './pages/Login.js';
 import { store } from './redux/store.js';
+import { useLoader } from './useLoader.js';
+import SkeletonScreen from './components/SkeletonScreen.js';
 
 function App() {
-  const [loading, setLoading] = useState(false);
-
-  useEffect(() => {
-    setLoading(true);
-    const timer = setTimeout(() => {
-      setLoading(false);
-    }, 3000);
-
-    return () => clearTimeout(timer);
-  }, []);
+  const { loading } = useLoader();
 
   return (
     <div className="App">
