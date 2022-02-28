@@ -1,131 +1,158 @@
 import React, { useState, useEffect } from 'react';
 import validator from 'validator';
-import {ButtonA as Button} from '../components/Button.js';
+import { ButtonA as Button } from '../components/Button.js';
 import buses from '../images/buses.jpg';
 import Input from '../components/Input.js';
 import busMap from '../images/busMap.png';
+import { useForm } from 'react-hook-form';
+import { toast } from 'react-toastify';
+import { useNavigate } from 'react-router-dom';
+import { List } from 'react-content-loader';
 
+export const LabelComponent = ({ name, htmlFor }) => {
+  return (
+    <label
+      className="block text-grey-darker text-sm font-bold font-rale  mb-2"
+      htmlFor={htmlFor}
+    >
+      {name}
+    </label>
+  );
+};
 
 function RegisterOperator() {
-  const initialValues = {
-    FirstName: '',
-    LastName: '',
-    Email: '',
-    MobileNumber: '',
-    Address: '',
-    NationalId: ''
-  };
-  const [formValues, setFormValues] = useState(initialValues);
-  const [formErrors, setFormErros] = useState({});
-  const [isSubmit, setIsSubmit] = useState(false);
+  let navigate = useNavigate();
+  const [operator, setOperator] = useState(null);
+  const [loading, setloading] = useState(false);
+  const {
+    register,
+    handleSubmit,
+    formState: { errors }
+  } = useForm();
 
-  const handleChange = (e) => {
-    const { name, value } = e.target;
-    setFormValues({ ...formValues, [name]: value });
-    console.log(formValues);
-  };
-
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    setFormErros(validateForm(formValues));
-    setIsSubmit(true);
+  const onValid = (data) => {
+    setloading(true);
+    setOperator(operator);
+    setTimeout(async () => {
+      setloading(false);
+      toast('The new operator has been added');
+      navigate('/dahboard/operator');
+    }, 3000);
   };
 
-  useEffect(() => {
-    if (Object.keys(formErrors).length === 0 && isSubmit) {
-      console.log(formValues);
-    }
-  }, [formErrors]);
+  const onErrors = () => {};
 
-  const validateForm = (values) => {
-    const errors = {};
+  const namePattern = /^([a-zA-Z]+\s)*[a-zA-Z]+$/;
 
-    const validateEmail = (value) => {
-      if (!values.Email) {
-        errors.Email = 'Email is required';
-      } else if (!validator.isEmail(value)) {
-        errors.Email = errors.Email = 'Wrong Email';
-      }
-    };
-    validateEmail(values.Email);
-
-    const namePattern = /^([a-zA-Z]+\s)*[a-zA-Z]+$/;
-
-    if (!values.FirstName) {
-      errors.FirstName = 'First name is required';
-    } else if (!values.FirstName.match(namePattern)) {
-      errors.FirstName = 'Enter a valid name';
-    }
-
-    if (!values.LastName) {
-      errors.LastName = 'Last name is required';
-    } else if (!values.LastName.match(namePattern)) {
-      errors.LastName = 'Enter valid name';
-    }
-
-    const phoneRegex = /(0|7|8)\d{9}$/;
-    if (!values.MobileNumber) {
-      errors.MobileNumber = 'Mobile number is required';
-    } else if (!values.MobileNumber.match(phoneRegex)) {
-      errors.MobileNumber = 'Enter valid phone number';
-    }
-
-    if (!values.Address) {
-      errors.Address = 'Address is required';
-    }
-
-    const IdRegex = /^[1-3](19|20)\d{2}[7-8]\d{7}[0-9]\d{2}$/;
-    if (!values.NationalId) {
-      errors.NationalId = 'Id is required';
-    } else if (!values.NationalId.match(IdRegex)) {
-      errors.NationalId = 'Nationa Id must be 16 numbers and valid';
-    }
-
-    return errors;
-  };
+  const inpuStyles =
+    'appearance-none border font-rale rounded w-full py-2 px-3 text-grey-darker bg-gray-200 text-md outline-hidden';
 
   return (
-    <div className='font-sans antialiased bg-grey-lightest py-8  md:flex'>
-            <div className="mr-2 hidden lg:block md:w-1/2">
-              <img src={busMap} alt=" Bus IMG" className=" h-50  w-full max-w-lg md:w-70 md:w-full lg:mx-auto lg:h-full" />
+    <div className="font-sans antialiased bg-grey-lightest py-8  md:flex">
+      <div className="mr-2 hidden lg:block md:w-1/2">
+        <img
+          src={busMap}
+          alt=" Bus IMG"
+          className=" h-50  w-full max-w-lg md:w-70 md:w-full lg:mx-auto lg:h-full"
+        />
+      </div>
+      <div className="block bg-white rounded  p-2 w-full lg:max-w-3xl shadow-lg min-h-[70vh] ">
+        <div className="py-4 px-8 text-black font-bold lg:px-4 md:px-4">
+          <h1 className="text-center  text-2xl  font-rale font-bold md:ml-0 md:text-left">
+            Register Operator
+          </h1>
+        </div>
+        <div className="py-4 px-4  w-full  lg:mx-auto ">
+          <div className="block mb-4 xl:flex md:grid md:grid-cols-2 md:gap-2">
+            <div className="mr-1 xl:w-1/2 ">
+              <Input
+                type="text"
+                name="FirstName"
+                labelName="First Name"
+                placeholder="Enter operator first name"
+                id="firstName"
+                value={formValues.FirstName}
+                onChange={handleChange}
+              />
+              <p className="text-red-800">{formErrors.FirstName}</p>
             </div>
-            <div className="block bg-white rounded  p-2 w-full lg:max-w-3xl shadow-lg min-h-[70vh] ">
-              <div className="py-4 px-8 text-black font-bold lg:px-4 md:px-4">
-               <h1 className='text-center  text-2xl  font-rale font-bold md:ml-0 md:text-left'>Register Operator</h1> 
-              </div>
-              <form onSubmit={handleSubmit} >
-                <div className="py-4 px-4  w-full  lg:mx-auto ">
-                  <div className="block mb-4 xl:flex md:grid md:grid-cols-2 md:gap-2">
-                    <div className="mr-1 xl:w-1/2 ">
-                      <Input type="text"  name="FirstName"  labelName="First Name"  placeholder="Enter operator first name" id="firstName" value={formValues.FirstName}   onChange={handleChange}  />
-                      <p className="text-red-800">{formErrors.FirstName}</p>
-                    </div>
 
-                    <div className="ml-1 xl:w-1/2">
-                      <Input type="text" name="LastName"  labelName="Last Name"  placeholder="Enter operator last name" id="lastName"
-                        value={formValues.LastName}
-                        onChange={handleChange} />
-                      <p className="text-red-800">{formErrors.LastName}</p>
-                    </div>
+            <div className="ml-1 xl:w-1/2">
+              <Input
+                type="text"
+                name="LastName"
+                labelName="Last Name"
+                placeholder="Enter operator last name"
+                id="lastName"
+                value={formValues.LastName}
+                onChange={handleChange}
+              />
+              <p className="text-red-800">{formErrors.LastName}</p>
+            </div>
+          </div>
+          <form onSubmit={handleSubmit(onValid, onErrors)}>
+            <div className="py-4 px-4  w-full  lg:mx-auto ">
+              <div className="block mb-4 xl:flex md:grid md:grid-cols-2 md:gap-2">
+                <div className="mr-1 xl:w-1/2 ">
+                  <div className="mb-2 block font-raleway">
+                    <LabelComponent
+                      htmlFor={'firstname'}
+                      name={'First Name'}
+                    ></LabelComponent>
+                    <input
+                      type="text"
+                      name="FirstName"
+                      className={inpuStyles}
+                      placeholder="Ex: Yves"
+                      id="firstName"
+                      {...register('FirstName', {
+                        required: 'First name is required',
+                        pattern: {
+                          value: namePattern,
+                          message: 'Invalid firstname'
+                        }
+                      })}
+                    />
                   </div>
 
                   <div className="block mb-4 xl:flex md:grid md:grid-cols-2  md:gap-2">
                     <div className="mr-1 xl:w-1/2">
-                      <Input type="text"  name="Email"  labelName="Email"  placeholder="Enter operator email" id="email" value={formValues.Email} onChange={handleChange} />
+                      <Input
+                        type="text"
+                        name="Email"
+                        labelName="Email"
+                        placeholder="Enter operator email"
+                        id="email"
+                        value={formValues.Email}
+                        onChange={handleChange}
+                      />
                       <p className="text-red-800">{formErrors.Email}</p>
                     </div>
 
                     <div className="ml-1 xl:w-1/2">
-                      <Input
+                      <div className="mb-2 block font-raleway">
+                        <LabelComponent
+                          htmlFor={'lastname'}
+                          name={'Last Name'}
+                        ></LabelComponent>
+                      </div>
+                      <input
                         type="text"
-                        name="MobileNumber"
-                        labelName="Mobile Number"
-                        placeholder="Enter operator mobile number"
-                        id="mobileNumber"
-                        value={formValues.MobileNumber}
-                        onChange={handleChange}
+                        name="LastName"
+                        className={inpuStyles}
+                        placeholder="Hakuzimana"
+                        id="lastName"
+                        {...register('LastName', {
+                          required: 'Last name is required',
+                          pattern: {
+                            value: namePattern,
+                            message: 'Invalid last name'
+                          }
+                        })}
                       />
-                      <p className="text-red-800">{formErrors.MobileNumber}</p>
+                      <p className="text-red-800">
+                        {errors?.LastName && errors.LastName.message}
+                      </p>
                     </div>
                   </div>
 
@@ -144,7 +171,9 @@ function RegisterOperator() {
                         placeholder="Select operator company"
                         className="appearance-none border rounded w-full py-2 px-3 text-grey-darker bg-gray-200"
                       >
-                        <option className="text-grey-darker" hidden>Select company</option>
+                        <option className="text-grey-darker" hidden>
+                          Select company
+                        </option>
                         <option value="">Royal Express Limited </option>
                         <option value=""> City Express Limited </option>
                         <option value="">KIGALI BUS SERVICES</option>
@@ -163,27 +192,96 @@ function RegisterOperator() {
                       <p className="text-red-800">{formErrors.Address}</p>
                     </div>
                   </div>
-
-                  <div className="mb-4">
-                    <div className="w-full mr-3 flex flex-col">
-                      <Input
-                        type="text"
-                        name="NationalId"
-                        labelName="National Id"
-                        placeholder="Enter operator national ID number"
-                        id="nationalId"
-                        onChange={handleChange}
-                      />
-                      <p className="text-red-800">{formErrors.NationalId}</p>
-                    </div>
-                  </div>
-                  <div className="flex justify-center align">
-                    <Button name="Register Operator" type="submit" />
-                  </div>
+                  <p className="text-red-800">
+                    {errors?.mobileNumber && errors.mobileNumber.message}
+                  </p>
                 </div>
-              </form>
+              </div>
+
+              <div className="block mb-4 xl:flex md:grid md:grid-cols-2  md:gap-2">
+                <div className="mr-1 xl:w-1/2">
+                  <label
+                    htmlFor="company"
+                    name="Company"
+                    className="block text-grey-darker text-sm font-bold mb-2"
+                  >
+                    Company
+                  </label>
+                  <select
+                    id="company"
+                    placeholder="Select operator company"
+                    className="appearance-none border rounded w-full py-2 px-3 text-grey-darker bg-gray-200"
+                    required
+                  >
+                    <option className="text-grey-darker">Select company</option>
+                    <option value="">Royal Express Limited </option>
+                    <option value=""> City Express Limited </option>
+                    <option value="">KIGALI BUS SERVICES</option>
+                  </select>
+                </div>
+                <div className="ml-1 xl:w-1/2 ">
+                  <div className="mb-2 block font-raleway">
+                    <LabelComponent
+                      htmlFor={'address'}
+                      name={'Address'}
+                    ></LabelComponent>
+                    <input
+                      type="text"
+                      name="address"
+                      className={inpuStyles}
+                      placeholder="Nyamirambo, Kigali"
+                      id="address"
+                      {...register('address', {
+                        required: 'Address is required',
+                        pattern: {
+                          value: /^[A-Za-z][A-Za-z]{3,99}$/,
+                          message: 'Invalid address'
+                        }
+                      })}
+                    />
+                  </div>
+
+                  <p className="text-red-800">
+                    {errors?.address && errors.address.message}
+                  </p>
+                </div>
+              </div>
+
+              <div className="mb-4">
+                <div className="w-full mr-3 flex flex-col">
+                  <LabelComponent
+                    htmlFor={'nationalId'}
+                    name={'National ID'}
+                  ></LabelComponent>
+                  <input
+                    type="text"
+                    name="nationalid"
+                    className={inpuStyles}
+                    placeholder="1 1997 80020002 1 20"
+                    id="nationalId"
+                    {...register('nationalid', {
+                      required: 'ID is required',
+                      pattern: {
+                        value: /^[1-3](19|20)\d{2}[7-8]\d{7}[0-9]\d{2}$/,
+                        message: 'National Id must be 16 numbers and valid'
+                      }
+                    })}
+                  />
+                  <p className="text-red-800">
+                    {' '}
+                    {errors?.nationalid && errors.nationalid.message}
+                  </p>
+                </div>
+              </div>
+              <div className="flex justify-center align">
+                {!loading && <Button name="Register Operator" type="submit" />}
+                {loading && <Button name="Loading" type="submit" />}
+              </div>
             </div>
+          </form>
         </div>
+      </div>
+    </div>
   );
 }
 

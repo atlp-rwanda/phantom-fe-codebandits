@@ -2,6 +2,7 @@ import React from 'react';
 import { Provider } from 'react-redux';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import './app.css';
+import { ToastContainer } from 'react-toastify';
 import Footer from './components/Footer.js';
 import Header from './components/Header.js';
 import Account from './pages/Account.js';
@@ -12,17 +13,24 @@ import {
   RegisterDriverPage,
   RegisterOperatorPage
 } from './pages/RegisterPages.js';
+import 'react-toastify/dist/ReactToastify.css';
+import DashboardRoute from './DashboardRoutes.js';
 
 function App() {
   const { loading } = useLoader();
 
   return (
-    <div>
+    <div className="min-h-screen flex flex-col">
       <Provider store={store}>
         <BrowserRouter>
           <Header />
           <Routes>
             <Route path="/" element={<LandingPage />} />
+            <Route
+              exact={false}
+              path="/dashboard/*"
+              element={<DashboardRoute />}
+            />
             <Route path="/login" element={<Login />} />
             <Route path="/account" element={<Account />} />
             <Route
@@ -33,6 +41,7 @@ function App() {
           </Routes>
           <Footer />
         </BrowserRouter>
+        <ToastContainer theme="colored" />
       </Provider>
     </div>
   );
