@@ -144,7 +144,7 @@ function RegisterOperator() {
                         placeholder="Select operator company"
                         className="appearance-none border rounded w-full py-2 px-3 text-grey-darker bg-gray-200"
                       >
-                        <option className="text-grey-darker">Select company</option>
+                        <option className="text-grey-darker" hidden>Select company</option>
                         <option value="">Royal Express Limited </option>
                         <option value=""> City Express Limited </option>
                         <option value="">KIGALI BUS SERVICES</option>
