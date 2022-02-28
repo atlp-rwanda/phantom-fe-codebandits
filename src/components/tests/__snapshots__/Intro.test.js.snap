@@ -12,26 +12,28 @@ exports[`Intro should render Intro 1`] = `
         Track bus location,
       </span>
       <span
-        className="ml-4 md:ml-10"
+        className="md:ml-10 ml-4"
       >
         Save your time.
       </span>
     </h1>
-    <p
+    <div
       className="flex flex-col text-sm md:text-xl xl:text-base mx-20 md:ml-32 xl:ml-52 mt-10"
     >
-      <span>
+      <p>
         Check the location of the buses
-      </span>
-      <span
-        className="ml-4"
-      >
-        on their respective routes
-      </span>
-    </p>
+      </p>
+      <div>
+        <p
+          className="ml-4"
+        >
+          on their respective routes
+        </p>
+      </div>
+    </div>
     <div>
       <button
-        className="bg-primary hover:bg-hover text-white rounded-3xl mt-12 px-12 xl:px-12 py-2 ml-28 md:ml-48 xl:ml-64 rounded-xl py-3 px-5"
+        className="bg-primary hover:bg-hover text-white rounded-3xl mt-12 px-12 xl:px-12 py-2 ml-28 md:ml-48 xl:ml-64 rounded-xl py-3 text-base md:text-sm lg:text-lg xl:text-lg px-5"
         type="button"
       >
         Start

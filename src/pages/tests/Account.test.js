@@ -7,9 +7,11 @@ describe('Account', () => {
   it('should render Account', () => {
     const elem = renderer
       .create(
-        <BrowserRouter>
-          <Account />
-        </BrowserRouter>
+        <div>
+          <BrowserRouter>
+            <Account />
+          </BrowserRouter>
+        </div>
       )
       .toJSON();
     expect(elem).toMatchSnapshot();

@@ -6,18 +6,22 @@ import LanguageButton from './LanguageButton.js';
 const MobileMenu = ({ styles }) => {
   return (
     <div
-      className={`${styles} flex flex-col font-raleway md:hidden lg:hidden xl:hidden border px-4 py-2 mr-6 z-50`}
+      className={`${styles} flex flex-col font-raleway md:hidden lg:hidden xl:hidden border px-8 pt-6 pb-8 mr-6 z-50`}
     >
-      <Link to="/login">
-        <Button
-          name="For operators"
-          styles="bg-primary hover:bg-hover text-white rounded-xl mt-2 px-3 py-2"
-        />
-      </Link>
+      <div>
+        <Link to="/login">
+          <div>
+            <Button
+              name="For operators"
+              styles="bg-primary hover:bg-hover text-white text-md rounded-xl my-2 px-8 py-3"
+            />
+          </div>
+        </Link>
+      </div>
 
       <Button
         name="Track Bus"
-        styles="border border-primary bg-background hover:bg-hover2 text-primary rounded-xl mt-2 px-6 py-2"
+        styles="border border-primary bg-background hover:bg-hover2 text-primary rounded-xl mt-2 mb-4 px-11 py-3"
       />
       <LanguageButton className="mt-2" />
     </div>

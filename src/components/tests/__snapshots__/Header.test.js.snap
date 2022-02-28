@@ -25,7 +25,7 @@ exports[`Header should render Header 1`] = `
     >
       <div>
         <button
-          className="bg-primary hover:bg-hover text-white rounded-xl mt-7 ml-6 rounded-xl py-3 px-5"
+          className="bg-primary hover:bg-hover text-white rounded-xl mt-7 ml-6 rounded-xl py-3 text-base md:text-sm lg:text-lg xl:text-lg px-5"
           type="button"
         >
           For operators
@@ -34,27 +34,32 @@ exports[`Header should render Header 1`] = `
     </a>
     <div>
       <button
-        className="border border-primary bg-background hover:bg-hover2 text-primary rounded-xl mt-7 ml-6 px-6 rounded-xl py-3 px-5"
+        className="border border-primary bg-background hover:bg-hover2 text-primary rounded-xl mt-7 ml-6 px-6 rounded-xl py-3 text-base md:text-sm lg:text-lg xl:text-lg px-5"
         type="button"
       >
         Track Bus
       </button>
     </div>
     <div>
-      <button
-        className="undefined md:mt-8 lg:mt-8 xl:mt-8 flex py-2 px-4 text-lg hover:font-bold"
-        onClick={[Function]}
-        type="button"
+      <select
+        className=" md:mt-8 bg-background border outline-none md:ml-6 lg:ml-6 xl:ml-6 lg:mt-8 xl:mt-8 flex py-2 px-4 text-lg hover:font-bold"
       >
-        <h1>
+        <option
+          className=" border-none bg-background w-full cursor-pointer hover:font-bold"
+        >
           English
-        </h1>
-        <img
-          alt="dropdown"
-          className="w-3 mt-3 ml-2 h-2"
-          src="dropdown.png"
-        />
-      </button>
+        </option>
+        <option
+          className=" border-none bg-background w-full cursor-pointer hover:font-bold"
+        >
+          French
+        </option>
+        <option
+          className=" border-none bg-background cursor-pointer hover:font-bold"
+        >
+          Kinyarwanda
+        </option>
+      </select>
     </div>
   </div>
   <section

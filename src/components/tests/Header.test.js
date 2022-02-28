@@ -36,6 +36,6 @@ describe('Header', () => {
       </MemoryRouter>
     );
     const img = wrapper.find('img');
-    expect(img.length).toEqual(2);
+    expect(img.length).toEqual(1);
   });
 });

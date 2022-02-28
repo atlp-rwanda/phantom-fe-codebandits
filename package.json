@@ -47,7 +47,6 @@
     "collectCoverage": true,
     "testEnvironment": "jsdom"
   },
-  
   "repository": {
     "type": "git",
     "url": "git+https://github.com/atlp-rwanda/phantom-fe-codebandits.git"
