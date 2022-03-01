@@ -5,7 +5,7 @@ import { toast } from 'react-toastify';
 import busMapImg from '../assets/busMap.png';
 
 const Login = () => {
-  let navigate = useNavigate();
+  const navigate = useNavigate();
   const [err, setErr] = useState('');
   const [attempts, setAttempts] = useState(0);
   const {
