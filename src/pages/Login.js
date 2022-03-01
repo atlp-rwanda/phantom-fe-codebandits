@@ -4,7 +4,7 @@ import { useNavigate } from 'react-router-dom';
 import { toast } from 'react-toastify';
 import busMapImg from '../assets/busMap.png';
 
-const Login = ({ onSubmit }) => {
+const Login = () => {
   const navigate = useNavigate();
   const [err, setErr] = useState('');
   const [attempts, setAttempts] = useState(0);
