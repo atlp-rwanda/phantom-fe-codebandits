@@ -12,6 +12,7 @@ import RegisterOperator, {
 
 describe('Registration', () => {
   describe('Operators', () => {
+
     it('Should render the operator form', () => {
       const elem = renderer
         .create(
