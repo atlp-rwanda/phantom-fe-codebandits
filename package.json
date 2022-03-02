@@ -26,11 +26,9 @@
       "<rootDir>/tests/setupTests.js"
     ],
     "moduleNameMapper": {
-      "\\.(css|scss)$": "identity-obj-proxy"
-    },
-    "transform": {
-      "\\.(js|jsx)$": "babel-jest",
-      "\\.(jpg|jpeg|png|svg)$": "<rootDir>/config/jest/fileMock.js"
+      "\\.(css|scss|png|jpg|svg|jpeg)$": "<rootDir>/__mocks__/fileMock.js",
+      "\\.(css|less)$": "<rootDir>/__mocks__/fileMock.js"
+
     },
     "coverageReporters": [
       "json",

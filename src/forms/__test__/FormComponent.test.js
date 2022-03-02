@@ -24,7 +24,7 @@ describe('Form Components and actions', ()=>{
     it('should render a Button of Submit', () => {
         const wrapper = mount(
           <MemoryRouter>
-            <FormComponent called />
+            <FormComponent  />
           </MemoryRouter>
         );
         expect(wrapper.find('Button').length).toEqual(1);
@@ -33,10 +33,10 @@ describe('Form Components and actions', ()=>{
       it('should render a Label Component', () => {
         const wrapper = mount(
           <MemoryRouter>
-            <FormComponent called/>
+            <FormComponent />
           </MemoryRouter>
         );
-        expect(wrapper.find('LabelComponent').length).toEqual(2);
+        expect(wrapper.find('LabelComponent').length).toEqual(7);
       });
 
       it('Test click Event ', ()=>{
