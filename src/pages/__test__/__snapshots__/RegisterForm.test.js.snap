@@ -21,14 +21,15 @@ exports[`Registration Operators Should render the driver form 1`] = `
           />
         </div>
         <div
-          className="block bg-white rounded  p-2 w-full lg:max-w-3xl shadow-lg min-h-[70vh] "
+          className="block bg-white rounded  p-2 w-full lg:max-w-3xl shadow-lg min-h-[70vh] mr-4"
         >
           <div
-            className="py-4 px-8 text-black font-bold lg:px-4 md:px-4"
+            className="py-4 px-8 text-black font-bold lg:px-4 md:px-4 "
           >
             <h1
               className="text-center  text-2xl  font-rale font-bold md:ml-0 md:text-left"
             >
+               
               Register Driver
             </h1>
           </div>
@@ -42,7 +43,7 @@ exports[`Registration Operators Should render the driver form 1`] = `
                 className="block mb-4 xl:flex md:grid md:grid-cols-2 md:gap-2"
               >
                 <div
-                  className="mr-1 xl:w-1/2 "
+                  className="ml-1 xl:w-1/2 "
                 >
                   <div
                     className="mb-2 block font-raleway"
@@ -51,24 +52,27 @@ exports[`Registration Operators Should render the driver form 1`] = `
                       className="block text-grey-darker text-sm font-bold font-rale  mb-2"
                       htmlFor="firstname"
                     >
-                      First Name
+                      First name
                     </label>
                     <input
                       className="appearance-none border font-rale rounded w-full py-2 px-3 text-grey-darker bg-gray-200 text-md outline-hidden"
-                      id="firstName"
-                      name="FirstName"
+                      id="firstname"
+                      name="firstname"
                       onBlur={[Function]}
                       onChange={[Function]}
-                      placeholder="Ex: Yves"
+                      placeholder="Vedaste"
                       type="text"
                     />
                   </div>
                   <p
                     className="text-red-800"
-                  />
+                  >
+                      
+                     
+                  </p>
                 </div>
                 <div
-                  className="ml-1 xl:w-1/2"
+                  className="ml-1 xl:w-1/2 "
                 >
                   <div
                     className="mb-2 block font-raleway"
@@ -77,28 +81,31 @@ exports[`Registration Operators Should render the driver form 1`] = `
                       className="block text-grey-darker text-sm font-bold font-rale  mb-2"
                       htmlFor="lastname"
                     >
-                      Last Name
+                      Last name
                     </label>
+                    <input
+                      className="appearance-none border font-rale rounded w-full py-2 px-3 text-grey-darker bg-gray-200 text-md outline-hidden"
+                      id="lastname"
+                      name="lastname"
+                      onBlur={[Function]}
+                      onChange={[Function]}
+                      placeholder="Hategekimana"
+                      type="text"
+                    />
                   </div>
-                  <input
-                    className="appearance-none border font-rale rounded w-full py-2 px-3 text-grey-darker bg-gray-200 text-md outline-hidden"
-                    id="lastName"
-                    name="LastName"
-                    onBlur={[Function]}
-                    onChange={[Function]}
-                    placeholder="Hakuzimana"
-                    type="text"
-                  />
                   <p
                     className="text-red-800"
-                  />
+                  >
+                      
+                     
+                  </p>
                 </div>
               </div>
               <div
-                className="block mb-4 xl:flex md:grid md:grid-cols-2  md:gap-2"
+                className="block mb-4 xl:flex md:grid md:grid-cols-2 md:gap-2"
               >
                 <div
-                  className="mr-1 xl:w-1/2"
+                  className="ml-1 xl:w-1/2 "
                 >
                   <div
                     className="mb-2 block font-raleway"
@@ -115,25 +122,28 @@ exports[`Registration Operators Should render the driver form 1`] = `
                       name="email"
                       onBlur={[Function]}
                       onChange={[Function]}
-                      placeholder="Ex: example@gmail.com"
+                      placeholder="example@mail.com"
                       type="email"
                     />
                   </div>
                   <p
                     className="text-red-800"
-                  />
+                  >
+                      
+                     
+                  </p>
                 </div>
                 <div
-                  className="ml-1 xl:w-1/2"
+                  className="ml-1 xl:w-1/2 "
                 >
                   <div
                     className="mb-2 block font-raleway"
                   >
                     <label
                       className="block text-grey-darker text-sm font-bold font-rale  mb-2"
-                      htmlFor="mobileNumber"
+                      htmlFor="mobilenumber"
                     >
-                      Mobile Number
+                      Mobile number
                     </label>
                     <input
                       className="appearance-none border font-rale rounded w-full py-2 px-3 text-grey-darker bg-gray-200 text-md outline-hidden"
@@ -147,11 +157,14 @@ exports[`Registration Operators Should render the driver form 1`] = `
                   </div>
                   <p
                     className="text-red-800"
-                  />
+                  >
+                      
+                     
+                  </p>
                 </div>
               </div>
               <div
-                className="block mb-4 xl:flex md:grid md:grid-cols-2  md:gap-2"
+                className="block mb-4 xl:flex md:grid md:grid-cols-2 md:gap-2"
               >
                 <div
                   className="mr-1 xl:w-1/2"
@@ -159,36 +172,48 @@ exports[`Registration Operators Should render the driver form 1`] = `
                   <label
                     className="block text-grey-darker text-sm font-bold mb-2"
                     htmlFor="company"
-                    name="Company"
+                    name="company"
                   >
-                    Company
+                     
+                    Select company
+                     
                   </label>
                   <select
                     className="appearance-none border rounded w-full py-2 px-3 text-grey-darker bg-gray-200"
                     id="company"
-                    placeholder="Select operator company"
+                    placeholder="Select company"
                     required={true}
                   >
                     <option
                       className="text-grey-darker"
                       hidden={true}
                     >
+                       
                       Select company
                     </option>
                     <option
-                      value=""
+                      className="text-grey-darker"
+                      hidden={false}
+                      value="roy"
                     >
-                      Royal Express Limited 
+                       
+                      Royal Express Limited
                     </option>
                     <option
-                      value=""
+                      className="text-grey-darker"
+                      hidden={false}
+                      value="cit"
                     >
-                       City Express Limited 
+                       
+                      City Express Ltd
                     </option>
                     <option
-                      value=""
+                      className="text-grey-darker"
+                      hidden={false}
+                      value="kbs"
                     >
-                      KIGALI BUS SERVICES
+                       
+                      Kigali bus services
                     </option>
                   </select>
                 </div>
@@ -210,63 +235,78 @@ exports[`Registration Operators Should render the driver form 1`] = `
                       name="address"
                       onBlur={[Function]}
                       onChange={[Function]}
-                      placeholder="Nyamirambo, Kigali"
+                      placeholder="Cell, Sector, District"
                       type="text"
                     />
                   </div>
                   <p
                     className="text-red-800"
-                  />
+                  >
+                      
+                     
+                  </p>
                 </div>
               </div>
               <div
                 className="block mb-4 xl:flex md:grid md:grid-cols-2 md:gap-2"
               >
                 <div
-                  className="mr-1 xl:w-1/2"
+                  className="ml-1 xl:w-1/2 "
                 >
-                  <label
-                    className="block text-grey-darker text-sm font-bold font-rale  mb-2"
-                    htmlFor="nationalId"
+                  <div
+                    className="mb-2 block font-raleway"
                   >
-                    National ID
-                  </label>
-                  <input
-                    className="appearance-none border font-rale rounded w-full py-2 px-3 text-grey-darker bg-gray-200 text-md outline-hidden"
-                    id="nationalId"
-                    name="nationalid"
-                    onBlur={[Function]}
-                    onChange={[Function]}
-                    placeholder="1 1997 80020002 1 20"
-                    type="text"
-                  />
+                    <label
+                      className="block text-grey-darker text-sm font-bold font-rale  mb-2"
+                      htmlFor="nationalid"
+                    >
+                      National ID
+                    </label>
+                    <input
+                      className="appearance-none border font-rale rounded w-full py-2 px-3 text-grey-darker bg-gray-200 text-md outline-hidden"
+                      id="nationalid"
+                      name="nationalid"
+                      onBlur={[Function]}
+                      onChange={[Function]}
+                      placeholder="1 119950030880 0 40"
+                      type="text"
+                    />
+                  </div>
                   <p
                     className="text-red-800"
                   >
+                      
                      
                   </p>
                 </div>
                 <div
-                  className=" ml-1 xl:w-1/2 "
+                  className="ml-1 xl:w-1/2 "
                 >
-                  <label
-                    className="block text-grey-darker text-sm font-bold font-rale  mb-2"
-                    htmlFor="license"
+                  <div
+                    className="mb-2 block font-raleway"
                   >
-                    Driver License
-                  </label>
-                  <input
-                    className="appearance-none border font-rale rounded w-full py-2 px-3 text-grey-darker bg-gray-200 text-md outline-hidden"
-                    id="license"
-                    name="license"
-                    onBlur={[Function]}
-                    onChange={[Function]}
-                    placeholder="Enter enter driver license number"
-                    type="text"
-                  />
+                    <label
+                      className="block text-grey-darker text-sm font-bold font-rale  mb-2"
+                      htmlFor="license"
+                    >
+                      Driver License
+                    </label>
+                    <input
+                      className="appearance-none border font-rale rounded w-full py-2 px-3 text-grey-darker bg-gray-200 text-md outline-hidden"
+                      id="license"
+                      name="license"
+                      onBlur={[Function]}
+                      onChange={[Function]}
+                      placeholder="1 119950030880 0 40"
+                      type="text"
+                    />
+                  </div>
                   <p
                     className="text-red-800"
-                  />
+                  >
+                      
+                     
+                  </p>
                 </div>
               </div>
               <div
@@ -311,14 +351,15 @@ exports[`Registration Operators Should render the operator form 1`] = `
           />
         </div>
         <div
-          className="block bg-white rounded  p-2 w-full lg:max-w-3xl shadow-lg min-h-[70vh] "
+          className="block bg-white rounded  p-2 w-full lg:max-w-3xl shadow-lg min-h-[70vh] mr-4"
         >
           <div
-            className="py-4 px-8 text-black font-bold lg:px-4 md:px-4"
+            className="py-4 px-8 text-black font-bold lg:px-4 md:px-4 "
           >
             <h1
               className="text-center  text-2xl  font-rale font-bold md:ml-0 md:text-left"
             >
+               
               Register Operator
             </h1>
           </div>
@@ -332,7 +373,7 @@ exports[`Registration Operators Should render the operator form 1`] = `
                 className="block mb-4 xl:flex md:grid md:grid-cols-2 md:gap-2"
               >
                 <div
-                  className="mr-1 xl:w-1/2 "
+                  className="ml-1 xl:w-1/2 "
                 >
                   <div
                     className="mb-2 block font-raleway"
@@ -341,24 +382,27 @@ exports[`Registration Operators Should render the operator form 1`] = `
                       className="block text-grey-darker text-sm font-bold font-rale  mb-2"
                       htmlFor="firstname"
                     >
-                      First Name
+                      First name
                     </label>
                     <input
                       className="appearance-none border font-rale rounded w-full py-2 px-3 text-grey-darker bg-gray-200 text-md outline-hidden"
-                      id="firstName"
-                      name="FirstName"
+                      id="firstname"
+                      name="firstname"
                       onBlur={[Function]}
                       onChange={[Function]}
-                      placeholder="Ex: Yves"
+                      placeholder="Vedaste"
                       type="text"
                     />
                   </div>
                   <p
                     className="text-red-800"
-                  />
+                  >
+                      
+                     
+                  </p>
                 </div>
                 <div
-                  className="ml-1 xl:w-1/2"
+                  className="ml-1 xl:w-1/2 "
                 >
                   <div
                     className="mb-2 block font-raleway"
@@ -367,28 +411,31 @@ exports[`Registration Operators Should render the operator form 1`] = `
                       className="block text-grey-darker text-sm font-bold font-rale  mb-2"
                       htmlFor="lastname"
                     >
-                      Last Name
+                      Last name
                     </label>
+                    <input
+                      className="appearance-none border font-rale rounded w-full py-2 px-3 text-grey-darker bg-gray-200 text-md outline-hidden"
+                      id="lastname"
+                      name="lastname"
+                      onBlur={[Function]}
+                      onChange={[Function]}
+                      placeholder="Hategekimana"
+                      type="text"
+                    />
                   </div>
-                  <input
-                    className="appearance-none border font-rale rounded w-full py-2 px-3 text-grey-darker bg-gray-200 text-md outline-hidden"
-                    id="lastName"
-                    name="LastName"
-                    onBlur={[Function]}
-                    onChange={[Function]}
-                    placeholder="Hakuzimana"
-                    type="text"
-                  />
                   <p
                     className="text-red-800"
-                  />
+                  >
+                      
+                     
+                  </p>
                 </div>
               </div>
               <div
-                className="block mb-4 xl:flex md:grid md:grid-cols-2  md:gap-2"
+                className="block mb-4 xl:flex md:grid md:grid-cols-2 md:gap-2"
               >
                 <div
-                  className="mr-1 xl:w-1/2"
+                  className="ml-1 xl:w-1/2 "
                 >
                   <div
                     className="mb-2 block font-raleway"
@@ -405,25 +452,28 @@ exports[`Registration Operators Should render the operator form 1`] = `
                       name="email"
                       onBlur={[Function]}
                       onChange={[Function]}
-                      placeholder="Ex: example@provider.com"
+                      placeholder="example@mail.com"
                       type="email"
                     />
                   </div>
                   <p
                     className="text-red-800"
-                  />
+                  >
+                      
+                     
+                  </p>
                 </div>
                 <div
-                  className="ml-1 xl:w-1/2"
+                  className="ml-1 xl:w-1/2 "
                 >
                   <div
                     className="mb-2 block font-raleway"
                   >
                     <label
                       className="block text-grey-darker text-sm font-bold font-rale  mb-2"
-                      htmlFor="mobileNumber"
+                      htmlFor="mobilenumber"
                     >
-                      Mobile Number
+                      Mobile number
                     </label>
                     <input
                       className="appearance-none border font-rale rounded w-full py-2 px-3 text-grey-darker bg-gray-200 text-md outline-hidden"
@@ -437,11 +487,14 @@ exports[`Registration Operators Should render the operator form 1`] = `
                   </div>
                   <p
                     className="text-red-800"
-                  />
+                  >
+                      
+                     
+                  </p>
                 </div>
               </div>
               <div
-                className="block mb-4 xl:flex md:grid md:grid-cols-2  md:gap-2"
+                className="block mb-4 xl:flex md:grid md:grid-cols-2 md:gap-2"
               >
                 <div
                   className="mr-1 xl:w-1/2"
@@ -449,36 +502,48 @@ exports[`Registration Operators Should render the operator form 1`] = `
                   <label
                     className="block text-grey-darker text-sm font-bold mb-2"
                     htmlFor="company"
-                    name="Company"
+                    name="company"
                   >
-                    Company
+                     
+                    Select company
+                     
                   </label>
                   <select
                     className="appearance-none border rounded w-full py-2 px-3 text-grey-darker bg-gray-200"
                     id="company"
-                    placeholder="Select operator company"
+                    placeholder="Select company"
                     required={true}
                   >
                     <option
                       className="text-grey-darker"
                       hidden={true}
                     >
+                       
                       Select company
                     </option>
                     <option
-                      value=""
+                      className="text-grey-darker"
+                      hidden={false}
+                      value="roy"
                     >
-                      Royal Express Limited 
+                       
+                      Royal Express Limited
                     </option>
                     <option
-                      value=""
+                      className="text-grey-darker"
+                      hidden={false}
+                      value="cit"
                     >
-                       City Express Limited 
+                       
+                      City Express Ltd
                     </option>
                     <option
-                      value=""
+                      className="text-grey-darker"
+                      hidden={false}
+                      value="kbs"
                     >
-                      KIGALI BUS SERVICES
+                       
+                      Kigali bus services
                     </option>
                   </select>
                 </div>
@@ -506,7 +571,10 @@ exports[`Registration Operators Should render the operator form 1`] = `
                   </div>
                   <p
                     className="text-red-800"
-                  />
+                  >
+                      
+                     
+                  </p>
                 </div>
               </div>
               <div
@@ -517,22 +585,23 @@ exports[`Registration Operators Should render the operator form 1`] = `
                 >
                   <label
                     className="block text-grey-darker text-sm font-bold font-rale  mb-2"
-                    htmlFor="nationalId"
+                    htmlFor="nationalid"
                   >
                     National ID
                   </label>
                   <input
                     className="appearance-none border font-rale rounded w-full py-2 px-3 text-grey-darker bg-gray-200 text-md outline-hidden"
-                    id="nationalId"
+                    id="nationalid"
                     name="nationalid"
                     onBlur={[Function]}
                     onChange={[Function]}
-                    placeholder="1 1997 80020002 1 20"
+                    placeholder="1 119950030880 0 40"
                     type="text"
                   />
                   <p
                     className="text-red-800"
                   >
+                     
                      
                   </p>
                 </div>

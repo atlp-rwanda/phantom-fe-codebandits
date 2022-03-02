@@ -17,17 +17,11 @@ export const FormComponent = ({ type, inputs, callback, redirect }) => {
 
   const onValid = async (data) => {
     setloading(true);
-
-    await callback(data).then(() => {
-      setloading(false);
-      navigate(redirect);
-    });
+    await callback(data).then(() => { setloading(false); navigate(redirect); });
   };
-  const inpuStyles =
-    'appearance-none border font-rale rounded w-full py-2 px-3 text-grey-darker bg-gray-200 text-md outline-hidden';
+  const inpuStyles = 'appearance-none border font-rale rounded w-full py-2 px-3 text-grey-darker bg-gray-200 text-md outline-hidden';
 
   return (
-    <div>
       <div className="font-sans antialiased bg-grey-lightest">
         <div className="w-full bg-grey-lightest ">
           <div className="py-8  md:flex">
@@ -92,8 +86,7 @@ export const FormComponent = ({ type, inputs, callback, redirect }) => {
                                           );
                                         })}
                                       </select>
-                                    </div>
-                                  );
+                                    </div> );
                                 } else {
                                   return (
                                     <div
@@ -129,14 +122,11 @@ export const FormComponent = ({ type, inputs, callback, redirect }) => {
                                           field.message}
                                       </p>
                                     </div>
-                                  );
-                                }
-                              })}
+                                  )}})};
                             </div>
                           );
                         } else {
                           let field = input[0];
-
                           return (
                             <div className="mb-4" key={field.id}>
                               <div className="w-full mr-3 flex flex-col">
@@ -181,6 +171,5 @@ export const FormComponent = ({ type, inputs, callback, redirect }) => {
           </div>
         </div>
       </div>
-    </div>
   );
 };

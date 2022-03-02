@@ -1,8 +1,11 @@
-import { shallow } from 'enzyme';
 import React from 'react';
+import { shallow } from 'enzyme';
+import { Provider } from 'react-redux';
 import { BrowserRouter } from 'react-router-dom';
 import renderer from 'react-test-renderer';
-import RegisterDriver from '../RegisterDrivers.js';
+import { store } from '../../redux/store.js';
+import Driver from '../../pages/dashboard/Driver.js';
+import Operator from '../../pages/dashboard/Operator.js';
 import RegisterOperator, {
   LabelComponent
 } from '../RegisterOperator.js';
@@ -13,7 +16,7 @@ describe('Registration', () => {
       const elem = renderer
         .create(
           <BrowserRouter>
-            <RegisterOperator />
+            <Operator />
           </BrowserRouter>
         )
         .toJSON();
@@ -22,14 +25,17 @@ describe('Registration', () => {
     it('Should render the driver form', () => {
       const elem = renderer
         .create(
-          <BrowserRouter>
-            <RegisterDriver />
-          </BrowserRouter>
+          <Provider store={store}>
+            <BrowserRouter>
+              <Driver />
+            </BrowserRouter>
+          </Provider>
         )
         .toJSON();
       expect(elem).toMatchSnapshot();
     });
   });
+
   describe('Component', () => {
     const wrapper = shallow(
       <LabelComponent htmlFor={'test'} name={'test'}></LabelComponent>
