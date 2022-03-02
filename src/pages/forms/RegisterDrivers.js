@@ -1,23 +1,33 @@
+import { FormComponent } from '@components/FormComponent.js';
+import axios from '@utils/Api.js';
 import React from 'react';
 import { toast } from 'react-toastify';
-import sleep from '../../utils/sleep.js';
-import { FormComponent } from '../../forms/FormComponent.js';
-import { driverInputs } from '../../forms/FormInputs.js';
+import { driverInputs } from './FormInputs.js';
 
+const registerDriverToDB = async (driverInfo) => {
+  const defaultValues = { assigned_bus: null, assigned_route: null };
+  const fullName = driverInfo.firstname + ' ' + driverInfo.lastname;
+  delete driverInfo.firstname;
+  delete driverInfo.lastname;
+  const fullDriverInfo = JSON.stringify(
+    Object.assign({}, driverInfo, { name: fullName }, defaultValues)
+  );
+  try {
+    await axios.post('/drivers', fullDriverInfo);
+    toast('Driver registered successful', { type: 'success' });
+  } catch (error) {
+    toast('error occured' + error.message, { type: 'error' });
+    return;
+  }
+};
 function RegisterDriver() {
-  const handleDriver = async (data) => {
-    return new Promise(resolve=>{
-      setTimeout(resolve, 3000)
-    })
-  };
-
   return (
     <FormComponent
       inputs={driverInputs}
-      redirect={'/dashboard/driver'}
-      callback={handleDriver}
+      redirect={'/dashboard/management'}
+      callback={registerDriverToDB}
       type={'Register Driver'}
-    ></FormComponent>
+    />
   );
 }
 

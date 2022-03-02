@@ -1,3 +1,4 @@
+import { PrimaryButton } from '@components/Button.js';
 import React from 'react';
 import { Link, useParams } from 'react-router-dom';
 const img =
@@ -22,14 +23,10 @@ function EmailSent() {
           Did not receive the email? Remember to check <b>Junk/Spam</b> folder
         </p>
       </div>
-      <div className="bg-yellow-300 rounded-md text-xs p-2 font-bold">
-        <Link
-          className="text-primary my-2"
-          to={`/accounts/reset-password/${uuid}/${token}`}
-        >
-          Test
-        </Link>
-      </div>
+
+      <Link to={`/`} className={"w-fit my-2"}>
+        <PrimaryButton name={'Home'}/>
+      </Link>
     </>
   );
 }

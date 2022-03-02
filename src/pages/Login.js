@@ -1,26 +1,51 @@
 import React, { useEffect, useState } from 'react';
 import { useForm } from 'react-hook-form';
-import { Link, useNavigate } from 'react-router-dom';
+import { useDispatch } from 'react-redux';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { toast } from 'react-toastify';
 import busMapImg from '../assets/busMap.png';
+import usersDB from '../database/usersDB.json';
+import { loginUser } from '../redux/reducers/authReducer.js';
+import Sleep from '../utils/Sleep.js';
 
 const Login = () => {
-  const navigate = useNavigate();
+  let navigate = useNavigate();
+  let location = useLocation();
+  const dispatch = useDispatch();
   const [err, setErr] = useState('');
   const [attempts, setAttempts] = useState(0);
+  const [loading, setLoading] = useState(false);
+  let from = location?.state || '/dashboard/main';
   const {
     register,
     handleSubmit,
     formState: { errors }
   } = useForm();
 
-  const onValid = () => {
-    toast('Welcome Ivad.', { type: 'success' });
-    navigate('/account');
+  const onValid = (data) => {
+    setLoading(true);
+
+    Sleep(3000).then(() => {
+      const user = usersDB.filter((entry) => {
+        return entry.email === data.email;
+      });
+      if (user.length === 0) {
+        setLoading(false);
+        setErr('Invalid credentials');
+        return toast('Invalid credentials', { type: 'error' });
+      }
+
+      dispatch(loginUser(user[0]));
+      toast(user.name, { type: 'success' });
+      setLoading(false);
+      navigate(from);
+    });
   };
 
-  const onErrors = () => {
-    setAttempts(attempts + 1);
+  const onErrors = (errors) => {
+    if (errors.password && !errors.email) {
+      setAttempts(attempts + 1);
+    }
   };
   useEffect(() => {
     if (attempts > 3 && attempts < 5) {
@@ -47,6 +72,17 @@ const Login = () => {
             onSubmit={handleSubmit(onValid, onErrors)}
           >
             <h2 className="text-2xl mb-5 text-center font-extrabold">Login</h2>
+
+            <p className="font-bold text-sm font-raleway">
+              {from !== '/dashboard/main' && (
+                <div>
+                  <p>Login is required to access:</p>
+                  <p className="font-bold text-green-600 cursor-pointer">
+                    {from}
+                  </p>
+                </div>
+              )}
+            </p>
             <p className="font-bold text-sm py-1">{err}</p>
             <label
               htmlFor="email"
@@ -107,7 +143,7 @@ const Login = () => {
                 id="login-btn"
                 className="bg-primary px-5 py-2 rounded-md text-white w-fit mx-auto hover:bg-hover transition-all hover:transition-all"
               >
-                Login
+                {!loading ? 'Login' : 'Sending...'}
               </button>
             )}
           </form>

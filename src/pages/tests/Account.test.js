@@ -1,7 +1,9 @@
 import { mount } from 'enzyme';
 import React from 'react';
+import { Provider } from 'react-redux';
 import { BrowserRouter, MemoryRouter } from 'react-router-dom';
 import renderer from 'react-test-renderer';
+import { store } from '../../redux/store.js';
 import Account from '../Account.js';
 
 const mockedUsedNavigate = jest.fn();
@@ -14,11 +16,11 @@ describe('Account', () => {
   it('should render the account page', () => {
     const elem = renderer
       .create(
-        <div>
+        <Provider store={store}>
           <BrowserRouter>
             <Account />
           </BrowserRouter>
-        </div>
+        </Provider>
       )
       .toJSON();
     expect(elem).toMatchSnapshot();
@@ -28,9 +30,11 @@ describe('Account', () => {
 describe('Account functionality tests', () => {
   const logoutMock = jest.fn();
   const wrapper = mount(
-    <MemoryRouter>
-      <Account logout={logoutMock()} />
-    </MemoryRouter>
+    <Provider store={store}>
+      <MemoryRouter>
+        <Account logout={logoutMock()} />
+      </MemoryRouter>
+    </Provider>
   );
   const logoutBtn = wrapper.find('#logout');
   it('should call logout function when logout button clicked', () => {

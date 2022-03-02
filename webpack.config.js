@@ -21,6 +21,22 @@ const config = {
     watchFiles: ['./src/**/*.{js,jsx, css, scss}'],
     historyApiFallback: true,
     hot: true
+   
+  },
+  watchOptions: {
+    ignored: ["src/database/database.json"]
+  },
+  resolve: {
+    
+    alias: {
+      '@': path.resolve(__dirname, 'src'),
+      '@pages': path.resolve(__dirname, 'src/pages'),
+      '@components': path.resolve(__dirname, 'src/components'),
+      '@utils': path.resolve(__dirname, 'src/utils'),
+      '@reducers': path.resolve(__dirname, 'src/redux/reducers'),
+      '@forms': path.resolve(__dirname, 'src/forms')
+    },
+    modules: ['node_modules'],
   },
   module: {
     rules: [
@@ -36,6 +52,7 @@ const config = {
       },
       {
         test: /\.css$/i,
+
         use: ['style-loader', 'css-loader', 'postcss-loader']
       },
       {

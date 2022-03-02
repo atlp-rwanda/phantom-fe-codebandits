@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { useForm } from 'react-hook-form';
 import { Link, useNavigate } from 'react-router-dom';
 import { toast } from 'react-toastify';
-import sleep from '../../utils/sleep.js';
+import Sleep from '../../utils/Sleep.js';
 import { Button } from './AccountRouter.js';
 
 const img =
@@ -22,28 +22,17 @@ function ResetFormPage() {
     mode: 'onChange'
   });
 
-  const handleEmail = (email) => {
-    if (email == 'fab@me.com') {
-      sleep(3000).then(() => {
-        toast('You account was found');
-        navigate('/accounts/reset-email/abcd-1234-ghyi-567/123456');
-      });
-    } else {
-      sleep(3000, 'reject')
-        .then(() => {})
-        .catch(() => {
-          setloading(false);
-          toast('Account not found', {
-            theme: 'colored',
-            type: 'error'
-          });
-        });
-    }
+  const handleEmail = () => {
+    Sleep(3000).then(() => {
+      toast('You account was found');
+      setloading(false);
+      navigate('/accounts/reset-email/abcd-1234-ghyi-567/123456');
+    });
   };
 
-  const onSubmit = (data) => {
+  const onSubmit = () => {
     setloading(true);
-    handleEmail(data.email);
+    handleEmail();
   };
 
   return (

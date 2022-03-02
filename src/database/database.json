@@ -1,0 +1,47 @@
+{
+  "buses": [
+    {
+      "busType": "Minibus",
+      "company": "KBS",
+      "seats": "20",
+      "plateNumber": "RAB1234",
+      "driver": "Muhire Girbert",
+      "route": null,
+      "id": 1
+    },
+    {
+      "busType": "Minibus",
+      "company": "Virunga_express",
+      "seats": "30",
+      "plateNumber": "TAN123",
+      "driver": null,
+      "route": null,
+      "id": 3
+    }
+  ],
+  "drivers": [
+    {
+      "id": 2,
+      "name": "Muhire Girbert",
+      "nationalid": "1199721772809249",
+      "mobileNumber": "0788251891",
+      "email": "ctruswell1@histats.com",
+      "license": "1195510237288508",
+      "address": "Kimihurura",
+      "assigned_bus": null,
+      "assigned_route": null
+    },
+    {
+      "email": "driver@me.com",
+      "mobileNumber": "0788498955",
+      "company": "roy",
+      "address": "Nyamirambo",
+      "nationalid": "1199780030880040",
+      "license": "1199780030880040",
+      "name": "Fabrice Hategekimana",
+      "assigned_bus": "RAB1234",
+      "assigned_route": null,
+      "id": 5
+    }
+  ]
+}

@@ -3,15 +3,20 @@ import { NavLink } from 'react-router-dom';
 
 const SideNavLink = ({ image, name, linkTo }) => {
   return (
-    <div className="flex justify-center items-center hover:bg-gray-200 py-1">
-      <img src={image} alt="icon" className="w-6" />
+    <li>
       <NavLink
         to={linkTo}
-        className="py-1 px-2 font-bold my-1  cursor-pointer w-full"
+        className={(navData) =>
+          navData.isActive
+            ? 'py-2 pr-10 pl-4 rounded-full font-bold my-1 bg-gray-400   hover:bg-gray-300 transition-all  cursor-pointer min-w-fit w-full flex items-center'
+            : 'py-2 pr-10 pl-4 rounded-full font-bold my-1  hover:bg-gray-300 transition-all  cursor-pointer min-w-fit w-full flex items-center'
+        }
       >
-        <li>{name}</li>
+        <img src={image} alt="icon" className="w-6 mr-2" />
+
+        <span>{name}</span>
       </NavLink>
-    </div>
+    </li>
   );
 };
 

@@ -30,6 +30,9 @@ exports[`Login snapshot test should render Login 1`] = `
           Login
         </h2>
         <p
+          className="font-bold text-sm font-raleway"
+        />
+        <p
           className="font-bold text-sm py-1"
         >
           

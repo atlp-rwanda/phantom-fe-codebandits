@@ -2,7 +2,7 @@ import React, { useRef, useState } from 'react';
 import { useForm } from 'react-hook-form';
 import { useNavigate } from 'react-router-dom';
 import { toast } from 'react-toastify';
-import sleep from '../../utils/sleep.js';
+import Sleep from '../../utils/Sleep.js';
 
 function ResetNewPassword() {
   const PASS_REGEX = /^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9]).{6,}$/;
@@ -26,7 +26,7 @@ function ResetNewPassword() {
   const onValid = (data) => {
     setloading(true);
     setValid(true);
-    sleep(2000).then(() => {
+    Sleep(2000).then(() => {
       setloading(false);
       toast('Your new password has been created', {
         theme: 'colored',
