@@ -2,6 +2,8 @@ import React from 'react';
 import { Provider } from 'react-redux';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import { ToastContainer } from 'react-toastify';
+
+import ComingSoon from './pages/ComingSoon.js';
 import 'react-toastify/dist/ReactToastify.css';
 import './app.css';
 import SkeletonScreen from './components/SkeletonUIs/SkeletonScreen.js';

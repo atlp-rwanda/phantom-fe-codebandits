@@ -13,7 +13,6 @@ const Button = ({ name, styles, onClick }) => {
     </div>
   );
 };
-
 export const ButtonA = ({ name, onClick, styles, type }) => {
   return (
     <div>

@@ -1,0 +1,32 @@
+{
+  "routes": [
+    {
+      "destination1": "Remera",
+      "destination2": "Nyabugogo",
+      "distance": "15km",
+      "total_buses": "100",
+      "id": 2
+    },
+    {
+      "destination1": "Kabuga",
+      "destination2": "Kimironko",
+      "distance": "7.5km",
+      "total_buses": "100",
+      "id": 4
+    },
+    {
+      "destination1": "Nyabugogo",
+      "destination2": "Kimironko",
+      "distance": "7.5km",
+      "total_buses": "100",
+      "id": 5
+    },
+    {
+      "destination1": "Kabuga",
+      "destination2": "Nyanza",
+      "distance": "8km",
+      "total_buses": "100",
+      "id": 6
+    }
+  ]
+}

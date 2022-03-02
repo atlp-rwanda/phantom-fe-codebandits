@@ -10,6 +10,7 @@ import Management from '../pages/dashboard/Management.js';
 import Roles from '../pages/dashboard/RolesPage.js';
 import OperatorProfile from '../pages/profiles/OperatorProfile.js';
 import RegisterBus from '../pages/RegisterBus.js';
+import RegisterRoute from '../pages/RegisterRoute.js';
 import UpdateBus from '../pages/UpdateBus.js';
 import ModalRoutes from './ModalRoutes.js';
 
@@ -43,6 +44,9 @@ function DashRoutes() {
               <Route path="bus/register" element={<RegisterBus />} />
               <Route path="bus/update/:id" element={<UpdateBus />} />
               <Route path="operator/register" element={<RegisterOperator />} />
+
+              <Route path="operator/register" element={<RegisterOperator />} />
+              <Route path="route/register" element={<RegisterRoute />} />
               <Route path="operator/update" element={<UpdateOperator />} />
               <Route path="" element={<Management />}></Route>
             </Route>
