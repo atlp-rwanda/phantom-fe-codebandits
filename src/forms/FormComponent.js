@@ -46,9 +46,7 @@ export const FormComponent = ({ type, inputs, callback, redirect }) => {
               ) : (
                 <>
                   <div className="py-4 px-8 text-black font-bold lg:px-4 md:px-4 ">
-                    <h1 className="text-center  text-2xl  font-rale font-bold md:ml-0 md:text-left">
-                      {type}
-                    </h1>
+                    <h1 className="text-center  text-2xl  font-rale font-bold md:ml-0 md:text-left"> {type}</h1>
                   </div>
                   <form onSubmit={handleSubmit(onValid)}>
                     <div className="py-4 px-4  w-full  lg:mx-auto ">
