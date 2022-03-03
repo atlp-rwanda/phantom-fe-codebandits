@@ -2,7 +2,6 @@ import { mount, shallow } from 'enzyme';
 import React from 'react';
 import { BrowserRouter, MemoryRouter } from 'react-router-dom';
 import renderer, { act } from 'react-test-renderer';
-
 import Login from '../Login.js';
 
 const wrapper = renderer.create(
@@ -81,11 +80,11 @@ describe('Login page tests', () => {
   });
 });
 
-describe('Landing page functionality tests', () => {
+describe('Login page functionality tests', () => {
   const handleSubmitMock = jest.fn();
   const wrapper = mount(
     <MemoryRouter>
-      <Login handleSubmit={handleSubmitMock} />)
+      <Login handleSubmit={handleSubmitMock()} />)
     </MemoryRouter>
   );
   const simulateOnChangeInput = (wrapper, inputSelector, newValue) => {
@@ -102,12 +101,11 @@ describe('Landing page functionality tests', () => {
     });
   });
 
-  
   it('shows error when entered email is empty', () => {
     act(() => {
       simulateOnChangeInput(wrapper, 'input[name="email"]', '');
       loginBtn.simulate('click');
-      console.log(wrapper.find('#email-errors').html())
+      console.log(wrapper.find('#email-errors').html());
       expect(wrapper.find('#email-errors').text()).toEqual('Email is required');
     });
   });

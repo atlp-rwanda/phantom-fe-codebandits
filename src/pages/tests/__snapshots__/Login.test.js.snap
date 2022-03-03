@@ -88,4 +88,4 @@ exports[`Login snapshot test should render Login 1`] = `
 </div>
 `;
 
-exports[`Login test the onValid function 1`] = `[MockFunction]`;
+exports[`Login snapshot test test the onValid function 1`] = `[MockFunction]`;
