@@ -1,11 +1,11 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Login should render Login 1`] = `
+exports[`Login snapshot test should render Login 1`] = `
 <div
   className=" z-0 h-full"
 >
   <main
-    className="min-h-[70vh] flex flex-col  md:flex-row items-center w-full justify-center shadow-md relative h-full pb-20 md:pb-1 md:pt-1 pt-10"
+    className="min-h-[80vh] flex flex-col  md:flex-row items-center w-full justify-center shadow-md relative h-full pb-20 md:pb-1 md:pt-1 pt-10"
   >
     <section
       className="max-w-sm mt-[-60px] md:flex md:items-center md:justify-center md:mx-auto md:mt-[auto] xl:ml-64"
@@ -21,6 +21,7 @@ exports[`Login should render Login 1`] = `
     >
       <form
         className="flex flex-col w-full px-4"
+        id="loginForm"
         onSubmit={[Function]}
       >
         <h2
@@ -50,6 +51,7 @@ exports[`Login should render Login 1`] = `
         />
         <p
           className="text-red-600 text-sm pb-3"
+          id="email-errors"
         />
         <label
           className="capitalize mb-2 font-semibold required"
@@ -76,6 +78,7 @@ exports[`Login should render Login 1`] = `
         </h4>
         <button
           className="bg-primary px-5 py-2 rounded-md text-white w-fit mx-auto hover:bg-hover transition-all hover:transition-all"
+          id="login-btn"
         >
           Login
         </button>

@@ -4,7 +4,7 @@ import { useNavigate } from 'react-router-dom';
 import { toast } from 'react-toastify';
 import busMapImg from '../assets/busMap.png';
 
-const Login = () => {
+const Login = ({ onSubmit }) => {
   const navigate = useNavigate();
   const [err, setErr] = useState('');
   const [attempts, setAttempts] = useState(0);
@@ -42,6 +42,7 @@ const Login = () => {
         </section>
         <section className="flex flex-col  py-3 px-4 w-72 md:w-fit md:min-w-[300px] shadow-main absolute bg-white top-16 md:top-0 md:mx-auto md:relative rounded-lg xl:mr-64">
           <form
+            id="loginForm"
             className="flex flex-col w-full px-4"
             onSubmit={handleSubmit(onValid, onErrors)}
           >
@@ -68,7 +69,7 @@ const Login = () => {
               })}
               className="rounded-md mb-1 p-1 border-2 w-full outline-none focus:border-gray-500"
             />
-            <p className="text-red-600 text-sm pb-3">
+            <p id='email-errors'className="text-red-600 text-sm pb-3">
               {errors?.email && errors.email.message}
             </p>
             <label
@@ -99,7 +100,10 @@ const Login = () => {
                 Unlock in 5 minutes
               </button>
             ) : (
-              <button className="bg-primary px-5 py-2 rounded-md text-white w-fit mx-auto hover:bg-hover transition-all hover:transition-all">
+              <button
+                id="login-btn"
+                className="bg-primary px-5 py-2 rounded-md text-white w-fit mx-auto hover:bg-hover transition-all hover:transition-all"
+              >
                 Login
               </button>
             )}
