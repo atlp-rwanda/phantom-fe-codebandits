@@ -20,7 +20,7 @@ describe('Form Component', ()=>{
 })
 
 describe('Form Components and actions', ()=>{
-    const called = inputs={driverInputs}, type={"Submit"}, callback={oninvalid()}, redirect={'/dahsbord'};
+  const called = inputs={driverInputs}, type={"Submit"}, callback={oninvalid()}, redirect={'/dahsbord'};
     it('should render a Button of Submit', () => {
         const wrapper = mount(
           <MemoryRouter>
@@ -33,7 +33,7 @@ describe('Form Components and actions', ()=>{
       it('should render a Label Component', () => {
         const wrapper = mount(
           <MemoryRouter>
-            <FormComponent />
+            <FormComponent inputs={driverInputs}/>
           </MemoryRouter>
         );
         expect(wrapper.find('LabelComponent').length).toEqual(7);
