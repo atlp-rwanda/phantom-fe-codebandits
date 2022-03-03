@@ -43,7 +43,7 @@ exports[`Intro should render Intro 1`] = `
   >
     <img
       alt="Bus"
-      src={null}
+      src=""
     />
   </div>
 </div>

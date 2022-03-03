@@ -1,7 +1,8 @@
-import { shallow } from 'enzyme';
+import { mount, shallow } from 'enzyme';
 import React from 'react';
-import { BrowserRouter } from 'react-router-dom';
-import renderer from 'react-test-renderer';
+import { BrowserRouter, MemoryRouter } from 'react-router-dom';
+import renderer, { act } from 'react-test-renderer';
+
 import Login from '../Login.js';
 
 const mockedUsedNavigate = jest.fn();
@@ -10,7 +11,13 @@ jest.mock('react-router-dom', () => ({
   useNavigate: () => mockedUsedNavigate
 }));
 
-describe('Login', () => {
+jest.mock('react-hook-form', () => ({
+  ...jest.requireActual('react-hook-form'),
+  register: jest.fn(),
+  handleSubmit: jest.fn()
+}));
+
+describe('Login snapshot test', () => {
   it('should render Login', () => {
     const elem = renderer
       .create(
@@ -23,10 +30,8 @@ describe('Login', () => {
   });
 });
 
-const wrapper = shallow(<Login />);
-console.log(wrapper.debug());
-
 describe('Login page tests', () => {
+  const wrapper = shallow(<Login />);
   it('renders without errors', () => {
     wrapper;
   });
@@ -59,10 +64,26 @@ describe('Login page tests', () => {
   it('has input for password', () => {
     expect(wrapper.find('input[name="password"]').length).toBe(1);
   });
-  it('has one h4 elemet', () => {
-  expect(wrapper.find('h4').length).toEqual(1);
+  it('has one h4 element', () => {
+    expect(wrapper.find('h4').length).toEqual(1);
   });
   it('has forgot password heading', () => {
     expect(wrapper.find('h4').text()).toEqual('Forgot password?');
+  });
+});
+
+describe('Landing page functionality tests', () => {
+  const handleSubmitMock = jest.fn();
+  const wrapper = mount(
+    <MemoryRouter>
+      <Login handleSubmit={handleSubmitMock()} />)
+    </MemoryRouter>
+  );
+  const loginBtn = wrapper.find('#login-btn');
+  it('calls handleSubmit function on form submit', () => {
+    act(() => {
+      loginBtn.simulate('click');
+      expect(handleSubmitMock).toBeCalledTimes(1);
+    });
   });
 });

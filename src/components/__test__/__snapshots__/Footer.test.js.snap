@@ -10,7 +10,7 @@ exports[`Footer should render Footer 1`] = `
     <img
       alt="Codebandits"
       className="w-24 ml-2 lg:ml-8 lg:mt-4 xl:mt-2"
-      src={null}
+      src=""
     />
     <h3
       className="lg:ml-8 xl:ml-20 mt-6 xl:mt-2"
