@@ -1,27 +1,19 @@
-import React, { useState } from 'react';
-import dropdown from '../assets/dropdown.png';
-import LanguageDropdown from './LanguageDropdown.js';
+import React from 'react';
 
-const LanguageButton = ({ styles }) => {
-  const [style, setStyle] = useState('hidden');
-  const handleDropdown = () => {
-    if (style === 'hidden') {
-      setStyle('flex');
-    } else {
-      setStyle('hidden');
-    }
-  };
+const LanguageButton = () => {
   return (
     <div>
-      <button
-        type="button"
-        onClick={handleDropdown}
-        className={`${styles} flex py-2 px-4 text-lg`}
-      >
-        <h1>English</h1>
-        <img src={dropdown} alt="dropdown" className="w-3 mt-3 ml-2 h-2" />
-      </button>
-      <LanguageDropdown styles={`${style} absolute py-2 ml-4 w-fit`} />
+      <select className=" md:mt-8 bg-background border outline-none md:ml-6 lg:ml-6 xl:ml-6 lg:mt-8 xl:mt-8 flex py-2 px-4 text-lg hover:font-bold">
+        <option className=" border-none bg-background w-full cursor-pointer hover:font-bold">
+          English
+        </option>
+        <option className=" border-none bg-background w-full cursor-pointer hover:font-bold">
+          French
+        </option>
+        <option className=" border-none bg-background cursor-pointer hover:font-bold">
+          Kinyarwanda
+        </option>
+      </select>
     </div>
   );
 };

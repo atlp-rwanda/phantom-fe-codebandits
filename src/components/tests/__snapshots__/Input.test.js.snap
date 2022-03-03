@@ -1,0 +1,12 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Input should render Input 1`] = `
+Array [
+  <label
+    className="capitalize mb-2 font-semibold"
+  />,
+  <input
+    className="rounded-md mb-2 p-2 border-2 w-full"
+  />,
+]
+`;
