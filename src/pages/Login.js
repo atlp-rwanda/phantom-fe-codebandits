@@ -69,7 +69,7 @@ const Login = ({ onSubmit }) => {
               })}
               className="rounded-md mb-1 p-1 border-2 w-full outline-none focus:border-gray-500"
             />
-            <p id='email-errors'className="text-red-600 text-sm pb-3">
+            <p id="email-errors" className="text-red-600 text-sm pb-3">
               {errors?.email && errors.email.message}
             </p>
             <label

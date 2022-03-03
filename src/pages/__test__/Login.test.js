@@ -71,6 +71,7 @@ describe('Login page tests', () => {
     expect(wrapper.find('h4').text()).toEqual('Forgot password?');
   });
 });
+
 describe('Landing page functionality tests', () => {
   const handleSubmitMock = jest.fn();
   const wrapper = mount(
@@ -78,11 +79,25 @@ describe('Landing page functionality tests', () => {
       <Login handleSubmit={handleSubmitMock()} />)
     </MemoryRouter>
   );
+  const simulateOnChangeInput = (wrapper, inputSelector, newValue) => {
+    const input = wrapper.find(inputSelector);
+    input.simulate('change', {
+      target: { value: newValue }
+    });
+  };
   const loginBtn = wrapper.find('#login-btn');
   it('calls handleSubmit function on form submit', () => {
     act(() => {
       loginBtn.simulate('click');
       expect(handleSubmitMock).toBeCalledTimes(1);
+    });
+  });
+  it('shows error when entered email is empty', () => {
+    act(() => {
+      simulateOnChangeInput(wrapper, 'input[name="email"]', '');
+      loginBtn.simulate('click');
+      console.log(wrapper.find('#email-errors').html())
+      expect(wrapper.find('#email-errors').text()).toEqual('Email is required');
     });
   });
 });
