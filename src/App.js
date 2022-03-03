@@ -8,10 +8,11 @@ import Account from './pages/Account.js';
 import LandingPage from './pages/LandingPage.js';
 import Login from './pages/Login.js';
 import { store } from './redux/store.js';
+import LoginSkeleton from './pages/skeleton/LoginSkeleton.js';
 
 function App() {
   return (
-    <div>
+    <div className="h-screen flex flex-col">
       <Provider store={store}>
         <BrowserRouter>
           <Header />
@@ -19,6 +20,7 @@ function App() {
             <Route path="/" element={<LandingPage />} />
             <Route path="/login" element={<Login />} />
             <Route path="/account" element={<Account />} />
+            <Route path="/acc" element={<LoginSkeleton />} />
           </Routes>
           <Footer />
         </BrowserRouter>

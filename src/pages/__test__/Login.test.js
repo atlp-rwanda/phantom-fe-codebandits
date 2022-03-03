@@ -76,7 +76,7 @@ describe('Landing page functionality tests', () => {
   const handleSubmitMock = jest.fn();
   const wrapper = mount(
     <MemoryRouter>
-      <Login handleSubmit={handleSubmitMock()} />)
+      <Login handleSubmit={handleSubmitMock} />)
     </MemoryRouter>
   );
   const simulateOnChangeInput = (wrapper, inputSelector, newValue) => {
@@ -92,6 +92,8 @@ describe('Landing page functionality tests', () => {
       expect(handleSubmitMock).toBeCalledTimes(1);
     });
   });
+
+  
   it('shows error when entered email is empty', () => {
     act(() => {
       simulateOnChangeInput(wrapper, 'input[name="email"]', '');
