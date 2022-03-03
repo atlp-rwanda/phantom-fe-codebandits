@@ -71,7 +71,6 @@ describe('Login page tests', () => {
     expect(wrapper.find('h4').text()).toEqual('Forgot password?');
   });
 });
-
 describe('Landing page functionality tests', () => {
   const handleSubmitMock = jest.fn();
   const wrapper = mount(
