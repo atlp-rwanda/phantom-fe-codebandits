@@ -32,15 +32,15 @@ const Login = () => {
 
   return (
     <div className=" z-0 h-full">
-      <main className="min-h-[80vh] flex flex-col  md:flex-row items-center w-full justify-center shadow-md relative h-full pb-20 md:pb-1 md:pt-1 pt-10">
-        <section className="max-w-sm mt-[-60px] md:flex md:items-center md:justify-center md:mx-auto md:mt-[auto] xl:ml-64">
+      <main className="min-h-[80vh] flex flex-col  md:flex-row items-center w-full justify-center shadow-md relative h-full pb-52 md:pb-1 md:pt-1 pt-10">
+        <section className="max-w-sm mt-[-60px] md:flex md:items-center md:justify-center md:mx-auto xl:ml-64">
           <img
             src={busMapImg}
             alt="vector image of a bus on map"
             className="w-full object-cover "
           />
         </section>
-        <section className="flex flex-col  py-3 px-4 w-72 md:w-fit md:min-w-[300px] shadow-main absolute bg-white top-16 md:top-0 md:mx-auto md:relative rounded-lg xl:mr-64">
+        <section className="flex flex-col  py-3 px-4 w-72 md:w-fit md:min-w-[300px] shadow-main absolute bg-white top-28 md:top-0 md:mx-auto md:relative rounded-lg xl:mr-64">
           <form
             id="loginForm"
             className="flex flex-col w-full px-4"
