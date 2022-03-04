@@ -13,8 +13,6 @@ import Login from './pages/Login.js';
 import { store } from './redux/store.js';
 
 function App() {
-  const { loading } = useLoader();
-
   return (
     <div className="min-h-screen flex flex-col">
       <Provider store={store}>

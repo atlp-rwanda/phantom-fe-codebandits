@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Registration Operators Should render the driver form 1`] = `
+exports[`Registration Should render the driver form 1`] = `
 <h1
   className="text-black"
 >
@@ -8,7 +8,7 @@ exports[`Registration Operators Should render the driver form 1`] = `
 </h1>
 `;
 
-exports[`Registration Operators Should render the operator form 1`] = `
+exports[`Registration Should render the operator form 1`] = `
 <div
   className="flex flex-row h-full w-full items-center justify-center"
 >

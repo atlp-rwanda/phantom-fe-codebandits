@@ -11,8 +11,6 @@ import RegisterOperator, {
 } from '../RegisterOperator.js';
 
 describe('Registration', () => {
-  describe('Operators', () => {
-
     it('Should render the operator form', () => {
       const elem = renderer
         .create(
@@ -37,12 +35,12 @@ describe('Registration', () => {
     });
   });
 
-  describe('Component', () => {
-    const wrapper = shallow(
-      <LabelComponent htmlFor={'test'} name={'test'}></LabelComponent>
-    );
-    it('Should return test', () => {
-      expect(wrapper.text()).toEqual('test');
-    });
+
+describe('Component', () => {
+  const wrapper = shallow(
+    <LabelComponent htmlFor={'test'} name={'test'}></LabelComponent>
+  );
+  it('Should return test', () => {
+    expect(wrapper.text()).toEqual('test');
   });
 });

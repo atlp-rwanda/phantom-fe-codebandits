@@ -1,12 +1,14 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Input should render Input 1`] = `
-Array [
+<div
+  className="mb-2 block font-raleway"
+>
   <label
-    className="capitalize mb-2 font-semibold"
-  />,
+    className="block text-grey-darker text-sm font-bold font-rale  mb-2"
+  />
   <input
-    className="rounded-md mb-2 p-2 border-2 w-full"
-  />,
-]
+    className="undefined appearance-none border font-rale rounded w-full py-2 px-3 text-grey-darker bg-gray-200 text-md outline-hidden"
+  />
+</div>
 `;

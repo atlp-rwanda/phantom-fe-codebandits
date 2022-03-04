@@ -65,10 +65,7 @@ exports[`Registration Operators Should render the driver form 1`] = `
                 </div>
                 <p
                   className="text-red-800"
-                >
-                    
-                   
-                </p>
+                />
               </div>
               <div
                 className="ml-1 xl:w-1/2 "
@@ -94,12 +91,8 @@ exports[`Registration Operators Should render the driver form 1`] = `
                 </div>
                 <p
                   className="text-red-800"
-                >
-                    
-                   
-                </p>
+                />
               </div>
-              ;
             </div>
             <div
               className="block mb-4 xl:flex md:grid md:grid-cols-2 md:gap-2"
@@ -128,10 +121,7 @@ exports[`Registration Operators Should render the driver form 1`] = `
                 </div>
                 <p
                   className="text-red-800"
-                >
-                    
-                   
-                </p>
+                />
               </div>
               <div
                 className="ml-1 xl:w-1/2 "
@@ -157,12 +147,8 @@ exports[`Registration Operators Should render the driver form 1`] = `
                 </div>
                 <p
                   className="text-red-800"
-                >
-                    
-                   
-                </p>
+                />
               </div>
-              ;
             </div>
             <div
               className="block mb-4 xl:flex md:grid md:grid-cols-2 md:gap-2"
@@ -175,9 +161,7 @@ exports[`Registration Operators Should render the driver form 1`] = `
                   htmlFor="company"
                   name="company"
                 >
-                   
                   Select company
-                   
                 </label>
                 <select
                   className="appearance-none border rounded w-full py-2 px-3 text-grey-darker bg-gray-200"
@@ -246,12 +230,8 @@ exports[`Registration Operators Should render the driver form 1`] = `
                 </div>
                 <p
                   className="text-red-800"
-                >
-                    
-                   
-                </p>
+                />
               </div>
-              ;
             </div>
             <div
               className="block mb-4 xl:flex md:grid md:grid-cols-2 md:gap-2"
@@ -280,10 +260,7 @@ exports[`Registration Operators Should render the driver form 1`] = `
                 </div>
                 <p
                   className="text-red-800"
-                >
-                    
-                   
-                </p>
+                />
               </div>
               <div
                 className="ml-1 xl:w-1/2 "
@@ -309,12 +286,8 @@ exports[`Registration Operators Should render the driver form 1`] = `
                 </div>
                 <p
                   className="text-red-800"
-                >
-                    
-                   
-                </p>
+                />
               </div>
-              ;
             </div>
             <div
               className="flex justify-center align"
@@ -401,10 +374,7 @@ exports[`Registration Operators Should render the operator form 1`] = `
                 </div>
                 <p
                   className="text-red-800"
-                >
-                    
-                   
-                </p>
+                />
               </div>
               <div
                 className="ml-1 xl:w-1/2 "
@@ -430,12 +400,8 @@ exports[`Registration Operators Should render the operator form 1`] = `
                 </div>
                 <p
                   className="text-red-800"
-                >
-                    
-                   
-                </p>
+                />
               </div>
-              ;
             </div>
             <div
               className="block mb-4 xl:flex md:grid md:grid-cols-2 md:gap-2"
@@ -464,10 +430,7 @@ exports[`Registration Operators Should render the operator form 1`] = `
                 </div>
                 <p
                   className="text-red-800"
-                >
-                    
-                   
-                </p>
+                />
               </div>
               <div
                 className="ml-1 xl:w-1/2 "
@@ -493,12 +456,8 @@ exports[`Registration Operators Should render the operator form 1`] = `
                 </div>
                 <p
                   className="text-red-800"
-                >
-                    
-                   
-                </p>
+                />
               </div>
-              ;
             </div>
             <div
               className="block mb-4 xl:flex md:grid md:grid-cols-2 md:gap-2"
@@ -511,9 +470,7 @@ exports[`Registration Operators Should render the operator form 1`] = `
                   htmlFor="company"
                   name="company"
                 >
-                   
                   Select company
-                   
                 </label>
                 <select
                   className="appearance-none border rounded w-full py-2 px-3 text-grey-darker bg-gray-200"
@@ -582,12 +539,8 @@ exports[`Registration Operators Should render the operator form 1`] = `
                 </div>
                 <p
                   className="text-red-800"
-                >
-                    
-                   
-                </p>
+                />
               </div>
-              ;
             </div>
             <div
               className="mb-4"
@@ -612,10 +565,7 @@ exports[`Registration Operators Should render the operator form 1`] = `
                 />
                 <p
                   className="text-red-800"
-                >
-                   
-                   
-                </p>
+                />
               </div>
             </div>
             <div
