@@ -1,7 +1,8 @@
-import { shallow } from 'enzyme';
+import { mount } from 'enzyme';
 import React from 'react';
-import { BrowserRouter } from 'react-router-dom';
+import { BrowserRouter, MemoryRouter } from 'react-router-dom';
 import renderer from 'react-test-renderer';
+
 import Account from '../Account.js';
 
 const mockedUsedNavigate = jest.fn();
@@ -10,8 +11,8 @@ jest.mock('react-router-dom', () => ({
   useNavigate: () => mockedUsedNavigate
 }));
 
-describe('Login', () => {
-  it('should render Login', () => {
+describe('Account', () => {
+  it('should render the account page', () => {
     const elem = renderer
       .create(
         <div>
@@ -25,13 +26,16 @@ describe('Login', () => {
   });
 });
 
-const wrapper = shallow(<Account />);
-
-describe('Login page tests', () => {
-  it('renders without errors', () => {
-    wrapper;
-  });
-  it('has one child element', () => {
-    expect(wrapper.children().length).toEqual(1);
+describe('Account functionality tests', () => {
+  const logoutMock = jest.fn();
+  const wrapper = mount(
+    <MemoryRouter>
+      <Account  logout={logoutMock()}/>
+    </MemoryRouter>
+  );
+  const logoutBtn = wrapper.find('button');
+  it('should call logout function when logout button clicked', () => {
+    logoutBtn.simulate('click');
+    expect(logoutMock).toHaveBeenCalled()
   });
 });

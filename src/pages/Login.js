@@ -14,12 +14,12 @@ const Login = () => {
     formState: { errors }
   } = useForm();
 
-  const onValid = (data) => {
+  const onValid = () => {
     toast('Welcome Ivad.', { type: 'success' });
     navigate('/account');
   };
 
-  const onErrors = (data) => {
+  const onErrors = () => {
     setAttempts(attempts + 1);
   };
   useEffect(() => {
