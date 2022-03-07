@@ -15,7 +15,7 @@ function App() {
   const { loading } = useLoader();
 
   return (
-    <div className="App">
+    <div className="App flex flex-col">
       {loading && <SkeletonScreen />}
       {!loading && (
         <div>
