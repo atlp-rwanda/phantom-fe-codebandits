@@ -10,15 +10,16 @@ import Login from './pages/Login.js';
 import { store } from './redux/store.js';
 import { useLoader } from './useLoader.js';
 import SkeletonScreen from './components/SkeletonScreen.js';
+import RegisterBus from './pages/RegisterBus.js';
 
 function App() {
   const { loading } = useLoader();
 
   return (
-    <div className="App flex flex-col">
+    <div>
       {loading && <SkeletonScreen />}
       {!loading && (
-        <div>
+        <div className="h-screen flex flex-col">
           <Provider store={store}>
             <BrowserRouter>
               <Header />
@@ -26,6 +27,7 @@ function App() {
                 <Route path="/" element={<LandingPage />} />
                 <Route path="/login" element={<Login />} />
                 <Route path="/account" element={<Account />} />
+                <Route path="/bus_register" element={<RegisterBus />} />
               </Routes>
               <Footer />
             </BrowserRouter>
