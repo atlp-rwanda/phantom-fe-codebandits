@@ -1,9 +1,13 @@
+import { fireEvent, render, screen, waitFor } from '@testing-library/react';
 import { mount, shallow } from 'enzyme';
 import React from 'react';
 import { BrowserRouter, MemoryRouter } from 'react-router-dom';
 import renderer, { act } from 'react-test-renderer';
 import Login from '../Login.js';
 
+const navigateMock = () => {
+  return jest.fn();
+};
 const wrapper = renderer.create(
   <BrowserRouter>
     <Login />
@@ -20,6 +24,36 @@ jest.mock('react-hook-form', () => ({
   register: jest.fn(),
   handleSubmit: jest.fn()
 }));
+
+describe('Render the errors', () => {
+  beforeEach(() => {
+    render(
+      <BrowserRouter>
+        <Login navigate={navigateMock} onValid={jest.fn()} />
+      </BrowserRouter>
+    );
+  });
+  it('Render email error', async () => {
+    fireEvent.submit(screen.getByTestId('loginForm'));
+    expect(await screen.findAllByText(/Email is required/i)).toHaveLength(1);
+  });
+  it('Should not display errors when the form is valid', async () => {
+    fireEvent.input(screen.getByTestId('email'), {
+      target: {
+        value: 'test@gmail.com'
+      }
+    });
+    fireEvent.input(screen.getByTestId('password'), {
+      target: {
+        value: 'Test@123'
+      }
+    });
+    fireEvent.submit(screen.getByTestId('loginForm'));
+    await waitFor(() => {
+      expect(screen.queryAllByText(/Enter a valid email/i)).toHaveLength(0);
+    });
+  });
+});
 
 describe('Login snapshot test', () => {
   it('should render Login', () => {
@@ -80,6 +114,40 @@ describe('Login page tests', () => {
   });
 });
 
+describe('Attempts', () => {
+  it('Should return an attempts error', async () => {
+    await act(async () => {
+      render(
+        <BrowserRouter>
+          <Login navigate={navigateMock} onValid={jest.fn()} />
+        </BrowserRouter>
+      );
+      fireEvent.submit(screen.getByTestId('loginForm'));
+      expect(await screen.findAllByText(/Email is required/i)).toHaveLength(1);
+      fireEvent.submit(screen.getByTestId('loginForm'));
+      expect(await screen.findAllByText(/Email is required/i)).toHaveLength(1);
+      fireEvent.submit(screen.getByTestId('loginForm'));
+      expect(await screen.findAllByText(/Email is required/i)).toHaveLength(1);
+      fireEvent.submit(screen.getByTestId('loginForm'));
+      expect(
+        await screen.findAllByText(/Wrong attempts of more than 3 times./i)
+      ).toHaveLength(1);
+      fireEvent.submit(screen.getByTestId('loginForm'));
+      expect(
+        await screen.findAllByText(/Wrong attempts of more than 3 times./i)
+      ).toHaveLength(1);
+      fireEvent.submit(screen.getByTestId('loginForm'));
+      expect(await screen.findAllByText(/Unlock in 5 minutes/i)).toHaveLength(
+        1
+      );
+      fireEvent.submit(screen.getByTestId('loginForm'));
+      expect(
+        await screen.findAllByText(/Try again in 5 minutes/i)
+      ).toHaveLength(1);
+    });
+  });
+});
+
 describe('Login page functionality tests', () => {
   const handleSubmitMock = jest.fn();
   const wrapper = mount(
@@ -100,12 +168,4 @@ describe('Login page functionality tests', () => {
       expect(handleSubmitMock).toBeCalledTimes(1);
     });
   });
-  // it('shows error when entered email is empty', () => {
-  //   act(() => {
-  //     simulateOnChangeInput(wrapper, 'input[name="email"]', '');
-  //     loginBtn.simulate('click');
-  //     console.log(wrapper.find('#email-errors').html());
-  //     expect(wrapper.find('#email-errors').text()).toEqual('Email is required');
-  //   });
-  // });
 });
