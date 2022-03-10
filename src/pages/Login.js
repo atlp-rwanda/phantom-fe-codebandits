@@ -23,7 +23,7 @@ const Login = () => {
     setAttempts(attempts + 1);
   };
   useEffect(() => {
-    if (attempts > 3) {
+    if (attempts > 3 && attempts < 5) {
       setErr('Wrong attempts of more than 3 times.');
     } else if (attempts > 5) {
       setErr('Try again in 5 minutes');
