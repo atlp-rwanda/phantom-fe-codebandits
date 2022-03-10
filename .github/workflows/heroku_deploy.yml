@@ -18,10 +18,12 @@ jobs:
       - name: Install all dependencies
         run: npm install
       # to added after the merge of test PR
-      - name: Run tests
-        run: npm run test
+      - name: Run tests and generate coverage
+        run: npm run coverage
       - name: Check linting errors
         run: npm run lint
+      - name: Run the build and check success
+        run: npm run build
   deploy:
     # deploy to heroku dev pipeline
     concurrency: 
