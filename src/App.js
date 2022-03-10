@@ -11,6 +11,7 @@ import { store } from './redux/store.js';
 import { useLoader } from './useLoader.js';
 import SkeletonScreen from './components/SkeletonScreen.js';
 import RegisterBus from './pages/RegisterBus.js';
+import BusesTable from './components/BusesTable.js';
 
 function App() {
   const { loading } = useLoader();
@@ -28,6 +29,7 @@ function App() {
                 <Route path="/login" element={<Login />} />
                 <Route path="/account" element={<Account />} />
                 <Route path="/bus_register" element={<RegisterBus />} />
+                <Route path="/buses_table" element={<BusesTable />} />
               </Routes>
               <Footer />
             </BrowserRouter>
