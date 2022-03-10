@@ -14,7 +14,7 @@
     "prepare": "husky install",
     "format": "npx pretty-quick",
     "lint": "npx eslint src/*.j{s,sx} --fix",
-    "test": "jest",
+    "test": "jest --watch",
     "coverage": "jest --coverage",
     "testPro": "cd dist && http-server"
   },

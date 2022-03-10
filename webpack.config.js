@@ -1,5 +1,5 @@
-import path from 'path';
 import HtmlWebpackPlugin from 'html-webpack-plugin';
+import path from 'path';
 import { fileURLToPath } from 'url';
 
 const __filename = fileURLToPath(import.meta.url);
@@ -8,7 +8,8 @@ const __dirname = path.dirname(__filename);
 const config = {
   entry: path.join(__dirname, 'src', 'index.js'),
   output: {
-    path: path.resolve(__dirname, 'dist')
+    path: path.resolve(__dirname, 'dist'),
+    publicPath: '/'
   },
   devServer: {
     static: {
@@ -17,7 +18,9 @@ const config = {
     historyApiFallback: true,
     compress: true,
     port: 3000,
-    watchFiles: ['./src/**/*.{js,jsx, css, scss}']
+    watchFiles: ['./src/**/*.{js,jsx, css, scss}'],
+    historyApiFallback: true,
+    hot: true
   },
   module: {
     rules: [

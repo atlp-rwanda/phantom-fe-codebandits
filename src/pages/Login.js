@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { useForm } from 'react-hook-form';
-import { useNavigate } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import { toast } from 'react-toastify';
 import busMapImg from '../assets/busMap.png';
 
@@ -89,9 +89,12 @@ const Login = () => {
             <p className="text-red-600 text-sm">
               {errors?.password && errors.password.message}
             </p>
-            <h4 className="text-primary text-right mb-5 text-sm font-bold">
-              Forgot password?
-            </h4>
+            <Link to="/accounts/reset-password">
+              <h4 className="text-primary text-right mb-5 text-sm font-bold">
+                Forgot password?
+              </h4>
+            </Link>
+
             {attempts > 5 ? (
               <button
                 disabled

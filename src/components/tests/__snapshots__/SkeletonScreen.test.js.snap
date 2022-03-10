@@ -48,7 +48,7 @@ exports[`SkeletonScreen should render SkeletonScreen 1`] = `
       />
     </section>
     <div
-      className="w-64 md:w-96 lg:w-96 xl:w-96 h-32 mb-8 md:h-48 lg:h-48 xl:h-48 rounded-xl bg-gray-300 px-20 lg:w-80 xl:w-96 lg:ml-auto xl:ml-auto lg:mr-36 xl:mr-36 mt-28"
+      className="w-64 md:w-96 lg:w-96 h-32 mb-8 md:h-48 lg:h-48 xl:h-48 rounded-xl bg-gray-300 px-20  xl:w-96 lg:ml-auto xl:ml-auto lg:mr-36 xl:mr-36 mt-28"
     />
   </main>
 </div>

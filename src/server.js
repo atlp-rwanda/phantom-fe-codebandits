@@ -7,4 +7,9 @@ const port = process.env.PORT || 3000; // Heroku will need the PORT environment 
 
 app.use(express.static(join(__dirname, 'dist')));
 
+// Always ensure to load the react router to handle the routing
+app.use('*', (req, res) => {
+  return res.sendFile(join(__dirname, 'dist', 'index.html'));
+});
+
 app.listen(port, () => {});
