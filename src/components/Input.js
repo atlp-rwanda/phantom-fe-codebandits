@@ -1,20 +1,20 @@
 import React from 'react';
 
-const Input = ({ name, placeholder }) => {
+function Input({ type, placeholder, styles, onChange, name, htmlFor, labelName}) {
   return (
-    <>
-      <label htmlFor={name} className="capitalize mb-2 font-semibold">
-        {name}
-      </label>
+    <div className="mb-2 block font-raleway">
+      <label htmlFor={htmlFor} className="block text-grey-darker text-sm font-bold font-rale  mb-2">{labelName}</label>
       <input
-        type={name}
-        id={name}
-        name={name}
+        className={`${styles} appearance-none border font-rale rounded w-full py-2 px-3 text-grey-darker bg-gray-200 text-md outline-hidden`}
+        type={type}
         placeholder={placeholder}
-        className="rounded-md mb-2 p-2 border-2 w-full"
+        onChange={onChange}
+        name={name}
       />
-    </>
+    </div>
   );
-};
+}
+
 
 export default Input;
+

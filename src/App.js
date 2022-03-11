@@ -7,6 +7,7 @@ import './app.css';
 import Footer from './components/Footer.js';
 import Header from './components/Header.js';
 import SkeletonScreen from './components/SkeletonScreen.js';
+import DashboardRoute from './DashboardRoutes.js';
 import Account from './pages/Account.js';
 import AccountRouter from './pages/accounts/AccountRouter.js';
 import LandingPage from './pages/LandingPage.js';
@@ -27,6 +28,7 @@ function App() {
               <Header />
               <Routes>
                 <Route path="/" element={<LandingPage />} />
+                <Route path="/dashboard/*" element={<DashboardRoute />} />
                 <Route path="/login" element={<Login />} />
                 <Route path="/account" element={<Account />} />
                 <Route

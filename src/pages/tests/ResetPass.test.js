@@ -19,6 +19,44 @@ const wrapper = shallow(
     <ResetRouterLayout />
   </BrowserRouter>
 );
+describe('function testing', () => {
+  let wrapper;
+
+  it('Should return a errors', async () => {
+    await act(async () => {
+      wrapper = mount(
+        <BrowserRouter>
+          <ResetFormPage handleEmail={mockHandleEmail} />
+        </BrowserRouter>
+      );
+      wrapper.find('form').simulate('submit');
+      expect(await wrapper).toMatchSnapshot();
+    });
+  });
+  it('Should return a errors in new password', async () => {
+    await act(async () => {
+      wrapper = mount(
+        <BrowserRouter>
+          <ResetNewPassword handleEmail={mockHandleEmail} />
+        </BrowserRouter>
+      );
+      wrapper.simulate('change', {
+        target: {
+          name: 'password',
+          value: '123'
+        }
+      });
+      wrapper.simulate('change', {
+        target: {
+          name: 'password2',
+          value: '123'
+        }
+      });
+      wrapper.find('form').simulate('submit');
+      expect(await wrapper).toMatchSnapshot();
+    });
+  });
+});
 
 describe('Reset page layout', () => {
   it('Render without crashing', () => {
@@ -67,19 +105,7 @@ describe('Reset password layout', () => {
       .toJSON();
     expect(elem).toMatchSnapshot();
   });
-  // it('should render the errors', async () => {
-  //   await act(async () => {
-  //     const handleSubmitMock = jest.fn();
-  //     const elem = mount(
-  //       <BrowserRouter>
-  //         <ResetFormPage handleSubmit={handleSubmitMock()} />
-  //       </BrowserRouter>
-  //     );
-  //     elem.simulate('change', { target: { name: 'email', value: 'fab' } });
-  //     elem.find('form').simulate('submit');
-  //     expect(elem).toMatchSnapshot();
-  //   });
-  // });
+
   it('should render the success message', () => {
     const elem = renderer
       .create(
@@ -91,89 +117,6 @@ describe('Reset password layout', () => {
     expect(elem).toMatchSnapshot();
   });
 });
-
-// describe('Actions and branches', () => {
-//   it('should return errors', async () => {
-//     act(async () => {
-//       const handleSubmitMock = jest.fn();
-//       const elem = mount(
-//         <BrowserRouter>
-//           <ResetNewPassword handleSubmit={handleSubmitMock()} />
-//         </BrowserRouter>
-//       );
-//       elem.simulate('change', {
-//         target: {
-//           name: 'password',
-//           value: '123'
-//         }
-//       });
-//       elem.simulate('change', {
-//         target: {
-//           name: 'password2',
-//           value: '1234'
-//         }
-//       });
-//       elem.find('form').simulate('submit');
-//       expect(elem).toMatchSnapshot();
-//     });
-//   });
-//   it('should return errors', () => {
-//     const handleSubmitMock = jest.fn();
-//     const elem = mount(
-//       <BrowserRouter>
-//         <ResetNewPassword handleSubmit={handleSubmitMock()} />
-//       </BrowserRouter>
-//     );
-//     act(() => {
-//       elem.simulate('change', {
-//         target: {
-//           name: 'password',
-//           value: '123'
-//         }
-//       });
-//       elem.simulate('change', {
-//         target: {
-//           name: 'password2',
-//           value: '1234'
-//         }
-//       });
-//       elem.find('form').simulate('submit');
-//     });
-//     expect(elem).toMatchSnapshot();
-//     expect(handleSubmitMock).toBeCalled();
-//   });
-//   it('should return success', async () => {
-//     const handleSubmitMock = jest.fn();
-//     const onValid = jest.fn();
-
-//     await act(async () => {
-//       const elem = mount(
-//         <BrowserRouter>
-//           <ResetNewPassword
-//             onValid={onValid()}
-//             handleSubmit={handleSubmitMock()}
-//           />
-//         </BrowserRouter>
-//       );
-//       elem.simulate('change', {
-//         target: {
-//           name: 'password',
-//           value: 'Fab123'
-//         }
-//       });
-//       elem.simulate('change', {
-//         target: {
-//           name: 'password2',
-//           value: 'Fab123'
-//         }
-//       });
-//       elem.find('form').simulate('submit');
-//       expect(elem).toMatchSnapshot();
-//       expect(handleSubmitMock).toBeCalled();
-//       expect(onValid).toBeCalled();
-//     });
-//   });
-// });
 
 describe('NotFound', () => {
   it('It renders without', () => {
@@ -217,45 +160,9 @@ describe('Testing Library', () => {
     });
     fireEvent.submit(screen.getByTestId('form'));
     expect(await screen.findAllByText('SENDING...')).toHaveLength(1);
-  });
-});
-
-
-describe('function testing', () => {
-  let wrapper;
-
-  it('Should return a errors', async () => {
-    await act(async () => {
-      wrapper = mount(
-        <BrowserRouter>
-          <ResetFormPage handleEmail={mockHandleEmail} />
-        </BrowserRouter>
-      );
-      wrapper.find('form').simulate('submit');
-      expect(await wrapper).toMatchSnapshot();
-    });
-  });
-  it('Should return a errors in new password', async () => {
-    await act(async () => {
-      wrapper = mount(
-        <BrowserRouter>
-          <ResetNewPassword handleEmail={mockHandleEmail} />
-        </BrowserRouter>
-      );
-      wrapper.simulate('change', {
-        target: {
-          name: 'password',
-          value: '123'
-        }
-      });
-      wrapper.simulate('change', {
-        target: {
-          name: 'password2',
-          value: '123'
-        }
-      });
-      wrapper.find('form').simulate('submit');
-      expect(await wrapper).toMatchSnapshot();
-    });
+    await new Promise((r) => setTimeout(r, 3500));
+    expect(await screen.queryAllByText(/You account was found/i)).toHaveLength(
+      0
+    );
   });
 });

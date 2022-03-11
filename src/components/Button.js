@@ -13,4 +13,20 @@ const Button = ({ name, styles }) => {
   );
 };
 
+export function ButtonA({ name, onClick, styles, type }) {
+  return (
+    <div>
+      <button
+        type={type}
+        onClick={onClick}
+        className={`${styles} bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded-xl m-2 `}
+      >
+        {name}
+      </button>
+    </div>
+  );
+}
+
+
+
 export default Button;

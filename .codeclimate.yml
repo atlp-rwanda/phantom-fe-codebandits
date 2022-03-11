@@ -16,4 +16,5 @@ exclude_patterns:
   - "**/tests/"
   - "**/__tests__/"
   - "coverage/"
+  - "*.test.js"
 
