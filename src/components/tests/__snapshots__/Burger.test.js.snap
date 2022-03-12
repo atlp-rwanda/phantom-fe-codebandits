@@ -3,13 +3,13 @@
 exports[`Burger Component it should render the Burger component 1`] = `
 <div>
   <div
-    className="h-1 w-7 bg-primary mt-1"
+    className="undefined h-1 w-7 bg-primary mt-1"
   />
   <div
-    className="h-1 w-7 bg-primary mt-1"
+    className="undefined h-1 w-7 bg-primary mt-1"
   />
   <div
-    className="h-1 w-7 bg-primary mt-1"
+    className="undefined h-1 w-7 bg-primary mt-1"
   />
 </div>
 `;

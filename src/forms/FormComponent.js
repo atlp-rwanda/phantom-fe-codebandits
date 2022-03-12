@@ -4,8 +4,7 @@ import { useForm } from 'react-hook-form';
 import { useNavigate } from 'react-router-dom';
 import { ButtonA as Button } from '../components/Button.js';
 import busMap from '../images/busMap.png';
-import { LabelComponent } from './RegisterOperator.js';
-
+import LabelComponent from '../components/LabelComponent.js';
 export const FormComponent = ({ type, inputs = [], callback, redirect }) => {
   const navigate = useNavigate();
   const [loading, setloading] = useState(false);

@@ -4,7 +4,7 @@ const Button = ({ name, styles }) => {
   return (
     <div>
       <button
-        type="button"
+        type="submit"
         className={`${styles} rounded-xl py-3 text-base md:text-sm lg:text-lg xl:text-lg px-5`}
       >
         {name}
@@ -13,7 +13,7 @@ const Button = ({ name, styles }) => {
   );
 };
 
-export function ButtonA({ name, onClick, styles, type }) {
+export const ButtonA = ({ name, onClick, styles, type }) => {
   return (
     <div>
       <button
@@ -25,8 +25,6 @@ export function ButtonA({ name, onClick, styles, type }) {
       </button>
     </div>
   );
-}
-
-
+};
 
 export default Button;

@@ -32,7 +32,7 @@ describe('Account functionality tests', () => {
       <Account logout={logoutMock()} />
     </MemoryRouter>
   );
-  const logoutBtn = wrapper.find('button');
+  const logoutBtn = wrapper.find('#logout');
   it('should call logout function when logout button clicked', () => {
     logoutBtn.simulate('click');
     expect(logoutMock).toHaveBeenCalled();
