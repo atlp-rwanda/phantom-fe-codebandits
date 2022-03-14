@@ -26,3 +26,7 @@
 #photo-upload {
   display: none;
 }
+
+.leaflet-routing-alt {
+  display: none;
+}

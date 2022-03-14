@@ -28,10 +28,12 @@ const Header = forwardRef(({ open, setOpen }, ref) => {
           />
         </Link>
 
-        <Button
-          name="Track Bus"
-          styles="border border-primary bg-background hover:bg-hover2 text-primary rounded-xl mt-7 ml-6 px-6"
-        />
+        <Link to="/tracking-page">
+          <Button
+            name="Track Bus"
+            styles="border border-primary bg-background hover:bg-hover2 text-primary rounded-xl mt-7 ml-6 px-6"
+          />
+        </Link>
         <LanguageButton styles="mt-8" />
       </div>
       <section
