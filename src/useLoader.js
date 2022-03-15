@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+import { useEffect, useState } from 'react';
 
 export const useLoader = () => {
   const [loading, setLoading] = useState(false);
@@ -7,7 +7,7 @@ export const useLoader = () => {
     setLoading(true);
     const timer = setTimeout(() => {
       setLoading(false);
-    }, 3000);
+    }, 500);
 
     return () => clearTimeout(timer);
   }, []);
