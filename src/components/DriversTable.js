@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import { useGlobalFilter, usePagination, useTable } from 'react-table';
 import driversDB from '../database/driversDB.json';
 import Button from './Button.js';
-import ManageDropdown from './ManageDropdown.js';
+import BusManageDropdown from './ManageDropdown.js';
 import SearchFilter from './SearchFilter.js';
 import CheckRole from './utils/CheckRoles.js';
 
@@ -31,7 +31,7 @@ const tableColumns = [
   {
     Header: 'Management',
     accessor: 'management',
-    Cell: ({ row }) => <ManageDropdown id={row.original.email} />
+    Cell: ({ row }) => <BusManageDropdown id={row.original.plateNumber} />
   }
 ];
 

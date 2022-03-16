@@ -10,6 +10,7 @@ import { ProfilePage } from './dashboard/Mainpage.js';
 import Management from './dashboard/Management.js';
 import Roles from './dashboard/RolesPage.js';
 import RegisterBus from './RegisterBus.js';
+import UpdateBus from './updateBus.js';
 
 function DashRoutes() {
   return (
@@ -32,7 +33,9 @@ function DashRoutes() {
 
           <Route path="operator/register" element={<RegisterOperator />} />
           <Route path="operator/update" element={<UpdateOperator />} />
+
           <Route path="bus/register" element={<RegisterBus />} />
+          <Route path="management/bus/update/:id" element={<UpdateBus />} />
 
           <Route
             path="*"

@@ -1,4 +1,5 @@
 {
+  
   "name": "phantom-fe-codebandits",
   "version": "1.0.0",
   "description": "",
@@ -14,6 +15,7 @@
     "prepare": "husky install",
     "format": "npx pretty-quick",
     "lint": "npx eslint src/*.j{s,sx} --fix",
+    "start-server":"json-server --watch src/database/busesDB.json --port 8000",
     "test": "jest --watch",
     "coverage": "jest --coverage",
     "testPro": "cd dist && http-server"

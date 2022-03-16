@@ -8,6 +8,24 @@
       "driver": "No driver",
       "route": "No route",
       "id": 1
+    },
+    {
+      "busType": "Minibus",
+      "company": "Virunga_express",
+      "seats": "30",
+      "plateNumber": "TAN123",
+      "driver": "No driver",
+      "route": "No route",
+      "id": 3
+    },
+    {
+      "busType": "Minibus",
+      "company": "KBS",
+      "seats": "40",
+      "plateNumber": "RAB1000",
+      "driver": "No driver",
+      "route": "No route",
+      "id": 4
     }
   ]
 }

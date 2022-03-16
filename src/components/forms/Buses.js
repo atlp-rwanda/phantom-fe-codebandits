@@ -1,11 +1,15 @@
-import React, { useState } from 'react';
+import React from 'react';
 import Button from '../Button.js';
 import { useForm } from 'react-hook-form';
-import { toast } from 'react-toastify';
-import busesDB from '../../database/busesDB.json';
 
-const Buses = ({ formTitle, formAction }) => {
-  const [plateNumber, setPlateNumber] = useState(null);
+const Buses = ({
+  formTitle,
+  formAction,
+  busType,
+  company,
+  seats,
+  plateNumber
+}) => {
   const {
     register,
     handleSubmit,
@@ -15,21 +19,7 @@ const Buses = ({ formTitle, formAction }) => {
     mode: 'onChange'
   });
   const onValid = async (data) => {
-    const isBusInDB = busesDB.buses.filter((bus) => {
-      return bus.plateNumber == data.plateNumber
-    });
-    console.log(isBusInDB)
-    if (isBusInDB.length>0) {
-      toast(`Bus with ${data.plateNumber} plate number is already registered`, {
-        type: 'error'
-      });
-      return
-    }
     await formAction(data);
-  };
-
-  const handlePlateNumber = (e) => {
-    console.log(e.target.value);
   };
   const inputClassStyles = 'rounded-sm px-3 py-3 mb-2 bg-[#EFEFEF]';
   return (
@@ -43,6 +33,7 @@ const Buses = ({ formTitle, formAction }) => {
           Bus type
         </label>
         <select
+          defaultValue={busType}
           name="busType"
           id="busType"
           {...register('busType')}
@@ -60,6 +51,7 @@ const Buses = ({ formTitle, formAction }) => {
           Company
         </label>
         <select
+          defaultValue={company}
           name="company"
           id="company"
           className={inputClassStyles}
@@ -74,6 +66,7 @@ const Buses = ({ formTitle, formAction }) => {
           Seats
         </label>
         <input
+          defaultValue={seats}
           type="number"
           placeholder="Enter number of seats"
           className={inputClassStyles}
@@ -93,12 +86,12 @@ const Buses = ({ formTitle, formAction }) => {
           Plate number
         </label>
         <input
+          defaultValue={plateNumber}
           type="text"
           placeholder="Enter plate number"
           className={inputClassStyles}
           name="plateNumber"
           {...register('plateNumber', {
-            onChange: handlePlateNumber,
             required: 'Bus plate number is required',
             pattern: {
               value: /^[A-Za-z0-9]*$/,
@@ -119,6 +112,13 @@ const Buses = ({ formTitle, formAction }) => {
       </form>
     </div>
   );
+};
+
+Buses.defaultProps = {
+  busType: undefined,
+  company: undefined,
+  seats: undefined,
+  plateNumber: undefined
 };
 
 export default Buses;
