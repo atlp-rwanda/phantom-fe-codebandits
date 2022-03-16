@@ -109,7 +109,7 @@ const TrackingPage = () => {
                 <option
                   value={option.name}
                   key={option.name}
-                  className="cursor-pointer"
+                  className="cursor-pointer bg-transparent font-bold font-raleway disabled:text-gray-400 disabled:bg-gray-100"
                 >
                   {option.name}
                 </option>
@@ -133,7 +133,7 @@ const TrackingPage = () => {
                 <option
                   value={option.name}
                   key={option.name}
-                  className="cursor-pointer"
+                  className="cursor-pointer bg-transparent hover:bg-primary font-raleway font-bold disabled:text-gray-400 disabled:bg-gray-100"
                 >
                   {option.name}
                 </option>
