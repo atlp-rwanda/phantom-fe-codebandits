@@ -1,31 +1,31 @@
 {
   "buses": [
     {
-      "busType": "Minibus",
-      "company": "KBS",
-      "seats": "20",
-      "plateNumber": "RAB1234",
-      "driver": "No driver",
-      "route": "No route",
-      "id": 1
-    },
-    {
-      "busType": "Minibus",
+      "busType": "Coaster",
       "company": "Virunga_express",
       "seats": "30",
       "plateNumber": "TAN123",
-      "driver": "No driver",
-      "route": "No route",
+      "driver": null,
+      "route": null,
       "id": 3
     },
     {
       "busType": "Minibus",
       "company": "KBS",
-      "seats": "40",
-      "plateNumber": "RAB1000",
-      "driver": "No driver",
-      "route": "No route",
+      "seats": "50",
+      "plateNumber": "RAB1212",
+      "driver": null,
+      "route": null,
       "id": 4
+    },
+    {
+      "busType": "Minibus",
+      "company": "KBS",
+      "seats": "60",
+      "plateNumber": "RAT230A",
+      "driver": null,
+      "route": null,
+      "id": 5
     }
   ]
 }

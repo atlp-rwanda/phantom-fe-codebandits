@@ -1,0 +1,278 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Registration Operators Should render the role page 1`] = `
+<div
+  className="w-full h-full"
+>
+  <h1
+    className="text-2xl font-bold text-center justify-center font-rale"
+  >
+    Manage roles and permissions
+  </h1>
+  <div
+    className="mt-6 p-5 rounded-md shadow-main"
+  >
+    <table>
+      <thead
+        className="w-full"
+      >
+        <tr
+          className="border-b border-primary"
+        >
+          <td
+            className="font-bold text-center px-2"
+            colSpan={2}
+          >
+            Roles
+          </td>
+          <td
+            className="font-bold text-center px-2"
+            colSpan={4}
+          >
+            Permissions
+          </td>
+        </tr>
+      </thead>
+      <tbody
+        className="w-full"
+      >
+        <tr
+          className="border-b-2"
+        >
+          <td
+            className="px-2 py-1 capitalize font-bold"
+            colSpan={2}
+          >
+            admin
+          </td>
+          <td
+            className="px-2"
+            colSpan={4}
+          >
+            <tr
+              className="flex flex-col"
+            >
+              <td
+                className="my-2 capitalize"
+              >
+                driver
+                :
+                <span
+                  className="bg-get text-white font-bold rounded-md px-2 py-1  mx-2 justify-between capitalize"
+                >
+                  get
+                </span>
+                <span
+                  className="bg-create text-white font-bold rounded-md px-2 py-1  mx-2 justify-between capitalize"
+                >
+                  create
+                </span>
+                <span
+                  className="bg-update text-white font-bold rounded-md px-2 py-1  mx-2 justify-between capitalize"
+                >
+                  update
+                </span>
+                <span
+                  className="bg-delete text-white font-bold rounded-md px-2 py-1  mx-2 justify-between capitalize"
+                >
+                  delete
+                </span>
+              </td>
+              <td
+                className="my-2 capitalize"
+              >
+                routes
+                :
+                <span
+                  className="bg-get text-white font-bold rounded-md px-2 py-1  mx-2 justify-between capitalize"
+                >
+                  get
+                </span>
+                <span
+                  className="bg-create text-white font-bold rounded-md px-2 py-1  mx-2 justify-between capitalize"
+                >
+                  create
+                </span>
+                <span
+                  className="bg-update text-white font-bold rounded-md px-2 py-1  mx-2 justify-between capitalize"
+                >
+                  update
+                </span>
+                <span
+                  className="bg-delete text-white font-bold rounded-md px-2 py-1  mx-2 justify-between capitalize"
+                >
+                  delete
+                </span>
+              </td>
+              <td
+                className="my-2 capitalize"
+              >
+                operator
+                :
+                <span
+                  className="bg-get text-white font-bold rounded-md px-2 py-1  mx-2 justify-between capitalize"
+                >
+                  get
+                </span>
+                <span
+                  className="bg-create text-white font-bold rounded-md px-2 py-1  mx-2 justify-between capitalize"
+                >
+                  create
+                </span>
+                <span
+                  className="bg-update text-white font-bold rounded-md px-2 py-1  mx-2 justify-between capitalize"
+                >
+                  update
+                </span>
+                <span
+                  className="bg-delete text-white font-bold rounded-md px-2 py-1  mx-2 justify-between capitalize"
+                >
+                  delete
+                </span>
+              </td>
+              <td
+                className="my-2 capitalize"
+              >
+                company
+                :
+                <span
+                  className="bg-get text-white font-bold rounded-md px-2 py-1  mx-2 justify-between capitalize"
+                >
+                  get
+                </span>
+                <span
+                  className="bg-create text-white font-bold rounded-md px-2 py-1  mx-2 justify-between capitalize"
+                >
+                  create
+                </span>
+                <span
+                  className="bg-update text-white font-bold rounded-md px-2 py-1  mx-2 justify-between capitalize"
+                >
+                  update
+                </span>
+                <span
+                  className="bg-delete text-white font-bold rounded-md px-2 py-1  mx-2 justify-between capitalize"
+                >
+                  delete
+                </span>
+              </td>
+            </tr>
+          </td>
+        </tr>
+        <tr
+          className="border-b-2"
+        >
+          <td
+            className="px-2 py-1 capitalize font-bold"
+            colSpan={2}
+          >
+            operator
+          </td>
+          <td
+            className="px-2"
+            colSpan={4}
+          >
+            <tr
+              className="flex flex-col"
+            >
+              <td
+                className="my-2 capitalize"
+              >
+                driver
+                :
+                <span
+                  className="bg-get text-white font-bold rounded-md px-2 py-1  mx-2 justify-between capitalize"
+                >
+                  get
+                </span>
+                <span
+                  className="bg-create text-white font-bold rounded-md px-2 py-1  mx-2 justify-between capitalize"
+                >
+                  create
+                </span>
+                <span
+                  className="bg-update text-white font-bold rounded-md px-2 py-1  mx-2 justify-between capitalize"
+                >
+                  update
+                </span>
+                <span
+                  className="bg-delete text-white font-bold rounded-md px-2 py-1  mx-2 justify-between capitalize"
+                >
+                  delete
+                </span>
+              </td>
+              <td
+                className="my-2 capitalize"
+              >
+                routes
+                :
+                <span
+                  className="bg-get text-white font-bold rounded-md px-2 py-1  mx-2 justify-between capitalize"
+                >
+                  get
+                </span>
+                <span
+                  className="bg-create text-white font-bold rounded-md px-2 py-1  mx-2 justify-between capitalize"
+                >
+                  create
+                </span>
+                <span
+                  className="bg-update text-white font-bold rounded-md px-2 py-1  mx-2 justify-between capitalize"
+                >
+                  update
+                </span>
+                <span
+                  className="bg-delete text-white font-bold rounded-md px-2 py-1  mx-2 justify-between capitalize"
+                >
+                  delete
+                </span>
+              </td>
+            </tr>
+          </td>
+        </tr>
+        <tr
+          className="border-b-2"
+        >
+          <td
+            className="px-2 py-1 capitalize font-bold"
+            colSpan={2}
+          >
+            driver
+          </td>
+          <td
+            className="px-2"
+            colSpan={4}
+          >
+            <tr
+              className="flex flex-col"
+            >
+              <td
+                className="my-2 capitalize"
+              >
+                driver
+                :
+                <span
+                  className="bg-get text-white font-bold rounded-md px-2 py-1  mx-2 justify-between capitalize"
+                >
+                  get
+                </span>
+              </td>
+              <td
+                className="my-2 capitalize"
+              >
+                routes
+                :
+                <span
+                  className="bg-get text-white font-bold rounded-md px-2 py-1  mx-2 justify-between capitalize"
+                >
+                  get
+                </span>
+              </td>
+            </tr>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+`;

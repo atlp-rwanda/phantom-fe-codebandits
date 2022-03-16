@@ -8,7 +8,7 @@ function CheckRole({ children, role, type }) {
   if (!authenticated) {
     return '';
   }
-  if (user.roles.name == 'admin') {
+  if (user.roles.name === 'admin') {
     return children;
   } else if (role.includes(user.roles.name)) {
     return children;

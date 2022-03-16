@@ -1,6 +1,8 @@
+/* eslint-disable jsx-a11y/label-has-associated-control */
+/* eslint-disable react/jsx-props-no-spreading */
 import React from 'react';
-import Button from '../Button.js';
 import { useForm } from 'react-hook-form';
+import Button from '../Button.js';
 
 const Buses = ({
   formTitle,
@@ -22,6 +24,7 @@ const Buses = ({
     await formAction(data);
   };
   const inputClassStyles = 'rounded-sm px-3 py-3 mb-2 bg-[#EFEFEF]';
+  const errorStyles = 'text-rose-500 mb-2';
   return (
     <div className="px-8 py-4 my-auto font-raleway md:py-8">
       <form
@@ -36,15 +39,17 @@ const Buses = ({
           defaultValue={busType}
           name="busType"
           id="busType"
-          {...register('busType')}
+          {...register('busType', { required: 'Bus type is required' })}
           className={inputClassStyles}
         >
-          <option hidden>Select bus type</option>
+          <option hidden value="">
+            Select bus type
+          </option>
           <option value="Coaster">Coaster</option>
           <option value="Minibus">Minibus</option>
           <option value="Big Bus">Big Bus</option>
         </select>
-        <p className="text-red-800">
+        <p className={errorStyles}>
           {errors?.busType && errors.busType.message}
         </p>
         <label htmlFor="busType" className="font-bold mb-2">
@@ -55,13 +60,18 @@ const Buses = ({
           name="company"
           id="company"
           className={inputClassStyles}
-          {...register('company')}
+          {...register('company', { required: 'Company is required' })}
         >
-          <option hidden>Select company</option>
+          <option hidden value="">
+            Select company
+          </option>
           <option value="KBS">Kigali Bus Service</option>
           <option value="Royal_express">Royal Express</option>
           <option value="Virunga_express">Virunga Express</option>
         </select>
+        <p className={errorStyles}>
+          {errors?.company && errors.company.message}
+        </p>
         <label htmlFor="seats" className="font-bold mb-2">
           Seats
         </label>
@@ -79,9 +89,7 @@ const Buses = ({
             }
           })}
         />
-        <p className="text-red-800 mb-2">
-          {errors?.seats && errors.seats.message}
-        </p>
+        <p className={errorStyles}>{errors?.seats && errors.seats.message}</p>
         <label htmlFor="seats" className="font-bold mb-2">
           Plate number
         </label>
@@ -99,13 +107,12 @@ const Buses = ({
             }
           })}
         />
-        <p className="text-red-800 mb-2">
+        <p className={errorStyles}>
           {errors?.plateNumber && errors.plateNumber.message}
         </p>
         <div className="self-center">
           <Button
             name={formTitle}
-            type="submit"
             styles="bg-primary text-sm text-white py-2 px-3 mt-4"
           />
         </div>

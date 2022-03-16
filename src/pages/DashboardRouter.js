@@ -10,7 +10,7 @@ import { ProfilePage } from './dashboard/Mainpage.js';
 import Management from './dashboard/Management.js';
 import Roles from './dashboard/RolesPage.js';
 import RegisterBus from './RegisterBus.js';
-import UpdateBus from './updateBus.js';
+import UpdateBus from './UpdateBus.js';
 
 function DashRoutes() {
   return (
@@ -18,13 +18,13 @@ function DashRoutes() {
       <Sidebar />
       <div className=" w-4/5 float-right h-full p-4 top-8 right-2 ">
         <Routes>
-          <Route path="main" element={<ComingSoon title={'dashboard'} />} />
+          <Route path="main" element={<ComingSoon title="dashboard" />} />
           <Route path="roles" element={<Roles />} />
           <Route
             path="notifications"
-            element={<ComingSoon title={'notifications'} />}
+            element={<ComingSoon title="notifications" />}
           />
-          <Route path="settings" element={<ComingSoon title={'settings'} />} />
+          <Route path="settings" element={<ComingSoon title="settings" />} />
           <Route path="profile" element={<ProfilePage />} />
           <Route path="management" element={<Management />} />
 

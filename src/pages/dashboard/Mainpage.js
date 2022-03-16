@@ -1,5 +1,5 @@
 import React from 'react';
-import OperatorProfile from '../../profiles/OperatorProfile.js';
+import OperatorProfile from '../../pages/profiles/OperatorProfile.js';
 
 export const UsersPage = () => {
   return <h1>User Page</h1>;
@@ -19,5 +19,5 @@ export const UserInfo = () => {
   return <h1>Main Dashboard</h1>;
 };
 export const ProfilePage = () => {
-  return <OperatorProfile/>
+  return <OperatorProfile />;
 };
