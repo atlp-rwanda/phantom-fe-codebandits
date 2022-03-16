@@ -23,7 +23,6 @@ const RegisterBus = () => {
   return (
     <Buses
       formTitle="Register Bus"
-      successToastMessage={'Bus registered successfully'}
       formAction={registerBusToDB}
     />
   );
