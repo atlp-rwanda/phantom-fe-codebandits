@@ -15,7 +15,7 @@ const createRoutingMachineLayer = ({ origin, destination, userPosition }) => {
     addWaypoints: true,
     routeWhileDragging: true,
     draggableWaypoints: true,
-    fitSelectedRoutes: true,
+    fitSelectedRoutes: false,
     showAlternatives: false
   });
 
@@ -23,9 +23,11 @@ const createRoutingMachineLayer = ({ origin, destination, userPosition }) => {
     iconUrl: currentIcon,
     iconSize: [25, 35]
   });
-  L.marker(userPosition, { icon: locationIcon })
-    .addTo(map)
-    .bindPopup('Current location');
+  if (userPosition) {
+    L.marker(userPosition, { icon: locationIcon })
+      .addTo(map)
+      .bindPopup('Current location');
+  }
 
   return instance;
 };

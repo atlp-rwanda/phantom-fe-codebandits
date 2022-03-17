@@ -21,13 +21,14 @@ function BusTracker({ data }) {
 
   return (
     <LeafletTrackingMarker
+      id="leaflet"
       icon={busIcon}
       position={[lat, lng]}
       previousPosition={prevPos}
       duration={1000}
     >
       <Popup>
-        Bus: Coaster, RAC508E <br /> Driver:
+        Bus: Coaster, RAC508E <br /> Remaining seats: 5 <br /> Driver:
         <Link to="/public-profile"> Eric SHEMA.</Link>
       </Popup>
     </LeafletTrackingMarker>

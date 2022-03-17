@@ -30,3 +30,7 @@
 .leaflet-routing-alt {
   display: none;
 }
+
+.leaflet-verticalcenter {
+  margin-left: 10px;
+}

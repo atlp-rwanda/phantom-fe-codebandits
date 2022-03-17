@@ -1,10 +1,10 @@
 import L from 'leaflet';
 import React, { useEffect, useRef, useState } from 'react';
-import { MapContainer, TileLayer } from 'react-leaflet';
+import { MapContainer, TileLayer, ZoomControl } from 'react-leaflet';
 import { toast } from 'react-toastify';
 import BusTracker from '../components/BusTracker.js';
 import RoutingMachine from './RoutingMachine.js';
-import directionIcon from '../assets/directions-solid.svg';
+import Button from '../components/Button.js';
 
 const TrackingPage = () => {
   const options = [
@@ -36,71 +36,68 @@ const TrackingPage = () => {
   const selectOne = useRef();
   const selectDes = useRef();
   const [position, setposition] = useState(null);
-  const [prevPos, setprevPos] = useState(null);
 
   const handleRoute = (e) => {
     e.preventDefault();
     options.filter((option) => {
-      const startingPoint = option.name == e.target.origin.value;
+      const startingPoint = option.name === e.target.origin.value;
       if (startingPoint) {
         setOrigin(option.coordinates);
       }
     });
     options.filter((option) => {
-      const endingPoint = option.name == e.target.destination.value;
+      const endingPoint = option.name === e.target.destination.value;
       if (endingPoint) {
         setDestination(option.coordinates);
       }
     });
   };
+
   let cursor = 0;
+
   const [currentTrack, setcurrentTrack] = useState(null);
+
   useEffect(() => {
-    if (origin && destination) {
-      if (rMachine.current) {
-        rMachine.current.setWaypoints([
-          L.latLng(origin),
-          L.latLng(destination)
-        ]);
-        rMachine.current.on('routeselected', (e) => {
-          window.clearInterval();
-          const coor = e.route.coordinates;
-          const { instructions } = e.route;
-          toast('Route selected');
+    if (origin && destination && rMachine.current) {
+      rMachine.current.setWaypoints([L.latLng(origin), L.latLng(destination)]);
+      rMachine.current.on('routeselected', (e) => {
+        window.clearInterval();
+        const coor = e.route.coordinates;
+        toast('Route selected');
+        setcurrentTrack(coor[cursor]);
+        setInterval(() => {
+          if (cursor === coor.length - 1) {
+            setTimeout(() => {
+              cursor = 0;
+              setcurrentTrack(coor[cursor]);
+            }, 5000);
+          }
+          cursor++;
           setcurrentTrack(coor[cursor]);
-          const interval = setInterval(() => {
-            if (cursor === coor.length - 1) {
-              setTimeout(() => {
-                cursor = 0;
-                setcurrentTrack(coor[cursor]);
-              }, 5000);
-            }
-            cursor++;
-            setcurrentTrack(coor[cursor]);
-          }, 2000);
-        });
-      }
+        }, 2000);
+      });
     }
   }, [origin, destination]);
+
   const handleChange = (e) => {
     const { value } = e.target;
     const optionNames = selectDes.current.options;
     Object.keys(optionNames).forEach((key) => {
       const option = optionNames[key];
-      if (option.value == value) {
+      if (option.value === value) {
         option.disabled = true;
       } else {
         option.disabled = false;
       }
     });
   };
+
   const handleChangeDes = (e) => {
     const { value } = e.target;
-
     const optionNames = selectOne.current.options;
     Object.keys(optionNames).forEach((key) => {
       const option = optionNames[key];
-      if (option.value == value) {
+      if (option.value === value) {
         option.disabled = true;
       } else {
         option.disabled = false;
@@ -110,24 +107,23 @@ const TrackingPage = () => {
 
   useEffect(() => {
     if ('geolocation' in navigator) {
-      navigator.geolocation.getCurrentPosition(function (position) {
+      navigator.geolocation.getCurrentPosition((pos) => {
         const userLocation = {
-          lat: position.coords.latitude,
-          lng: position.coords.longitude
+          lat: pos.coords.latitude,
+          lng: pos.coords.longitude
         };
         setposition(userLocation);
       });
-    } else {
-      console.log('Not Available');
     }
   }, []);
   return (
-    <div className="flex flex-col py-8 mx-8 md:mx-32 lg:mx-28 xl:mx-72 mb-6">
+    <div className="flex flex-col">
       <form
+        id="form"
         onSubmit={handleRoute}
-        className="flex flex-col justify-center pb-6 md:mx-4 lg:mx-20 xl:mx-0 md:flex-row"
+        className="fixed z-20 flex flex-col justify-center"
       >
-        <div className="flex flex-col items-center md:items-baseline">
+        <div className="flex flex-col bg-background p-4 rounded-xl mt-2 ml-6 md:ml-10 md:items-baseline">
           <select
             type="text"
             id="origin"
@@ -135,7 +131,7 @@ const TrackingPage = () => {
             ref={selectOne}
             onChange={handleChange}
             placeholder="your current location"
-            className="rounded-xl mb-2 pl-8 md:pr-24 py-1 w-4/5 md:w-full border-2"
+            className="rounded-xl bg-background border-primary text-sm outline-none mb-2 pl-4 md:pl-8 py-1 w-4/5 w-40 md:w-56 border-2"
           >
             <option id="origin-select">Select Origin</option>
             {options.map((option) => {
@@ -156,7 +152,7 @@ const TrackingPage = () => {
             id="destination"
             name="destination"
             placeholder="your destination"
-            className="rounded-xl mb-2 pl-8 md:pr-24 py-1 w-4/5 md:w-full border-2"
+            className="rounded-xl bg-background border-primary text-sm outline-none mb-2 pl-4 md:pl-8 py-1 w-40 w-4/5 md:w-56 border-2"
             ref={selectDes}
           >
             <option value="" hidden>
@@ -174,22 +170,27 @@ const TrackingPage = () => {
               );
             })}
           </select>
-          <button type="submit" className="flex justify-center lg:ml-28">
-            <img src={directionIcon} alt="" className="w-10" />
-          </button>
+          <div type="submit" className="flex justify-center md:ml-16">
+            <Button
+              name="Track"
+              styles="bg-primary text-sm text-background py-1"
+            />
+          </div>
         </div>
       </form>
 
-      <div className="flex justify-center z-10">
+      <div className="flex flex-col items-center z-10">
         <MapContainer
           center={{ lat: -1.936671, lng: 30.053524 }}
           zoom={13}
-          className="h-96 md:h-96 w-[90vw] md:w-[70vw] lg:w-[70vw] xl:w-[60vw]"
+          zoomControl={false}
+          className="h-screen md:h-[88vh] w-[95vw]"
         >
           <TileLayer
             attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
             url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
           />
+          <ZoomControl position="topright" />
           {origin && destination && currentTrack ? (
             <BusTracker data={currentTrack} />
           ) : (

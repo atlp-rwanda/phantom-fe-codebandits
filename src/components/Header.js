@@ -16,7 +16,7 @@ const Header = forwardRef(({ open, setOpen }, ref) => {
           <img
             src={phantom}
             alt="Phantom"
-            className="w-44 xl:w-60 ml-8 xl:ml-20 mt-7 mb-2"
+            className="w-44 xl:w-48 ml-8 xl:ml-20 mt-4"
           />
         </Link>
       </div>
@@ -24,17 +24,17 @@ const Header = forwardRef(({ open, setOpen }, ref) => {
         <Link to="/login">
           <Button
             name="For operators"
-            styles="bg-primary hover:bg-hover text-white rounded-xl mt-7 ml-6"
+            styles="bg-primary hover:bg-hover text-white rounded-xl mt-5 ml-6"
           />
         </Link>
 
         <Link to="/tracking-page">
           <Button
             name="Track Bus"
-            styles="border border-primary bg-background hover:bg-hover2 text-primary rounded-xl mt-7 ml-6 px-6"
+            styles="border border-primary bg-background hover:bg-hover2 text-primary rounded-xl mt-5 ml-6 px-6"
           />
         </Link>
-        <LanguageButton styles="mt-8" />
+        <LanguageButton />
       </div>
       <section
         ref={ref}
@@ -43,7 +43,7 @@ const Header = forwardRef(({ open, setOpen }, ref) => {
         <button
           type="button"
           id="toggle"
-          className="md:hidden xl:hidden ml-auto mr-12 mt-8"
+          className="md:hidden xl:hidden ml-auto mr-12 mt-5"
           onClick={() => setOpen(!open)}
         >
           {!open && <Burger />}

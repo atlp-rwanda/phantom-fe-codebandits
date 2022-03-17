@@ -1,5 +1,6 @@
 import React from 'react';
 import renderer from 'react-test-renderer';
+import { MemoryRouter } from 'react-router-dom';
 import { shallow } from 'enzyme';
 import Intro from '../Intro.js';
 
@@ -10,7 +11,13 @@ describe('Intro', () => {
     expect(value).toEqual(2);
   });
   it('should render Intro', () => {
-    const intro = renderer.create(<Intro />).toJSON();
+    const intro = renderer
+      .create(
+        <MemoryRouter>
+          <Intro />
+        </MemoryRouter>
+      )
+      .toJSON();
     expect(intro).toMatchSnapshot();
   });
 });

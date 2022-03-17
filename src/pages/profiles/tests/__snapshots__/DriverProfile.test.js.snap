@@ -180,6 +180,7 @@ exports[`DriverProfile should render the DriverProfile component 1`] = `
       >
         <button
           className="md:hidden lg:hidden xl:hidden"
+          id="button"
           onClick={[Function]}
           type="button"
         >
