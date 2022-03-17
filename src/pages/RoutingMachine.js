@@ -1,9 +1,11 @@
-import L from 'leaflet';
 import { createControlComponent } from '@react-leaflet/core';
+import L from 'leaflet';
 import 'leaflet-routing-machine';
+import { useMap } from 'react-leaflet';
+import currentIcon from '../assets/current-location.svg';
 
-const createRoutingMachineLayer = ({ origin, destination }) => {
-
+const createRoutingMachineLayer = ({ origin, destination, userPosition }) => {
+  const map = useMap();
   const instance = L.Routing.control({
     waypoints: [L.latLng(origin), L.latLng(destination)],
     lineOptions: {
@@ -16,6 +18,14 @@ const createRoutingMachineLayer = ({ origin, destination }) => {
     fitSelectedRoutes: true,
     showAlternatives: false
   });
+
+  const locationIcon = L.icon({
+    iconUrl: currentIcon,
+    iconSize: [25, 35]
+  });
+  L.marker(userPosition, { icon: locationIcon })
+    .addTo(map)
+    .bindPopup('Current location');
 
   return instance;
 };

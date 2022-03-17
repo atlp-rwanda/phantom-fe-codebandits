@@ -1,8 +1,10 @@
 import L from 'leaflet';
 import React, { useEffect, useRef, useState } from 'react';
 import { MapContainer, TileLayer } from 'react-leaflet';
-import Button from '../components/Button.js';
+import { toast } from 'react-toastify';
+import BusTracker from '../components/BusTracker.js';
 import RoutingMachine from './RoutingMachine.js';
+import directionIcon from '../assets/directions-solid.svg';
 
 const TrackingPage = () => {
   const options = [
@@ -33,6 +35,8 @@ const TrackingPage = () => {
   const rMachine = useRef();
   const selectOne = useRef();
   const selectDes = useRef();
+  const [position, setposition] = useState(null);
+  const [prevPos, setprevPos] = useState(null);
 
   const handleRoute = (e) => {
     e.preventDefault();
@@ -40,17 +44,17 @@ const TrackingPage = () => {
       const startingPoint = option.name == e.target.origin.value;
       if (startingPoint) {
         setOrigin(option.coordinates);
-        return;
       }
     });
     options.filter((option) => {
       const endingPoint = option.name == e.target.destination.value;
       if (endingPoint) {
         setDestination(option.coordinates);
-        return;
       }
     });
   };
+  let cursor = 0;
+  const [currentTrack, setcurrentTrack] = useState(null);
   useEffect(() => {
     if (origin && destination) {
       if (rMachine.current) {
@@ -58,12 +62,29 @@ const TrackingPage = () => {
           L.latLng(origin),
           L.latLng(destination)
         ]);
+        rMachine.current.on('routeselected', (e) => {
+          window.clearInterval();
+          const coor = e.route.coordinates;
+          const { instructions } = e.route;
+          toast('Route selected');
+          setcurrentTrack(coor[cursor]);
+          const interval = setInterval(() => {
+            if (cursor === coor.length - 1) {
+              setTimeout(() => {
+                cursor = 0;
+                setcurrentTrack(coor[cursor]);
+              }, 5000);
+            }
+            cursor++;
+            setcurrentTrack(coor[cursor]);
+          }, 2000);
+        });
       }
     }
   }, [origin, destination]);
   const handleChange = (e) => {
-    const value = e.target.value;
-    let optionNames = selectDes.current.options;
+    const { value } = e.target;
+    const optionNames = selectDes.current.options;
     Object.keys(optionNames).forEach((key) => {
       const option = optionNames[key];
       if (option.value == value) {
@@ -74,9 +95,9 @@ const TrackingPage = () => {
     });
   };
   const handleChangeDes = (e) => {
-    const value = e.target.value;
+    const { value } = e.target;
 
-    let optionNames = selectOne.current.options;
+    const optionNames = selectOne.current.options;
     Object.keys(optionNames).forEach((key) => {
       const option = optionNames[key];
       if (option.value == value) {
@@ -87,11 +108,24 @@ const TrackingPage = () => {
     });
   };
 
+  useEffect(() => {
+    if ('geolocation' in navigator) {
+      navigator.geolocation.getCurrentPosition(function (position) {
+        const userLocation = {
+          lat: position.coords.latitude,
+          lng: position.coords.longitude
+        };
+        setposition(userLocation);
+      });
+    } else {
+      console.log('Not Available');
+    }
+  }, []);
   return (
     <div className="flex flex-col py-8 mx-8 md:mx-32 lg:mx-28 xl:mx-72 mb-6">
       <form
         onSubmit={handleRoute}
-        className="flex flex-col pb-6 md:mx-4 lg:mx-20 xl:mx-0 md:flex-row"
+        className="flex flex-col justify-center pb-6 md:mx-4 lg:mx-20 xl:mx-0 md:flex-row"
       >
         <div className="flex flex-col items-center md:items-baseline">
           <select
@@ -140,16 +174,13 @@ const TrackingPage = () => {
               );
             })}
           </select>
-        </div>
-        <div className="flex justify-center">
-          <Button
-            name="Track"
-            styles="text-sm text-background bg-primary py-1 px-8 mt-4 md:mt-11 md:ml-24"
-          />
+          <button type="submit" className="flex justify-center lg:ml-28">
+            <img src={directionIcon} alt="" className="w-10" />
+          </button>
         </div>
       </form>
 
-      <div className="flex justify-center">
+      <div className="flex justify-center z-10">
         <MapContainer
           center={{ lat: -1.936671, lng: 30.053524 }}
           zoom={13}
@@ -159,11 +190,18 @@ const TrackingPage = () => {
             attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
             url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
           />
+          {origin && destination && currentTrack ? (
+            <BusTracker data={currentTrack} />
+          ) : (
+            ''
+          )}
+
           {origin && destination ? (
             <RoutingMachine
               ref={rMachine}
               origin={origin}
               destination={destination}
+              userPosition={position}
             />
           ) : (
             ''
