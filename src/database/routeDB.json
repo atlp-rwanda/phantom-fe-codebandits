@@ -1,32 +1,74 @@
 {
   "routes": [
     {
-      "destination1": "Remera",
+      "destination1": "Kabuga",
       "destination2": "Nyabugogo",
-      "distance": "15km",
+      "distance": "20km",
       "total_buses": "100",
-      "id": 2
+      "id": 13
     },
     {
       "destination1": "Kabuga",
-      "destination2": "Kimironko",
-      "distance": "7.5km",
+      "destination2": "Remera",
+      "distance": "28km",
       "total_buses": "100",
-      "id": 4
+      "id": 14
     },
     {
       "destination1": "Nyabugogo",
-      "destination2": "Kimironko",
-      "distance": "7.5km",
+      "destination2": "DownTown",
+      "distance": "5km",
       "total_buses": "100",
-      "id": 5
+      "id": 15
     },
     {
       "destination1": "Kabuga",
-      "destination2": "Nyanza",
-      "distance": "8km",
+      "destination2": "Remera",
+      "distance": "28km",
       "total_buses": "100",
-      "id": 6
+      "id": 16
+    },
+    {
+      "destination1": "DownTown",
+      "destination2": "Kimironko",
+      "distance": "7.5km",
+      "total_buses": "100",
+      "id": 17
+    },
+    {
+      "destination1": "Kabuga",
+      "destination2": "DownTown",
+      "distance": "17km",
+      "total_buses": "100",
+      "id": 18
+    },
+    {
+      "destination1": "Kacyiru",
+      "destination2": "Kabuga",
+      "distance": "13km",
+      "total_buses": "100",
+      "id": 19
+    },
+    {
+      "destination1": "Kacyiru",
+      "destination2": "Kabuga",
+      "distance": "13km",
+      "total_buses": "100",
+      "id": 20
+    },
+    {
+      "destination1": "Kacyiru",
+      "destination2": "Kabuga",
+      "distance": "13km",
+      "total_buses": "100",
+      "id": 21
+    },
+    {
+      "destination1": "Kacyiru",
+      "destination2": "Kabuga",
+      "distance": "13km",
+      "total_buses": "100",
+      "id": 22
     }
   ]
 }

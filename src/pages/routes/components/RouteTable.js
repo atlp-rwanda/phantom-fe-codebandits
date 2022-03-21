@@ -1,12 +1,12 @@
 import React, { useMemo } from 'react';
 import { Link } from 'react-router-dom';
 import { useGlobalFilter, usePagination, useTable } from 'react-table';
-// import routeDB from '../database/routeDb.json'
-import routeDB from '../database/routeDB.json';
-import CheckRole from '../utils/CheckRoles.js';
-import Button from './Button.js';
-import ManageDropdown from './ManageDropdown.js';
-import SearchFilter from './SearchFilter.js';
+
+import routeDB from '../../../database/routeDB.json'
+import CheckRole from '../../../utils/CheckRoles.js';
+import Button from '../../../components/Button.js';
+import ManageDropdown from '../../../components/ManageDropdown.js';
+import SearchFilter from '../../../components/SearchFilter.js';
 
 const tableColumns = [{
         Header: 'Destination 1',
@@ -27,12 +27,10 @@ const tableColumns = [{
     {
         Header: 'Management',
         accessor: 'management',
-        Cell: ({ row }) => < ManageDropdown row = { row }
-        />
-    }
+        Cell: ({ row }) => < ManageDropdown row = { row.original }
+        />  }
 ];
 
-//!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 const RouteTable = (props) => {
     const columns = useMemo(() => tableColumns, []);
     const data = useMemo(() => routeDB.routes, []);
@@ -101,24 +99,20 @@ const RouteTable = (props) => {
         <div className = "w-full justify-end" >
         <button className = "mr-2"
         onClick = { () => gotoPage(0)
-        }disabled = {!canPreviousPage } > { '<<' } </button>{' '} 
+        }disabled = {!canPreviousPage } > { '<<' } </button>
         <button className = "mr-2"
         onClick = {() => previousPage()}
-        disabled = {!canPreviousPage } >Previous </button>{' '} <button className = "mr-2"
+        disabled = {!canPreviousPage } >Previous </button> <button className = "mr-2"
         onClick = { () => nextPage() }
-        disabled = {!canNextPage } > Next </button>{' '} <button onClick = {() => gotoPage(pageCount - 1)}
-        disabled = {!canNextPage } > { '>>' } </button>{' '} 
-        <span > Page { ' ' } <strong > { pageIndex + 1 } of { pageOptions.length } </strong>{' '} 
-        </span > <span >
-        |Go to page: { ' ' } 
-        <input type = "number"
+        disabled = {!canNextPage } > Next </button> <button onClick = {() => gotoPage(pageCount - 1)}
+        disabled = {!canNextPage } > { '>>' } </button>
+        <span > Page  <strong > { pageIndex + 1 } of { pageOptions.length } </strong>
+        </span > <span > |Go to page: <input type = "number"
         defaultValue = { pageIndex + 1 }
         onChange = { (e) => {const pageNumber = e.target.value?Number(e.target.value) - 1 : 0; gotoPage(pageNumber);}
         }
-        style = {
-            { width: '50px' }
-        }/> 
-        </span > { ' ' } 
+        style = {  { width: '50px' } }/> 
+        </span >
         <select value = { pageSize } onChange = {(e) => setPageSize(Number(e.target.value))} > {[10, 25, 50].map((pageSize) => ( <
                 option key = { pageSize }
                 value = { pageSize } > Show { pageSize } 

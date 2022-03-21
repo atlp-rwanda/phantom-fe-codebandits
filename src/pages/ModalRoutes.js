@@ -1,6 +1,5 @@
 import React from 'react';
 import { Route, Routes } from 'react-router-dom';
-import RouteEdit from './routes/RouteEdit.js';
 import RouteView from './routes/RouteView.js';
 
 function ModalRoutes() {
@@ -9,7 +8,6 @@ function ModalRoutes() {
       <div className="h-fit w-fit overflow-auto rounded-md shadow-main">
         <Routes>
           <Route path="routes/view/:id" element={<RouteView />}></Route>
-          <Route path="routes/edit/:id" element={<RouteEdit />}></Route>
         </Routes>
       </div>
     </div>

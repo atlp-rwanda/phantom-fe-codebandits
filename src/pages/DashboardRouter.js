@@ -10,6 +10,8 @@ import { ProfilePage } from './dashboard/Mainpage.js';
 import Management from './dashboard/Management.js';
 import Roles from './dashboard/RolesPage.js';
 import ModalRoutes from './ModalRoutes.js';
+import RegisterRoute from './routes/RegisterRoute.js';
+import RouteEdit from './routes/RouteEdit.js';
 
 function DashRoutes() {
   return (
@@ -32,6 +34,8 @@ function DashRoutes() {
 
           <Route path="operator/register" element={<RegisterOperator />} />
           <Route path="operator/update" element={<UpdateOperator />} />
+          <Route path="route/register" element={<RegisterRoute />} />
+          <Route path="route/edit/:id" element={<RouteEdit />} />
           <Route path="modal/*" element={<ModalRoutes />} />
           <Route
             path="*"

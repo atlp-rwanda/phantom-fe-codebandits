@@ -2,17 +2,13 @@ import React from 'react';
 import { MapContainer, Marker, Popup, TileLayer } from 'react-leaflet';
 import { useLocation, useParams } from 'react-router-dom';
 
-
 function RouteView() {
-    // const {id} = useParams()
     const location = useLocation();
     console.log(location?.state);
-    const { id, destination1, destination2 } = location?.state?.route;
-    console.log("Destination: ", destination1);
+    const {  destination1, destination2 } = location?.state?.route;
 
     return ( 
     <div className = 'p-4 bg-white' >
-        {/* <h1 className='bold'> Edit model </h1>  */}
         <h2 className='text-2xl text-center font-bold'> Route informations </h2> 
         <div className='mt-5'>
         <ul>

@@ -1,5 +1,5 @@
 import React from 'react';
-import RouteTable from '../../components/RouteTable.js';
+import RouteTable from '../routes/components/RouteTable.js';
 
 const Routes = () => {
         return ( 
