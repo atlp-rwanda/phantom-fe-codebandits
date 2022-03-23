@@ -11,8 +11,20 @@ const routesDistance = [{
 	distance: '50km'
 },
 {
+	route: ['Kacyiru', 'Nyabugogo'],
+	distance: '5km'
+},
+{
+	route: ['Kimironko', 'Kabuga'],
+	distance: '14km'
+},
+{
 	route: ['Remera', 'Kabuga'],
 	distance: '28km'
+},
+{
+	route: ['Nyanza', 'Kabuga'],
+	distance: '22km'
 },
 {
 	route: ['Kabuga', 'Nyabugogo'],

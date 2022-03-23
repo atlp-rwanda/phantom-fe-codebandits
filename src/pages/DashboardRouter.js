@@ -6,12 +6,12 @@ import RegisterOperator from '../forms/RegisterOperator.js';
 import UpdateDriver from '../forms/UpdateDriver.js';
 import UpdateOperator from '../forms/UpdateOperator.js';
 import ComingSoon from './ComingSoon.js';
-import { ProfilePage } from './dashboard/Mainpage.js';
 import Management from './dashboard/Management.js';
 import Roles from './dashboard/RolesPage.js';
 import ModalRoutes from './ModalRoutes.js';
 import RegisterRoute from './routes/RegisterRoute.js';
 import RouteEdit from './routes/RouteEdit.js';
+import OperatorProfile from './profiles/OperatorProfile.js';
 
 function DashRoutes() {
   return (
@@ -26,12 +26,11 @@ function DashRoutes() {
             element={<ComingSoon title={'notifications'} />}
           />
           <Route path="settings" element={<ComingSoon title={'settings'} />} />
-          <Route path="profile" element={<ProfilePage />} />
           <Route path="management" element={<Management />} />
 
           <Route path="driver/register" element={<RegisterDriver />} />
           <Route path="driver/update" element={<UpdateDriver />} />
-
+          <Route path="profile/operator" element={<OperatorProfile />} />
           <Route path="operator/register" element={<RegisterOperator />} />
           <Route path="operator/update" element={<UpdateOperator />} />
           <Route path="route/register" element={<RegisterRoute />} />

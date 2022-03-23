@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Driver Management page should render Login 1`] = `
+exports[` 1`] = `
 <div>
   <section
     className="flex justify-between content-center pb-7"
@@ -10,106 +10,118 @@ exports[`Driver Management page should render Login 1`] = `
         className="p-1 rounded-md border-2"
         name="search"
         onChange={[Function]}
-        placeholder="Search drivers..."
         type="text"
         value=""
       />
     </div>
+     
     
   </section>
+   
   <table
     className="w-full"
     role="table"
   >
     <thead>
+       
       <tr
         className="pb-10 "
         role="row"
       >
+         
         <th
           className="text-left font-extrabold pr-5 border-b-2 pb-4"
           colSpan={1}
           role="columnheader"
         >
-          Names
+           
+          Destination 1
+           
         </th>
         <th
           className="text-left font-extrabold pr-5 border-b-2 pb-4"
           colSpan={1}
           role="columnheader"
         >
-          Email
+           
+          Destination 2
+           
         </th>
         <th
           className="text-left font-extrabold pr-5 border-b-2 pb-4"
           colSpan={1}
           role="columnheader"
         >
-          License
+           
+          Distance
+           
         </th>
         <th
           className="text-left font-extrabold pr-5 border-b-2 pb-4"
           colSpan={1}
           role="columnheader"
         >
-          Assigned Bus
+           
+          Total buses in Route
+           
         </th>
         <th
           className="text-left font-extrabold pr-5 border-b-2 pb-4"
           colSpan={1}
           role="columnheader"
         >
-          Assigned Route
-        </th>
-        <th
-          className="text-left font-extrabold pr-5 border-b-2 pb-4"
-          colSpan={1}
-          role="columnheader"
-        >
+           
           Management
+           
         </th>
+         
       </tr>
     </thead>
     <tbody
       role="rowgroup"
     >
+       
       <tr
         role="row"
       >
+         
         <td
           className="pr-5 py-4 border-b-2"
           role="cell"
         >
-          Mugisha Lambert
+           
+          Kabuga
+           
         </td>
         <td
           className="pr-5 py-4 border-b-2"
           role="cell"
         >
-          lborthwick0@ning.com
+           
+          DownTown
+           
         </td>
         <td
           className="pr-5 py-4 border-b-2"
           role="cell"
         >
-          1191985415211291
+           
+          17km
+           
         </td>
         <td
           className="pr-5 py-4 border-b-2"
           role="cell"
         >
-          RAB108E
+           
+          100
+           
         </td>
         <td
           className="pr-5 py-4 border-b-2"
           role="cell"
         >
-          Nyabugogo-Kimironko
-        </td>
-        <td
-          className="pr-5 py-4 border-b-2"
-          role="cell"
-        >
+           
           <div
             className="z-10"
           >
@@ -118,6 +130,7 @@ exports[`Driver Management page should render Login 1`] = `
               id=""
               name=""
               onChange={[Function]}
+              role="select"
             >
               <option
                 hidden={true}
@@ -128,56 +141,61 @@ exports[`Driver Management page should render Login 1`] = `
                 onClick={[Function]}
                 value="view"
               >
-                 View 
+                 
+                View
+                 
               </option>
-               
               
-              
-               
               
                
             </select>
              
           </div>
+           
         </td>
+         
       </tr>
       <tr
         role="row"
       >
+         
         <td
           className="pr-5 py-4 border-b-2"
           role="cell"
         >
-          Mugisha Lambert
+           
+          Kacyiru
+           
         </td>
         <td
           className="pr-5 py-4 border-b-2"
           role="cell"
         >
-          ctruswell1@histats.com
+           
+          Kabuga
+           
         </td>
         <td
           className="pr-5 py-4 border-b-2"
           role="cell"
         >
-          1195510237288508
+           
+          13km
+           
         </td>
         <td
           className="pr-5 py-4 border-b-2"
           role="cell"
         >
-          RAB482E
+           
+          100
+           
         </td>
         <td
           className="pr-5 py-4 border-b-2"
           role="cell"
         >
-          Nyabugogo-Kimironko
-        </td>
-        <td
-          className="pr-5 py-4 border-b-2"
-          role="cell"
-        >
+           
           <div
             className="z-10"
           >
@@ -186,6 +204,7 @@ exports[`Driver Management page should render Login 1`] = `
               id=""
               name=""
               onChange={[Function]}
+              role="select"
             >
               <option
                 hidden={true}
@@ -196,56 +215,61 @@ exports[`Driver Management page should render Login 1`] = `
                 onClick={[Function]}
                 value="view"
               >
-                 View 
+                 
+                View
+                 
               </option>
-               
               
-              
-               
               
                
             </select>
              
           </div>
+           
         </td>
+         
       </tr>
       <tr
         role="row"
       >
+         
         <td
           className="pr-5 py-4 border-b-2"
           role="cell"
         >
-          Mugisha Lambert
+           
+          Kacyiru
+           
         </td>
         <td
           className="pr-5 py-4 border-b-2"
           role="cell"
         >
-          jcasperri2@studiopress.com
+           
+          Kabuga
+           
         </td>
         <td
           className="pr-5 py-4 border-b-2"
           role="cell"
         >
-          1199847297552675
+           
+          13km
+           
         </td>
         <td
           className="pr-5 py-4 border-b-2"
           role="cell"
         >
-          RAB933E
+           
+          100
+           
         </td>
         <td
           className="pr-5 py-4 border-b-2"
           role="cell"
         >
-          Nyabugogo-Kimironko
-        </td>
-        <td
-          className="pr-5 py-4 border-b-2"
-          role="cell"
-        >
+           
           <div
             className="z-10"
           >
@@ -254,6 +278,7 @@ exports[`Driver Management page should render Login 1`] = `
               id=""
               name=""
               onChange={[Function]}
+              role="select"
             >
               <option
                 hidden={true}
@@ -264,56 +289,61 @@ exports[`Driver Management page should render Login 1`] = `
                 onClick={[Function]}
                 value="view"
               >
-                 View 
+                 
+                View
+                 
               </option>
-               
               
-              
-               
               
                
             </select>
              
           </div>
+           
         </td>
+         
       </tr>
       <tr
         role="row"
       >
+         
         <td
           className="pr-5 py-4 border-b-2"
           role="cell"
         >
-          Mugisha Lambert
+           
+          Kacyiru
+           
         </td>
         <td
           className="pr-5 py-4 border-b-2"
           role="cell"
         >
-          ayoudell3@msu.edu
+           
+          Nyabugogo
+           
         </td>
         <td
           className="pr-5 py-4 border-b-2"
           role="cell"
         >
-          1190568123797554
+           
+          5km
+           
         </td>
         <td
           className="pr-5 py-4 border-b-2"
           role="cell"
         >
-          RAB109E
+           
+          100
+           
         </td>
         <td
           className="pr-5 py-4 border-b-2"
           role="cell"
         >
-          Nyabugogo-Kimironko
-        </td>
-        <td
-          className="pr-5 py-4 border-b-2"
-          role="cell"
-        >
+           
           <div
             className="z-10"
           >
@@ -322,6 +352,7 @@ exports[`Driver Management page should render Login 1`] = `
               id=""
               name=""
               onChange={[Function]}
+              role="select"
             >
               <option
                 hidden={true}
@@ -332,56 +363,61 @@ exports[`Driver Management page should render Login 1`] = `
                 onClick={[Function]}
                 value="view"
               >
-                 View 
+                 
+                View
+                 
               </option>
-               
               
-              
-               
               
                
             </select>
              
           </div>
+           
         </td>
+         
       </tr>
       <tr
         role="row"
       >
+         
         <td
           className="pr-5 py-4 border-b-2"
           role="cell"
         >
-          Mugisha Lambert
+           
+          Kabuga
+           
         </td>
         <td
           className="pr-5 py-4 border-b-2"
           role="cell"
         >
-          sfilde4@livejournal.com
+           
+          DownTown
+           
         </td>
         <td
           className="pr-5 py-4 border-b-2"
           role="cell"
         >
-          1197907904314586
+           
+          17km
+           
         </td>
         <td
           className="pr-5 py-4 border-b-2"
           role="cell"
         >
-          RAB513E
+           
+          100
+           
         </td>
         <td
           className="pr-5 py-4 border-b-2"
           role="cell"
         >
-          Nyabugogo-Kimironko
-        </td>
-        <td
-          className="pr-5 py-4 border-b-2"
-          role="cell"
-        >
+           
           <div
             className="z-10"
           >
@@ -390,6 +426,7 @@ exports[`Driver Management page should render Login 1`] = `
               id=""
               name=""
               onChange={[Function]}
+              role="select"
             >
               <option
                 hidden={true}
@@ -400,56 +437,61 @@ exports[`Driver Management page should render Login 1`] = `
                 onClick={[Function]}
                 value="view"
               >
-                 View 
+                 
+                View
+                 
               </option>
-               
               
-              
-               
               
                
             </select>
              
           </div>
+           
         </td>
+         
       </tr>
       <tr
         role="row"
       >
+         
         <td
           className="pr-5 py-4 border-b-2"
           role="cell"
         >
-          Mugisha Lambert
+           
+          Kabuga
+           
         </td>
         <td
           className="pr-5 py-4 border-b-2"
           role="cell"
         >
-          gchisnall5@psu.edu
+           
+          Nyanza
+           
         </td>
         <td
           className="pr-5 py-4 border-b-2"
           role="cell"
         >
-          1198369243838678
+           
+          22km
+           
         </td>
         <td
           className="pr-5 py-4 border-b-2"
           role="cell"
         >
-          RAB145E
+           
+          100
+           
         </td>
         <td
           className="pr-5 py-4 border-b-2"
           role="cell"
         >
-          Nyabugogo-Kimironko
-        </td>
-        <td
-          className="pr-5 py-4 border-b-2"
-          role="cell"
-        >
+           
           <div
             className="z-10"
           >
@@ -458,6 +500,7 @@ exports[`Driver Management page should render Login 1`] = `
               id=""
               name=""
               onChange={[Function]}
+              role="select"
             >
               <option
                 hidden={true}
@@ -468,56 +511,61 @@ exports[`Driver Management page should render Login 1`] = `
                 onClick={[Function]}
                 value="view"
               >
-                 View 
+                 
+                View
+                 
               </option>
-               
               
-              
-               
               
                
             </select>
              
           </div>
+           
         </td>
+         
       </tr>
       <tr
         role="row"
       >
+         
         <td
           className="pr-5 py-4 border-b-2"
           role="cell"
         >
-          Mugisha Lambert
+           
+          Kabuga
+           
         </td>
         <td
           className="pr-5 py-4 border-b-2"
           role="cell"
         >
-          fchastagnier6@nbcnews.com
+           
+          Nyabugogo
+           
         </td>
         <td
           className="pr-5 py-4 border-b-2"
           role="cell"
         >
-          1195777993305775
+           
+          20km
+           
         </td>
         <td
           className="pr-5 py-4 border-b-2"
           role="cell"
         >
-          RAB290E
+           
+          100
+           
         </td>
         <td
           className="pr-5 py-4 border-b-2"
           role="cell"
         >
-          Nyabugogo-Kimironko
-        </td>
-        <td
-          className="pr-5 py-4 border-b-2"
-          role="cell"
-        >
+           
           <div
             className="z-10"
           >
@@ -526,6 +574,7 @@ exports[`Driver Management page should render Login 1`] = `
               id=""
               name=""
               onChange={[Function]}
+              role="select"
             >
               <option
                 hidden={true}
@@ -536,56 +585,61 @@ exports[`Driver Management page should render Login 1`] = `
                 onClick={[Function]}
                 value="view"
               >
-                 View 
+                 
+                View
+                 
               </option>
-               
               
-              
-               
               
                
             </select>
              
           </div>
+           
         </td>
+         
       </tr>
       <tr
         role="row"
       >
+         
         <td
           className="pr-5 py-4 border-b-2"
           role="cell"
         >
-          Mugisha Lambert
+           
+          Kabuga
+           
         </td>
         <td
           className="pr-5 py-4 border-b-2"
           role="cell"
         >
-          plambell7@telegraph.co.uk
+           
+          Nyabugogo
+           
         </td>
         <td
           className="pr-5 py-4 border-b-2"
           role="cell"
         >
-          1195935121286616
+           
+          20km
+           
         </td>
         <td
           className="pr-5 py-4 border-b-2"
           role="cell"
         >
-          RAB419E
+           
+          100
+           
         </td>
         <td
           className="pr-5 py-4 border-b-2"
           role="cell"
         >
-          Nyabugogo-Kimironko
-        </td>
-        <td
-          className="pr-5 py-4 border-b-2"
-          role="cell"
-        >
+           
           <div
             className="z-10"
           >
@@ -594,6 +648,7 @@ exports[`Driver Management page should render Login 1`] = `
               id=""
               name=""
               onChange={[Function]}
+              role="select"
             >
               <option
                 hidden={true}
@@ -604,155 +659,21 @@ exports[`Driver Management page should render Login 1`] = `
                 onClick={[Function]}
                 value="view"
               >
-                 View 
+                 
+                View
+                 
               </option>
-               
               
-              
-               
               
                
             </select>
              
           </div>
+           
         </td>
+         
       </tr>
-      <tr
-        role="row"
-      >
-        <td
-          className="pr-5 py-4 border-b-2"
-          role="cell"
-        >
-          Mugisha Lambert
-        </td>
-        <td
-          className="pr-5 py-4 border-b-2"
-          role="cell"
-        >
-          cattle8@cmu.edu
-        </td>
-        <td
-          className="pr-5 py-4 border-b-2"
-          role="cell"
-        >
-          1196851209448122
-        </td>
-        <td
-          className="pr-5 py-4 border-b-2"
-          role="cell"
-        >
-          RAB439E
-        </td>
-        <td
-          className="pr-5 py-4 border-b-2"
-          role="cell"
-        >
-          Nyabugogo-Kimironko
-        </td>
-        <td
-          className="pr-5 py-4 border-b-2"
-          role="cell"
-        >
-          <div
-            className="z-10"
-          >
-            <select
-              className="py-1 px-3 font-rale font-bold bg-transparent border rounded-sm"
-              id=""
-              name=""
-              onChange={[Function]}
-            >
-              <option
-                hidden={true}
-              >
-                 Manage 
-              </option>
-              <option
-                onClick={[Function]}
-                value="view"
-              >
-                 View 
-              </option>
-               
-              
-              
-               
-              
-               
-            </select>
-             
-          </div>
-        </td>
-      </tr>
-      <tr
-        role="row"
-      >
-        <td
-          className="pr-5 py-4 border-b-2"
-          role="cell"
-        >
-          Mugisha Lambert
-        </td>
-        <td
-          className="pr-5 py-4 border-b-2"
-          role="cell"
-        >
-          ocasaccio9@twitpic.com
-        </td>
-        <td
-          className="pr-5 py-4 border-b-2"
-          role="cell"
-        >
-          1197914502450240
-        </td>
-        <td
-          className="pr-5 py-4 border-b-2"
-          role="cell"
-        >
-          RAB065E
-        </td>
-        <td
-          className="pr-5 py-4 border-b-2"
-          role="cell"
-        >
-          Nyabugogo-Kimironko
-        </td>
-        <td
-          className="pr-5 py-4 border-b-2"
-          role="cell"
-        >
-          <div
-            className="z-10"
-          >
-            <select
-              className="py-1 px-3 font-rale font-bold bg-transparent border rounded-sm"
-              id=""
-              name=""
-              onChange={[Function]}
-            >
-              <option
-                hidden={true}
-              >
-                 Manage 
-              </option>
-              <option
-                onClick={[Function]}
-                value="view"
-              >
-                 View 
-              </option>
-               
-              
-              
-               
-              
-               
-            </select>
-             
-          </div>
-        </td>
-      </tr>
+       
     </tbody>
     <tfoot>
       <tr
@@ -769,7 +690,17 @@ exports[`Driver Management page should render Login 1`] = `
               disabled={true}
               onClick={[Function]}
             >
+               
               &lt;&lt;
+               
+            </button>
+            <button
+              className="mr-2"
+              disabled={true}
+              onClick={[Function]}
+            >
+              Previous
+               
             </button>
              
             <button
@@ -777,36 +708,35 @@ exports[`Driver Management page should render Login 1`] = `
               disabled={true}
               onClick={[Function]}
             >
-              Previous
-            </button>
-             
-            <button
-              className="mr-2"
-              disabled={false}
-              onClick={[Function]}
-            >
+               
               Next
+               
             </button>
              
             <button
-              disabled={false}
+              disabled={true}
               onClick={[Function]}
             >
+               
               &gt;&gt;
+               
             </button>
-             
             <span>
+               
               Page
                
               <strong>
+                 
                 1
                  of 
-                10
+                1
+                 
               </strong>
-               
             </span>
+             
             <span>
-              | Go to page:
+               
+              |Go to page:
                
               <input
                 defaultValue={1}
@@ -819,31 +749,36 @@ exports[`Driver Management page should render Login 1`] = `
                 type="number"
               />
             </span>
-             
             <select
               onChange={[Function]}
               value={10}
             >
+               
               <option
                 value={10}
               >
+                 
                 Show 
                 10
               </option>
               <option
                 value={25}
               >
+                 
                 Show 
                 25
               </option>
               <option
                 value={50}
               >
+                 
                 Show 
                 50
               </option>
+               
             </select>
           </div>
+           
         </td>
       </tr>
     </tfoot>

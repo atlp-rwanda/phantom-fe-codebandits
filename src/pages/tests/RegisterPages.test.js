@@ -1,7 +1,7 @@
 import React from 'react';
 import { MemoryRouter } from 'react-router-dom';
 import renderer from 'react-test-renderer';
-import { RegisterOperatorPage, RegisterDriverPage } from '../RegisterPages.js';
+import { RegisterDriverPage, RegisterOperatorPage } from '../RegisterPages.js';
 
 describe('RegisterOperatorPages component test', () => {
   it('it should render RegisterOperator page', () => {

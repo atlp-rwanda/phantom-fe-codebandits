@@ -10,7 +10,6 @@ Array [
         className="p-1 rounded-md border-2"
         name="search"
         onChange={[Function]}
-        placeholder="Search drivers..."
         type="text"
         value=""
       />
@@ -99,7 +98,7 @@ Array [
           role="cell"
         >
            
-          Nyabugogo
+          DownTown
            
         </td>
         <td
@@ -107,7 +106,7 @@ Array [
           role="cell"
         >
            
-          20km
+          17km
            
         </td>
         <td
@@ -131,6 +130,7 @@ Array [
               id=""
               name=""
               onChange={[Function]}
+              role="select"
             >
               <option
                 hidden={true}
@@ -141,12 +141,11 @@ Array [
                 onClick={[Function]}
                 value="view"
               >
-                 View 
+                 
+                View
+                 
               </option>
-               
               
-              
-               
               
                
             </select>
@@ -160,6 +159,14 @@ Array [
         role="row"
       >
          
+        <td
+          className="pr-5 py-4 border-b-2"
+          role="cell"
+        >
+           
+          Kacyiru
+           
+        </td>
         <td
           className="pr-5 py-4 border-b-2"
           role="cell"
@@ -173,15 +180,7 @@ Array [
           role="cell"
         >
            
-          Remera
-           
-        </td>
-        <td
-          className="pr-5 py-4 border-b-2"
-          role="cell"
-        >
-           
-          28km
+          13km
            
         </td>
         <td
@@ -205,6 +204,7 @@ Array [
               id=""
               name=""
               onChange={[Function]}
+              role="select"
             >
               <option
                 hidden={true}
@@ -215,12 +215,11 @@ Array [
                 onClick={[Function]}
                 value="view"
               >
-                 View 
+                 
+                View
+                 
               </option>
-               
               
-              
-               
               
                
             </select>
@@ -239,7 +238,7 @@ Array [
           role="cell"
         >
            
-          Nyabugogo
+          Kacyiru
            
         </td>
         <td
@@ -247,7 +246,81 @@ Array [
           role="cell"
         >
            
-          DownTown
+          Kabuga
+           
+        </td>
+        <td
+          className="pr-5 py-4 border-b-2"
+          role="cell"
+        >
+           
+          13km
+           
+        </td>
+        <td
+          className="pr-5 py-4 border-b-2"
+          role="cell"
+        >
+           
+          100
+           
+        </td>
+        <td
+          className="pr-5 py-4 border-b-2"
+          role="cell"
+        >
+           
+          <div
+            className="z-10"
+          >
+            <select
+              className="py-1 px-3 font-rale font-bold bg-transparent border rounded-sm"
+              id=""
+              name=""
+              onChange={[Function]}
+              role="select"
+            >
+              <option
+                hidden={true}
+              >
+                 Manage 
+              </option>
+              <option
+                onClick={[Function]}
+                value="view"
+              >
+                 
+                View
+                 
+              </option>
+              
+              
+               
+            </select>
+             
+          </div>
+           
+        </td>
+         
+      </tr>
+      <tr
+        role="row"
+      >
+         
+        <td
+          className="pr-5 py-4 border-b-2"
+          role="cell"
+        >
+           
+          Kacyiru
+           
+        </td>
+        <td
+          className="pr-5 py-4 border-b-2"
+          role="cell"
+        >
+           
+          Nyabugogo
            
         </td>
         <td
@@ -279,6 +352,7 @@ Array [
               id=""
               name=""
               onChange={[Function]}
+              role="select"
             >
               <option
                 hidden={true}
@@ -289,160 +363,11 @@ Array [
                 onClick={[Function]}
                 value="view"
               >
-                 View 
+                 
+                View
+                 
               </option>
-               
               
-              
-               
-              
-               
-            </select>
-             
-          </div>
-           
-        </td>
-         
-      </tr>
-      <tr
-        role="row"
-      >
-         
-        <td
-          className="pr-5 py-4 border-b-2"
-          role="cell"
-        >
-           
-          Kabuga
-           
-        </td>
-        <td
-          className="pr-5 py-4 border-b-2"
-          role="cell"
-        >
-           
-          Remera
-           
-        </td>
-        <td
-          className="pr-5 py-4 border-b-2"
-          role="cell"
-        >
-           
-          28km
-           
-        </td>
-        <td
-          className="pr-5 py-4 border-b-2"
-          role="cell"
-        >
-           
-          100
-           
-        </td>
-        <td
-          className="pr-5 py-4 border-b-2"
-          role="cell"
-        >
-           
-          <div
-            className="z-10"
-          >
-            <select
-              className="py-1 px-3 font-rale font-bold bg-transparent border rounded-sm"
-              id=""
-              name=""
-              onChange={[Function]}
-            >
-              <option
-                hidden={true}
-              >
-                 Manage 
-              </option>
-              <option
-                onClick={[Function]}
-                value="view"
-              >
-                 View 
-              </option>
-               
-              
-              
-               
-              
-               
-            </select>
-             
-          </div>
-           
-        </td>
-         
-      </tr>
-      <tr
-        role="row"
-      >
-         
-        <td
-          className="pr-5 py-4 border-b-2"
-          role="cell"
-        >
-           
-          DownTown
-           
-        </td>
-        <td
-          className="pr-5 py-4 border-b-2"
-          role="cell"
-        >
-           
-          Kimironko
-           
-        </td>
-        <td
-          className="pr-5 py-4 border-b-2"
-          role="cell"
-        >
-           
-          7.5km
-           
-        </td>
-        <td
-          className="pr-5 py-4 border-b-2"
-          role="cell"
-        >
-           
-          100
-           
-        </td>
-        <td
-          className="pr-5 py-4 border-b-2"
-          role="cell"
-        >
-           
-          <div
-            className="z-10"
-          >
-            <select
-              className="py-1 px-3 font-rale font-bold bg-transparent border rounded-sm"
-              id=""
-              name=""
-              onChange={[Function]}
-            >
-              <option
-                hidden={true}
-              >
-                 Manage 
-              </option>
-              <option
-                onClick={[Function]}
-                value="view"
-              >
-                 View 
-              </option>
-               
-              
-              
-               
               
                
             </select>
@@ -501,6 +426,7 @@ Array [
               id=""
               name=""
               onChange={[Function]}
+              role="select"
             >
               <option
                 hidden={true}
@@ -511,12 +437,11 @@ Array [
                 onClick={[Function]}
                 value="view"
               >
-                 View 
+                 
+                View
+                 
               </option>
-               
               
-              
-               
               
                
             </select>
@@ -535,14 +460,6 @@ Array [
           role="cell"
         >
            
-          Kacyiru
-           
-        </td>
-        <td
-          className="pr-5 py-4 border-b-2"
-          role="cell"
-        >
-           
           Kabuga
            
         </td>
@@ -551,7 +468,15 @@ Array [
           role="cell"
         >
            
-          13km
+          Nyanza
+           
+        </td>
+        <td
+          className="pr-5 py-4 border-b-2"
+          role="cell"
+        >
+           
+          22km
            
         </td>
         <td
@@ -575,6 +500,7 @@ Array [
               id=""
               name=""
               onChange={[Function]}
+              role="select"
             >
               <option
                 hidden={true}
@@ -585,12 +511,11 @@ Array [
                 onClick={[Function]}
                 value="view"
               >
-                 View 
+                 
+                View
+                 
               </option>
-               
               
-              
-               
               
                
             </select>
@@ -609,14 +534,6 @@ Array [
           role="cell"
         >
            
-          Kacyiru
-           
-        </td>
-        <td
-          className="pr-5 py-4 border-b-2"
-          role="cell"
-        >
-           
           Kabuga
            
         </td>
@@ -625,7 +542,15 @@ Array [
           role="cell"
         >
            
-          13km
+          Nyabugogo
+           
+        </td>
+        <td
+          className="pr-5 py-4 border-b-2"
+          role="cell"
+        >
+           
+          20km
            
         </td>
         <td
@@ -649,6 +574,7 @@ Array [
               id=""
               name=""
               onChange={[Function]}
+              role="select"
             >
               <option
                 hidden={true}
@@ -659,12 +585,11 @@ Array [
                 onClick={[Function]}
                 value="view"
               >
-                 View 
+                 
+                View
+                 
               </option>
-               
               
-              
-               
               
                
             </select>
@@ -683,14 +608,6 @@ Array [
           role="cell"
         >
            
-          Kacyiru
-           
-        </td>
-        <td
-          className="pr-5 py-4 border-b-2"
-          role="cell"
-        >
-           
           Kabuga
            
         </td>
@@ -699,7 +616,15 @@ Array [
           role="cell"
         >
            
-          13km
+          Nyabugogo
+           
+        </td>
+        <td
+          className="pr-5 py-4 border-b-2"
+          role="cell"
+        >
+           
+          20km
            
         </td>
         <td
@@ -723,6 +648,7 @@ Array [
               id=""
               name=""
               onChange={[Function]}
+              role="select"
             >
               <option
                 hidden={true}
@@ -733,86 +659,11 @@ Array [
                 onClick={[Function]}
                 value="view"
               >
-                 View 
+                 
+                View
+                 
               </option>
-               
               
-              
-               
-              
-               
-            </select>
-             
-          </div>
-           
-        </td>
-         
-      </tr>
-      <tr
-        role="row"
-      >
-         
-        <td
-          className="pr-5 py-4 border-b-2"
-          role="cell"
-        >
-           
-          Kacyiru
-           
-        </td>
-        <td
-          className="pr-5 py-4 border-b-2"
-          role="cell"
-        >
-           
-          Kabuga
-           
-        </td>
-        <td
-          className="pr-5 py-4 border-b-2"
-          role="cell"
-        >
-           
-          13km
-           
-        </td>
-        <td
-          className="pr-5 py-4 border-b-2"
-          role="cell"
-        >
-           
-          100
-           
-        </td>
-        <td
-          className="pr-5 py-4 border-b-2"
-          role="cell"
-        >
-           
-          <div
-            className="z-10"
-          >
-            <select
-              className="py-1 px-3 font-rale font-bold bg-transparent border rounded-sm"
-              id=""
-              name=""
-              onChange={[Function]}
-            >
-              <option
-                hidden={true}
-              >
-                 Manage 
-              </option>
-              <option
-                onClick={[Function]}
-                value="view"
-              >
-                 View 
-              </option>
-               
-              
-              
-               
               
                
             </select>
@@ -848,7 +699,8 @@ Array [
               disabled={true}
               onClick={[Function]}
             >
-              Previous 
+              Previous
+               
             </button>
              
             <button
@@ -856,7 +708,9 @@ Array [
               disabled={true}
               onClick={[Function]}
             >
-               Next 
+               
+              Next
+               
             </button>
              
             <button
@@ -868,7 +722,9 @@ Array [
                
             </button>
             <span>
-               Page  
+               
+              Page
+               
               <strong>
                  
                 1
@@ -879,7 +735,9 @@ Array [
             </span>
              
             <span>
-               |Go to page: 
+               
+              |Go to page:
+               
               <input
                 defaultValue={1}
                 onChange={[Function]}
@@ -899,19 +757,22 @@ Array [
               <option
                 value={10}
               >
-                 Show 
+                 
+                Show 
                 10
               </option>
               <option
                 value={25}
               >
-                 Show 
+                 
+                Show 
                 25
               </option>
               <option
                 value={50}
               >
-                 Show 
+                 
+                Show 
                 50
               </option>
                

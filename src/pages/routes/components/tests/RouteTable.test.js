@@ -1,6 +1,6 @@
 import React from 'react';
 import renderer from 'react-test-renderer';
-import { shallow, mount } from 'enzyme';
+import {  mount } from 'enzyme';
 import { MemoryRouter } from 'react-router-dom';
 import RouteTable from '../RouteTable.js'
 import { Provider } from 'react-redux';

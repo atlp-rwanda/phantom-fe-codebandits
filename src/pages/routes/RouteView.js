@@ -4,7 +4,7 @@ import { useLocation, useParams } from 'react-router-dom';
 
 function RouteView() {
     const location = useLocation();
-    console.log(location?.state);
+    // console.log("hhh",location.state);
     const {  destination1, destination2 } = location?.state?.route;
 
     return ( 

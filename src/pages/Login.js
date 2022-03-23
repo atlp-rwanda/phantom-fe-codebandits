@@ -7,9 +7,10 @@ import busMapImg from '../assets/busMap.png';
 import usersDB from '../database/usersDB.json';
 import { loginUser } from '../redux/reducers/authReducer.js';
 import Sleep from '../utils/Sleep.js';
-
 const Login = () => {
-  const navigate = useNavigate();
+  let navigate = useNavigate();
+  let location = useLocation();
+  const dispatch = useDispatch();
   const [err, setErr] = useState('');
   const [attempts, setAttempts] = useState(0);
   const [loading, setLoading] = useState(false);
@@ -32,7 +33,6 @@ const Login = () => {
         setErr('Invalid credentials');
         return toast('Invalid credentials', { type: 'error' });
       }
-
       dispatch(loginUser(user[0]));
       toast(user.name, { type: 'success' });
       setLoading(false);
@@ -40,8 +40,10 @@ const Login = () => {
     });
   };
 
-  const onErrors = () => {
-    setAttempts(attempts + 1);
+  const onErrors = (errors) => {
+    if (errors.password && !errors.email) {
+      setAttempts(attempts + 1);
+    }
   };
   useEffect(() => {
     if (attempts > 3 && attempts < 5) {
