@@ -1,6 +1,6 @@
+import FormComponent from '@components/FormComponent.js';
+import { operatorInputs } from '@pages/forms/FormInputs.js';
 import React from 'react';
-import { FormComponent } from '../../forms/FormComponent.js';
-import { operatorInputs } from '../../forms/FormInputs.js';
 
 function RegisterOperator() {
   const handleReg = async (data) => {

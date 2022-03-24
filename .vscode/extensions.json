@@ -1,5 +1,7 @@
 {
     "recommendations": [
-        "dbaeumer.vscode-eslint"
+        "ionutvmi.path-autocomplete",
+        "woodreamz.es7-react-js-snippets",
+        "eamodio.gitlens"
     ]
 }

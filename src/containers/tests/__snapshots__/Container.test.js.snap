@@ -1,0 +1,1056 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Check roles Return empty for for the operator 1`] = `
+<div
+  className="flex flex-col items-center justify-center"
+>
+  <h3
+    className="font-rale font-bold"
+  >
+    Don't have the permissions to view the page.
+  </h3>
+  <Link
+    className="bg-primary rounded-sm font-bold"
+    to="/login"
+  >
+    Login with a different account
+  </Link>
+</div>
+`;
+
+exports[`Check roles Return empty for for the operator 2`] = `""`;
+
+exports[`Check roles Return the element for the admin 1`] = `<Roles />`;
+
+exports[`Check roles Return the element for the operator 1`] = `<Roles />`;
+
+exports[`Containers Render the dashboard routes 1`] = `
+Object {
+  "asFragment": [Function],
+  "baseElement": <body>
+    <div>
+      <div
+        class="flex fixed top-0 left-0 right-0 bottom-0 z-0 min-h-screen font-sans antialiased bg-grey-lightest w-full overflow-hidden"
+      >
+        <div
+          class="relative z-10 md:z-0 h-full "
+        >
+          <main
+            class="hidden md:flex lg:flex xl:flex  flex text-sm h-full "
+          >
+            <aside
+              class="border-r-2 h-full sticky top-0 px-4 min-w-fit py-8 bg-gray-100 transition-transform "
+            >
+              <h1
+                class="font-rale font-bold text-center text-3xl "
+              >
+                <a
+                  class="font-bold text-primary font-raleway pb-3"
+                  href="/"
+                >
+                  Phantom
+                </a>
+              </h1>
+              <hr />
+              <div
+                class=" mb-6 mt-8"
+              >
+                <span
+                  class="rounded-full mx-auto flex items-center justify-center h-12 w-12 mb-5"
+                >
+                  <img
+                    alt="Image"
+                    class="rounded-full object-cover h-12 w-12"
+                    src="profileImg.jpg"
+                  />
+                </span>
+                <div
+                  class="text-center font-black text-lg"
+                >
+                  <h1
+                    class="font-raleway"
+                  >
+                    <span
+                      class="capitalize font-bold text-primary"
+                    >
+                      :
+                       
+                    </span>
+                  </h1>
+                </div>
+              </div>
+              <div
+                class="font-raleway w-full"
+              >
+                <ul
+                  class="mb-2"
+                >
+                  <li>
+                    <a
+                      class="py-2 pr-10 pl-4 rounded-full font-bold my-1  hover:bg-gray-300 transition-all  cursor-pointer min-w-fit w-full flex items-center"
+                      href="/dashboard/main"
+                    >
+                      <img
+                        alt="icon"
+                        class="w-6 mr-2"
+                        src="dashboardIcon.png"
+                      />
+                      <span>
+                        Dashboard
+                      </span>
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      class="py-2 pr-10 pl-4 rounded-full font-bold my-1  hover:bg-gray-300 transition-all  cursor-pointer min-w-fit w-full flex items-center"
+                      href="/dashboard/management"
+                    >
+                      <img
+                        alt="icon"
+                        class="w-6 mr-2"
+                        src="manageIcon.png"
+                      />
+                      <span>
+                        Management
+                      </span>
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      class="py-2 pr-10 pl-4 rounded-full font-bold my-1  hover:bg-gray-300 transition-all  cursor-pointer min-w-fit w-full flex items-center"
+                      href="/dashboard/profile"
+                    >
+                      <img
+                        alt="icon"
+                        class="w-6 mr-2"
+                        src="profileIcon.png"
+                      />
+                      <span>
+                        Profile
+                      </span>
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      class="py-2 pr-10 pl-4 rounded-full font-bold my-1  hover:bg-gray-300 transition-all  cursor-pointer min-w-fit w-full flex items-center"
+                      href="/dashboard/notifications"
+                    >
+                      <img
+                        alt="icon"
+                        class="w-6 mr-2"
+                        src="notificationIcon.png"
+                      />
+                      <span>
+                        Notifications
+                      </span>
+                    </a>
+                  </li>
+                  
+                  <li>
+                    <a
+                      class="py-2 pr-10 pl-4 rounded-full font-bold my-1  hover:bg-gray-300 transition-all  cursor-pointer min-w-fit w-full flex items-center"
+                      href="/dashboard/settings"
+                    >
+                      <img
+                        alt="icon"
+                        class="w-6 mr-2"
+                        src="settingIcon.png"
+                      />
+                      <span>
+                        Settings
+                      </span>
+                    </a>
+                  </li>
+                </ul>
+                <div>
+                  <button
+                    class="bg-red mt-4 px-6 py-1 hover:bg-red-600 bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded-xl m-2 "
+                    type="submit"
+                  >
+                    Logout
+                  </button>
+                </div>
+              </div>
+            </aside>
+          </main>
+          <div
+            class="flex"
+          >
+            <button
+              class="md:hidden lg:hidden xl:hidden"
+              id="button"
+              type="button"
+            >
+              <div
+                class="fixed top-2 left-[-10px] bg-gray-300 p-1 opacity-[0.5]"
+              >
+                <div
+                  class=" ml-2 bg-black h-1 w-7 bg-primary mt-1"
+                />
+                <div
+                  class=" ml-2 bg-black h-1 w-7 bg-primary mt-1"
+                />
+                <div
+                  class=" ml-2 bg-black h-1 w-7 bg-primary mt-1"
+                />
+              </div>
+            </button>
+          </div>
+        </div>
+        <div
+          class="float-right min-h-screen h-full  m-0 relative  w-full overflow-y-scroll overflow-x-hidden"
+        >
+          <div
+            class="min-h-full px-2 py-2"
+          >
+            <div
+              class="justify-self-center w-full h-full relative bg-gray-300 md:min-w-[300px] min-h-[300px] p-9"
+            >
+              <div
+                class="flex flex-col items-center justify-center top-0 left-0 right-0 bottom-0"
+              >
+                <h2
+                  class="text-xl font-bold text-primary  pb-5"
+                >
+                  You tried to access 
+                  <b
+                    class="text-black"
+                  >
+                    &lt;&lt;dashboard&gt;&gt;
+                  </b>
+                   but this page is...
+                </h2>
+                <h1
+                  class="text-3xl font-bold pb-5"
+                >
+                  Coming Soon
+                </h1>
+                <div
+                  class="flex flex-row w-fit justify-between"
+                >
+                  <a
+                    class="bg-primary font-bold px-3 py-1 rounded-md mr-2"
+                    href="/"
+                  >
+                    Home
+                  </a>
+                  <button
+                    class="bg-transparent border-2 border-primary font-bold font-rale rounded-md px-3 py-1"
+                  >
+                    &lt;&lt; Back
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div
+            class="mt-auto pt-4 "
+          >
+            <ul
+              class="w-full flex flex-row justify-around items-center py-1 px-4  font-raleway bg-green-200 bg-opacity-40"
+            >
+              <li>
+                © Codebandits 
+                2022
+              </li>
+              <li>
+                <a
+                  href="/"
+                >
+                  home
+                </a>
+              </li>
+              <li>
+                <a
+                  href="/#support"
+                >
+                  Support
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>,
+  "container": <div>
+    <div
+      class="flex fixed top-0 left-0 right-0 bottom-0 z-0 min-h-screen font-sans antialiased bg-grey-lightest w-full overflow-hidden"
+    >
+      <div
+        class="relative z-10 md:z-0 h-full "
+      >
+        <main
+          class="hidden md:flex lg:flex xl:flex  flex text-sm h-full "
+        >
+          <aside
+            class="border-r-2 h-full sticky top-0 px-4 min-w-fit py-8 bg-gray-100 transition-transform "
+          >
+            <h1
+              class="font-rale font-bold text-center text-3xl "
+            >
+              <a
+                class="font-bold text-primary font-raleway pb-3"
+                href="/"
+              >
+                Phantom
+              </a>
+            </h1>
+            <hr />
+            <div
+              class=" mb-6 mt-8"
+            >
+              <span
+                class="rounded-full mx-auto flex items-center justify-center h-12 w-12 mb-5"
+              >
+                <img
+                  alt="Image"
+                  class="rounded-full object-cover h-12 w-12"
+                  src="profileImg.jpg"
+                />
+              </span>
+              <div
+                class="text-center font-black text-lg"
+              >
+                <h1
+                  class="font-raleway"
+                >
+                  <span
+                    class="capitalize font-bold text-primary"
+                  >
+                    :
+                     
+                  </span>
+                </h1>
+              </div>
+            </div>
+            <div
+              class="font-raleway w-full"
+            >
+              <ul
+                class="mb-2"
+              >
+                <li>
+                  <a
+                    class="py-2 pr-10 pl-4 rounded-full font-bold my-1  hover:bg-gray-300 transition-all  cursor-pointer min-w-fit w-full flex items-center"
+                    href="/dashboard/main"
+                  >
+                    <img
+                      alt="icon"
+                      class="w-6 mr-2"
+                      src="dashboardIcon.png"
+                    />
+                    <span>
+                      Dashboard
+                    </span>
+                  </a>
+                </li>
+                <li>
+                  <a
+                    class="py-2 pr-10 pl-4 rounded-full font-bold my-1  hover:bg-gray-300 transition-all  cursor-pointer min-w-fit w-full flex items-center"
+                    href="/dashboard/management"
+                  >
+                    <img
+                      alt="icon"
+                      class="w-6 mr-2"
+                      src="manageIcon.png"
+                    />
+                    <span>
+                      Management
+                    </span>
+                  </a>
+                </li>
+                <li>
+                  <a
+                    class="py-2 pr-10 pl-4 rounded-full font-bold my-1  hover:bg-gray-300 transition-all  cursor-pointer min-w-fit w-full flex items-center"
+                    href="/dashboard/profile"
+                  >
+                    <img
+                      alt="icon"
+                      class="w-6 mr-2"
+                      src="profileIcon.png"
+                    />
+                    <span>
+                      Profile
+                    </span>
+                  </a>
+                </li>
+                <li>
+                  <a
+                    class="py-2 pr-10 pl-4 rounded-full font-bold my-1  hover:bg-gray-300 transition-all  cursor-pointer min-w-fit w-full flex items-center"
+                    href="/dashboard/notifications"
+                  >
+                    <img
+                      alt="icon"
+                      class="w-6 mr-2"
+                      src="notificationIcon.png"
+                    />
+                    <span>
+                      Notifications
+                    </span>
+                  </a>
+                </li>
+                
+                <li>
+                  <a
+                    class="py-2 pr-10 pl-4 rounded-full font-bold my-1  hover:bg-gray-300 transition-all  cursor-pointer min-w-fit w-full flex items-center"
+                    href="/dashboard/settings"
+                  >
+                    <img
+                      alt="icon"
+                      class="w-6 mr-2"
+                      src="settingIcon.png"
+                    />
+                    <span>
+                      Settings
+                    </span>
+                  </a>
+                </li>
+              </ul>
+              <div>
+                <button
+                  class="bg-red mt-4 px-6 py-1 hover:bg-red-600 bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded-xl m-2 "
+                  type="submit"
+                >
+                  Logout
+                </button>
+              </div>
+            </div>
+          </aside>
+        </main>
+        <div
+          class="flex"
+        >
+          <button
+            class="md:hidden lg:hidden xl:hidden"
+            id="button"
+            type="button"
+          >
+            <div
+              class="fixed top-2 left-[-10px] bg-gray-300 p-1 opacity-[0.5]"
+            >
+              <div
+                class=" ml-2 bg-black h-1 w-7 bg-primary mt-1"
+              />
+              <div
+                class=" ml-2 bg-black h-1 w-7 bg-primary mt-1"
+              />
+              <div
+                class=" ml-2 bg-black h-1 w-7 bg-primary mt-1"
+              />
+            </div>
+          </button>
+        </div>
+      </div>
+      <div
+        class="float-right min-h-screen h-full  m-0 relative  w-full overflow-y-scroll overflow-x-hidden"
+      >
+        <div
+          class="min-h-full px-2 py-2"
+        >
+          <div
+            class="justify-self-center w-full h-full relative bg-gray-300 md:min-w-[300px] min-h-[300px] p-9"
+          >
+            <div
+              class="flex flex-col items-center justify-center top-0 left-0 right-0 bottom-0"
+            >
+              <h2
+                class="text-xl font-bold text-primary  pb-5"
+              >
+                You tried to access 
+                <b
+                  class="text-black"
+                >
+                  &lt;&lt;dashboard&gt;&gt;
+                </b>
+                 but this page is...
+              </h2>
+              <h1
+                class="text-3xl font-bold pb-5"
+              >
+                Coming Soon
+              </h1>
+              <div
+                class="flex flex-row w-fit justify-between"
+              >
+                <a
+                  class="bg-primary font-bold px-3 py-1 rounded-md mr-2"
+                  href="/"
+                >
+                  Home
+                </a>
+                <button
+                  class="bg-transparent border-2 border-primary font-bold font-rale rounded-md px-3 py-1"
+                >
+                  &lt;&lt; Back
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div
+          class="mt-auto pt-4 "
+        >
+          <ul
+            class="w-full flex flex-row justify-around items-center py-1 px-4  font-raleway bg-green-200 bg-opacity-40"
+          >
+            <li>
+              © Codebandits 
+              2022
+            </li>
+            <li>
+              <a
+                href="/"
+              >
+                home
+              </a>
+            </li>
+            <li>
+              <a
+                href="/#support"
+              >
+                Support
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>,
+  "debug": [Function],
+  "findAllByAltText": [Function],
+  "findAllByDisplayValue": [Function],
+  "findAllByLabelText": [Function],
+  "findAllByPlaceholderText": [Function],
+  "findAllByRole": [Function],
+  "findAllByTestId": [Function],
+  "findAllByText": [Function],
+  "findAllByTitle": [Function],
+  "findByAltText": [Function],
+  "findByDisplayValue": [Function],
+  "findByLabelText": [Function],
+  "findByPlaceholderText": [Function],
+  "findByRole": [Function],
+  "findByTestId": [Function],
+  "findByText": [Function],
+  "findByTitle": [Function],
+  "getAllByAltText": [Function],
+  "getAllByDisplayValue": [Function],
+  "getAllByLabelText": [Function],
+  "getAllByPlaceholderText": [Function],
+  "getAllByRole": [Function],
+  "getAllByTestId": [Function],
+  "getAllByText": [Function],
+  "getAllByTitle": [Function],
+  "getByAltText": [Function],
+  "getByDisplayValue": [Function],
+  "getByLabelText": [Function],
+  "getByPlaceholderText": [Function],
+  "getByRole": [Function],
+  "getByTestId": [Function],
+  "getByText": [Function],
+  "getByTitle": [Function],
+  "queryAllByAltText": [Function],
+  "queryAllByDisplayValue": [Function],
+  "queryAllByLabelText": [Function],
+  "queryAllByPlaceholderText": [Function],
+  "queryAllByRole": [Function],
+  "queryAllByTestId": [Function],
+  "queryAllByText": [Function],
+  "queryAllByTitle": [Function],
+  "queryByAltText": [Function],
+  "queryByDisplayValue": [Function],
+  "queryByLabelText": [Function],
+  "queryByPlaceholderText": [Function],
+  "queryByRole": [Function],
+  "queryByTestId": [Function],
+  "queryByText": [Function],
+  "queryByTitle": [Function],
+  "rerender": [Function],
+  "unmount": [Function],
+}
+`;
+
+exports[`Containers Render the dashboard routes 2`] = `
+Object {
+  "asFragment": [Function],
+  "baseElement": <body>
+    <div>
+      <div
+        class="fixed top-0 bottom-0 left-0 right-0 flex justify-center bg-gray-600 bg-opacity-50"
+      >
+        <div
+          class="relative bg-white rounded-md px-2 py-2 min-w-md h-fit my-auto"
+        >
+          <div
+            class="absolute top-[-15px] right-[-15px] font-raleway text-white bg-red rounded-circle w-[30px] h-[30px] flex justify-center items-center font-bold cursor-pointer"
+          >
+            X
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>,
+  "container": <div>
+    <div
+      class="fixed top-0 bottom-0 left-0 right-0 flex justify-center bg-gray-600 bg-opacity-50"
+    >
+      <div
+        class="relative bg-white rounded-md px-2 py-2 min-w-md h-fit my-auto"
+      >
+        <div
+          class="absolute top-[-15px] right-[-15px] font-raleway text-white bg-red rounded-circle w-[30px] h-[30px] flex justify-center items-center font-bold cursor-pointer"
+        >
+          X
+        </div>
+      </div>
+    </div>
+  </div>,
+  "debug": [Function],
+  "findAllByAltText": [Function],
+  "findAllByDisplayValue": [Function],
+  "findAllByLabelText": [Function],
+  "findAllByPlaceholderText": [Function],
+  "findAllByRole": [Function],
+  "findAllByTestId": [Function],
+  "findAllByText": [Function],
+  "findAllByTitle": [Function],
+  "findByAltText": [Function],
+  "findByDisplayValue": [Function],
+  "findByLabelText": [Function],
+  "findByPlaceholderText": [Function],
+  "findByRole": [Function],
+  "findByTestId": [Function],
+  "findByText": [Function],
+  "findByTitle": [Function],
+  "getAllByAltText": [Function],
+  "getAllByDisplayValue": [Function],
+  "getAllByLabelText": [Function],
+  "getAllByPlaceholderText": [Function],
+  "getAllByRole": [Function],
+  "getAllByTestId": [Function],
+  "getAllByText": [Function],
+  "getAllByTitle": [Function],
+  "getByAltText": [Function],
+  "getByDisplayValue": [Function],
+  "getByLabelText": [Function],
+  "getByPlaceholderText": [Function],
+  "getByRole": [Function],
+  "getByTestId": [Function],
+  "getByText": [Function],
+  "getByTitle": [Function],
+  "queryAllByAltText": [Function],
+  "queryAllByDisplayValue": [Function],
+  "queryAllByLabelText": [Function],
+  "queryAllByPlaceholderText": [Function],
+  "queryAllByRole": [Function],
+  "queryAllByTestId": [Function],
+  "queryAllByText": [Function],
+  "queryAllByTitle": [Function],
+  "queryByAltText": [Function],
+  "queryByDisplayValue": [Function],
+  "queryByLabelText": [Function],
+  "queryByPlaceholderText": [Function],
+  "queryByRole": [Function],
+  "queryByTestId": [Function],
+  "queryByText": [Function],
+  "queryByTitle": [Function],
+  "rerender": [Function],
+  "unmount": [Function],
+}
+`;
+
+exports[`Containers Render the main routes 1`] = `
+Object {
+  "asFragment": [Function],
+  "baseElement": <body>
+    <div>
+      <div
+        class="flex bg-background border-b-4 pb-4 sticky top-0 z-20"
+      >
+        <div>
+          <a
+            href="/"
+          >
+            <img
+              alt="Phantom"
+              class="w-44 xl:w-48 ml-8 xl:ml-20 mt-4"
+              src="phantom.png"
+            />
+          </a>
+        </div>
+        <div
+          class="hidden md:flex xl:flex ml-auto mr-20"
+        >
+          <a
+            href="/login"
+          >
+            <div>
+              <button
+                class="bg-primary hover:bg-hover text-white rounded-xl mt-5 ml-6 rounded-xl py-2 text-base md:text-sm px-5"
+                type="submit"
+              >
+                For operators
+              </button>
+            </div>
+          </a>
+          <a
+            href="/tracking-page"
+          >
+            <div>
+              <button
+                class="border border-primary bg-background hover:bg-hover2 text-primary rounded-xl mt-5 ml-6 px-6 rounded-xl py-2 text-base md:text-sm px-5"
+                type="submit"
+              >
+                Track Bus
+              </button>
+            </div>
+          </a>
+          <div>
+            <select
+              class="bg-background border outline-none md:ml-6 lg:ml-6 xl:ml-6 mt-5 flex py-2 px-4 text-sm hover:font-bold"
+            >
+              <option
+                class=" border-none bg-background w-full cursor-pointer"
+              >
+                English
+              </option>
+              <option
+                class=" border-none bg-background w-full cursor-pointer"
+              >
+                French
+              </option>
+              <option
+                class=" border-none bg-background cursor-pointer"
+              >
+                Kinyarwanda
+              </option>
+            </select>
+          </div>
+        </div>
+        <section
+          class="flex flex-col absolute right-0 bg-background px-2"
+        >
+          <button
+            class="md:hidden xl:hidden ml-auto mr-12 mt-5"
+            id="toggle"
+            type="button"
+          >
+            <div>
+              <div
+                class="undefined h-1 w-7 bg-primary mt-1"
+              />
+              <div
+                class="undefined h-1 w-7 bg-primary mt-1"
+              />
+              <div
+                class="undefined h-1 w-7 bg-primary mt-1"
+              />
+            </div>
+          </button>
+        </section>
+      </div>
+      <div>
+        <div
+          class="flex flex-col items-center"
+        >
+          <main
+            class="flex flex-col items-center lg:flex-row xl:flex-row"
+          >
+            <section
+              class="flex flex-col items-center"
+            >
+              <h1>
+                <div
+                  class="w-64 md:w-96 lg:w-96 xl:w-96 bg-gray-300 h-12 rounded-xl mx-12 xl:mx-28 mt-24 md:mt-32 xl:mt-32"
+                />
+              </h1>
+              <h2>
+                <div
+                  class="w-44 md:w-48 lg:w-48 xl:w-48 bg-gray-300 h-12 rounded-xl mx-20 mt-10 "
+                />
+              </h2>
+              <div
+                class="w-28 md:w-28 lg:w-28 xl:w-28 bg-gray-300 h-10 rounded-3xl mt-12 px-12 xl:px-12 py-2"
+              />
+            </section>
+            <div
+              class="w-64 md:w-96 lg:w-96 h-32 mb-8 md:h-48 lg:h-48 xl:h-48 rounded-xl bg-gray-300 px-20  xl:w-96 lg:ml-auto xl:ml-auto lg:mr-36 xl:mr-36 mt-28"
+            />
+          </main>
+          <div
+            class="w-64 md:w-96 lg:w-96 xl:w-96 bg-gray-300 h-8 rounded-xl mx-12 xl:mx-28 mt-24 md:mt-32 xl:mt-32 mb-32"
+          />
+        </div>
+      </div>
+      <footer
+        class="flex bg-primary z-20 xl:justify-center md:text-xl text-background font-sans font-sm py-8 lg:py-2 xl:py-2 mt-auto"
+      >
+        <div
+          class="flex flex-col lg:flex-row xl:flex-row px-12 text-center items-center"
+        >
+          <img
+            alt="Codebandits"
+            class="w-24 ml-2 lg:ml-8 lg:mt-4 xl:mt-2"
+            src="codebandits.png"
+          />
+          <h3
+            class="lg:ml-8 xl:ml-20 mt-6 xl:mt-2"
+          >
+            ©copyright Codebandits 2022
+          </h3>
+        </div>
+        <div
+          class="flex flex-col md:text-xl lg:flex-row xl:flex-row lg:mt-7 xl:mt-3 mr-16 md:mx-20 xl:ml-20 ml-auto md:ml-auto"
+        >
+          <a
+            class="xl:ml-0 lg:ml-0 mt-2 text-md mb-4 hover:font-bold"
+            href="/"
+          >
+            Support
+          </a>
+          <a
+            class="xl:ml-28 lg:ml-12 mt-2 text-md mb-4 hover:font-bold"
+            href="/"
+          >
+            Terms of use
+          </a>
+          <a
+            class="xl:ml-28 lg:ml-12 mt-2 text-md hover:font-bold"
+            href="/login"
+          >
+            Administration
+          </a>
+        </div>
+      </footer>
+    </div>
+  </body>,
+  "container": <div>
+    <div
+      class="flex bg-background border-b-4 pb-4 sticky top-0 z-20"
+    >
+      <div>
+        <a
+          href="/"
+        >
+          <img
+            alt="Phantom"
+            class="w-44 xl:w-48 ml-8 xl:ml-20 mt-4"
+            src="phantom.png"
+          />
+        </a>
+      </div>
+      <div
+        class="hidden md:flex xl:flex ml-auto mr-20"
+      >
+        <a
+          href="/login"
+        >
+          <div>
+            <button
+              class="bg-primary hover:bg-hover text-white rounded-xl mt-5 ml-6 rounded-xl py-2 text-base md:text-sm px-5"
+              type="submit"
+            >
+              For operators
+            </button>
+          </div>
+        </a>
+        <a
+          href="/tracking-page"
+        >
+          <div>
+            <button
+              class="border border-primary bg-background hover:bg-hover2 text-primary rounded-xl mt-5 ml-6 px-6 rounded-xl py-2 text-base md:text-sm px-5"
+              type="submit"
+            >
+              Track Bus
+            </button>
+          </div>
+        </a>
+        <div>
+          <select
+            class="bg-background border outline-none md:ml-6 lg:ml-6 xl:ml-6 mt-5 flex py-2 px-4 text-sm hover:font-bold"
+          >
+            <option
+              class=" border-none bg-background w-full cursor-pointer"
+            >
+              English
+            </option>
+            <option
+              class=" border-none bg-background w-full cursor-pointer"
+            >
+              French
+            </option>
+            <option
+              class=" border-none bg-background cursor-pointer"
+            >
+              Kinyarwanda
+            </option>
+          </select>
+        </div>
+      </div>
+      <section
+        class="flex flex-col absolute right-0 bg-background px-2"
+      >
+        <button
+          class="md:hidden xl:hidden ml-auto mr-12 mt-5"
+          id="toggle"
+          type="button"
+        >
+          <div>
+            <div
+              class="undefined h-1 w-7 bg-primary mt-1"
+            />
+            <div
+              class="undefined h-1 w-7 bg-primary mt-1"
+            />
+            <div
+              class="undefined h-1 w-7 bg-primary mt-1"
+            />
+          </div>
+        </button>
+      </section>
+    </div>
+    <div>
+      <div
+        class="flex flex-col items-center"
+      >
+        <main
+          class="flex flex-col items-center lg:flex-row xl:flex-row"
+        >
+          <section
+            class="flex flex-col items-center"
+          >
+            <h1>
+              <div
+                class="w-64 md:w-96 lg:w-96 xl:w-96 bg-gray-300 h-12 rounded-xl mx-12 xl:mx-28 mt-24 md:mt-32 xl:mt-32"
+              />
+            </h1>
+            <h2>
+              <div
+                class="w-44 md:w-48 lg:w-48 xl:w-48 bg-gray-300 h-12 rounded-xl mx-20 mt-10 "
+              />
+            </h2>
+            <div
+              class="w-28 md:w-28 lg:w-28 xl:w-28 bg-gray-300 h-10 rounded-3xl mt-12 px-12 xl:px-12 py-2"
+            />
+          </section>
+          <div
+            class="w-64 md:w-96 lg:w-96 h-32 mb-8 md:h-48 lg:h-48 xl:h-48 rounded-xl bg-gray-300 px-20  xl:w-96 lg:ml-auto xl:ml-auto lg:mr-36 xl:mr-36 mt-28"
+          />
+        </main>
+        <div
+          class="w-64 md:w-96 lg:w-96 xl:w-96 bg-gray-300 h-8 rounded-xl mx-12 xl:mx-28 mt-24 md:mt-32 xl:mt-32 mb-32"
+        />
+      </div>
+    </div>
+    <footer
+      class="flex bg-primary z-20 xl:justify-center md:text-xl text-background font-sans font-sm py-8 lg:py-2 xl:py-2 mt-auto"
+    >
+      <div
+        class="flex flex-col lg:flex-row xl:flex-row px-12 text-center items-center"
+      >
+        <img
+          alt="Codebandits"
+          class="w-24 ml-2 lg:ml-8 lg:mt-4 xl:mt-2"
+          src="codebandits.png"
+        />
+        <h3
+          class="lg:ml-8 xl:ml-20 mt-6 xl:mt-2"
+        >
+          ©copyright Codebandits 2022
+        </h3>
+      </div>
+      <div
+        class="flex flex-col md:text-xl lg:flex-row xl:flex-row lg:mt-7 xl:mt-3 mr-16 md:mx-20 xl:ml-20 ml-auto md:ml-auto"
+      >
+        <a
+          class="xl:ml-0 lg:ml-0 mt-2 text-md mb-4 hover:font-bold"
+          href="/"
+        >
+          Support
+        </a>
+        <a
+          class="xl:ml-28 lg:ml-12 mt-2 text-md mb-4 hover:font-bold"
+          href="/"
+        >
+          Terms of use
+        </a>
+        <a
+          class="xl:ml-28 lg:ml-12 mt-2 text-md hover:font-bold"
+          href="/login"
+        >
+          Administration
+        </a>
+      </div>
+    </footer>
+  </div>,
+  "debug": [Function],
+  "findAllByAltText": [Function],
+  "findAllByDisplayValue": [Function],
+  "findAllByLabelText": [Function],
+  "findAllByPlaceholderText": [Function],
+  "findAllByRole": [Function],
+  "findAllByTestId": [Function],
+  "findAllByText": [Function],
+  "findAllByTitle": [Function],
+  "findByAltText": [Function],
+  "findByDisplayValue": [Function],
+  "findByLabelText": [Function],
+  "findByPlaceholderText": [Function],
+  "findByRole": [Function],
+  "findByTestId": [Function],
+  "findByText": [Function],
+  "findByTitle": [Function],
+  "getAllByAltText": [Function],
+  "getAllByDisplayValue": [Function],
+  "getAllByLabelText": [Function],
+  "getAllByPlaceholderText": [Function],
+  "getAllByRole": [Function],
+  "getAllByTestId": [Function],
+  "getAllByText": [Function],
+  "getAllByTitle": [Function],
+  "getByAltText": [Function],
+  "getByDisplayValue": [Function],
+  "getByLabelText": [Function],
+  "getByPlaceholderText": [Function],
+  "getByRole": [Function],
+  "getByTestId": [Function],
+  "getByText": [Function],
+  "getByTitle": [Function],
+  "queryAllByAltText": [Function],
+  "queryAllByDisplayValue": [Function],
+  "queryAllByLabelText": [Function],
+  "queryAllByPlaceholderText": [Function],
+  "queryAllByRole": [Function],
+  "queryAllByTestId": [Function],
+  "queryAllByText": [Function],
+  "queryAllByTitle": [Function],
+  "queryByAltText": [Function],
+  "queryByDisplayValue": [Function],
+  "queryByLabelText": [Function],
+  "queryByPlaceholderText": [Function],
+  "queryByRole": [Function],
+  "queryByTestId": [Function],
+  "queryByText": [Function],
+  "queryByTitle": [Function],
+  "rerender": [Function],
+  "unmount": [Function],
+}
+`;
+
+exports[`Private State Should return a redirect to the login 1`] = `
+<Navigate
+  state="/testroute"
+  to="/login"
+/>
+`;
+
+exports[`Private roles Should return a redirect to the login 1`] = `
+<Navigate
+  state="/testroute"
+  to="/login"
+/>
+`;
+
+exports[`Private roles Should return the actual children 1`] = `<Roles />`;

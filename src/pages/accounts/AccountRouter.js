@@ -5,12 +5,10 @@ import ResetEmail from './EmailSent.js';
 import ResetNewPassword from './NewPasswordForm.js';
 import NotFoundAccount from './NotFound.js';
 import ResetSuccess from './PasswordChanged.js';
+
 const img =
   'https://res.cloudinary.com/feyton/image/upload/v1645616111/Codebandits/Phantom_icon_1_tpjkws.png';
-const phantom =
-  'https://res.cloudinary.com/feyton/image/upload/v1645611696/Codebandits/phantom_lkpwx7.png';
-const codebandits =
-  'https://res.cloudinary.com/feyton/image/upload/v1644861999/Codebandits/codebandits_favicon_ahnxce.png';
+
 export const Button = ({ name, styles, type, icon }) => {
   return (
     <div>

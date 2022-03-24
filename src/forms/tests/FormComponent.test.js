@@ -1,10 +1,12 @@
+import { FormComponent } from '@components/FormComponent.js';
+import { driverInputs } from '@pages/forms/FormInputs.js';
 import { fireEvent, render, screen, waitFor } from '@testing-library/react';
-import { mount } from 'enzyme';
+import { mount, shallow } from 'enzyme';
 import React from 'react';
 import { BrowserRouter, MemoryRouter } from 'react-router-dom';
 import renderer from 'react-test-renderer';
-import { FormComponent } from '../FormComponent.js';
-import { driverInputs } from '../FormInputs.js';
+import UpdateDriver from '../UpdateDriver.js';
+import UpdateOperator from '../UpdateOperator.js';
 
 describe('Form Component', () => {
   it('Should render a form Componet', () => {
@@ -143,5 +145,16 @@ describe('Testingfull form', () => {
     expect(
       await screen.findAllByText(/A valid firstname is required/i)
     ).toHaveLength(1);
+  });
+});
+
+describe('Render the update', () => {
+  it('render the update driver', () => {
+    const elem = shallow(<UpdateDriver />);
+    expect(elem).toMatchSnapshot();
+  });
+  it('render the update operator', () => {
+    const elem = shallow(<UpdateOperator />);
+    expect(elem).toMatchSnapshot();
   });
 });

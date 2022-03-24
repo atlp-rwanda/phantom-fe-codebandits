@@ -182,7 +182,6 @@ const UpdateProfile = ({
                     defaultValue={nationalIDInfo}
                     type="text"
                     name={nationalID}
-                    defaultValue="1199780020002120"
                     {...register('nationalID', {
                       required: 'National ID is required',
                       pattern: /^[1-3](19|20)\d{2}[7-8]\d{7}[0-9]\d{2}$/

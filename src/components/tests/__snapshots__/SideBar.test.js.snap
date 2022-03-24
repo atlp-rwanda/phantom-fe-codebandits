@@ -1,200 +1,177 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`SideBar should render the SideBar component 1`] = `
-Array [
-  <div
-    className="relative z-10"
+<div
+  className="relative z-10 md:z-0 h-full "
+>
+  <main
+    className="hidden md:flex lg:flex xl:flex  flex text-sm h-full "
   >
-    <main
-      className="hidden md:flex lg:flex xl:flex flex text-sm"
+    <aside
+      className="border-r-2 h-full sticky top-0 px-4 min-w-fit py-8 bg-gray-100 transition-transform "
     >
-      <aside
-        className="border-r-2 h-full sticky top-0 px-8 py-4 bg-gray-100 transition-transform"
+      <h1
+        className="font-rale font-bold text-center text-3xl "
       >
-        <div
-          className=" mb-6"
+        <a
+          className="font-bold text-primary font-raleway pb-3"
+          href="/"
+          onClick={[Function]}
         >
-          <span
-            className="rounded-full mx-auto flex items-center justify-center h-12 w-12 mb-5"
+          Phantom
+        </a>
+      </h1>
+      <hr />
+      <div
+        className=" mb-6 mt-8"
+      >
+        <span
+          className="rounded-full mx-auto flex items-center justify-center h-12 w-12 mb-5"
+        >
+          <img
+            alt="Image"
+            className="rounded-full object-cover h-12 w-12"
+            src="profileImg.jpg"
+          />
+        </span>
+        <div
+          className="text-center font-black text-lg"
+        >
+          <h1
+            className="font-raleway"
           >
-            <img
-              alt="Image"
-              className="rounded-full object-cover h-12 w-12"
-              src="profileImg.jpg"
-            />
-          </span>
-          <div
-            className="text-center font-black text-md"
-          >
-            <h1>
-              NGABO Patrick
-            </h1>
-            <div>
-              <h1
-                className="font-bold"
-              >
-                Operator
-              </h1>
-            </div>
-          </div>
+            <span
+              className="capitalize font-bold text-primary"
+            >
+              :
+               
+            </span>
+          </h1>
         </div>
-        <div>
-          <h2
-            className="mb-2 text-lg font-black"
-          >
-            Account
-          </h2>
-          <ul
-            className="mb-2"
-          >
-            <div
-              className="flex justify-center items-center hover:bg-gray-200 py-1"
+      </div>
+      <div
+        className="font-raleway w-full"
+      >
+        <ul
+          className="mb-2"
+        >
+          <li>
+            <a
+              className="py-2 pr-10 pl-4 rounded-full font-bold my-1  hover:bg-gray-300 transition-all  cursor-pointer min-w-fit w-full flex items-center"
+              href="/dashboard/main"
+              onClick={[Function]}
             >
               <img
                 alt="icon"
-                className="w-6"
+                className="w-6 mr-2"
                 src="dashboardIcon.png"
               />
-              <a
-                className="py-1 px-2 font-bold my-1  cursor-pointer w-full"
-                href="/account"
-                onClick={[Function]}
-              >
-                <li>
-                  Dashboard
-                </li>
-              </a>
-            </div>
-            <div
-              className="flex justify-center items-center hover:bg-gray-200 py-1"
+              <span>
+                Dashboard
+              </span>
+            </a>
+          </li>
+          <li>
+            <a
+              className="py-2 pr-10 pl-4 rounded-full font-bold my-1  hover:bg-gray-300 transition-all  cursor-pointer min-w-fit w-full flex items-center"
+              href="/dashboard/management"
+              onClick={[Function]}
             >
               <img
                 alt="icon"
-                className="w-6"
+                className="w-6 mr-2"
                 src="manageIcon.png"
               />
-              <a
-                aria-current="page"
-                className="py-1 px-2 font-bold my-1  cursor-pointer w-full active"
-                href="/#p"
-                onClick={[Function]}
-              >
-                <li>
-                  Management
-                </li>
-              </a>
-            </div>
-            <div
-              className="flex justify-center items-center hover:bg-gray-200 py-1"
+              <span>
+                Management
+              </span>
+            </a>
+          </li>
+          <li>
+            <a
+              className="py-2 pr-10 pl-4 rounded-full font-bold my-1  hover:bg-gray-300 transition-all  cursor-pointer min-w-fit w-full flex items-center"
+              href="/dashboard/profile"
+              onClick={[Function]}
             >
               <img
                 alt="icon"
-                className="w-6"
+                className="w-6 mr-2"
                 src="profileIcon.png"
               />
-              <a
-                className="py-1 px-2 font-bold my-1  cursor-pointer w-full"
-                href="/dashboard/profile"
-                onClick={[Function]}
-              >
-                <li>
-                  Profile
-                </li>
-              </a>
-            </div>
-            <div
-              className="flex justify-center items-center hover:bg-gray-200 py-1"
+              <span>
+                Profile
+              </span>
+            </a>
+          </li>
+          <li>
+            <a
+              className="py-2 pr-10 pl-4 rounded-full font-bold my-1  hover:bg-gray-300 transition-all  cursor-pointer min-w-fit w-full flex items-center"
+              href="/dashboard/notifications"
+              onClick={[Function]}
             >
               <img
                 alt="icon"
-                className="w-6"
+                className="w-6 mr-2"
                 src="notificationIcon.png"
               />
-              <a
-                aria-current="page"
-                className="py-1 px-2 font-bold my-1  cursor-pointer w-full active"
-                href="/#p"
-                onClick={[Function]}
-              >
-                <li>
-                  Notifications
-                </li>
-              </a>
-            </div>
-            <div
-              className="flex justify-center items-center hover:bg-gray-200 py-1"
+              <span>
+                Notifications
+              </span>
+            </a>
+          </li>
+          
+          <li>
+            <a
+              className="py-2 pr-10 pl-4 rounded-full font-bold my-1  hover:bg-gray-300 transition-all  cursor-pointer min-w-fit w-full flex items-center"
+              href="/dashboard/settings"
+              onClick={[Function]}
             >
               <img
                 alt="icon"
-                className="w-6"
-                src="supportIcon.png"
-              />
-              <a
-                aria-current="page"
-                className="py-1 px-2 font-bold my-1  cursor-pointer w-full active"
-                href="/#p"
-                onClick={[Function]}
-              >
-                <li>
-                  Support
-                </li>
-              </a>
-            </div>
-            <div
-              className="flex justify-center items-center hover:bg-gray-200 py-1"
-            >
-              <img
-                alt="icon"
-                className="w-6"
+                className="w-6 mr-2"
                 src="settingIcon.png"
               />
-              <a
-                aria-current="page"
-                className="py-1 px-2 font-bold my-1  cursor-pointer w-full active"
-                href="/#p"
-                onClick={[Function]}
-              >
-                <li>
-                  Settings
-                </li>
-              </a>
-            </div>
-          </ul>
-          <div>
-            <button
-              className="bg-red px-6 py-1 hover:bg-red-600 bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded-xl m-2 "
-              onClick={[Function]}
-              type="submit"
-            >
-              Logout
-            </button>
-          </div>
-        </div>
-      </aside>
-    </main>
-    <div
-      className="flex"
-    >
-      <button
-        className="md:hidden lg:hidden xl:hidden"
-        id="button"
-        onClick={[Function]}
-        type="button"
-      >
+              <span>
+                Settings
+              </span>
+            </a>
+          </li>
+        </ul>
         <div>
-          <div
-            className="ml-2 bg-black h-1 w-7 bg-primary mt-1"
-          />
-          <div
-            className="ml-2 bg-black h-1 w-7 bg-primary mt-1"
-          />
-          <div
-            className="ml-2 bg-black h-1 w-7 bg-primary mt-1"
-          />
+          <button
+            className="bg-red mt-4 px-6 py-1 hover:bg-red-600 bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded-xl m-2 "
+            onClick={[Function]}
+            type="submit"
+          >
+            Logout
+          </button>
         </div>
-      </button>
-    </div>
-  </div>,
-  ")",
-]
+      </div>
+    </aside>
+  </main>
+  <div
+    className="flex"
+  >
+    <button
+      className="md:hidden lg:hidden xl:hidden"
+      id="button"
+      onClick={[Function]}
+      type="button"
+    >
+      <div
+        className="fixed top-2 left-[-10px] bg-gray-300 p-1 opacity-[0.5]"
+      >
+        <div
+          className=" ml-2 bg-black h-1 w-7 bg-primary mt-1"
+        />
+        <div
+          className=" ml-2 bg-black h-1 w-7 bg-primary mt-1"
+        />
+        <div
+          className=" ml-2 bg-black h-1 w-7 bg-primary mt-1"
+        />
+      </div>
+    </button>
+  </div>
+</div>
 `;

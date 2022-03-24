@@ -1,0 +1,31 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Management routes Render Operators 1`] = `
+<div>
+  Operators management
+</div>
+`;
+
+exports[`Management routes Render buses 1`] = `
+<div>
+  Buses management
+</div>
+`;
+
+exports[`Management routes Render companies 1`] = `
+<div>
+  Companies management
+</div>
+`;
+
+exports[`Management routes Render drivers 1`] = `
+<div>
+  <DriversTable />
+</div>
+`;
+
+exports[`Management routes Render routes 1`] = `
+<div>
+  Routes management
+</div>
+`;

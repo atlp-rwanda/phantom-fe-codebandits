@@ -8,7 +8,7 @@ describe('LabelComponent', () => {
     const elem = renderer
       .create(
         <MemoryRouter>
-          <LabelComponent />)
+          <LabelComponent />
         </MemoryRouter>
       )
       .toJSON();
