@@ -184,6 +184,7 @@ exports[`Account should render the account page 1`] = `
           >
             <button
               className="md:hidden lg:hidden xl:hidden"
+              id="button"
               onClick={[Function]}
               type="button"
             >

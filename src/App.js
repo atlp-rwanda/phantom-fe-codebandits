@@ -13,6 +13,8 @@ import Account from './pages/Account.js';
 import AccountRouter from './pages/accounts/AccountRouter.js';
 import LandingPage from './pages/LandingPage.js';
 import Login from './pages/Login.js';
+import TrackingPage from './pages/TrackingPage.js';
+import PublicProfile from './pages/profiles/PublicProfile.js';
 import { store } from './redux/store.js';
 import { useLoader } from './useLoader.js';
 
@@ -31,6 +33,8 @@ function App() {
                 <Route path="/" element={<LandingPage />} />
                 <Route path="/dashboard/*" element={<DashboardRoute />} />
                 <Route path="/login" element={<Login />} />
+                <Route path="/tracking-page" element={<TrackingPage />} />
+                <Route path="/public-profile" element={<PublicProfile />} />
                 <Route path="/account" element={<Account />} />
                 <Route
                   exact={false}

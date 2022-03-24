@@ -26,3 +26,11 @@
 #photo-upload {
   display: none;
 }
+
+.leaflet-routing-alt {
+  display: none;
+}
+
+.leaflet-verticalcenter {
+  margin-left: 10px;
+}

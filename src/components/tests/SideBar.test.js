@@ -15,16 +15,16 @@ describe('SideBar', () => {
       .toJSON();
     expect(elem).toMatchSnapshot();
   });
-
-  it('It should test the logout function', () => {
-    const logout = jest.fn();
+  it('It should test the setopen function', () => {
+    const open = false;
+    const setOpen = jest.fn();
     const component = mount(
       <MemoryRouter>
-        <SideBar logout={logout()} />
+        <SideBar setOpen={() => setOpen(!open)} />
       </MemoryRouter>
     );
-    const button = component.find('#logout');
+    const button = component.find('#button');
     button.simulate('click');
-    expect(logout).toBeCalledTimes(1);
+    expect(setOpen).not.toBeCalledTimes(1);
   });
 });

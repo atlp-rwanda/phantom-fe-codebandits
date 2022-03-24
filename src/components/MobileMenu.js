@@ -18,11 +18,13 @@ const MobileMenu = ({ styles }) => {
           </div>
         </Link>
       </div>
+      <Link to="/tracking-page">
+        <Button
+          name="Track Bus"
+          styles="border border-primary bg-background hover:bg-hover2 text-primary rounded-xl mt-2 mb-4 px-11 py-3"
+        />
+      </Link>
 
-      <Button
-        name="Track Bus"
-        styles="border border-primary bg-background hover:bg-hover2 text-primary rounded-xl mt-2 mb-4 px-11 py-3"
-      />
       <LanguageButton className="mt-2" />
     </div>
   );

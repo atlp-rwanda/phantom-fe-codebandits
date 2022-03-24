@@ -11,6 +11,7 @@ const SideBar = forwardRef(({ open, setOpen }, ref) => {
       <div ref={ref} className="flex">
         {open && <SideNav styles="fixed" />}
         <button
+          id="button"
           type="button"
           onClick={() => setOpen(!open)}
           className="md:hidden lg:hidden xl:hidden"

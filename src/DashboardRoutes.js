@@ -7,6 +7,7 @@ import RegisterOperator from './pages/forms/RegisterOperator.js';
 import UpdateDriver from './pages/forms/UpdateDriver.js';
 import UpdateOperator from './pages/forms/UpdateOperator.js';
 import OperatorProfile from './pages/profiles/OperatorProfile.js';
+import DriverProfile from './pages/profiles/DriverProfile.js';
 
 const DashboardRoute = () => {
   return (
@@ -19,6 +20,7 @@ const DashboardRoute = () => {
       <Route path="operator/register" element={<RegisterOperator />} />
       <Route path="driver/register" element={<RegisterDriver />} />
       <Route path="profile" element={<OperatorProfile />} />
+      <Route path="driver-profile" element={<DriverProfile />} />
     </Routes>
   );
 };

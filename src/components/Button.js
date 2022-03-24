@@ -5,7 +5,7 @@ const Button = ({ name, styles }) => {
     <div>
       <button
         type="submit"
-        className={`${styles} rounded-xl py-3 text-base md:text-sm lg:text-lg xl:text-lg px-5`}
+        className={`${styles} rounded-xl py-2 text-base md:text-sm px-5`}
       >
         {name}
       </button>

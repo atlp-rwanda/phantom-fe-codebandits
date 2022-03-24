@@ -24,8 +24,15 @@ const UpdateProfile = ({
     formState: { errors }
   } = useForm();
 
-  const { address, company, firstName, lastName,
-    mobileNumber, nationalID, driverLicense } = useSelector((state) => state?.profileUpdates);
+  const {
+    address,
+    company,
+    firstName,
+    lastName,
+    mobileNumber,
+    nationalID,
+    driverLicense
+  } = useSelector((state) => state?.profileUpdates);
 
   const dispatch = useDispatch();
 
@@ -49,6 +56,7 @@ const UpdateProfile = ({
             Update {position} Profile
           </h1>
           <form
+            id="updateForm"
             onSubmit={handleSubmit(handleUpdate)}
             className="flex flex-col "
           >
@@ -56,6 +64,7 @@ const UpdateProfile = ({
               <div className="lg:mr-4 xl:mr-4 lg:w-96 xl:w-96">
                 <div>
                   <Input
+                    id="firstName"
                     labelName="First Name"
                     defaultValue={firstNameInfo}
                     type="text"
@@ -75,6 +84,7 @@ const UpdateProfile = ({
                 </div>
                 <div>
                   <Input
+                    id="mobileNumber"
                     labelName="mobile number"
                     defaultValue={mobileNumberInfo}
                     type="text"
@@ -94,6 +104,7 @@ const UpdateProfile = ({
                 </div>
                 <div>
                   <Input
+                    id="address"
                     labelName="Address"
                     defaultValue={addressInfo}
                     type="text"
@@ -115,6 +126,7 @@ const UpdateProfile = ({
               <div className="lg:ml-4 xl:ml-4 lg:w-96 xl:w-96">
                 <div>
                   <Input
+                    id="lastName"
                     labelName="Last name"
                     defaultValue={lastNameInfo}
                     type="text"
@@ -165,6 +177,7 @@ const UpdateProfile = ({
                 </div>
                 <div>
                   <Input
+                    id="nationalID"
                     labelName="National ID"
                     defaultValue={nationalIDInfo}
                     type="text"
@@ -187,6 +200,7 @@ const UpdateProfile = ({
             </div>
             <div>
               <Input
+                id="driverLicense"
                 labelName="Driver license"
                 type="text"
                 name={driverLicense}

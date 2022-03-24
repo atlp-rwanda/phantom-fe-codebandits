@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import Button from './Button.js';
 import bus from '../assets/bus.png';
 
@@ -16,10 +17,12 @@ const Intro = () => {
             <p className="ml-4">on their respective routes</p>
           </div>
         </div>
-        <Button
-          name="Start"
-          styles="bg-primary hover:bg-hover text-white rounded-3xl mt-12 px-12 xl:px-12 py-2 ml-28 md:ml-48 xl:ml-64"
-        />
+        <Link to="tracking-page">
+          <Button
+            name="Start"
+            styles="bg-primary hover:bg-hover text-white rounded-3xl mt-12 px-12 xl:px-12 py-2 ml-28 md:ml-48 xl:ml-64"
+          />
+        </Link>
       </div>
       <div className="w-full px-20 lg:w-80 xl:w-96 lg:ml-auto xl:ml-auto lg:mr-36 xl:mr-36 lg:px-0 xl:px-0 mt-28">
         <img src={bus} alt="Bus" />
