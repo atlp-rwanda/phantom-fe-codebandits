@@ -53,7 +53,7 @@ exports[`SideNav should render the SideNav component 1`] = `
           />
           <a
             className="py-1 px-2 font-bold my-1  cursor-pointer w-full"
-            href="/account"
+            href="/dashboard/main"
             onClick={[Function]}
           >
             <li>

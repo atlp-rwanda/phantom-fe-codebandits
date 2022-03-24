@@ -1,0 +1,33 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Registration Operators Should render the management page 1`] = `
+<main>
+  <h1
+    className="font-black text-2xl pb-6"
+  >
+    Management
+  </h1>
+  <div
+    className="react-tabs"
+    data-rttabs={true}
+    onClick={[Function]}
+    onKeyDown={[Function]}
+  >
+    <ul
+      className="flex border-b-2 mb-5"
+      role="tablist"
+    >
+      
+      
+      
+      
+      
+    </ul>
+    
+    
+    
+    
+    
+  </div>
+</main>
+`;

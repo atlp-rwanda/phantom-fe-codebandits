@@ -1,0 +1,1405 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Management tests it should render Buses Management page 1`] = `
+<div>
+  <section
+    className="flex justify-between content-center pb-7"
+  >
+    <div>
+      <input
+        className="p-1 rounded-md border-2"
+        name="search"
+        onChange={[Function]}
+        placeholder="Search buses..."
+        type="text"
+        value=""
+      />
+    </div>
+    
+  </section>
+  <table
+    className="w-full"
+    role="table"
+  >
+    <thead>
+      <tr
+        className="pb-10 "
+        role="row"
+      >
+        <th
+          className="text-left font-extrabold pr-5 border-b-2 pb-4"
+          colSpan={1}
+          role="columnheader"
+        >
+          Plate number
+        </th>
+        <th
+          className="text-left font-extrabold pr-5 border-b-2 pb-4"
+          colSpan={1}
+          role="columnheader"
+        >
+          Bus type
+        </th>
+        <th
+          className="text-left font-extrabold pr-5 border-b-2 pb-4"
+          colSpan={1}
+          role="columnheader"
+        >
+          Seats
+        </th>
+        <th
+          className="text-left font-extrabold pr-5 border-b-2 pb-4"
+          colSpan={1}
+          role="columnheader"
+        >
+          Driver
+        </th>
+        <th
+          className="text-left font-extrabold pr-5 border-b-2 pb-4"
+          colSpan={1}
+          role="columnheader"
+        >
+          Route
+        </th>
+        <th
+          className="text-left font-extrabold pr-5 border-b-2 pb-4"
+          colSpan={1}
+          role="columnheader"
+        >
+          Management
+        </th>
+      </tr>
+    </thead>
+    <tbody
+      role="rowgroup"
+    >
+      <tr
+        role="row"
+      >
+        <td
+          className="pr-5 py-4 border-b-2"
+          role="cell"
+        >
+          RAN123
+        </td>
+        <td
+          className="pr-5 py-4 border-b-2"
+          role="cell"
+        >
+          Coaster
+        </td>
+        <td
+          className="pr-5 py-4 border-b-2"
+          role="cell"
+        >
+          30
+        </td>
+        <td
+          className="pr-5 py-4 border-b-2"
+          role="cell"
+        >
+          <div
+            className="text-red"
+          >
+            No driver
+          </div>
+        </td>
+        <td
+          className="pr-5 py-4 border-b-2"
+          role="cell"
+        >
+          <div
+            className="text-red"
+          >
+            No route assigned
+          </div>
+        </td>
+        <td
+          className="pr-5 py-4 border-b-2"
+          role="cell"
+        >
+          <div
+            className="z-10"
+          >
+            <select
+              className="py-1 px-3 font-rale font-bold bg-transparent border rounded-sm"
+              id=""
+              name="busManagement"
+              onChange={[Function]}
+              role="select"
+            >
+              <option
+                hidden={true}
+              >
+                Manage
+              </option>
+              <option
+                className="cursor-pointer"
+                value="edit"
+              >
+                Edit
+              </option>
+              <option
+                className="cursor-pointer"
+                value="delete"
+              >
+                Delete
+              </option>
+            </select>
+          </div>
+        </td>
+      </tr>
+      <tr
+        role="row"
+      >
+        <td
+          className="pr-5 py-4 border-b-2"
+          role="cell"
+        >
+          RAB121777
+        </td>
+        <td
+          className="pr-5 py-4 border-b-2"
+          role="cell"
+        >
+          Minibus
+        </td>
+        <td
+          className="pr-5 py-4 border-b-2"
+          role="cell"
+        >
+          50
+        </td>
+        <td
+          className="pr-5 py-4 border-b-2"
+          role="cell"
+        >
+          <div
+            className="text-red"
+          >
+            No driver
+          </div>
+        </td>
+        <td
+          className="pr-5 py-4 border-b-2"
+          role="cell"
+        >
+          <div
+            className="text-red"
+          >
+            No route assigned
+          </div>
+        </td>
+        <td
+          className="pr-5 py-4 border-b-2"
+          role="cell"
+        >
+          <div
+            className="z-10"
+          >
+            <select
+              className="py-1 px-3 font-rale font-bold bg-transparent border rounded-sm"
+              id=""
+              name="busManagement"
+              onChange={[Function]}
+              role="select"
+            >
+              <option
+                hidden={true}
+              >
+                Manage
+              </option>
+              <option
+                className="cursor-pointer"
+                value="edit"
+              >
+                Edit
+              </option>
+              <option
+                className="cursor-pointer"
+                value="delete"
+              >
+                Delete
+              </option>
+            </select>
+          </div>
+        </td>
+      </tr>
+      <tr
+        role="row"
+      >
+        <td
+          className="pr-5 py-4 border-b-2"
+          role="cell"
+        >
+          RAT230A
+        </td>
+        <td
+          className="pr-5 py-4 border-b-2"
+          role="cell"
+        >
+          Minibus
+        </td>
+        <td
+          className="pr-5 py-4 border-b-2"
+          role="cell"
+        >
+          60
+        </td>
+        <td
+          className="pr-5 py-4 border-b-2"
+          role="cell"
+        >
+          <div
+            className="text-red"
+          >
+            No driver
+          </div>
+        </td>
+        <td
+          className="pr-5 py-4 border-b-2"
+          role="cell"
+        >
+          <div
+            className="text-red"
+          >
+            No route assigned
+          </div>
+        </td>
+        <td
+          className="pr-5 py-4 border-b-2"
+          role="cell"
+        >
+          <div
+            className="z-10"
+          >
+            <select
+              className="py-1 px-3 font-rale font-bold bg-transparent border rounded-sm"
+              id=""
+              name="busManagement"
+              onChange={[Function]}
+              role="select"
+            >
+              <option
+                hidden={true}
+              >
+                Manage
+              </option>
+              <option
+                className="cursor-pointer"
+                value="edit"
+              >
+                Edit
+              </option>
+              <option
+                className="cursor-pointer"
+                value="delete"
+              >
+                Delete
+              </option>
+            </select>
+          </div>
+        </td>
+      </tr>
+      <tr
+        role="row"
+      >
+        <td
+          className="pr-5 py-4 border-b-2"
+          role="cell"
+        >
+          RAB12343
+        </td>
+        <td
+          className="pr-5 py-4 border-b-2"
+          role="cell"
+        >
+          Minibus
+        </td>
+        <td
+          className="pr-5 py-4 border-b-2"
+          role="cell"
+        >
+          12
+        </td>
+        <td
+          className="pr-5 py-4 border-b-2"
+          role="cell"
+        >
+          <div
+            className="text-red"
+          >
+            No driver
+          </div>
+        </td>
+        <td
+          className="pr-5 py-4 border-b-2"
+          role="cell"
+        >
+          <div
+            className="text-red"
+          >
+            No route assigned
+          </div>
+        </td>
+        <td
+          className="pr-5 py-4 border-b-2"
+          role="cell"
+        >
+          <div
+            className="z-10"
+          >
+            <select
+              className="py-1 px-3 font-rale font-bold bg-transparent border rounded-sm"
+              id=""
+              name="busManagement"
+              onChange={[Function]}
+              role="select"
+            >
+              <option
+                hidden={true}
+              >
+                Manage
+              </option>
+              <option
+                className="cursor-pointer"
+                value="edit"
+              >
+                Edit
+              </option>
+              <option
+                className="cursor-pointer"
+                value="delete"
+              >
+                Delete
+              </option>
+            </select>
+          </div>
+        </td>
+      </tr>
+    </tbody>
+    <tfoot>
+      <tr
+        className="pagination mt-3 pt-3"
+      >
+        <td
+          colSpan={5}
+        >
+          <div
+            className="w-full justify-end"
+          >
+            <button
+              className="mr-2"
+              disabled={true}
+              onClick={[Function]}
+            >
+              &lt;&lt;
+            </button>
+             
+            <button
+              className="mr-2"
+              disabled={true}
+              onClick={[Function]}
+            >
+              Previous
+            </button>
+             
+            <button
+              className="mr-2"
+              disabled={true}
+              onClick={[Function]}
+            >
+              Next
+            </button>
+             
+            <button
+              disabled={true}
+              onClick={[Function]}
+            >
+              &gt;&gt;
+            </button>
+             
+            <span>
+              Page
+               
+              <strong>
+                1
+                 of 
+                1
+              </strong>
+               
+            </span>
+            <span>
+              | Go to page:
+               
+              <input
+                defaultValue={1}
+                onChange={[Function]}
+                style={
+                  Object {
+                    "width": "50px",
+                  }
+                }
+                type="number"
+              />
+            </span>
+             
+            <select
+              onChange={[Function]}
+              value={10}
+            >
+              <option
+                value={10}
+              >
+                Show 
+                10
+              </option>
+              <option
+                value={25}
+              >
+                Show 
+                25
+              </option>
+              <option
+                value={50}
+              >
+                Show 
+                50
+              </option>
+            </select>
+          </div>
+        </td>
+      </tr>
+    </tfoot>
+  </table>
+</div>
+`;
+
+exports[`Management tests it should render Companies Management page 1`] = `
+<div>
+  Companies management
+</div>
+`;
+
+exports[`Management tests it should render Drivers Management page 1`] = `
+<div>
+  <section
+    className="flex justify-between content-center pb-7"
+  >
+    <div>
+      <input
+        className="p-1 rounded-md border-2"
+        name="search"
+        onChange={[Function]}
+        placeholder="Search drivers..."
+        type="text"
+        value=""
+      />
+    </div>
+    
+  </section>
+  <table
+    className="w-full"
+    role="table"
+  >
+    <thead>
+      <tr
+        className="pb-10 "
+        role="row"
+      >
+        <th
+          className="text-left font-extrabold pr-5 border-b-2 pb-4"
+          colSpan={1}
+          role="columnheader"
+        >
+          Names
+        </th>
+        <th
+          className="text-left font-extrabold pr-5 border-b-2 pb-4"
+          colSpan={1}
+          role="columnheader"
+        >
+          Email
+        </th>
+        <th
+          className="text-left font-extrabold pr-5 border-b-2 pb-4"
+          colSpan={1}
+          role="columnheader"
+        >
+          License
+        </th>
+        <th
+          className="text-left font-extrabold pr-5 border-b-2 pb-4"
+          colSpan={1}
+          role="columnheader"
+        >
+          Assigned Bus
+        </th>
+        <th
+          className="text-left font-extrabold pr-5 border-b-2 pb-4"
+          colSpan={1}
+          role="columnheader"
+        >
+          Assigned Route
+        </th>
+        <th
+          className="text-left font-extrabold pr-5 border-b-2 pb-4"
+          colSpan={1}
+          role="columnheader"
+        >
+          Management
+        </th>
+      </tr>
+    </thead>
+    <tbody
+      role="rowgroup"
+    >
+      <tr
+        role="row"
+      >
+        <td
+          className="pr-5 py-4 border-b-2"
+          role="cell"
+        >
+          Mugisha Lambert
+        </td>
+        <td
+          className="pr-5 py-4 border-b-2"
+          role="cell"
+        >
+          lborthwick0@ning.com
+        </td>
+        <td
+          className="pr-5 py-4 border-b-2"
+          role="cell"
+        >
+          1191985415211291
+        </td>
+        <td
+          className="pr-5 py-4 border-b-2"
+          role="cell"
+        >
+          RAB108E
+        </td>
+        <td
+          className="pr-5 py-4 border-b-2"
+          role="cell"
+        >
+          Nyabugogo-Kimironko
+        </td>
+        <td
+          className="pr-5 py-4 border-b-2"
+          role="cell"
+        >
+          <div
+            className="z-10"
+          >
+            <select
+              className="py-1 px-3 font-rale font-bold bg-transparent border rounded-sm"
+              id=""
+              name=""
+              onChange={[Function]}
+              role="select"
+            >
+              <option
+                hidden={true}
+              >
+                Manage
+              </option>
+              <option
+                className="cursor-pointer"
+                value="edit"
+              >
+                Edit
+              </option>
+              <option
+                className="cursor-pointer"
+                value="delete"
+              >
+                Delete
+              </option>
+              <option
+                className="cursor-pointer"
+                value="permission"
+              >
+                Permissions
+              </option>
+            </select>
+          </div>
+        </td>
+      </tr>
+      <tr
+        role="row"
+      >
+        <td
+          className="pr-5 py-4 border-b-2"
+          role="cell"
+        >
+          Mugisha Lambert
+        </td>
+        <td
+          className="pr-5 py-4 border-b-2"
+          role="cell"
+        >
+          ctruswell1@histats.com
+        </td>
+        <td
+          className="pr-5 py-4 border-b-2"
+          role="cell"
+        >
+          1195510237288508
+        </td>
+        <td
+          className="pr-5 py-4 border-b-2"
+          role="cell"
+        >
+          RAB482E
+        </td>
+        <td
+          className="pr-5 py-4 border-b-2"
+          role="cell"
+        >
+          Nyabugogo-Kimironko
+        </td>
+        <td
+          className="pr-5 py-4 border-b-2"
+          role="cell"
+        >
+          <div
+            className="z-10"
+          >
+            <select
+              className="py-1 px-3 font-rale font-bold bg-transparent border rounded-sm"
+              id=""
+              name=""
+              onChange={[Function]}
+              role="select"
+            >
+              <option
+                hidden={true}
+              >
+                Manage
+              </option>
+              <option
+                className="cursor-pointer"
+                value="edit"
+              >
+                Edit
+              </option>
+              <option
+                className="cursor-pointer"
+                value="delete"
+              >
+                Delete
+              </option>
+              <option
+                className="cursor-pointer"
+                value="permission"
+              >
+                Permissions
+              </option>
+            </select>
+          </div>
+        </td>
+      </tr>
+      <tr
+        role="row"
+      >
+        <td
+          className="pr-5 py-4 border-b-2"
+          role="cell"
+        >
+          Mugisha Lambert
+        </td>
+        <td
+          className="pr-5 py-4 border-b-2"
+          role="cell"
+        >
+          jcasperri2@studiopress.com
+        </td>
+        <td
+          className="pr-5 py-4 border-b-2"
+          role="cell"
+        >
+          1199847297552675
+        </td>
+        <td
+          className="pr-5 py-4 border-b-2"
+          role="cell"
+        >
+          RAB933E
+        </td>
+        <td
+          className="pr-5 py-4 border-b-2"
+          role="cell"
+        >
+          Nyabugogo-Kimironko
+        </td>
+        <td
+          className="pr-5 py-4 border-b-2"
+          role="cell"
+        >
+          <div
+            className="z-10"
+          >
+            <select
+              className="py-1 px-3 font-rale font-bold bg-transparent border rounded-sm"
+              id=""
+              name=""
+              onChange={[Function]}
+              role="select"
+            >
+              <option
+                hidden={true}
+              >
+                Manage
+              </option>
+              <option
+                className="cursor-pointer"
+                value="edit"
+              >
+                Edit
+              </option>
+              <option
+                className="cursor-pointer"
+                value="delete"
+              >
+                Delete
+              </option>
+              <option
+                className="cursor-pointer"
+                value="permission"
+              >
+                Permissions
+              </option>
+            </select>
+          </div>
+        </td>
+      </tr>
+      <tr
+        role="row"
+      >
+        <td
+          className="pr-5 py-4 border-b-2"
+          role="cell"
+        >
+          Mugisha Lambert
+        </td>
+        <td
+          className="pr-5 py-4 border-b-2"
+          role="cell"
+        >
+          ayoudell3@msu.edu
+        </td>
+        <td
+          className="pr-5 py-4 border-b-2"
+          role="cell"
+        >
+          1190568123797554
+        </td>
+        <td
+          className="pr-5 py-4 border-b-2"
+          role="cell"
+        >
+          RAB109E
+        </td>
+        <td
+          className="pr-5 py-4 border-b-2"
+          role="cell"
+        >
+          Nyabugogo-Kimironko
+        </td>
+        <td
+          className="pr-5 py-4 border-b-2"
+          role="cell"
+        >
+          <div
+            className="z-10"
+          >
+            <select
+              className="py-1 px-3 font-rale font-bold bg-transparent border rounded-sm"
+              id=""
+              name=""
+              onChange={[Function]}
+              role="select"
+            >
+              <option
+                hidden={true}
+              >
+                Manage
+              </option>
+              <option
+                className="cursor-pointer"
+                value="edit"
+              >
+                Edit
+              </option>
+              <option
+                className="cursor-pointer"
+                value="delete"
+              >
+                Delete
+              </option>
+              <option
+                className="cursor-pointer"
+                value="permission"
+              >
+                Permissions
+              </option>
+            </select>
+          </div>
+        </td>
+      </tr>
+      <tr
+        role="row"
+      >
+        <td
+          className="pr-5 py-4 border-b-2"
+          role="cell"
+        >
+          Mugisha Lambert
+        </td>
+        <td
+          className="pr-5 py-4 border-b-2"
+          role="cell"
+        >
+          sfilde4@livejournal.com
+        </td>
+        <td
+          className="pr-5 py-4 border-b-2"
+          role="cell"
+        >
+          1197907904314586
+        </td>
+        <td
+          className="pr-5 py-4 border-b-2"
+          role="cell"
+        >
+          RAB513E
+        </td>
+        <td
+          className="pr-5 py-4 border-b-2"
+          role="cell"
+        >
+          Nyabugogo-Kimironko
+        </td>
+        <td
+          className="pr-5 py-4 border-b-2"
+          role="cell"
+        >
+          <div
+            className="z-10"
+          >
+            <select
+              className="py-1 px-3 font-rale font-bold bg-transparent border rounded-sm"
+              id=""
+              name=""
+              onChange={[Function]}
+              role="select"
+            >
+              <option
+                hidden={true}
+              >
+                Manage
+              </option>
+              <option
+                className="cursor-pointer"
+                value="edit"
+              >
+                Edit
+              </option>
+              <option
+                className="cursor-pointer"
+                value="delete"
+              >
+                Delete
+              </option>
+              <option
+                className="cursor-pointer"
+                value="permission"
+              >
+                Permissions
+              </option>
+            </select>
+          </div>
+        </td>
+      </tr>
+      <tr
+        role="row"
+      >
+        <td
+          className="pr-5 py-4 border-b-2"
+          role="cell"
+        >
+          Mugisha Lambert
+        </td>
+        <td
+          className="pr-5 py-4 border-b-2"
+          role="cell"
+        >
+          gchisnall5@psu.edu
+        </td>
+        <td
+          className="pr-5 py-4 border-b-2"
+          role="cell"
+        >
+          1198369243838678
+        </td>
+        <td
+          className="pr-5 py-4 border-b-2"
+          role="cell"
+        >
+          RAB145E
+        </td>
+        <td
+          className="pr-5 py-4 border-b-2"
+          role="cell"
+        >
+          Nyabugogo-Kimironko
+        </td>
+        <td
+          className="pr-5 py-4 border-b-2"
+          role="cell"
+        >
+          <div
+            className="z-10"
+          >
+            <select
+              className="py-1 px-3 font-rale font-bold bg-transparent border rounded-sm"
+              id=""
+              name=""
+              onChange={[Function]}
+              role="select"
+            >
+              <option
+                hidden={true}
+              >
+                Manage
+              </option>
+              <option
+                className="cursor-pointer"
+                value="edit"
+              >
+                Edit
+              </option>
+              <option
+                className="cursor-pointer"
+                value="delete"
+              >
+                Delete
+              </option>
+              <option
+                className="cursor-pointer"
+                value="permission"
+              >
+                Permissions
+              </option>
+            </select>
+          </div>
+        </td>
+      </tr>
+      <tr
+        role="row"
+      >
+        <td
+          className="pr-5 py-4 border-b-2"
+          role="cell"
+        >
+          Mugisha Lambert
+        </td>
+        <td
+          className="pr-5 py-4 border-b-2"
+          role="cell"
+        >
+          fchastagnier6@nbcnews.com
+        </td>
+        <td
+          className="pr-5 py-4 border-b-2"
+          role="cell"
+        >
+          1195777993305775
+        </td>
+        <td
+          className="pr-5 py-4 border-b-2"
+          role="cell"
+        >
+          RAB290E
+        </td>
+        <td
+          className="pr-5 py-4 border-b-2"
+          role="cell"
+        >
+          Nyabugogo-Kimironko
+        </td>
+        <td
+          className="pr-5 py-4 border-b-2"
+          role="cell"
+        >
+          <div
+            className="z-10"
+          >
+            <select
+              className="py-1 px-3 font-rale font-bold bg-transparent border rounded-sm"
+              id=""
+              name=""
+              onChange={[Function]}
+              role="select"
+            >
+              <option
+                hidden={true}
+              >
+                Manage
+              </option>
+              <option
+                className="cursor-pointer"
+                value="edit"
+              >
+                Edit
+              </option>
+              <option
+                className="cursor-pointer"
+                value="delete"
+              >
+                Delete
+              </option>
+              <option
+                className="cursor-pointer"
+                value="permission"
+              >
+                Permissions
+              </option>
+            </select>
+          </div>
+        </td>
+      </tr>
+      <tr
+        role="row"
+      >
+        <td
+          className="pr-5 py-4 border-b-2"
+          role="cell"
+        >
+          Mugisha Lambert
+        </td>
+        <td
+          className="pr-5 py-4 border-b-2"
+          role="cell"
+        >
+          plambell7@telegraph.co.uk
+        </td>
+        <td
+          className="pr-5 py-4 border-b-2"
+          role="cell"
+        >
+          1195935121286616
+        </td>
+        <td
+          className="pr-5 py-4 border-b-2"
+          role="cell"
+        >
+          RAB419E
+        </td>
+        <td
+          className="pr-5 py-4 border-b-2"
+          role="cell"
+        >
+          Nyabugogo-Kimironko
+        </td>
+        <td
+          className="pr-5 py-4 border-b-2"
+          role="cell"
+        >
+          <div
+            className="z-10"
+          >
+            <select
+              className="py-1 px-3 font-rale font-bold bg-transparent border rounded-sm"
+              id=""
+              name=""
+              onChange={[Function]}
+              role="select"
+            >
+              <option
+                hidden={true}
+              >
+                Manage
+              </option>
+              <option
+                className="cursor-pointer"
+                value="edit"
+              >
+                Edit
+              </option>
+              <option
+                className="cursor-pointer"
+                value="delete"
+              >
+                Delete
+              </option>
+              <option
+                className="cursor-pointer"
+                value="permission"
+              >
+                Permissions
+              </option>
+            </select>
+          </div>
+        </td>
+      </tr>
+      <tr
+        role="row"
+      >
+        <td
+          className="pr-5 py-4 border-b-2"
+          role="cell"
+        >
+          Mugisha Lambert
+        </td>
+        <td
+          className="pr-5 py-4 border-b-2"
+          role="cell"
+        >
+          cattle8@cmu.edu
+        </td>
+        <td
+          className="pr-5 py-4 border-b-2"
+          role="cell"
+        >
+          1196851209448122
+        </td>
+        <td
+          className="pr-5 py-4 border-b-2"
+          role="cell"
+        >
+          RAB439E
+        </td>
+        <td
+          className="pr-5 py-4 border-b-2"
+          role="cell"
+        >
+          Nyabugogo-Kimironko
+        </td>
+        <td
+          className="pr-5 py-4 border-b-2"
+          role="cell"
+        >
+          <div
+            className="z-10"
+          >
+            <select
+              className="py-1 px-3 font-rale font-bold bg-transparent border rounded-sm"
+              id=""
+              name=""
+              onChange={[Function]}
+              role="select"
+            >
+              <option
+                hidden={true}
+              >
+                Manage
+              </option>
+              <option
+                className="cursor-pointer"
+                value="edit"
+              >
+                Edit
+              </option>
+              <option
+                className="cursor-pointer"
+                value="delete"
+              >
+                Delete
+              </option>
+              <option
+                className="cursor-pointer"
+                value="permission"
+              >
+                Permissions
+              </option>
+            </select>
+          </div>
+        </td>
+      </tr>
+      <tr
+        role="row"
+      >
+        <td
+          className="pr-5 py-4 border-b-2"
+          role="cell"
+        >
+          Mugisha Lambert
+        </td>
+        <td
+          className="pr-5 py-4 border-b-2"
+          role="cell"
+        >
+          ocasaccio9@twitpic.com
+        </td>
+        <td
+          className="pr-5 py-4 border-b-2"
+          role="cell"
+        >
+          1197914502450240
+        </td>
+        <td
+          className="pr-5 py-4 border-b-2"
+          role="cell"
+        >
+          RAB065E
+        </td>
+        <td
+          className="pr-5 py-4 border-b-2"
+          role="cell"
+        >
+          Nyabugogo-Kimironko
+        </td>
+        <td
+          className="pr-5 py-4 border-b-2"
+          role="cell"
+        >
+          <div
+            className="z-10"
+          >
+            <select
+              className="py-1 px-3 font-rale font-bold bg-transparent border rounded-sm"
+              id=""
+              name=""
+              onChange={[Function]}
+              role="select"
+            >
+              <option
+                hidden={true}
+              >
+                Manage
+              </option>
+              <option
+                className="cursor-pointer"
+                value="edit"
+              >
+                Edit
+              </option>
+              <option
+                className="cursor-pointer"
+                value="delete"
+              >
+                Delete
+              </option>
+              <option
+                className="cursor-pointer"
+                value="permission"
+              >
+                Permissions
+              </option>
+            </select>
+          </div>
+        </td>
+      </tr>
+    </tbody>
+    <tfoot>
+      <tr
+        className="pagination mt-3 pt-3"
+      >
+        <td
+          colSpan={5}
+        >
+          <div
+            className="w-full justify-end"
+          >
+            <button
+              className="mr-2"
+              disabled={true}
+              onClick={[Function]}
+            >
+              &lt;&lt;
+            </button>
+             
+            <button
+              className="mr-2"
+              disabled={true}
+              onClick={[Function]}
+            >
+              Previous
+            </button>
+             
+            <button
+              className="mr-2"
+              disabled={false}
+              onClick={[Function]}
+            >
+              Next
+            </button>
+             
+            <button
+              disabled={false}
+              onClick={[Function]}
+            >
+              &gt;&gt;
+            </button>
+             
+            <span>
+              Page
+               
+              <strong>
+                1
+                 of 
+                10
+              </strong>
+               
+            </span>
+            <span>
+              | Go to page:
+               
+              <input
+                defaultValue={1}
+                onChange={[Function]}
+                style={
+                  Object {
+                    "width": "50px",
+                  }
+                }
+                type="number"
+              />
+            </span>
+             
+            <select
+              onChange={[Function]}
+              value={10}
+            >
+              <option
+                value={10}
+              >
+                Show 
+                10
+              </option>
+              <option
+                value={25}
+              >
+                Show 
+                25
+              </option>
+              <option
+                value={50}
+              >
+                Show 
+                50
+              </option>
+            </select>
+          </div>
+        </td>
+      </tr>
+    </tfoot>
+  </table>
+</div>
+`;
+
+exports[`Management tests it should render Operators Management page 1`] = `
+<div>
+  Operators management
+</div>
+`;
+
+exports[`Management tests it should render Routes Management page 1`] = `
+<div>
+  Routes management
+</div>
+`;

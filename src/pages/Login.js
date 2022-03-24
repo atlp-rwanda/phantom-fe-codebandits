@@ -7,9 +7,10 @@ import busMapImg from '../assets/busMap.png';
 import { Sleep } from '../components/utils/Sleep.js';
 import usersDB from '../database/usersDB.json';
 import { loginUser } from '../redux/reducers/authReducer.js';
+
 const Login = () => {
-  let navigate = useNavigate();
-  let location = useLocation();
+  const navigate = useNavigate();
+  const location = useLocation();
   const dispatch = useDispatch();
   const [err, setErr] = useState('');
   const [attempts, setAttempts] = useState(0);

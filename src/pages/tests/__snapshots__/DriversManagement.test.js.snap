@@ -10,7 +10,7 @@ exports[`Driver Management page should render Login 1`] = `
         className="p-1 rounded-md border-2"
         name="search"
         onChange={[Function]}
-        placeholder="Search Drivers..."
+        placeholder="Search drivers..."
         type="text"
         value=""
       />
@@ -117,6 +117,8 @@ exports[`Driver Management page should render Login 1`] = `
               className="py-1 px-3 font-rale font-bold bg-transparent border rounded-sm"
               id=""
               name=""
+              onChange={[Function]}
+              role="select"
             >
               <option
                 hidden={true}
@@ -125,21 +127,19 @@ exports[`Driver Management page should render Login 1`] = `
               </option>
               <option
                 className="cursor-pointer"
-                onClick={[Function]}
-                value="manage"
+                value="edit"
               >
                 Edit
               </option>
               <option
                 className="cursor-pointer"
-                value=""
+                value="delete"
               >
                 Delete
               </option>
               <option
                 className="cursor-pointer"
-                onClick={[Function]}
-                value=""
+                value="permission"
               >
                 Permissions
               </option>
@@ -191,6 +191,8 @@ exports[`Driver Management page should render Login 1`] = `
               className="py-1 px-3 font-rale font-bold bg-transparent border rounded-sm"
               id=""
               name=""
+              onChange={[Function]}
+              role="select"
             >
               <option
                 hidden={true}
@@ -199,21 +201,19 @@ exports[`Driver Management page should render Login 1`] = `
               </option>
               <option
                 className="cursor-pointer"
-                onClick={[Function]}
-                value="manage"
+                value="edit"
               >
                 Edit
               </option>
               <option
                 className="cursor-pointer"
-                value=""
+                value="delete"
               >
                 Delete
               </option>
               <option
                 className="cursor-pointer"
-                onClick={[Function]}
-                value=""
+                value="permission"
               >
                 Permissions
               </option>
@@ -265,6 +265,8 @@ exports[`Driver Management page should render Login 1`] = `
               className="py-1 px-3 font-rale font-bold bg-transparent border rounded-sm"
               id=""
               name=""
+              onChange={[Function]}
+              role="select"
             >
               <option
                 hidden={true}
@@ -273,21 +275,19 @@ exports[`Driver Management page should render Login 1`] = `
               </option>
               <option
                 className="cursor-pointer"
-                onClick={[Function]}
-                value="manage"
+                value="edit"
               >
                 Edit
               </option>
               <option
                 className="cursor-pointer"
-                value=""
+                value="delete"
               >
                 Delete
               </option>
               <option
                 className="cursor-pointer"
-                onClick={[Function]}
-                value=""
+                value="permission"
               >
                 Permissions
               </option>
@@ -339,6 +339,8 @@ exports[`Driver Management page should render Login 1`] = `
               className="py-1 px-3 font-rale font-bold bg-transparent border rounded-sm"
               id=""
               name=""
+              onChange={[Function]}
+              role="select"
             >
               <option
                 hidden={true}
@@ -347,21 +349,19 @@ exports[`Driver Management page should render Login 1`] = `
               </option>
               <option
                 className="cursor-pointer"
-                onClick={[Function]}
-                value="manage"
+                value="edit"
               >
                 Edit
               </option>
               <option
                 className="cursor-pointer"
-                value=""
+                value="delete"
               >
                 Delete
               </option>
               <option
                 className="cursor-pointer"
-                onClick={[Function]}
-                value=""
+                value="permission"
               >
                 Permissions
               </option>
@@ -413,6 +413,8 @@ exports[`Driver Management page should render Login 1`] = `
               className="py-1 px-3 font-rale font-bold bg-transparent border rounded-sm"
               id=""
               name=""
+              onChange={[Function]}
+              role="select"
             >
               <option
                 hidden={true}
@@ -421,21 +423,19 @@ exports[`Driver Management page should render Login 1`] = `
               </option>
               <option
                 className="cursor-pointer"
-                onClick={[Function]}
-                value="manage"
+                value="edit"
               >
                 Edit
               </option>
               <option
                 className="cursor-pointer"
-                value=""
+                value="delete"
               >
                 Delete
               </option>
               <option
                 className="cursor-pointer"
-                onClick={[Function]}
-                value=""
+                value="permission"
               >
                 Permissions
               </option>
@@ -487,6 +487,8 @@ exports[`Driver Management page should render Login 1`] = `
               className="py-1 px-3 font-rale font-bold bg-transparent border rounded-sm"
               id=""
               name=""
+              onChange={[Function]}
+              role="select"
             >
               <option
                 hidden={true}
@@ -495,21 +497,19 @@ exports[`Driver Management page should render Login 1`] = `
               </option>
               <option
                 className="cursor-pointer"
-                onClick={[Function]}
-                value="manage"
+                value="edit"
               >
                 Edit
               </option>
               <option
                 className="cursor-pointer"
-                value=""
+                value="delete"
               >
                 Delete
               </option>
               <option
                 className="cursor-pointer"
-                onClick={[Function]}
-                value=""
+                value="permission"
               >
                 Permissions
               </option>
@@ -561,6 +561,8 @@ exports[`Driver Management page should render Login 1`] = `
               className="py-1 px-3 font-rale font-bold bg-transparent border rounded-sm"
               id=""
               name=""
+              onChange={[Function]}
+              role="select"
             >
               <option
                 hidden={true}
@@ -569,21 +571,19 @@ exports[`Driver Management page should render Login 1`] = `
               </option>
               <option
                 className="cursor-pointer"
-                onClick={[Function]}
-                value="manage"
+                value="edit"
               >
                 Edit
               </option>
               <option
                 className="cursor-pointer"
-                value=""
+                value="delete"
               >
                 Delete
               </option>
               <option
                 className="cursor-pointer"
-                onClick={[Function]}
-                value=""
+                value="permission"
               >
                 Permissions
               </option>
@@ -635,6 +635,8 @@ exports[`Driver Management page should render Login 1`] = `
               className="py-1 px-3 font-rale font-bold bg-transparent border rounded-sm"
               id=""
               name=""
+              onChange={[Function]}
+              role="select"
             >
               <option
                 hidden={true}
@@ -643,21 +645,19 @@ exports[`Driver Management page should render Login 1`] = `
               </option>
               <option
                 className="cursor-pointer"
-                onClick={[Function]}
-                value="manage"
+                value="edit"
               >
                 Edit
               </option>
               <option
                 className="cursor-pointer"
-                value=""
+                value="delete"
               >
                 Delete
               </option>
               <option
                 className="cursor-pointer"
-                onClick={[Function]}
-                value=""
+                value="permission"
               >
                 Permissions
               </option>
@@ -709,6 +709,8 @@ exports[`Driver Management page should render Login 1`] = `
               className="py-1 px-3 font-rale font-bold bg-transparent border rounded-sm"
               id=""
               name=""
+              onChange={[Function]}
+              role="select"
             >
               <option
                 hidden={true}
@@ -717,21 +719,19 @@ exports[`Driver Management page should render Login 1`] = `
               </option>
               <option
                 className="cursor-pointer"
-                onClick={[Function]}
-                value="manage"
+                value="edit"
               >
                 Edit
               </option>
               <option
                 className="cursor-pointer"
-                value=""
+                value="delete"
               >
                 Delete
               </option>
               <option
                 className="cursor-pointer"
-                onClick={[Function]}
-                value=""
+                value="permission"
               >
                 Permissions
               </option>
@@ -783,6 +783,8 @@ exports[`Driver Management page should render Login 1`] = `
               className="py-1 px-3 font-rale font-bold bg-transparent border rounded-sm"
               id=""
               name=""
+              onChange={[Function]}
+              role="select"
             >
               <option
                 hidden={true}
@@ -791,21 +793,19 @@ exports[`Driver Management page should render Login 1`] = `
               </option>
               <option
                 className="cursor-pointer"
-                onClick={[Function]}
-                value="manage"
+                value="edit"
               >
                 Edit
               </option>
               <option
                 className="cursor-pointer"
-                value=""
+                value="delete"
               >
                 Delete
               </option>
               <option
                 className="cursor-pointer"
-                onClick={[Function]}
-                value=""
+                value="permission"
               >
                 Permissions
               </option>

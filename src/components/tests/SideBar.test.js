@@ -23,9 +23,11 @@ describe('SideBar', () => {
     const open = false;
     const setOpen = jest.fn();
     const component = mount(
-      <MemoryRouter>
-        <SideBar setOpen={() => setOpen(!open)} />
-      </MemoryRouter>
+      <Provider store={store}>
+        <MemoryRouter>
+          <SideBar setOpen={() => setOpen(!open)} />
+        </MemoryRouter>
+      </Provider>
     );
     const button = component.find('#button');
     button.simulate('click');

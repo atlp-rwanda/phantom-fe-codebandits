@@ -19,5 +19,5 @@ export const UserInfo = () => {
   return <h1>Main Dashboard</h1>;
 };
 export const ProfilePage = () => {
-  return <OperatorProfile/>
+  return <OperatorProfile />;
 };

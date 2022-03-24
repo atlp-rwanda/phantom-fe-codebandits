@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { toast } from 'react-toastify';
-import SideBar from '../../components/SideBar.js';
 import { ButtonA as Button } from '../../components/Button.js';
 import { saveInfo, editInfo } from '../../redux/reducers/profileReducer.js';
 import profileImg from '../../images/profileImg.jpg';
@@ -43,7 +42,6 @@ const Profile = ({
   return (
     <div className="flex h-full font-sans antialiased bg-grey-lightest w-full">
       <section>
-        <SideBar />
       </section>
       <section className="mx-auto items-center w-full h-full p-8 top-8 right-2 ">
         <h1 className="font-black text-2xl">Profile</h1>
@@ -74,10 +72,10 @@ const Profile = ({
                 />
               </span>
               <div className="h-20 flex flex-col items-center md:items-baseline lg:items-baseline xl:items-baseline">
-                <h1 className="font-black text-lg md:text-3xl lg:text-3xl xl:text-3xl text-3xl">
+                <h1 className="font-black text-lg md:text-3xl lg:text-3xl xl:text-3xl">
                   {firstName} {lastName}
                 </h1>
-                <h2 className="font-bold text-sm md:text-base lg:text-base xl:text-base text-base">
+                <h2 className="font-bold text-sm md:text-base lg:text-base xl:text-base">
                   {position} at {company}
                 </h2>
                 <h3>{email}</h3>

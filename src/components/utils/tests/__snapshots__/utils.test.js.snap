@@ -1,0 +1,25 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Check roles Return empty for for the operator 1`] = `
+<div
+  className="flex flex-col items-center justify-center"
+>
+  <h3
+    className="font-rale font-bold"
+  >
+    Don't have the permissions to view the page.
+  </h3>
+  <Link
+    className="bg-primary rounded-sm font-bold"
+    to="/login"
+  >
+    Login with a different account
+  </Link>
+</div>
+`;
+
+exports[`Check roles Return empty for for the operator 2`] = `""`;
+
+exports[`Check roles Return the element for the admin 1`] = `<Roles />`;
+
+exports[`Check roles Return the element for the operator 1`] = `<Roles />`;
