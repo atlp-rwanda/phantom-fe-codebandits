@@ -77,8 +77,12 @@ const DriversTable = () => {
 
   return (
     <>
-      <section className="flex justify-between content-center pb-7 overflow-x-auto">
-        <SearchFilter filter={globalFilter} setfilter={setGlobalFilter} />
+      <section className="flex justify-between content-center pb-7">
+        <SearchFilter
+          filter={globalFilter}
+          setfilter={setGlobalFilter}
+          placeholder="Search Drivers..."
+        />
         <CheckRole
           children={
             <Link to="driver/register">

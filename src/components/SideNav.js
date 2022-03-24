@@ -15,8 +15,8 @@ import { ButtonA as Button } from './Button.js';
 import SideNavLink from './SideNavLink.js';
 
 const SideNav = ({ styles }) => {
-  const navigate = useNavigate();
   const dispatch = useDispatch();
+  const navigate = useNavigate();
   const { authenticated, user } = useSelector((state) => state?.auth);
   const logout = () => {
     dispatch(logoutUser());
@@ -62,11 +62,7 @@ const SideNav = ({ styles }) => {
               linkTo="/dashboard/management"
               name="Management"
             />
-            <SideNavLink
-              image={profileIcon}
-              linkTo="/dashboard/profile"
-              name="Profile"
-            />
+            <SideNavLink image={profileIcon} linkTo="profile" name="Profile" />
             <SideNavLink
               image={notificationIcon}
               linkTo="/dashboard/notifications"

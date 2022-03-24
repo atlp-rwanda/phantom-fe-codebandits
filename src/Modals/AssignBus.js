@@ -131,7 +131,7 @@ export const AssignBusModal = ({ handleClose }) => {
                 <div className="font-raleway">
                   Bus with {createButton.plate} was not found
                 </div>
-                <Link to="/dashboard/management/buses/register">
+                <Link to="/dashboard/management/bus/register">
                   <PrimaryButton name={`Create new "${createButton.plate}"`} />
                 </Link>
               </div>

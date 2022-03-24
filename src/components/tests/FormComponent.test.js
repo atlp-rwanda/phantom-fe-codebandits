@@ -5,8 +5,8 @@ import { mount, shallow } from 'enzyme';
 import React from 'react';
 import { BrowserRouter, MemoryRouter } from 'react-router-dom';
 import renderer from 'react-test-renderer';
-import UpdateDriver from '../UpdateDriver.js';
-import UpdateOperator from '../UpdateOperator.js';
+import UpdateDriver from '../../forms/UpdateDriver.js';
+import UpdateOperator from '../../forms/UpdateOperator.js';
 
 describe('Form Component', () => {
   it('Should render a form Componet', () => {

@@ -97,7 +97,7 @@ exports[`Account should render the account page 1`] = `
                 <li>
                   <a
                     className="py-2 pr-10 pl-4 rounded-full font-bold my-1  hover:bg-gray-300 transition-all  cursor-pointer min-w-fit w-full flex items-center"
-                    href="/dashboard/profile"
+                    href="/profile"
                     onClick={[Function]}
                   >
                     <img
@@ -214,15 +214,13 @@ exports[`Account should render the account page 1`] = `
         <div
           className="flex"
         >
-          <div>
-            <a
-              className="m-2 py-1 px-3 bg-primary rounded-md"
-              href="/dashboard/operator/register"
-              onClick={[Function]}
-            >
-              Register Operator
-            </a>
-          </div>
+          <a
+            className="m-2 py-1 px-3 bg-primary rounded-md"
+            href="/dashboard/operator/register"
+            onClick={[Function]}
+          >
+            Register Operator
+          </a>
           <a
             className="m-2 py-1 px-3 bg-gray-500 rounded-md"
             href="/dashboard/operator/update"

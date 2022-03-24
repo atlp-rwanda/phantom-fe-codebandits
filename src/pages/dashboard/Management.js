@@ -1,6 +1,6 @@
+import CheckRole from '@utils/CheckRoles.js';
 import React from 'react';
 import { Tab, TabList, TabPanel, Tabs } from 'react-tabs';
-import CheckRole from '../../utils/CheckRoles.js';
 import Buses from '../management/Buses.js';
 import Companies from '../management/Companies.js';
 import Drivers from '../management/Drivers.js';

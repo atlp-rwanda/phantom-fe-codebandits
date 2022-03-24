@@ -10,4 +10,4 @@ const ProviderWrapper = ({ children }) => {
     </Provider>
   );
 };
-export default ProviderWrapper
+export default ProviderWrapper;

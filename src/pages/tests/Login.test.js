@@ -33,6 +33,18 @@ jest.mock('react-hook-form', () => ({
   register: jest.fn(),
   handleSubmit: jest.fn()
 }));
+const mockUseLocationValue = {
+  pathname: '/testroute',
+  search: '',
+  hash: '',
+  state: null
+};
+jest.mock('react-router-dom', () => ({
+  ...jest.requireActual('react-router-dom'),
+  useLocation: jest.fn().mockImplementation(() => {
+    return mockUseLocationValue;
+  })
+}));
 
 describe('Render the errors', () => {
   beforeEach(() => {
@@ -100,7 +112,6 @@ describe('Attempts', () => {
           value: 'test@gmail.com'
         }
       });
-
       fireEvent.submit(screen.getByTestId('loginForm'));
       expect(await screen.findAllByText(/Password is required/i)).toHaveLength(
         1
