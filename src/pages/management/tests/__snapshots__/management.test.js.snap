@@ -1,0 +1,799 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Management tests it should render Buses Management page 1`] = `
+<div>
+  <section
+    className="flex justify-between content-center pb-7"
+  >
+    <div>
+      <input
+        className="p-1 rounded-md border-2"
+        name="search"
+        onChange={[Function]}
+        placeholder="Search buses..."
+        type="text"
+        value=""
+      />
+    </div>
+    
+  </section>
+  <table
+    className="w-full"
+    role="table"
+  >
+    <thead>
+      <tr
+        className="pb-10 "
+        role="row"
+      >
+        <th
+          className="text-left font-extrabold pr-5 border-b-2 pb-4"
+          colSpan={1}
+          role="columnheader"
+        >
+          Plate number
+        </th>
+        <th
+          className="text-left font-extrabold pr-5 border-b-2 pb-4"
+          colSpan={1}
+          role="columnheader"
+        >
+          Bus type
+        </th>
+        <th
+          className="text-left font-extrabold pr-5 border-b-2 pb-4"
+          colSpan={1}
+          role="columnheader"
+        >
+          Seats
+        </th>
+        <th
+          className="text-left font-extrabold pr-5 border-b-2 pb-4"
+          colSpan={1}
+          role="columnheader"
+        >
+          Driver
+        </th>
+        <th
+          className="text-left font-extrabold pr-5 border-b-2 pb-4"
+          colSpan={1}
+          role="columnheader"
+        >
+          Route
+        </th>
+        <th
+          className="text-left font-extrabold pr-5 border-b-2 pb-4"
+          colSpan={1}
+          role="columnheader"
+        >
+          Management
+        </th>
+      </tr>
+    </thead>
+    <tbody
+      role="rowgroup"
+    >
+      <tr
+        role="row"
+      >
+        <td
+          className="pr-5 py-4 border-b-2"
+          role="cell"
+        >
+          RAN123
+        </td>
+        <td
+          className="pr-5 py-4 border-b-2"
+          role="cell"
+        >
+          Coaster
+        </td>
+        <td
+          className="pr-5 py-4 border-b-2"
+          role="cell"
+        >
+          30
+        </td>
+        <td
+          className="pr-5 py-4 border-b-2"
+          role="cell"
+        >
+          <div
+            className="text-red"
+          >
+            No driver
+          </div>
+        </td>
+        <td
+          className="pr-5 py-4 border-b-2"
+          role="cell"
+        >
+          <div
+            className="text-red"
+          >
+            No route assigned
+          </div>
+        </td>
+        <td
+          className="pr-5 py-4 border-b-2"
+          role="cell"
+        >
+          <div
+            className="z-10"
+          >
+            <select
+              className="py-1 px-3 font-rale font-bold bg-transparent border rounded-sm"
+              id=""
+              name="busManagement"
+              onChange={[Function]}
+              role="select"
+            >
+              <option
+                hidden={true}
+              >
+                Manage
+              </option>
+              <option
+                className="cursor-pointer"
+                value="edit"
+              >
+                Edit
+              </option>
+              <option
+                className="cursor-pointer"
+                value="delete"
+              >
+                Delete
+              </option>
+            </select>
+          </div>
+        </td>
+      </tr>
+      <tr
+        role="row"
+      >
+        <td
+          className="pr-5 py-4 border-b-2"
+          role="cell"
+        >
+          RAB121777
+        </td>
+        <td
+          className="pr-5 py-4 border-b-2"
+          role="cell"
+        >
+          Minibus
+        </td>
+        <td
+          className="pr-5 py-4 border-b-2"
+          role="cell"
+        >
+          50
+        </td>
+        <td
+          className="pr-5 py-4 border-b-2"
+          role="cell"
+        >
+          <div
+            className="text-red"
+          >
+            No driver
+          </div>
+        </td>
+        <td
+          className="pr-5 py-4 border-b-2"
+          role="cell"
+        >
+          <div
+            className="text-red"
+          >
+            No route assigned
+          </div>
+        </td>
+        <td
+          className="pr-5 py-4 border-b-2"
+          role="cell"
+        >
+          <div
+            className="z-10"
+          >
+            <select
+              className="py-1 px-3 font-rale font-bold bg-transparent border rounded-sm"
+              id=""
+              name="busManagement"
+              onChange={[Function]}
+              role="select"
+            >
+              <option
+                hidden={true}
+              >
+                Manage
+              </option>
+              <option
+                className="cursor-pointer"
+                value="edit"
+              >
+                Edit
+              </option>
+              <option
+                className="cursor-pointer"
+                value="delete"
+              >
+                Delete
+              </option>
+            </select>
+          </div>
+        </td>
+      </tr>
+      <tr
+        role="row"
+      >
+        <td
+          className="pr-5 py-4 border-b-2"
+          role="cell"
+        >
+          RAT230A
+        </td>
+        <td
+          className="pr-5 py-4 border-b-2"
+          role="cell"
+        >
+          Minibus
+        </td>
+        <td
+          className="pr-5 py-4 border-b-2"
+          role="cell"
+        >
+          50
+        </td>
+        <td
+          className="pr-5 py-4 border-b-2"
+          role="cell"
+        >
+          <div
+            className="text-red"
+          >
+            No driver
+          </div>
+        </td>
+        <td
+          className="pr-5 py-4 border-b-2"
+          role="cell"
+        >
+          <div
+            className="text-red"
+          >
+            No route assigned
+          </div>
+        </td>
+        <td
+          className="pr-5 py-4 border-b-2"
+          role="cell"
+        >
+          <div
+            className="z-10"
+          >
+            <select
+              className="py-1 px-3 font-rale font-bold bg-transparent border rounded-sm"
+              id=""
+              name="busManagement"
+              onChange={[Function]}
+              role="select"
+            >
+              <option
+                hidden={true}
+              >
+                Manage
+              </option>
+              <option
+                className="cursor-pointer"
+                value="edit"
+              >
+                Edit
+              </option>
+              <option
+                className="cursor-pointer"
+                value="delete"
+              >
+                Delete
+              </option>
+            </select>
+          </div>
+        </td>
+      </tr>
+      <tr
+        role="row"
+      >
+        <td
+          className="pr-5 py-4 border-b-2"
+          role="cell"
+        >
+          RAB12343
+        </td>
+        <td
+          className="pr-5 py-4 border-b-2"
+          role="cell"
+        >
+          Minibus
+        </td>
+        <td
+          className="pr-5 py-4 border-b-2"
+          role="cell"
+        >
+          12
+        </td>
+        <td
+          className="pr-5 py-4 border-b-2"
+          role="cell"
+        >
+          <div
+            className="text-red"
+          >
+            No driver
+          </div>
+        </td>
+        <td
+          className="pr-5 py-4 border-b-2"
+          role="cell"
+        >
+          <div
+            className="text-red"
+          >
+            No route assigned
+          </div>
+        </td>
+        <td
+          className="pr-5 py-4 border-b-2"
+          role="cell"
+        >
+          <div
+            className="z-10"
+          >
+            <select
+              className="py-1 px-3 font-rale font-bold bg-transparent border rounded-sm"
+              id=""
+              name="busManagement"
+              onChange={[Function]}
+              role="select"
+            >
+              <option
+                hidden={true}
+              >
+                Manage
+              </option>
+              <option
+                className="cursor-pointer"
+                value="edit"
+              >
+                Edit
+              </option>
+              <option
+                className="cursor-pointer"
+                value="delete"
+              >
+                Delete
+              </option>
+            </select>
+          </div>
+        </td>
+      </tr>
+    </tbody>
+    <tfoot>
+      <tr
+        className="pagination mt-3 pt-3"
+      >
+        <td
+          colSpan={5}
+        >
+          <div
+            className="w-full justify-end"
+          >
+            <button
+              className="mr-2"
+              disabled={true}
+              onClick={[Function]}
+            >
+              &lt;&lt;
+            </button>
+             
+            <button
+              className="mr-2"
+              disabled={true}
+              onClick={[Function]}
+            >
+              Previous
+            </button>
+             
+            <button
+              className="mr-2"
+              disabled={true}
+              onClick={[Function]}
+            >
+              Next
+            </button>
+             
+            <button
+              disabled={true}
+              onClick={[Function]}
+            >
+              &gt;&gt;
+            </button>
+             
+            <span>
+              Page
+               
+              <strong>
+                1
+                 of 
+                1
+              </strong>
+               
+            </span>
+            <span>
+              | Go to page:
+               
+              <input
+                defaultValue={1}
+                onChange={[Function]}
+                style={
+                  Object {
+                    "width": "50px",
+                  }
+                }
+                type="number"
+              />
+            </span>
+             
+            <select
+              onChange={[Function]}
+              value={10}
+            >
+              <option
+                value={10}
+              >
+                Show 
+                10
+              </option>
+              <option
+                value={25}
+              >
+                Show 
+                25
+              </option>
+              <option
+                value={50}
+              >
+                Show 
+                50
+              </option>
+            </select>
+          </div>
+        </td>
+      </tr>
+    </tfoot>
+  </table>
+</div>
+`;
+
+exports[`Management tests it should render Companies Management page 1`] = `
+<div>
+  Companies management
+</div>
+`;
+
+exports[`Management tests it should render Drivers Management page 1`] = `
+<div>
+  <section
+    className="flex justify-between content-center pb-7"
+  >
+    <div>
+      <input
+        className="p-1 rounded-md border-2"
+        name="search"
+        onChange={[Function]}
+        placeholder="Search Drivers..."
+        type="text"
+        value=""
+      />
+    </div>
+    
+  </section>
+  <table
+    className="w-full overflow-x-scroll font-raleway"
+    role="table"
+  >
+    <thead>
+      <tr
+        className="pb-10 "
+        role="row"
+      >
+        <th
+          className="text-left font-extrabold pr-5 border-b-2 pb-4"
+          colSpan={1}
+          role="columnheader"
+        >
+          Names
+        </th>
+        <th
+          className="text-left font-extrabold pr-5 border-b-2 pb-4"
+          colSpan={1}
+          role="columnheader"
+        >
+          Email
+        </th>
+        <th
+          className="text-left font-extrabold pr-5 border-b-2 pb-4"
+          colSpan={1}
+          role="columnheader"
+        >
+          License
+        </th>
+        <th
+          className="text-left font-extrabold pr-5 border-b-2 pb-4"
+          colSpan={1}
+          role="columnheader"
+        >
+          Assigned Bus
+        </th>
+        <th
+          className="text-left font-extrabold pr-5 border-b-2 pb-4"
+          colSpan={1}
+          role="columnheader"
+        >
+          Management
+        </th>
+      </tr>
+    </thead>
+    <tbody
+      role="rowgroup"
+    >
+      <tr
+        role="row"
+      >
+        <td
+          className="pr-5 py-4 border-b-2"
+          role="cell"
+        >
+          Muhire Girbert
+        </td>
+        <td
+          className="pr-5 py-4 border-b-2"
+          role="cell"
+        >
+          ctruswell1@histats.com
+        </td>
+        <td
+          className="pr-5 py-4 border-b-2"
+          role="cell"
+        >
+          1195510237288508
+        </td>
+        <td
+          className="pr-5 py-4 border-b-2"
+          role="cell"
+        >
+          None
+        </td>
+        <td
+          className="pr-5 py-4 border-b-2"
+          role="cell"
+        >
+          <div
+            className="z-10 font-sm"
+          >
+            <select
+              className="py-1 px-1 font-rale font-bold bg-transparent border rounded-sm"
+              id=""
+              name=""
+              onChange={[Function]}
+              role="select"
+            >
+              <option
+                hidden={true}
+                value="manage"
+              >
+                Manage
+              </option>
+              <option
+                value="vies"
+              >
+                View
+              </option>
+              
+              
+              
+              
+            </select>
+          </div>
+        </td>
+      </tr>
+      <tr
+        role="row"
+      >
+        <td
+          className="pr-5 py-4 border-b-2"
+          role="cell"
+        >
+          Fabrice Hategekimana
+        </td>
+        <td
+          className="pr-5 py-4 border-b-2"
+          role="cell"
+        >
+          driver@me.com
+        </td>
+        <td
+          className="pr-5 py-4 border-b-2"
+          role="cell"
+        >
+          1199780030880040
+        </td>
+        <td
+          className="pr-5 py-4 border-b-2"
+          role="cell"
+        >
+          <a
+            className="text-primary"
+            href="/#buses"
+            onClick={[Function]}
+          >
+            RAB1234
+          </a>
+        </td>
+        <td
+          className="pr-5 py-4 border-b-2"
+          role="cell"
+        >
+          <div
+            className="z-10 font-sm"
+          >
+            <select
+              className="py-1 px-1 font-rale font-bold bg-transparent border rounded-sm"
+              id=""
+              name=""
+              onChange={[Function]}
+              role="select"
+            >
+              <option
+                hidden={true}
+                value="manage"
+              >
+                Manage
+              </option>
+              <option
+                value="vies"
+              >
+                View
+              </option>
+              
+              
+              
+              
+            </select>
+          </div>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+  <table
+    className=" mt-3 flex justify-center w-full bg-gray-300 bg-opacity-20 "
+  >
+    <tfoot>
+      <tr
+        className="p-1 flex-row flex items-center justify-center my-2 mx-auto w-full font-raleway"
+      >
+        <td
+          colSpan={5}
+        >
+          <div
+            className="w-full justify-center flex mx-auto flex-row items-center overflow-x-scroll"
+          >
+            <button
+              className="mx-2 rounded-circle font-bold flex items-center justify-center bg-primary h-[30px] w-[60px] cursor-pointer"
+              disabled={true}
+              onClick={[Function]}
+            >
+              &lt;|
+            </button>
+             
+            <button
+              className="mx-2 font-bold font-raleway"
+              disabled={true}
+              onClick={[Function]}
+            >
+              Prev
+            </button>
+             
+            <button
+              className="mx-2 font-bold font-raleway cursor-pointer"
+              disabled={true}
+              onClick={[Function]}
+            >
+              Next
+            </button>
+             
+            <button
+              className="mx-2 rounded-circle font-bold flex items-center justify-center bg-primary h-[30px] w-[60px] cursor-pointer"
+              disabled={true}
+              onClick={[Function]}
+            >
+              |&gt;
+            </button>
+             
+            <div
+              className="flex flex-row justify-center w-full"
+            >
+              <span
+                className="inline-block mx-2"
+              >
+                Page
+                 
+                <strong>
+                  1
+                   of 
+                  1
+                </strong>
+                 
+              </span>
+              <span
+                className="inline-block mx-2"
+              >
+                | Go to page:
+                 
+                <input
+                  className=" pl-2 outline-none border rounded-md border-primary"
+                  defaultValue={1}
+                  onChange={[Function]}
+                  style={
+                    Object {
+                      "width": "50px",
+                    }
+                  }
+                  type="number"
+                />
+              </span>
+               
+              <select
+                className="px-1/2 md:px-2 font-raleway rounded-md border border-primary"
+                onChange={[Function]}
+                value={10}
+              >
+                <option
+                  value={10}
+                >
+                  Show 
+                  10
+                </option>
+                <option
+                  value={25}
+                >
+                  Show 
+                  25
+                </option>
+                <option
+                  value={50}
+                >
+                  Show 
+                  50
+                </option>
+              </select>
+            </div>
+          </div>
+        </td>
+      </tr>
+    </tfoot>
+  </table>
+</div>
+`;
+
+exports[`Management tests it should render Operators Management page 1`] = `
+<div>
+  Operators management
+</div>
+`;
+
+exports[`Management tests it should render Routes Management page 1`] = `
+<div>
+  Routes management
+</div>
+`;

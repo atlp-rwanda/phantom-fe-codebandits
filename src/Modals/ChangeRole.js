@@ -24,15 +24,19 @@ function ChangeRole() {
     navigate(-1);
   };
   return (
-    <div className="font-raleway">
-      <h1 className="font-bold font-raleway text-center">Change user's role</h1>
+    <div className="font-raleway py-2 px-4">
+      <h1 className="font-bold font-raleway text-center text-2xl mb-2">
+        Change user's role
+      </h1>
       <hr />
-      <div>
+      <div className='mt-2'>
         <ul>
           <li>
             <b>Name</b>: {name}
           </li>
-          <li>Email: {email}</li>
+          <li>
+            <b>Email</b>: {email}
+          </li>
           <li>
             <b>Role</b>: {newRole?.name || 'Driver'}
           </li>

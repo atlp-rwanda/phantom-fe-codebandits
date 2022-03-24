@@ -6,13 +6,13 @@ Object {
   "baseElement": <body>
     <div>
       <section
-        class="flex justify-between content-center pb-7 overflow-x-auto"
+        class="flex justify-between content-center pb-7"
       >
         <div>
           <input
             class="p-1 rounded-md border-2"
             name="search"
-            placeholder="Search drivers..."
+            placeholder="Search Drivers..."
             type="text"
             value=""
           />
@@ -291,13 +291,13 @@ Object {
   </body>,
   "container": <div>
     <section
-      class="flex justify-between content-center pb-7 overflow-x-auto"
+      class="flex justify-between content-center pb-7"
     >
       <div>
         <input
           class="p-1 rounded-md border-2"
           name="search"
-          placeholder="Search drivers..."
+          placeholder="Search Drivers..."
           type="text"
           value=""
         />

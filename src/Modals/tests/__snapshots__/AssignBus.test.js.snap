@@ -6,15 +6,17 @@ Object {
   "baseElement": <body>
     <div>
       <div
-        class="font-raleway"
+        class="font-raleway py-2 px-4"
       >
         <h1
-          class="font-bold font-raleway text-center"
+          class="font-bold font-raleway text-center text-2xl mb-2"
         >
           Change user's role
         </h1>
         <hr />
-        <div>
+        <div
+          class="mt-2"
+        >
           <ul>
             <li>
               <b>
@@ -24,7 +26,10 @@ Object {
               Fabrice
             </li>
             <li>
-              Email: 
+              <b>
+                Email
+              </b>
+              : 
               emanuel@me.com
             </li>
             <li>
@@ -89,15 +94,17 @@ Object {
   </body>,
   "container": <div>
     <div
-      class="font-raleway"
+      class="font-raleway py-2 px-4"
     >
       <h1
-        class="font-bold font-raleway text-center"
+        class="font-bold font-raleway text-center text-2xl mb-2"
       >
         Change user's role
       </h1>
       <hr />
-      <div>
+      <div
+        class="mt-2"
+      >
         <ul>
           <li>
             <b>
@@ -107,7 +114,10 @@ Object {
             Fabrice
           </li>
           <li>
-            Email: 
+            <b>
+              Email
+            </b>
+            : 
             emanuel@me.com
           </li>
           <li>

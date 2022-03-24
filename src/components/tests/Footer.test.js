@@ -1,5 +1,5 @@
 import { mount } from 'enzyme';
-import React from 'react';
+import { default as React } from 'react';
 import { Provider } from 'react-redux';
 import { BrowserRouter } from 'react-router-dom';
 import renderer from 'react-test-renderer';

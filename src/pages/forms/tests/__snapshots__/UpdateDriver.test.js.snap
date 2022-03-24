@@ -25,6 +25,7 @@ exports[`UpdateDriver should render the UpdateDriver component 1`] = `
         </h1>
         <form
           className="flex flex-col "
+          id="updateForm"
           onSubmit={[Function]}
         >
           <div
@@ -45,6 +46,7 @@ exports[`UpdateDriver should render the UpdateDriver component 1`] = `
                   <input
                     className="undefined appearance-none border font-rale rounded w-full py-2 px-3 text-grey-darker bg-gray-200 text-md outline-hidden"
                     defaultValue="Eric"
+                    id="firstName"
                     name="firstName"
                     onChange={[Function]}
                     type="text"
@@ -66,6 +68,7 @@ exports[`UpdateDriver should render the UpdateDriver component 1`] = `
                   <input
                     className="undefined appearance-none border font-rale rounded w-full py-2 px-3 text-grey-darker bg-gray-200 text-md outline-hidden"
                     defaultValue="0789989655"
+                    id="mobileNumber"
                     name="mobileNumber"
                     onChange={[Function]}
                     type="text"
@@ -87,6 +90,7 @@ exports[`UpdateDriver should render the UpdateDriver component 1`] = `
                   <input
                     className="undefined appearance-none border font-rale rounded w-full py-2 px-3 text-grey-darker bg-gray-200 text-md outline-hidden"
                     defaultValue="Kacyiru, Kigali"
+                    id="address"
                     name="address"
                     onChange={[Function]}
                     type="text"
@@ -112,6 +116,7 @@ exports[`UpdateDriver should render the UpdateDriver component 1`] = `
                   <input
                     className="undefined appearance-none border font-rale rounded w-full py-2 px-3 text-grey-darker bg-gray-200 text-md outline-hidden"
                     defaultValue="SHEMA"
+                    id="lastName"
                     name="lastName"
                     onChange={[Function]}
                     type="text"
@@ -177,6 +182,7 @@ exports[`UpdateDriver should render the UpdateDriver component 1`] = `
                   <input
                     className="undefined appearance-none border font-rale rounded w-full py-2 px-3 text-grey-darker bg-gray-200 text-md outline-hidden"
                     defaultValue="1199780020002120"
+                    id="nationalID"
                     name="nationalID"
                     onChange={[Function]}
                     type="text"
@@ -200,6 +206,7 @@ exports[`UpdateDriver should render the UpdateDriver component 1`] = `
               <input
                 className="undefined appearance-none border font-rale rounded w-full py-2 px-3 text-grey-darker bg-gray-200 text-md outline-hidden"
                 defaultValue="1199780020002120"
+                id="driverLicense"
                 name="driverLicense"
                 onChange={[Function]}
                 type="text"
@@ -214,7 +221,7 @@ exports[`UpdateDriver should render the UpdateDriver component 1`] = `
           >
             <div>
               <button
-                className="bg-primary mb-8 text-background py-2 rounded-xl py-3 text-base md:text-sm lg:text-lg xl:text-lg px-5"
+                className="bg-primary mb-8 text-background py-2 rounded-xl py-2 text-base md:text-sm px-5"
                 onClick={[Function]}
                 type="submit"
               >

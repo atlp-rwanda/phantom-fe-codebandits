@@ -8,7 +8,7 @@ exports[`Management routes Render Operators 1`] = `
 
 exports[`Management routes Render buses 1`] = `
 <div>
-  Buses management
+  <BusesTable />
 </div>
 `;
 

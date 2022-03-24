@@ -9,6 +9,8 @@ import ComingSoon from '../pages/ComingSoon.js';
 import Management from '../pages/dashboard/Management.js';
 import Roles from '../pages/dashboard/RolesPage.js';
 import OperatorProfile from '../pages/profiles/OperatorProfile.js';
+import RegisterBus from '../pages/RegisterBus.js';
+import UpdateBus from '../pages/UpdateBus.js';
 import ModalRoutes from './ModalRoutes.js';
 
 function DashRoutes() {
@@ -18,7 +20,7 @@ function DashRoutes() {
       <div className="float-right min-h-screen h-full  m-0 relative  w-full overflow-y-scroll overflow-x-hidden">
         <div className="min-h-full px-2 py-2">
           <Routes>
-            <Route path="modal/*" exact={false} element={<ModalRoutes/>}/>
+            <Route path="modal/*" exact={false} element={<ModalRoutes />} />
             <Route path="main" element={<ComingSoon title={'dashboard'} />} />
             <Route path="/" element={<ComingSoon title={'dashboard'} />} />
             <Route path="roles" element={<Roles />} />
@@ -38,11 +40,9 @@ function DashRoutes() {
                 element={<RegisterDriver />}
               />
               <Route path="driver/update" element={<UpdateDriver />} />
-
-              <Route
-                path="operator/register"
-                element={<RegisterOperator />}
-              />
+              <Route path="bus/register" element={<RegisterBus />} />
+              <Route path="bus/update/:id" element={<UpdateBus />} />
+              <Route path="operator/register" element={<RegisterOperator />} />
               <Route path="operator/update" element={<UpdateOperator />} />
               <Route path="" element={<Management />}></Route>
             </Route>

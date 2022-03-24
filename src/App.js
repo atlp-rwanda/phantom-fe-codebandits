@@ -13,7 +13,6 @@ import PrivateRoute from './utils/PrivateRoute.js';
 
 function App() {
   const { loading } = useLoader();
-
   return (
     <div className="min-h-screen flex flex-col">
       {loading && <SkeletonScreen />}

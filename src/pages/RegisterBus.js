@@ -1,32 +1,35 @@
 import React from 'react';
-import Buses from '../components/forms/Buses.js';
 import { useNavigate } from 'react-router-dom';
 import { toast } from 'react-toastify';
+import axios from 'axios';
+import Buses from '../components/forms/Buses.js';
+import busesDB from '../database/busesDB.json';
 
 const RegisterBus = () => {
   const navigate = useNavigate();
-  const registerBusToDB = (busInfo) => {
-    const defaultValues = { driver: 'No driver', route: 'No route' };
-    fetch('http://localhost:8000/buses', {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-        Accept: 'application/json'
-      },
-      body: JSON.stringify(Object.assign({}, busInfo, defaultValues))
-    }).then((res) => {
-      res.json();
-      toast('Bus registered successfully');
-      navigate('/dashboard/management');
+
+  const registerBusToDB = async (busInfo) => {
+    const busInDb = busesDB.buses.filter((bus) => {
+      return bus.plateNumber === busInfo.plateNumber;
     });
+    if (busInDb.length > 0) {
+      toast(
+        `Bus with ${busInfo.plateNumber} plate number is already registered`,
+        {
+          type: 'error'
+        }
+      );
+      return;
+    }
+    const defaultValues = { driver: null, route: null };
+    await axios.post('http://localhost:8000/buses', {
+      ...busInfo,
+      ...defaultValues
+    });
+    toast('Bus registered successfully', { type: 'success' });
+    navigate(-1);
   };
-  return (
-    <Buses
-      formTitle="Register Bus"
-      successToastMessage={'Bus registered successfully'}
-      formAction={registerBusToDB}
-    />
-  );
+  return <Buses formTitle="Register Bus" formAction={registerBusToDB} />;
 };
 
 export default RegisterBus;

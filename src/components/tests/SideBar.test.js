@@ -25,7 +25,7 @@ describe('SideBar', () => {
     const component = mount(
       <Provider store={store}>
         <MemoryRouter>
-          <SideBar />
+          <SideBar setOpen={() => setOpen(!open)} />
         </MemoryRouter>
       </Provider>
     );

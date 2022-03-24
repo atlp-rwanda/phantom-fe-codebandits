@@ -1,52 +1,30 @@
-<<<<<<< HEAD
-import React, { useState } from 'react';
-import Button from '../Button.js';
-import { useForm } from 'react-hook-form';
-import { toast } from 'react-toastify';
-import busesDB from '../../database/busesDB.json';
-
-const Buses = ({ formTitle, formAction }) => {
-  const [plateNumber, setPlateNumber] = useState(null);
-=======
+/* eslint-disable jsx-a11y/label-has-associated-control */
+/* eslint-disable react/jsx-props-no-spreading */
 import React from 'react';
-import Button from '../Button.js';
 import { useForm } from 'react-hook-form';
-import { toast } from 'react-toastify';
+import Button from '../Button.js';
 
-const Buses = ({ formTitle, successToastMessage }) => {
->>>>>>> 3737ce0 (Add the click outside functionality)
+const Buses = ({
+  formTitle,
+  formAction,
+  busType,
+  company,
+  seats,
+  plateNumber
+}) => {
   const {
     register,
     handleSubmit,
     formState: { errors }
-<<<<<<< HEAD
   } = useForm({
     reValidateMode: 'onChange',
     mode: 'onChange'
   });
   const onValid = async (data) => {
-    const isBusInDB = busesDB.buses.filter((bus) => {
-      return bus.plateNumber == data.plateNumber
-    });
-    console.log(isBusInDB)
-    if (isBusInDB.length>0) {
-      toast(`Bus with ${data.plateNumber} plate number is already registered`, {
-        type: 'error'
-      });
-      return
-    }
     await formAction(data);
   };
-
-  const handlePlateNumber = (e) => {
-    console.log(e.target.value);
-=======
-  } = useForm();
-  const onValid = () => {
-    toast({ successToastMessage }, { type: 'success' });
->>>>>>> 3737ce0 (Add the click outside functionality)
-  };
   const inputClassStyles = 'rounded-sm px-3 py-3 mb-2 bg-[#EFEFEF]';
+  const errorStyles = 'text-rose-500 mb-2';
   return (
     <div className="px-8 py-4 my-auto font-raleway md:py-8">
       <form
@@ -58,57 +36,47 @@ const Buses = ({ formTitle, successToastMessage }) => {
           Bus type
         </label>
         <select
+          defaultValue={busType}
           name="busType"
           id="busType"
-<<<<<<< HEAD
-          {...register('busType')}
+          {...register('busType', { required: 'Bus type is required' })}
           className={inputClassStyles}
         >
-          <option hidden>Select bus type</option>
+          <option hidden value="">
+            Select bus type
+          </option>
           <option value="Coaster">Coaster</option>
           <option value="Minibus">Minibus</option>
           <option value="Big Bus">Big Bus</option>
-=======
-          className={inputClassStyles}
-          {...register('busType', {
-            required: 'Bus type is required'
-          })}
-        >
-          <option hidden>Select bus type</option>
-          <option value="coaster">Coaster</option>
-          <option value="minibus">Minibus</option>
-          <option value="bigBus">Big Bus</option>
->>>>>>> 3737ce0 (Add the click outside functionality)
         </select>
-        <p className="text-red-800">
+        <p className={errorStyles}>
           {errors?.busType && errors.busType.message}
         </p>
         <label htmlFor="busType" className="font-bold mb-2">
           Company
         </label>
-<<<<<<< HEAD
         <select
+          defaultValue={company}
           name="company"
           id="company"
           className={inputClassStyles}
-          {...register('company')}
+          {...register('company', { required: 'Company is required' })}
         >
-          <option hidden>Select company</option>
+          <option hidden value="">
+            Select company
+          </option>
           <option value="KBS">Kigali Bus Service</option>
           <option value="Royal_express">Royal Express</option>
           <option value="Virunga_express">Virunga Express</option>
-=======
-        <select name="company" id="busType" className={inputClassStyles}>
-          <option hidden>Select company</option>
-          <option value="kbs">Kigali Bus Service</option>
-          <option value="royal_express">Royal Express</option>
-          <option value="virunga_express">Virunga Express</option>
->>>>>>> 3737ce0 (Add the click outside functionality)
         </select>
+        <p className={errorStyles}>
+          {errors?.company && errors.company.message}
+        </p>
         <label htmlFor="seats" className="font-bold mb-2">
           Seats
         </label>
         <input
+          defaultValue={seats}
           type="number"
           placeholder="Enter number of seats"
           className={inputClassStyles}
@@ -121,46 +89,43 @@ const Buses = ({ formTitle, successToastMessage }) => {
             }
           })}
         />
-        <p className="text-red-800 mb-2">
-          {errors?.seats && errors.seats.message}
-        </p>
+        <p className={errorStyles}>{errors?.seats && errors.seats.message}</p>
         <label htmlFor="seats" className="font-bold mb-2">
           Plate number
         </label>
         <input
+          defaultValue={plateNumber}
           type="text"
           placeholder="Enter plate number"
           className={inputClassStyles}
           name="plateNumber"
           {...register('plateNumber', {
-<<<<<<< HEAD
-            onChange: handlePlateNumber,
             required: 'Bus plate number is required',
             pattern: {
               value: /^[A-Za-z0-9]*$/,
               message: 'Enter a valid plate number'
-=======
-            required: 'Bus plate number is required',
-            pattern: {
-              value: /^\d*$/,
-              message: 'Enter a valid number'
->>>>>>> 3737ce0 (Add the click outside functionality)
             }
           })}
         />
-        <p className="text-red-800 mb-2">
+        <p className={errorStyles}>
           {errors?.plateNumber && errors.plateNumber.message}
         </p>
         <div className="self-center">
           <Button
             name={formTitle}
-            type="submit"
             styles="bg-primary text-sm text-white py-2 px-3 mt-4"
           />
         </div>
       </form>
     </div>
   );
+};
+
+Buses.defaultProps = {
+  busType: undefined,
+  company: undefined,
+  seats: undefined,
+  plateNumber: undefined
 };
 
 export default Buses;
