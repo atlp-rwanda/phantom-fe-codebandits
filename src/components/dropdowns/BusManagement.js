@@ -1,11 +1,11 @@
-import axios from 'axios';
+import axios from '@utils/Api.js';
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import { toast } from 'react-toastify';
 
 const handleDelete = async (busId) => {
   try {
-    await axios.delete(`http://localhost:8000/buses/${busId}`);
+    await axios.delete(`/buses/${busId}`);
     toast('Bus deleted successfully', { type: 'success' });
   } catch (error) {
     toast('Error occured', { type: 'error' });
