@@ -1,4 +1,4 @@
-import axios from 'axios';
+import axios from '@utils/Api.js';
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import { toast } from 'react-toastify';
@@ -26,7 +26,7 @@ function ManageDropdownRoute({ row }) {
   };
 
   const handleDelete = async () => {
-    await axios.delete(`http://localhost:8000/routes/${id}`);
+    await axios.delete(`/routes/${id}`);
 
     toast('Route Deleted successfully', { type: 'success' });
     navigate('/dashboard/management');
