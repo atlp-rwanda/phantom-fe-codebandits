@@ -1,4 +1,5 @@
 import Sidebar from '@components/SideBar.js';
+import MainPage from '@pages/dashboard/Mainpage.js';
 import RegisterDriver from '@pages/forms/RegisterDrivers.js';
 import RegisterOperator from '@pages/forms/RegisterOperator.js';
 import RouteEdit from '@pages/routes/RouteEdit.js';
@@ -22,8 +23,8 @@ function DashRoutes() {
         <div className="min-h-full px-2 py-2">
           <Routes>
             <Route path="modal/*" exact={false} element={<ModalRoutes />} />
-            <Route path="main" element={<ComingSoon title={'dashboard'} />} />
-            <Route path="/" element={<ComingSoon title={'dashboard'} />} />
+            <Route path="main" element={<MainPage title={'dashboard'} />} />
+            <Route path="/" element={<MainPage title={'dashboard'} />} />
             <Route path="roles" element={<Roles />} />
             <Route
               path="notifications"
