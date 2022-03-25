@@ -1,0 +1,51 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`View Page should render the View component 1`] = `
+<div
+  className="p-4 bg-white"
+>
+  <h2
+    className="text-2xl text-center font-bold"
+  >
+     Route informations 
+  </h2>
+  <div
+    className="mt-5"
+  >
+    <ul>
+      <li>
+         
+        <b>
+           First Destination: 
+        </b>
+         
+        Remera
+         
+      </li>
+      <li>
+         
+        <b>
+           Second Destination: 
+        </b>
+         
+        Kacyiru
+         
+      </li>
+    </ul>
+  </div>
+   
+  <div
+    className="w-[400px] h-[300px] overflow-hidden px-4 py-4"
+  >
+    <h1>
+       Map 
+    </h1>
+     
+    <hr />
+    <div
+      className="w-full h-full"
+    />
+     
+  </div>
+</div>
+`;
