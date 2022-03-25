@@ -1,0 +1,182 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Route Component  should render the Route component 1`] = `
+<div>
+  <form
+    className="p-8 shadow-main px-4 flex flex-col w-full md:max-w-lg md:mx-auto"
+    onSubmit={[Function]}
+  >
+    <h1
+      className="font-bold text-xl pb-8 text-center "
+    >
+       
+       
+    </h1>
+    <label
+      className="font-bold mb-2"
+      htmlFor="FirstDestination"
+    >
+       
+      First Destination
+       
+    </label>
+    <select
+      className="rounded-sm px-3 py-4 mb-5 bg-[#EFEFEF]"
+      name="FirstDestination"
+      onChange={[Function]}
+    >
+      <option
+        hidden={true}
+      >
+         
+        Select first destination
+         
+      </option>
+       
+      <option
+        value="Remera"
+      >
+         
+        Remera
+         
+      </option>
+      <option
+        value="Kabuga"
+      >
+         
+        Kabuga
+         
+      </option>
+      <option
+        value="Kacyiru"
+      >
+         
+        Kacyiru
+         
+      </option>
+      <option
+        value="DownTown"
+      >
+         
+        DownTown
+         
+      </option>
+      <option
+        value="Nyabugogo"
+      >
+         
+        Nyabugogo
+         
+      </option>
+      <option
+        value="Remera"
+      >
+         
+        Remera
+         
+      </option>
+      <option
+        value="Kimironko"
+      >
+         
+        Kimironko
+         
+      </option>
+       
+    </select>
+    <label
+      className="font-bold mb-2"
+      htmlFor="busType"
+    >
+       
+      Second Destination
+       
+    </label>
+    <select
+      className="rounded-sm px-3 py-4 mb-5 bg-[#EFEFEF]"
+      name="secondDestination"
+      onChange={[Function]}
+    >
+      <option
+        hidden={true}
+      >
+         
+        Select second destination
+         
+      </option>
+       
+      <option
+        value="Nyanza"
+      >
+         
+        Nyanza
+         
+      </option>
+      <option
+        value="Nyabugogo"
+      >
+         
+        Nyabugogo
+         
+      </option>
+      <option
+        value="Kabuga"
+      >
+         
+        Kabuga
+         
+      </option>
+      <option
+        value="Remera"
+      >
+         
+        Remera
+         
+      </option>
+      <option
+        value="DownTown"
+      >
+         
+        DownTown
+         
+      </option>
+      <option
+        value="Kimironko"
+      >
+         
+        Kimironko
+         
+      </option>
+      <option
+        value="Kacyiru"
+      >
+         
+        Kacyiru
+         
+      </option>
+    </select>
+    <label
+      className="font-bold mb-2"
+      htmlFor="seats"
+    >
+      Distance
+       
+    </label>
+    <div
+      className="cursor-not-allowed rounded-sm p-2 mb-5 bg-[#EFEFEF] disabled:"
+    >
+      Distance
+    </div>
+    <div
+      className="self-center mt-6"
+    >
+      <div>
+        <button
+          className="bg-primary text-sm text-white py-2 px-3 hover:bg-hover rounded-xl py-2 text-base md:text-sm px-5"
+          type="submit"
+        />
+      </div>
+    </div>
+  </form>
+</div>
+`;

@@ -2,13 +2,12 @@ import React from 'react';
 import RegisterDrivers from './forms/RegisterDrivers.js';
 import RegisterOperator from './forms/RegisterOperator.js';
 
-function RegisterOperatorPage() {
+
+export function RegisterOperatorPage() {
   return <RegisterOperator />;
 }
 
-function RegisterDriverPage() {
+export function RegisterDriverPage() {
   return <RegisterDrivers />;
 }
 
-export { RegisterOperatorPage };
-export { RegisterDriverPage };

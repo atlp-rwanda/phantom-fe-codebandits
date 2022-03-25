@@ -1,0 +1,60 @@
+{
+  "routes": [
+    {
+      "destination1": "Kabuga",
+      "destination2": "DownTown",
+      "distance": "17km",
+      "total_buses": "100",
+      "id": 18
+    },
+    {
+      "destination1": "Kacyiru",
+      "destination2": "Kabuga",
+      "distance": "13km",
+      "total_buses": "100",
+      "id": 20
+    },
+    {
+      "destination1": "Kacyiru",
+      "destination2": "Kabuga",
+      "distance": "13km",
+      "total_buses": "100",
+      "id": 22
+    },
+    {
+      "destination1": "Kacyiru",
+      "destination2": "Nyabugogo",
+      "distance": "5km",
+      "total_buses": "100",
+      "id": 32
+    },
+    {
+      "destination1": "Kabuga",
+      "destination2": "DownTown",
+      "distance": "17km",
+      "total_buses": "100",
+      "id": 34
+    },
+    {
+      "destination1": "Kabuga",
+      "destination2": "Nyanza",
+      "distance": "22km",
+      "total_buses": "100",
+      "id": 35
+    },
+    {
+      "destination1": "Kabuga",
+      "destination2": "Nyabugogo",
+      "distance": "20km",
+      "total_buses": "100",
+      "id": 36
+    },
+    {
+      "destination1": "Kabuga",
+      "destination2": "Nyabugogo",
+      "distance": "20km",
+      "total_buses": "100",
+      "id": 37
+    }
+  ]
+}

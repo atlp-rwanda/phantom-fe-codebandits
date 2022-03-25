@@ -7,7 +7,6 @@ import busMapImg from '../assets/busMap.png';
 import usersDB from '../database/usersDB.json';
 import { loginUser } from '../redux/reducers/authReducer.js';
 import Sleep from '../utils/Sleep.js';
-
 const Login = () => {
   let navigate = useNavigate();
   let location = useLocation();
@@ -34,7 +33,6 @@ const Login = () => {
         setErr('Invalid credentials');
         return toast('Invalid credentials', { type: 'error' });
       }
-
       dispatch(loginUser(user[0]));
       toast(user.name, { type: 'success' });
       setLoading(false);

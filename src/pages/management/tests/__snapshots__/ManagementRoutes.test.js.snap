@@ -26,6 +26,6 @@ exports[`Management routes Render drivers 1`] = `
 
 exports[`Management routes Render routes 1`] = `
 <div>
-  Routes management
+  <RouteTable />
 </div>
 `;
