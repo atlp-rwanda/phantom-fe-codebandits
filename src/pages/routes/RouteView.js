@@ -34,9 +34,9 @@ function RouteView() {
             attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
             url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
           />
-          <Marker position={[51.505, -0.09]}>
+          <Marker position={[-1.936671, 30.053524]}>
             <Popup>
-              A pretty CSS3 popup. <br /> Easily customizable.{' '}
+              Route from <b>{destination1}</b> to <b>{destination2}</b>.{' '}
             </Popup>
           </Marker>{' '}
         </MapContainer>{' '}

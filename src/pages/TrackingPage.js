@@ -131,7 +131,7 @@ const TrackingPage = () => {
             ref={selectOne}
             onChange={handleChange}
             placeholder="your current location"
-            className="rounded-xl bg-background border-primary text-sm outline-none mb-2 pl-4 md:pl-8 py-1 w-4/5 w-40 md:w-56 border-2"
+            className="rounded-xl bg-background border-primary text-sm outline-none mb-2 pl-4 md:pl-8 py-1  w-40 md:w-56 border-2"
           >
             <option id="origin-select">Select Origin</option>
             {options.map((option) => {
@@ -152,7 +152,7 @@ const TrackingPage = () => {
             id="destination"
             name="destination"
             placeholder="your destination"
-            className="rounded-xl bg-background border-primary text-sm outline-none mb-2 pl-4 md:pl-8 py-1 w-40 w-4/5 md:w-56 border-2"
+            className="rounded-xl bg-background border-primary text-sm outline-none mb-2 pl-4 md:pl-8 py-1 w-40 md:w-56 border-2"
             ref={selectDes}
           >
             <option value="" hidden>

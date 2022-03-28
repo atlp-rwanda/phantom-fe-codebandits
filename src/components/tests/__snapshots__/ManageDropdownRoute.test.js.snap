@@ -32,13 +32,12 @@ Object {
           </option>
           <option
             class="cursor-pointer"
-            value="delete"
+            value="deleteRoute"
           >
              Delete 
           </option>
            
         </select>
-         
       </div>
     </div>
   </body>,
@@ -70,13 +69,12 @@ Object {
         </option>
         <option
           class="cursor-pointer"
-          value="delete"
+          value="deleteRoute"
         >
            Delete 
         </option>
          
       </select>
-       
     </div>
   </div>,
   "debug": [Function],
@@ -150,16 +148,12 @@ exports[`ManageDropdownRoute component should render the ManageDropdownRoute com
        Manage 
     </option>
     <option
-      onClick={[Function]}
       value="view"
     >
-       
-      View
-       
+       View 
     </option>
     <option
       className="cursor-pointer"
-      onClick={[Function]}
       value="edit"
     >
        
@@ -168,8 +162,7 @@ exports[`ManageDropdownRoute component should render the ManageDropdownRoute com
     </option>
     <option
       className="cursor-pointer"
-      onClick={[Function]}
-      value="delete"
+      value="deleteRoute"
     >
        
       Delete
@@ -177,6 +170,5 @@ exports[`ManageDropdownRoute component should render the ManageDropdownRoute com
     </option>
      
   </select>
-   
 </div>
 `;

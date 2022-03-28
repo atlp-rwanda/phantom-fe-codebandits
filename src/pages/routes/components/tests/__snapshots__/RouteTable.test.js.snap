@@ -114,18 +114,14 @@ Array [
                  Manage 
               </option>
               <option
-                onClick={[Function]}
                 value="view"
               >
-                 
-                View
-                 
+                 View 
               </option>
               
               
                
             </select>
-             
           </div>
         </td>
       </tr>
@@ -176,18 +172,14 @@ Array [
                  Manage 
               </option>
               <option
-                onClick={[Function]}
                 value="view"
               >
-                 
-                View
-                 
+                 View 
               </option>
               
               
                
             </select>
-             
           </div>
         </td>
       </tr>
