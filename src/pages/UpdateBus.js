@@ -9,7 +9,7 @@ const UpdateBus = () => {
   const { id, busType, plateNumber, company, seats } = location.state;
   const navigate = useNavigate();
   const updateBusInDB = async (newBusInfo) => {
-    await axios.patch(`http://localhost:8000/buses/${id}`, newBusInfo);
+    await axios.patch(`/buses/${id}`, newBusInfo);
     toast('Bus updated successfully', { type: 'success' });
     navigate(-1);
   };

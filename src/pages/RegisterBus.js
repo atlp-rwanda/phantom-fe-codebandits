@@ -1,7 +1,7 @@
+import axios from '@utils/Api.js';
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import { toast } from 'react-toastify';
-import axios from 'axios';
 import Buses from '../components/forms/Buses.js';
 import busesDB from '../database/busesDB.json';
 
@@ -22,7 +22,7 @@ const RegisterBus = () => {
       return;
     }
     const defaultValues = { driver: null, route: null };
-    await axios.post('http://localhost:8000/buses', {
+    await axios.post('/buses', {
       ...busInfo,
       ...defaultValues
     });
