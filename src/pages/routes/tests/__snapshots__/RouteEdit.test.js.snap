@@ -30,7 +30,6 @@ exports[`Edit Page should render the Edit component 1`] = `
         hidden={true}
       >
          
-        Select first destination
          
       </option>
        
@@ -102,7 +101,6 @@ exports[`Edit Page should render the Edit component 1`] = `
         hidden={true}
       >
          
-        Select second destination
          
       </option>
        
@@ -166,7 +164,7 @@ exports[`Edit Page should render the Edit component 1`] = `
     <div
       className="cursor-not-allowed rounded-sm p-2 mb-5 bg-[#EFEFEF] disabled:"
     >
-      Distance
+      undefined
     </div>
     <div
       className="self-center mt-6"

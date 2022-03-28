@@ -130,21 +130,6 @@ Object {
                       </span>
                     </a>
                   </li>
-                  <li>
-                    <a
-                      class="py-2 pr-10 pl-4 rounded-full font-bold my-1  hover:bg-gray-300 transition-all  cursor-pointer min-w-fit w-full flex items-center"
-                      href="/dashboard/notifications"
-                    >
-                      <img
-                        alt="icon"
-                        class="w-6 mr-2"
-                        src="notificationIcon.png"
-                      />
-                      <span>
-                        Notifications
-                      </span>
-                    </a>
-                  </li>
                   
                   <li>
                     <a
@@ -203,43 +188,78 @@ Object {
           <div
             class="min-h-full px-2 py-2"
           >
-            <div
-              class="justify-self-center w-full h-full relative bg-gray-300 md:min-w-[300px] min-h-[300px] p-9"
-            >
+            <div>
               <div
-                class="flex flex-col items-center justify-center top-0 left-0 right-0 bottom-0"
+                class="bg-background text-black font-bold font-raleway h-[400px] w-full mb-5"
               >
-                <h2
-                  class="text-xl font-bold text-primary  pb-5"
-                >
-                  You tried to access 
-                  <b
-                    class="text-black"
-                  >
-                    &lt;&lt;dashboard&gt;&gt;
-                  </b>
-                   but this page is...
-                </h2>
-                <h1
-                  class="text-3xl font-bold pb-5"
-                >
-                  Coming Soon
-                </h1>
+                <canvas
+                  height="150"
+                  role="img"
+                  width="300"
+                />
+              </div>
+              <div
+                class=" w-[99%] z-10 mx-auto h-full md:h-[150px] rounded-md mt-[-5px] px-4 py-2 flex flex-col md:grid md:grid-cols-4 md:gap-3"
+              >
                 <div
-                  class="flex flex-row w-fit justify-between"
+                  class="h-full w-full rounded-md bg-background flex flex-col items-center justify-center shadow-main mb-2"
                 >
-                  <a
-                    class="bg-primary font-bold px-3 py-1 rounded-md mr-2"
-                    href="/"
+                  <h2
+                    class="text-4xl font-semibold font-raleway mb-1"
+                  />
+                  <p
+                    class="text-2xl"
                   >
-                    Home
-                  </a>
-                  <button
-                    class="bg-transparent border-2 border-primary font-bold font-rale rounded-md px-3 py-1"
-                  >
-                    &lt;&lt; Back
-                  </button>
+                    Buses
+                  </p>
                 </div>
+                <div
+                  class="h-full w-full bg-background flex flex-col items-center justify-center shadow-main mb-2"
+                >
+                  <h2
+                    class="text-4xl font-semibold font-raleway mb-1"
+                  />
+                  <p
+                    class="text-2xl"
+                  >
+                    Routes
+                  </p>
+                </div>
+                <div
+                  class="h-full w-full bg-background flex flex-col items-center justify-center shadow-main mb-2"
+                >
+                  <h2
+                    class="text-4xl font-semibold font-raleway mb-1"
+                  />
+                  <p
+                    class="text-2xl"
+                  >
+                    Drivers
+                  </p>
+                </div>
+                <div
+                  class="h-full w-full bg-background flex flex-col items-center justify-center shadow-main mb-2"
+                >
+                  <h2
+                    class="text-4xl font-semibold font-raleway mb-1"
+                  />
+                  <p
+                    class="text-2xl"
+                  >
+                    Operators
+                  </p>
+                </div>
+              </div>
+              <div
+                class="shadow-main m-2 rounded-sm px-2 py-1 font-raleway"
+              >
+                <h1
+                  class="text-center text-2xl font-bold font-raleway"
+                >
+                  Notifications
+                </h1>
+                <hr />
+                <ul />
               </div>
             </div>
           </div>
@@ -375,21 +395,6 @@ Object {
                     </span>
                   </a>
                 </li>
-                <li>
-                  <a
-                    class="py-2 pr-10 pl-4 rounded-full font-bold my-1  hover:bg-gray-300 transition-all  cursor-pointer min-w-fit w-full flex items-center"
-                    href="/dashboard/notifications"
-                  >
-                    <img
-                      alt="icon"
-                      class="w-6 mr-2"
-                      src="notificationIcon.png"
-                    />
-                    <span>
-                      Notifications
-                    </span>
-                  </a>
-                </li>
                 
                 <li>
                   <a
@@ -448,43 +453,78 @@ Object {
         <div
           class="min-h-full px-2 py-2"
         >
-          <div
-            class="justify-self-center w-full h-full relative bg-gray-300 md:min-w-[300px] min-h-[300px] p-9"
-          >
+          <div>
             <div
-              class="flex flex-col items-center justify-center top-0 left-0 right-0 bottom-0"
+              class="bg-background text-black font-bold font-raleway h-[400px] w-full mb-5"
             >
-              <h2
-                class="text-xl font-bold text-primary  pb-5"
-              >
-                You tried to access 
-                <b
-                  class="text-black"
-                >
-                  &lt;&lt;dashboard&gt;&gt;
-                </b>
-                 but this page is...
-              </h2>
-              <h1
-                class="text-3xl font-bold pb-5"
-              >
-                Coming Soon
-              </h1>
+              <canvas
+                height="150"
+                role="img"
+                width="300"
+              />
+            </div>
+            <div
+              class=" w-[99%] z-10 mx-auto h-full md:h-[150px] rounded-md mt-[-5px] px-4 py-2 flex flex-col md:grid md:grid-cols-4 md:gap-3"
+            >
               <div
-                class="flex flex-row w-fit justify-between"
+                class="h-full w-full rounded-md bg-background flex flex-col items-center justify-center shadow-main mb-2"
               >
-                <a
-                  class="bg-primary font-bold px-3 py-1 rounded-md mr-2"
-                  href="/"
+                <h2
+                  class="text-4xl font-semibold font-raleway mb-1"
+                />
+                <p
+                  class="text-2xl"
                 >
-                  Home
-                </a>
-                <button
-                  class="bg-transparent border-2 border-primary font-bold font-rale rounded-md px-3 py-1"
-                >
-                  &lt;&lt; Back
-                </button>
+                  Buses
+                </p>
               </div>
+              <div
+                class="h-full w-full bg-background flex flex-col items-center justify-center shadow-main mb-2"
+              >
+                <h2
+                  class="text-4xl font-semibold font-raleway mb-1"
+                />
+                <p
+                  class="text-2xl"
+                >
+                  Routes
+                </p>
+              </div>
+              <div
+                class="h-full w-full bg-background flex flex-col items-center justify-center shadow-main mb-2"
+              >
+                <h2
+                  class="text-4xl font-semibold font-raleway mb-1"
+                />
+                <p
+                  class="text-2xl"
+                >
+                  Drivers
+                </p>
+              </div>
+              <div
+                class="h-full w-full bg-background flex flex-col items-center justify-center shadow-main mb-2"
+              >
+                <h2
+                  class="text-4xl font-semibold font-raleway mb-1"
+                />
+                <p
+                  class="text-2xl"
+                >
+                  Operators
+                </p>
+              </div>
+            </div>
+            <div
+              class="shadow-main m-2 rounded-sm px-2 py-1 font-raleway"
+            >
+              <h1
+                class="text-center text-2xl font-bold font-raleway"
+              >
+                Notifications
+              </h1>
+              <hr />
+              <ul />
             </div>
           </div>
         </div>

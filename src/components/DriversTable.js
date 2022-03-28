@@ -1,7 +1,7 @@
-import React, { useMemo, useState } from 'react';
+import React, { useMemo } from 'react';
+import { useSelector } from 'react-redux';
 import { Link } from 'react-router-dom';
 import { useGlobalFilter, usePagination, useTable } from 'react-table';
-import database from '../database/database.json';
 import CheckRole from '../utils/CheckRoles.js';
 import Button from './Button.js';
 import ManageDropdown from './ManageDropdown.js';
@@ -19,34 +19,35 @@ const LinkBus = ({ row }) => {
   return 'None';
 };
 
-const tableColumns = [
-  {
-    Header: 'Names',
-    accessor: 'name'
-  },
-  {
-    Header: 'Email',
-    accessor: 'email'
-  },
-  {
-    Header: 'License',
-    accessor: 'license'
-  },
-  {
-    Header: 'Assigned Bus',
-    accessor: 'assigned_bus',
-    Cell: ({ row }) => <LinkBus row={row} />
-  },
-  {
-    Header: 'Management',
-    accessor: 'management',
-    Cell: ({ row }) => <ManageDropdown row={row} />
-  }
-];
+const DriversTable = ({ data }) => {
+  const { user, authenticated } = useSelector((state) => state?.auth);
+  const tableColumns = [
+    {
+      Header: 'Names',
+      accessor: 'name'
+    },
+    {
+      Header: 'Email',
+      accessor: 'email'
+    },
+    {
+      Header: 'License',
+      accessor: 'license'
+    },
+    {
+      Header: 'Assigned Bus',
+      accessor: 'assigned_bus',
+      Cell: ({ row }) => <LinkBus row={row} />
+    },
+    {
+      Header: 'Management',
+      accessor: 'management',
+      Cell: ({ row }) => <ManageDropdown user={user} row={row} />
+    }
+  ];
 
-const DriversTable = () => {
   const columns = useMemo(() => tableColumns, []);
-  const data = useMemo(() => database.drivers, []);
+
   const {
     getTableProps,
     getTableBodyProps,
@@ -71,7 +72,6 @@ const DriversTable = () => {
     useGlobalFilter,
     usePagination
   );
-  const [open, setOpen] = useState(false);
 
   const { globalFilter, pageIndex, pageSize } = state;
 
@@ -133,78 +133,80 @@ const DriversTable = () => {
           })}
         </tbody>
       </table>
-      <table className=" mt-3 flex justify-center w-full bg-gray-300 bg-opacity-20 ">
-        <tfoot>
-          <tr className="p-1 flex-row flex items-center justify-center my-2 mx-auto w-full font-raleway">
-            <td colSpan={5}>
-              <div className="w-full justify-center flex mx-auto flex-row items-center overflow-x-scroll">
-                <button
-                  className="mx-2 rounded-circle font-bold flex items-center justify-center bg-primary h-[30px] w-[60px] cursor-pointer"
-                  onClick={() => gotoPage(0)}
-                  disabled={!canPreviousPage}
-                >
-                  {'<|'}
-                </button>{' '}
-                <button
-                  className="mx-2 font-bold font-raleway"
-                  onClick={() => previousPage()}
-                  disabled={!canPreviousPage}
-                >
-                  Prev
-                </button>{' '}
-                <button
-                  onClick={() => nextPage()}
-                  disabled={!canNextPage}
-                  className="mx-2 font-bold font-raleway cursor-pointer"
-                >
-                  Next
-                </button>{' '}
-                <button
-                  onClick={() => gotoPage(pageCount - 1)}
-                  disabled={!canNextPage}
-                  className="mx-2 rounded-circle font-bold flex items-center justify-center bg-primary h-[30px] w-[60px] cursor-pointer"
-                >
-                  {'|>'}
-                </button>{' '}
-                <div className="flex flex-row justify-center w-full">
-                  <span className="inline-block mx-2">
-                    Page{' '}
-                    <strong>
-                      {pageIndex + 1} of {pageOptions.length}
-                    </strong>{' '}
-                  </span>
-                  <span className="inline-block mx-2">
-                    | Go to page:{' '}
-                    <input
-                      type="number"
-                      className=" pl-2 outline-none border rounded-md border-primary"
-                      defaultValue={pageIndex + 1}
-                      onChange={(e) => {
-                        const pageNumber = e.target.value
-                          ? Number(e.target.value) - 1
-                          : 0;
-                        gotoPage(pageNumber);
-                      }}
-                      style={{ width: '50px' }}
-                    />
-                  </span>{' '}
-                  <select
-                    className="px-1/2 md:px-2 font-raleway rounded-md border border-primary"
-                    value={pageSize}
-                    onChange={(e) => setPageSize(Number(e.target.value))}
+      {pageOptions.length > 1 && (
+        <table className=" mt-3 flex justify-center w-full bg-gray-300 bg-opacity-20 ">
+          <tfoot>
+            <tr className="p-1 flex-row flex items-center justify-center my-2 mx-auto w-full font-raleway">
+              <td colSpan={5}>
+                <div className="w-full justify-center flex mx-auto flex-row items-center overflow-x-scroll">
+                  <button
+                    className="mx-2 rounded-circle font-bold flex items-center justify-center bg-primary h-[30px] w-[60px] cursor-pointer"
+                    onClick={() => gotoPage(0)}
+                    disabled={!canPreviousPage}
                   >
-                    {[10, 25, 50].map((pageSize) => (
-                      <option key={pageSize} value={pageSize}>
-                        Show {pageSize}
-                      </option>
-                    ))}
-                  </select>
+                    {'<|'}
+                  </button>{' '}
+                  <button
+                    className="mx-2 font-bold font-raleway"
+                    onClick={() => previousPage()}
+                    disabled={!canPreviousPage}
+                  >
+                    Prev
+                  </button>{' '}
+                  <button
+                    onClick={() => nextPage()}
+                    disabled={!canNextPage}
+                    className="mx-2 font-bold font-raleway cursor-pointer"
+                  >
+                    Next
+                  </button>{' '}
+                  <button
+                    onClick={() => gotoPage(pageCount - 1)}
+                    disabled={!canNextPage}
+                    className="mx-2 rounded-circle font-bold flex items-center justify-center bg-primary h-[30px] w-[60px] cursor-pointer"
+                  >
+                    {'|>'}
+                  </button>{' '}
+                  <div className="flex flex-row justify-center w-full">
+                    <span className="inline-block mx-2">
+                      Page{' '}
+                      <strong>
+                        {pageIndex + 1} of {pageOptions.length}
+                      </strong>{' '}
+                    </span>
+                    <span className="inline-block mx-2">
+                      | Go to page:{' '}
+                      <input
+                        type="number"
+                        className=" pl-2 outline-none border rounded-md border-primary"
+                        defaultValue={pageIndex + 1}
+                        onChange={(e) => {
+                          const pageNumber = e.target.value
+                            ? Number(e.target.value) - 1
+                            : 0;
+                          gotoPage(pageNumber);
+                        }}
+                        style={{ width: '50px' }}
+                      />
+                    </span>{' '}
+                    <select
+                      className="px-1/2 md:px-2 font-raleway rounded-md border border-primary"
+                      value={pageSize}
+                      onChange={(e) => setPageSize(Number(e.target.value))}
+                    >
+                      {[10, 25, 50].map((pageSize) => (
+                        <option key={pageSize} value={pageSize}>
+                          Show {pageSize}
+                        </option>
+                      ))}
+                    </select>
+                  </div>
                 </div>
-              </div>
-            </td>
-          </tr>
-        </tfoot>
-      </table>
+              </td>
+            </tr>
+          </tfoot>
+        </table>
+      )}
     </>
   );
 };

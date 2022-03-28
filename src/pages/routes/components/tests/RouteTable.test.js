@@ -8,12 +8,28 @@ import {store} from '../../../../redux/store.js'
 
 
 describe('Route table Page', () => {
+  const data =[
+    {
+      "destination1": "Kabuga",
+      "destination2": "Nyanza",
+      "distance": "22km",
+      "total_buses": "100",
+      "id": 35
+    },
+    {
+      "destination1": "Kabuga",
+      "destination2": "Nyabugogo",
+      "distance": "20km",
+      "total_buses": "100",
+      "id": 36
+    }
+  ]
   it('should render the Route table component', () => {
     const elem = renderer
       .create(
 		  <Provider store={store}>
           <MemoryRouter>
-            <RouteTable />
+            <RouteTable data={data} />
           </MemoryRouter>
 		  </Provider>
       )
@@ -22,10 +38,11 @@ describe('Route table Page', () => {
   });
 
   it('should render the button component', () => {
+    
    const wrapper = mount(
 	  <Provider store={store}>
           <MemoryRouter>
-            <RouteTable />
+            <RouteTable data={data} />
           </MemoryRouter>
 		  </Provider>
    )

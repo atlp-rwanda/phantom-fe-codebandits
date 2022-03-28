@@ -1,8 +1,7 @@
-import React from 'react';
-import busesDB from '../database/busesDB.json';
+import axios from '@utils/Api.js';
+import React, { useEffect, useState } from 'react';
 import BusManagement from './dropdowns/BusManagement.js';
 import ManagementTable from './ManagementTable.js';
-
 const DriverLink = ({ row }) => {
   if (row.driver) {
     return <div>{row.driver}</div>;
@@ -45,10 +44,18 @@ const busesTableColumns = [
 ];
 
 const BusesTable = () => {
+  const [buses, setbuses] = useState([]);
+  useEffect(() => {
+    const fetchData = async () => {
+      const response = await axios.get('/buses');
+      setbuses(response.data);
+    };
+    fetchData();
+  }, []);
   return (
     <ManagementTable
       tableColumns={busesTableColumns}
-      database={busesDB.buses}
+      data={buses}
       searchPlaceholder="Search buses..."
       registerNewPath="bus/register"
     />
