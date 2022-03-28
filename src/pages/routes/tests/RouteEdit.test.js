@@ -1,27 +1,34 @@
+import axios from '@utils/Api.js';
+import { mount } from 'enzyme';
 import React from 'react';
-import renderer from 'react-test-renderer';
-import { shallow, mount } from 'enzyme';
 import { MemoryRouter } from 'react-router-dom';
-import RouteEdit from '../RouteEdit.js'
-
+import renderer from 'react-test-renderer';
+import RouteEdit from '../RouteEdit.js';
+let axiosSpy = jest.spyOn(axios, 'get');
+axiosSpy.mockReturnValue(() => {
+  return {
+    id: 1,
+    destination1: 'Gakenke'
+  };
+});
 describe('Edit Page', () => {
   it('should render the Edit component', () => {
     const elem = renderer
       .create(
-          <MemoryRouter>
-            <RouteEdit />
-          </MemoryRouter>
+        <MemoryRouter>
+          <RouteEdit />
+        </MemoryRouter>
       )
       .toJSON();
     expect(elem).toMatchSnapshot();
   });
 
   it('should render the Route component', () => {
-   const wrapper = mount(
-	<MemoryRouter>
-	<RouteEdit />
-  </MemoryRouter>
-   )
-   expect(wrapper.find('RouteComponent').length).toEqual(1)
+    const wrapper = mount(
+      <MemoryRouter>
+        <RouteEdit />
+      </MemoryRouter>
+    );
+    expect(wrapper.find('RouteComponent').length).toEqual(1);
   });
 });

@@ -103,22 +103,6 @@ exports[`SideBar should render the SideBar component 1`] = `
               </span>
             </a>
           </li>
-          <li>
-            <a
-              className="py-2 pr-10 pl-4 rounded-full font-bold my-1  hover:bg-gray-300 transition-all  cursor-pointer min-w-fit w-full flex items-center"
-              href="/dashboard/notifications"
-              onClick={[Function]}
-            >
-              <img
-                alt="icon"
-                className="w-6 mr-2"
-                src="notificationIcon.png"
-              />
-              <span>
-                Notifications
-              </span>
-            </a>
-          </li>
           
           <li>
             <a

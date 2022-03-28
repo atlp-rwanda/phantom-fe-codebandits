@@ -86,7 +86,7 @@ function ManageDropdown({ row }) {
           <option hidden={true} value="manage">
             Manage
           </option>
-          <option value="vies">View</option>
+          <option value="view">View</option>
           <CheckRole
             children={
               <option

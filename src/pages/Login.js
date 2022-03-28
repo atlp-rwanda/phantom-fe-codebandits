@@ -1,12 +1,11 @@
+import axios from '@utils/Api.js';
 import React, { useEffect, useState } from 'react';
 import { useForm } from 'react-hook-form';
 import { useDispatch } from 'react-redux';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { toast } from 'react-toastify';
 import busMapImg from '../assets/busMap.png';
-import usersDB from '../database/usersDB.json';
 import { loginUser } from '../redux/reducers/authReducer.js';
-import Sleep from '../utils/Sleep.js';
 const Login = () => {
   let navigate = useNavigate();
   let location = useLocation();
@@ -21,23 +20,28 @@ const Login = () => {
     formState: { errors }
   } = useForm();
 
-  const onValid = (data) => {
+  const onValid = async (data) => {
     setLoading(true);
-
-    Sleep(3000).then(() => {
-      const user = usersDB.filter((entry) => {
-        return entry.email === data.email;
+    try {
+      const response = await axios.get('/users', {
+        params: {
+          email: data.email
+        }
       });
-      if (user.length === 0) {
-        setLoading(false);
+      if (response.data.length == 0) {
         setErr('Invalid credentials');
+        setLoading(false);
         return toast('Invalid credentials', { type: 'error' });
+      } else {
+        dispatch(loginUser(response.data[0]));
+        toast(response.data[0].name, { type: 'success' });
+        setLoading(false);
+        navigate(from);
       }
-      dispatch(loginUser(user[0]));
-      toast(user.name, { type: 'success' });
-      setLoading(false);
-      navigate(from);
-    });
+    } catch (error) {
+      setLoading(true);
+      toast('Something went wrong on our side');
+    }
   };
 
   const onErrors = (errors) => {

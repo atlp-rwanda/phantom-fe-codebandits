@@ -1,5 +1,6 @@
 import { fireEvent, render, screen, waitFor } from '@testing-library/react';
 import { mount } from 'enzyme';
+import mockAxios from 'jest-mock-axios';
 import React from 'react';
 import { Provider } from 'react-redux';
 import { BrowserRouter, MemoryRouter } from 'react-router-dom';
@@ -7,6 +8,9 @@ import renderer, { act } from 'react-test-renderer';
 import { store } from '../../redux/store.js';
 import Login from '../Login.js';
 
+afterEach(() => {
+  mockAxios.reset();
+});
 const navigateMock = () => {
   return jest.fn();
 };
@@ -72,6 +76,9 @@ describe('Render the errors', () => {
       }
     });
     fireEvent.submit(screen.getByTestId('loginForm'));
+    mockAxios.mockResolvedValue({
+      data: []
+    });
     await waitFor(() => {
       expect(screen.queryAllByText(/Enter a valid email/i)).toHaveLength(0);
     });
@@ -103,7 +110,7 @@ describe('Attempts', () => {
       render(
         <Provider store={store}>
           <BrowserRouter>
-            <Login navigate={navigateMock} onValid={jest.fn()} />
+            <Login navigate={navigateMock} />
           </BrowserRouter>
         </Provider>
       );

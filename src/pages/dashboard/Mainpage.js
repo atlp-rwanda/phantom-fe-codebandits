@@ -1,12 +1,23 @@
+import axios from '@utils/Api.js';
 import { Chart, registerables } from 'chart.js';
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { Bar } from 'react-chartjs-2';
-Chart.register(...registerables);
+import { useDispatch, useSelector } from 'react-redux';
+
+try {
+  Chart.register(...registerables);
+} catch (error) {}
 
 export const MainPageGraph = () => {
   const myChart = {
     data: {
-      labels: ['KBS', 'Royal express', 'RFTC', 'Virunga express', 'Codebandits'],
+      labels: [
+        'KBS',
+        'Royal express',
+        'RFTC',
+        'Virunga express',
+        'Codebandits'
+      ],
       datasets: [
         {
           label: 'Number of buses by operator',
@@ -68,26 +79,98 @@ export const MainPageGraph = () => {
   );
 };
 
-export const DetailPane = () => {
+export const fetchDashboardData = async () => {
+  const resDrivers = await axios.get('/drivers');
+  const resBuses = await axios.get('/buses');
+  const resRoutes = await axios.get('/routes');
+  const resOperator = await axios.get('/operators');
+  return {
+    drivers: resDrivers.data.length,
+    buses: resBuses.data.length,
+    routes: resRoutes.data.length,
+    operators: resOperator.data.length
+  };
+};
+
+export const NotificationPane = () => {
+  const [notifications, setNotifications] = useState([]);
+  useEffect(() => {
+    const fetchData = async () => {
+      const resNotifications = await axios.get('/notifications');
+      setNotifications(resNotifications.data);
+      console.log(resNotifications);
+    };
+    fetchData();
+  }, []);
   return (
-    <div className=" w-[99%] z-10 mx-auto h-full md:h-[150px] rounded-md mt-[-5px] px-4 py-2 flex flex-col md:grid md:grid-cols-4 md:gap-3">
-      <div className="h-full w-full bg-background flex flex-col items-center justify-center shadow-main mb-2">
-        <h2 className="text-4xl font-semibold font-raleway mb-1">50</h2>
-        <p className="text-2xl">Buses</p>
-      </div>
-      <div className="h-full w-full bg-background flex flex-col items-center justify-center shadow-main mb-2">
-        <h2 className="text-4xl font-semibold font-raleway mb-1">20</h2>
-        <p className="text-2xl">Routes</p>
-      </div>
-      <div className="h-full w-full bg-background flex flex-col items-center justify-center shadow-main mb-2">
-        <h2 className="text-4xl font-semibold font-raleway mb-1">55</h2>
-        <p className="text-2xl">Drivers</p>
-      </div>
-      <div className="h-full w-full bg-background flex flex-col items-center justify-center shadow-main mb-2">
-        <h2 className="text-4xl font-semibold font-raleway mb-1">5</h2>
-        <p className="text-2xl">Operators</p>
-      </div>
+    <div className="shadow-main m-2 rounded-sm px-2 py-1 font-raleway">
+      <h1 className="text-center text-2xl font-bold font-raleway">
+        Notifications
+      </h1>
+      <hr />
+      <ul>
+        {notifications.map((notification) => (
+          <li
+            className={`bg-${notification.category} bg-opacity-20 rounded-sm border-b py-2 bg-lightest m-1 px-2 flex justify-between`}
+            key={notification.id}
+          >
+            <span>{notification.message}</span>{' '}
+            {notification.read ? (
+              <span className="cursor-pointer font-bold text-red text-sm">
+                Delete
+              </span>
+            ) : (
+              <span className="cursor-pointer font-bold text-primary text-sm">
+                Mark as read
+              </span>
+            )}
+          </li>
+        ))}
+      </ul>
     </div>
+  );
+};
+
+export const DetailPane = () => {
+  const { info } = useSelector((state) => state?.dashboard);
+  const [data, setdata] = useState({});
+  const dispatch = useDispatch();
+  useEffect(() => {
+    const fetchInfo = async () => {
+      const data = await fetchDashboardData();
+      setdata(data);
+    };
+    fetchInfo();
+  }, []);
+  return (
+    <>
+      <div className=" w-[99%] z-10 mx-auto h-full md:h-[150px] rounded-md mt-[-5px] px-4 py-2 flex flex-col md:grid md:grid-cols-4 md:gap-3">
+        <div className="h-full w-full rounded-md bg-background flex flex-col items-center justify-center shadow-main mb-2">
+          <h2 className="text-4xl font-semibold font-raleway mb-1">
+            {data.buses}
+          </h2>
+          <p className="text-2xl">Buses</p>
+        </div>
+        <div className="h-full w-full bg-background flex flex-col items-center justify-center shadow-main mb-2">
+          <h2 className="text-4xl font-semibold font-raleway mb-1">
+            {data.routes}
+          </h2>
+          <p className="text-2xl">Routes</p>
+        </div>
+        <div className="h-full w-full bg-background flex flex-col items-center justify-center shadow-main mb-2">
+          <h2 className="text-4xl font-semibold font-raleway mb-1">
+            {data.drivers}
+          </h2>
+          <p className="text-2xl">Drivers</p>
+        </div>
+        <div className="h-full w-full bg-background flex flex-col items-center justify-center shadow-main mb-2">
+          <h2 className="text-4xl font-semibold font-raleway mb-1">
+            {data.operators}
+          </h2>
+          <p className="text-2xl">Operators</p>
+        </div>
+      </div>
+    </>
   );
 };
 
@@ -96,7 +179,8 @@ export const MainPage = () => {
     <div>
       <MainPageGraph />
       <DetailPane />
+      <NotificationPane />
     </div>
   );
 };
-export default MainPage
+export default MainPage;
