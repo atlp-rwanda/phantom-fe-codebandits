@@ -46,16 +46,19 @@ const busesTableColumns = [
 
 const BusesTable = () => {
   const [buses, setbuses] = useState([]);
+  const [loading, setloading] = useState(false);
   useEffect(() => {
     const fetchData = async () => {
+      setloading(true);
       const response = await axios.get('/buses');
       setbuses(response.data);
+      setloading(false);
     };
     fetchData();
   }, []);
   return (
     <>
-      {buses.length > 0 ? (
+      {!loading ? (
         <ManagementTable
           tableColumns={busesTableColumns}
           data={buses}

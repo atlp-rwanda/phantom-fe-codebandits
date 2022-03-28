@@ -20,12 +20,20 @@ exports[`Management routes Render companies 1`] = `
 
 exports[`Management routes Render drivers 1`] = `
 <div>
-  <TableSkeleton />
+  <Suspense
+    fallback={<TableSkeleton />}
+  >
+    <lazy
+      data={Array []}
+    />
+  </Suspense>
 </div>
 `;
 
 exports[`Management routes Render routes 1`] = `
 <div>
-  <TableSkeleton />
+  <RouteTable
+    data={Array []}
+  />
 </div>
 `;

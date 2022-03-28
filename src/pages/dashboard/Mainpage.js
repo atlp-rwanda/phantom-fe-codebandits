@@ -108,7 +108,12 @@ export const NotificationPane = () => {
       </h1>
       <hr />
       {!notifications.length > 0 ? (
-        <Code uniqueKey="notifications" height={40} />
+        <Code
+          height={100}
+          width={100}
+          uniqueKey="notifications"
+          style={{ width: '100%', padding: '1rem' }}
+        />
       ) : (
         <>
           <ul>
@@ -157,7 +162,13 @@ export const DetailPane = () => {
               <p className="text-2xl">Buses</p>
             </>
           ) : (
-            <Code uniqueKey="buses-loader" />
+            <Code
+              width={100}
+              height={100}
+              viewBox="0 0 100 100"
+              style={{ width: '100%' }}
+              uniqueKey="buses-loader"
+            />
           )}
         </div>
         <div className="h-full w-full bg-background flex flex-col items-center justify-center shadow-main mb-2">
@@ -169,7 +180,13 @@ export const DetailPane = () => {
               <p className="text-2xl">Routes</p>
             </>
           ) : (
-            <Code uniqueKey="routes-loader" />
+            <Code
+              width={100}
+              height={100}
+              viewBox="0 0 100 100"
+              style={{ width: '100%' }}
+              uniqueKey="routes-loader"
+            />
           )}
         </div>
         <div className="h-full w-full bg-background flex flex-col items-center justify-center shadow-main mb-2">
@@ -181,7 +198,12 @@ export const DetailPane = () => {
               <p className="text-2xl">Drivers</p>
             </>
           ) : (
-            <Code uniqueKey="drivers-loader" />
+            <Code
+              height={100}
+              viewBox="0 0 100 100"
+              style={{ width: '100%' }}
+              uniqueKey="drivers-loader"
+            />
           )}
         </div>
         <div className="h-full w-full bg-background flex flex-col items-center justify-center shadow-main mb-2">
@@ -193,7 +215,12 @@ export const DetailPane = () => {
               <p className="text-2xl">Operators</p>
             </>
           ) : (
-            <Code uniqueKey="operator-loader" />
+            <Code
+              height={100}
+              viewBox="0 0 100 100"
+              style={{ width: '100%' }}
+              uniqueKey="operator-loader"
+            />
           )}
         </div>
       </div>

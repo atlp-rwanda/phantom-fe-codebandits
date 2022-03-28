@@ -206,8 +206,11 @@ Object {
                 >
                   <svg
                     aria-labelledby="buses-loader-aria"
+                    height="100"
                     role="img"
-                    viewBox="0 0 340 84"
+                    style="width: 100%;"
+                    viewBox="0 0 100 100"
+                    width="100"
                   >
                     <title
                       id="buses-loader-aria"
@@ -335,8 +338,11 @@ Object {
                 >
                   <svg
                     aria-labelledby="routes-loader-aria"
+                    height="100"
                     role="img"
-                    viewBox="0 0 340 84"
+                    style="width: 100%;"
+                    viewBox="0 0 100 100"
+                    width="100"
                   >
                     <title
                       id="routes-loader-aria"
@@ -464,8 +470,10 @@ Object {
                 >
                   <svg
                     aria-labelledby="drivers-loader-aria"
+                    height="100"
                     role="img"
-                    viewBox="0 0 340 84"
+                    style="width: 100%;"
+                    viewBox="0 0 100 100"
                   >
                     <title
                       id="drivers-loader-aria"
@@ -593,8 +601,10 @@ Object {
                 >
                   <svg
                     aria-labelledby="operator-loader-aria"
+                    height="100"
                     role="img"
-                    viewBox="0 0 340 84"
+                    style="width: 100%;"
+                    viewBox="0 0 100 100"
                   >
                     <title
                       id="operator-loader-aria"
@@ -729,9 +739,11 @@ Object {
                 <hr />
                 <svg
                   aria-labelledby="notifications-aria"
-                  height="40"
+                  height="100"
                   role="img"
+                  style="width: 100%; padding: 1rem;"
                   viewBox="0 0 340 84"
+                  width="100"
                 >
                   <title
                     id="notifications-aria"
@@ -1064,8 +1076,11 @@ Object {
               >
                 <svg
                   aria-labelledby="buses-loader-aria"
+                  height="100"
                   role="img"
-                  viewBox="0 0 340 84"
+                  style="width: 100%;"
+                  viewBox="0 0 100 100"
+                  width="100"
                 >
                   <title
                     id="buses-loader-aria"
@@ -1193,8 +1208,11 @@ Object {
               >
                 <svg
                   aria-labelledby="routes-loader-aria"
+                  height="100"
                   role="img"
-                  viewBox="0 0 340 84"
+                  style="width: 100%;"
+                  viewBox="0 0 100 100"
+                  width="100"
                 >
                   <title
                     id="routes-loader-aria"
@@ -1322,8 +1340,10 @@ Object {
               >
                 <svg
                   aria-labelledby="drivers-loader-aria"
+                  height="100"
                   role="img"
-                  viewBox="0 0 340 84"
+                  style="width: 100%;"
+                  viewBox="0 0 100 100"
                 >
                   <title
                     id="drivers-loader-aria"
@@ -1451,8 +1471,10 @@ Object {
               >
                 <svg
                   aria-labelledby="operator-loader-aria"
+                  height="100"
                   role="img"
-                  viewBox="0 0 340 84"
+                  style="width: 100%;"
+                  viewBox="0 0 100 100"
                 >
                   <title
                     id="operator-loader-aria"
@@ -1587,9 +1609,11 @@ Object {
               <hr />
               <svg
                 aria-labelledby="notifications-aria"
-                height="40"
+                height="100"
                 role="img"
+                style="width: 100%; padding: 1rem;"
                 viewBox="0 0 340 84"
+                width="100"
               >
                 <title
                   id="notifications-aria"

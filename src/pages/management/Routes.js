@@ -4,17 +4,18 @@ import TableSkeleton from '../../components/SkeletonUIs/TableSkeleton.js';
 import RouteTable from '../routes/components/RouteTable.js';
 const Routes = () => {
   const [routes, setroutes] = useState([]);
+  const [loading, setloading] = useState(false);
   useEffect(() => {
     const fetchData = async () => {
+      setloading(true);
       const response = await axios.get('/routes');
       setroutes(response.data);
+      setloading(false);
     };
     fetchData();
   }, []);
   return (
-    <div>
-      {routes.length > 0 ? <RouteTable data={routes} /> : <TableSkeleton />}
-    </div>
+    <div>{!loading ? <RouteTable data={routes} /> : <TableSkeleton />}</div>
   );
 };
 
