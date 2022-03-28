@@ -16,7 +16,7 @@ Object {
             class="flex flex-col bg-background p-4 rounded-xl mt-2 ml-6 md:ml-10 md:items-baseline"
           >
             <select
-              class="rounded-xl bg-background border-primary text-sm outline-none mb-2 pl-4 md:pl-8 py-1 w-4/5 w-40 md:w-56 border-2"
+              class="rounded-xl bg-background border-primary text-sm outline-none mb-2 pl-4 md:pl-8 py-1  w-40 md:w-56 border-2"
               id="origin"
               name="origin"
               placeholder="your current location"
@@ -60,7 +60,7 @@ Object {
               </option>
             </select>
             <select
-              class="rounded-xl bg-background border-primary text-sm outline-none mb-2 pl-4 md:pl-8 py-1 w-40 w-4/5 md:w-56 border-2"
+              class="rounded-xl bg-background border-primary text-sm outline-none mb-2 pl-4 md:pl-8 py-1 w-40 md:w-56 border-2"
               id="destination"
               name="destination"
               placeholder="your destination"
@@ -281,7 +281,7 @@ Object {
           class="flex flex-col bg-background p-4 rounded-xl mt-2 ml-6 md:ml-10 md:items-baseline"
         >
           <select
-            class="rounded-xl bg-background border-primary text-sm outline-none mb-2 pl-4 md:pl-8 py-1 w-4/5 w-40 md:w-56 border-2"
+            class="rounded-xl bg-background border-primary text-sm outline-none mb-2 pl-4 md:pl-8 py-1  w-40 md:w-56 border-2"
             id="origin"
             name="origin"
             placeholder="your current location"
@@ -325,7 +325,7 @@ Object {
             </option>
           </select>
           <select
-            class="rounded-xl bg-background border-primary text-sm outline-none mb-2 pl-4 md:pl-8 py-1 w-40 w-4/5 md:w-56 border-2"
+            class="rounded-xl bg-background border-primary text-sm outline-none mb-2 pl-4 md:pl-8 py-1 w-40 md:w-56 border-2"
             id="destination"
             name="destination"
             placeholder="your destination"
@@ -600,7 +600,7 @@ exports[`TrackingPage should render TrackingPage 1`] = `
       className="flex flex-col bg-background p-4 rounded-xl mt-2 ml-6 md:ml-10 md:items-baseline"
     >
       <select
-        className="rounded-xl bg-background border-primary text-sm outline-none mb-2 pl-4 md:pl-8 py-1 w-4/5 w-40 md:w-56 border-2"
+        className="rounded-xl bg-background border-primary text-sm outline-none mb-2 pl-4 md:pl-8 py-1  w-40 md:w-56 border-2"
         id="origin"
         name="origin"
         onChange={[Function]}
@@ -644,7 +644,7 @@ exports[`TrackingPage should render TrackingPage 1`] = `
         </option>
       </select>
       <select
-        className="rounded-xl bg-background border-primary text-sm outline-none mb-2 pl-4 md:pl-8 py-1 w-40 w-4/5 md:w-56 border-2"
+        className="rounded-xl bg-background border-primary text-sm outline-none mb-2 pl-4 md:pl-8 py-1 w-40 md:w-56 border-2"
         id="destination"
         name="destination"
         onChange={[Function]}

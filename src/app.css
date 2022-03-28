@@ -55,6 +55,13 @@
   animation: loader 2s linear infinite;
 }
 
+.deleted {
+  color: red;
+  font-weight: bold;
+  text-align: center;
+  font-family: "Raleway";
+}
+
 @keyframes loader {
   0% {
     transform: rotate(0deg);

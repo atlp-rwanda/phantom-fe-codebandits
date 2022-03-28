@@ -27,10 +27,6 @@ function DashRoutes() {
             <Route path="/" element={<MainPage title={'dashboard'} />} />
             <Route path="roles" element={<Roles />} />
             <Route
-              path="notifications"
-              element={<ComingSoon title={'notifications'} />}
-            />
-            <Route
               path="settings"
               element={<ComingSoon title={'settings'} />}
             />

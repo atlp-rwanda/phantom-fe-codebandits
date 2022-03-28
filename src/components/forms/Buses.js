@@ -1,8 +1,8 @@
 /* eslint-disable jsx-a11y/label-has-associated-control */
 /* eslint-disable react/jsx-props-no-spreading */
-import React from 'react';
+import React, { useState } from 'react';
 import { useForm } from 'react-hook-form';
-import Button from '../Button.js';
+import Button, { ButtonLoading } from '../Button.js';
 
 const Buses = ({
   formTitle,
@@ -20,8 +20,11 @@ const Buses = ({
     reValidateMode: 'onChange',
     mode: 'onChange'
   });
+  const [loading, setloading] = useState(false);
   const onValid = async (data) => {
+    setloading(true);
     await formAction(data);
+    setloading(false);
   };
   const inputClassStyles = 'rounded-sm px-3 py-3 mb-2 bg-[#EFEFEF]';
   const errorStyles = 'text-rose-500 mb-2';
@@ -111,10 +114,14 @@ const Buses = ({
           {errors?.plateNumber && errors.plateNumber.message}
         </p>
         <div className="self-center">
-          <Button
-            name={formTitle}
-            styles="bg-primary text-sm text-white py-2 px-3 mt-4"
-          />
+          {loading ? (
+            <ButtonLoading name={'Sending...'} />
+          ) : (
+            <Button
+              name={formTitle}
+              styles="bg-primary text-sm text-white py-2 px-3 mt-4"
+            />
+          )}
         </div>
       </form>
     </div>
