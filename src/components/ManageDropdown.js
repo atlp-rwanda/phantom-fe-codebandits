@@ -1,14 +1,16 @@
 import axios from '@utils/Api.js';
-import React, { useRef } from 'react';
+import React, { useRef, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { toast } from 'react-toastify';
 import Swal from 'sweetalert2';
 import CheckRole from '../utils/CheckRoles.js';
+import { ButtonLoading } from './Button.js';
 
 function ManageDropdown({ row }) {
   const { name, email, license, assigned_bus, id } = row.original;
   const navigate = useNavigate();
   const selectRef = useRef();
+  const [loading, setloading] = useState(false);
   const handleEdit = () => {
     toast('Clicked');
   };
@@ -48,11 +50,15 @@ function ManageDropdown({ row }) {
       confirmButtonText: 'Yes, delete!'
     }).then(async (result) => {
       if (result.isConfirmed) {
-        const response = await toast.promise(axios.delete('/drivers/' + id), {
-          pending: 'Sending the request',
-          success: 'Driver deleted successfully!',
-          error: 'Opps, something went wrong.'
-        });
+        setloading(true);
+        try {
+          const response = await axios.delete('/drivers/' + id);
+          setloading(false);
+          selectRef.current.innerHTML = `<b className="deleted mx-auto font-bold">Deleted</>`;
+        } catch (error) {
+          toast('Something went wrong');
+          setloading(false);
+        }
       }
     });
   };
@@ -74,56 +80,59 @@ function ManageDropdown({ row }) {
 
   return (
     <>
-      <div className="z-10 font-sm">
-        <select
-          ref={selectRef}
-          onChange={handleChange}
-          name=""
-          id=""
-          role="select"
-          className="py-1 px-1 font-rale font-bold bg-transparent border rounded-sm"
-        >
-          <option hidden={true} value="manage">
-            Manage
-          </option>
-          <option value="view">View</option>
-          <CheckRole
-            children={
-              <option
-                className="cursor-pointer font-raleway font-bold"
-                value="edit"
-              >
-                Edit
-              </option>
-            }
-            role={['operator']}
-          ></CheckRole>
-          <CheckRole
-            children={
-              <option className="cursor-pointer" value="delete">
-                Delete
-              </option>
-            }
-            role={['operator']}
-          ></CheckRole>
-          <CheckRole
-            children={
-              <option className="cursor-pointer" value="assign">
-                {assigned_bus ? 'Change bus' : 'Assign bus'}
-              </option>
-            }
-            role={['operator']}
-          ></CheckRole>
+      <div className="z-10 font-sm" ref={selectRef}>
+        {loading ? (
+          <ButtonLoading name={'Sending...'} />
+        ) : (
+          <select
+            onChange={handleChange}
+            name=""
+            id=""
+            role="select"
+            className="py-1 px-1 font-rale font-bold bg-transparent border rounded-sm"
+          >
+            <option hidden={true} value="manage">
+              Manage
+            </option>
+            <option value="view">View</option>
+            <CheckRole
+              children={
+                <option
+                  className="cursor-pointer font-raleway font-bold"
+                  value="edit"
+                >
+                  Edit
+                </option>
+              }
+              role={['operator']}
+            ></CheckRole>
+            <CheckRole
+              children={
+                <option className="cursor-pointer" value="delete">
+                  Delete
+                </option>
+              }
+              role={['operator']}
+            ></CheckRole>
+            <CheckRole
+              children={
+                <option className="cursor-pointer" value="assign">
+                  {assigned_bus ? 'Change bus' : 'Assign bus'}
+                </option>
+              }
+              role={['operator']}
+            ></CheckRole>
 
-          <CheckRole
-            children={
-              <option className="cursor-pointer" value="perm">
-                Permissions
-              </option>
-            }
-            role={['admin']}
-          ></CheckRole>
-        </select>
+            <CheckRole
+              children={
+                <option className="cursor-pointer" value="perm">
+                  Permissions
+                </option>
+              }
+              role={['admin']}
+            ></CheckRole>
+          </select>
+        )}
       </div>
     </>
   );

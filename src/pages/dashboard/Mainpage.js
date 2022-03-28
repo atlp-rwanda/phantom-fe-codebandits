@@ -1,9 +1,9 @@
 import axios from '@utils/Api.js';
 import { Chart, registerables } from 'chart.js';
-import React, { useEffect, useState } from 'react';
+import React, { Suspense, useEffect, useState } from 'react';
 import { Bar } from 'react-chartjs-2';
-import { useDispatch, useSelector } from 'react-redux';
-
+import { Code } from 'react-content-loader';
+import SkeletonScreen from '../../components/SkeletonUIs/SkeletonScreen.js';
 try {
   Chart.register(...registerables);
 } catch (error) {}
@@ -73,7 +73,7 @@ export const MainPageGraph = () => {
   };
 
   return (
-    <div className="bg-background text-black font-bold font-raleway h-[400px] w-full mb-5">
+    <div className="bg-background text-black font-bold font-raleway h-[300px] w-full mb-5">
       <Bar data={myChart.data} options={myChart.options} />
     </div>
   );
@@ -98,7 +98,6 @@ export const NotificationPane = () => {
     const fetchData = async () => {
       const resNotifications = await axios.get('/notifications');
       setNotifications(resNotifications.data);
-      console.log(resNotifications);
     };
     fetchData();
   }, []);
@@ -108,33 +107,37 @@ export const NotificationPane = () => {
         Notifications
       </h1>
       <hr />
-      <ul>
-        {notifications.map((notification) => (
-          <li
-            className={`bg-${notification.category} bg-opacity-20 rounded-sm border-b py-2 bg-lightest m-1 px-2 flex justify-between`}
-            key={notification.id}
-          >
-            <span>{notification.message}</span>{' '}
-            {notification.read ? (
-              <span className="cursor-pointer font-bold text-red text-sm">
-                Delete
-              </span>
-            ) : (
-              <span className="cursor-pointer font-bold text-primary text-sm">
-                Mark as read
-              </span>
-            )}
-          </li>
-        ))}
-      </ul>
+      {!notifications.length > 0 ? (
+        <Code uniqueKey="notifications" height={40} />
+      ) : (
+        <>
+          <ul>
+            {notifications.map((notification) => (
+              <li
+                className={`bg-${notification.category} bg-opacity-20 rounded-sm border-b py-2 bg-lightest m-1 px-2 flex justify-between`}
+                key={notification.id}
+              >
+                <span>{notification.message}</span>{' '}
+                {notification.read ? (
+                  <span className="cursor-pointer font-bold text-red text-sm">
+                    Delete
+                  </span>
+                ) : (
+                  <span className="cursor-pointer font-bold text-primary text-sm">
+                    Mark as read
+                  </span>
+                )}
+              </li>
+            ))}
+          </ul>
+        </>
+      )}
     </div>
   );
 };
 
 export const DetailPane = () => {
-  const { info } = useSelector((state) => state?.dashboard);
-  const [data, setdata] = useState({});
-  const dispatch = useDispatch();
+  const [data, setdata] = useState([]);
   useEffect(() => {
     const fetchInfo = async () => {
       const data = await fetchDashboardData();
@@ -146,28 +149,52 @@ export const DetailPane = () => {
     <>
       <div className=" w-[99%] z-10 mx-auto h-full md:h-[150px] rounded-md mt-[-5px] px-4 py-2 flex flex-col md:grid md:grid-cols-4 md:gap-3">
         <div className="h-full w-full rounded-md bg-background flex flex-col items-center justify-center shadow-main mb-2">
-          <h2 className="text-4xl font-semibold font-raleway mb-1">
-            {data.buses}
-          </h2>
-          <p className="text-2xl">Buses</p>
+          {data.buses ? (
+            <>
+              <h2 className="text-4xl font-semibold font-raleway mb-1">
+                {data.buses}
+              </h2>
+              <p className="text-2xl">Buses</p>
+            </>
+          ) : (
+            <Code uniqueKey="buses-loader" />
+          )}
         </div>
         <div className="h-full w-full bg-background flex flex-col items-center justify-center shadow-main mb-2">
-          <h2 className="text-4xl font-semibold font-raleway mb-1">
-            {data.routes}
-          </h2>
-          <p className="text-2xl">Routes</p>
+          {data.routes ? (
+            <>
+              <h2 className="text-4xl font-semibold font-raleway mb-1">
+                {data.routes}
+              </h2>
+              <p className="text-2xl">Routes</p>
+            </>
+          ) : (
+            <Code uniqueKey="routes-loader" />
+          )}
         </div>
         <div className="h-full w-full bg-background flex flex-col items-center justify-center shadow-main mb-2">
-          <h2 className="text-4xl font-semibold font-raleway mb-1">
-            {data.drivers}
-          </h2>
-          <p className="text-2xl">Drivers</p>
+          {data.drivers ? (
+            <>
+              <h2 className="text-4xl font-semibold font-raleway mb-1">
+                {data.drivers}
+              </h2>
+              <p className="text-2xl">Drivers</p>
+            </>
+          ) : (
+            <Code uniqueKey="drivers-loader" />
+          )}
         </div>
         <div className="h-full w-full bg-background flex flex-col items-center justify-center shadow-main mb-2">
-          <h2 className="text-4xl font-semibold font-raleway mb-1">
-            {data.operators}
-          </h2>
-          <p className="text-2xl">Operators</p>
+          {data.operators ? (
+            <>
+              <h2 className="text-4xl font-semibold font-raleway mb-1">
+                {data.operators}
+              </h2>
+              <p className="text-2xl">Operators</p>
+            </>
+          ) : (
+            <Code uniqueKey="operator-loader" />
+          )}
         </div>
       </div>
     </>
@@ -177,9 +204,11 @@ export const DetailPane = () => {
 export const MainPage = () => {
   return (
     <div>
-      <MainPageGraph />
-      <DetailPane />
-      <NotificationPane />
+      <Suspense fallback={<SkeletonScreen />}>
+        <MainPageGraph />
+        <DetailPane />
+        <NotificationPane />
+      </Suspense>
     </div>
   );
 };

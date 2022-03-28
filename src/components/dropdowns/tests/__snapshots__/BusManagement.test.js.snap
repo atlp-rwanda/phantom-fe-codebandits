@@ -8,30 +8,19 @@ Object {
       <div
         class="z-10"
       >
-        <select
-          class="py-1 px-3 font-rale font-bold bg-transparent border rounded-sm"
-          id=""
-          name="busManagement"
-          role="select"
+        <div
+          class="flex w-fit py-1 px-3 bg-primary font-raleway font-bold rounded-md"
         >
-          <option
-            hidden=""
+          <div
+            class="loader mr-1"
+          />
+          <button
+            class="ml-1 font-raleway text-white font-bold"
           >
-            Manage
-          </option>
-          <option
-            class="cursor-pointer"
-            value="edit"
-          >
-            Edit
-          </option>
-          <option
-            class="cursor-pointer"
-            value="delete"
-          >
-            Delete
-          </option>
-        </select>
+             
+            Sending
+          </button>
+        </div>
       </div>
     </div>
   </body>,
@@ -39,30 +28,19 @@ Object {
     <div
       class="z-10"
     >
-      <select
-        class="py-1 px-3 font-rale font-bold bg-transparent border rounded-sm"
-        id=""
-        name="busManagement"
-        role="select"
+      <div
+        class="flex w-fit py-1 px-3 bg-primary font-raleway font-bold rounded-md"
       >
-        <option
-          hidden=""
+        <div
+          class="loader mr-1"
+        />
+        <button
+          class="ml-1 font-raleway text-white font-bold"
         >
-          Manage
-        </option>
-        <option
-          class="cursor-pointer"
-          value="edit"
-        >
-          Edit
-        </option>
-        <option
-          class="cursor-pointer"
-          value="delete"
-        >
-          Delete
-        </option>
-      </select>
+           
+          Sending
+        </button>
+      </div>
     </div>
   </div>,
   "debug": [Function],
@@ -127,30 +105,19 @@ Object {
       <div
         class="z-10"
       >
-        <select
-          class="py-1 px-3 font-rale font-bold bg-transparent border rounded-sm"
-          id=""
-          name="busManagement"
-          role="select"
+        <div
+          class="flex w-fit py-1 px-3 bg-primary font-raleway font-bold rounded-md"
         >
-          <option
-            hidden=""
+          <div
+            class="loader mr-1"
+          />
+          <button
+            class="ml-1 font-raleway text-white font-bold"
           >
-            Manage
-          </option>
-          <option
-            class="cursor-pointer"
-            value="edit"
-          >
-            Edit
-          </option>
-          <option
-            class="cursor-pointer"
-            value="delete"
-          >
-            Delete
-          </option>
-        </select>
+             
+            Sending
+          </button>
+        </div>
       </div>
     </div>
   </body>,
@@ -158,30 +125,19 @@ Object {
     <div
       class="z-10"
     >
-      <select
-        class="py-1 px-3 font-rale font-bold bg-transparent border rounded-sm"
-        id=""
-        name="busManagement"
-        role="select"
+      <div
+        class="flex w-fit py-1 px-3 bg-primary font-raleway font-bold rounded-md"
       >
-        <option
-          hidden=""
+        <div
+          class="loader mr-1"
+        />
+        <button
+          class="ml-1 font-raleway text-white font-bold"
         >
-          Manage
-        </option>
-        <option
-          class="cursor-pointer"
-          value="edit"
-        >
-          Edit
-        </option>
-        <option
-          class="cursor-pointer"
-          value="delete"
-        >
-          Delete
-        </option>
-      </select>
+           
+          Sending
+        </button>
+      </div>
     </div>
   </div>,
   "debug": [Function],

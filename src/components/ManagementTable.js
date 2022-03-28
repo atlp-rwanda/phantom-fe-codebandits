@@ -52,7 +52,7 @@ const ManagementTable = ({
             <Link to={registerNewPath}>
               <Button
                 name={'Register new'}
-                styles={'bg-primary text-white py-2 text-xs'}
+                styles={'bg-primary text-white py-2 text-xs font-raleway'}
               />
             </Link>
           }
@@ -66,7 +66,7 @@ const ManagementTable = ({
               {headerGroup.headers.map((column) => (
                 <th
                   {...column.getHeaderProps()}
-                  className="text-left font-extrabold pr-5 border-b-2 pb-4"
+                  className="text-left font-extrabold pr-5 border-b-2 pb-4 font-raleway"
                 >
                   {column.render('Header')}
                 </th>

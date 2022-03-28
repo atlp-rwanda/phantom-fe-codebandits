@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { Suspense } from 'react';
 import { Provider } from 'react-redux';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import { ToastContainer } from 'react-toastify';
@@ -6,19 +6,17 @@ import 'react-toastify/dist/ReactToastify.css';
 import './app.css';
 import SkeletonScreen from './components/SkeletonUIs/SkeletonScreen.js';
 import MainRoutes from './containers/MainRoutes.js';
-import DashRoutes from './containers/DashboardRouter.js';
 import { store } from './redux/store.js';
-import { useLoader } from './useLoader.js';
 import PrivateRoute from './utils/PrivateRoute.js';
 
+const DashRoutes = React.lazy(() => import('./containers/DashboardRouter.js'));
+
 function App() {
-  const { loading } = useLoader();
   return (
     <div className="min-h-screen flex flex-col">
-      {loading && <SkeletonScreen />}
-      {!loading && (
-        <Provider store={store}>
-          <BrowserRouter>
+      <Provider store={store}>
+        <BrowserRouter>
+          <Suspense fallback={<SkeletonScreen />}>
             <Routes>
               <Route
                 exact={false}
@@ -32,10 +30,10 @@ function App() {
 
               <Route exact={false} path="/*" element={<MainRoutes />} />
             </Routes>
-          </BrowserRouter>
-          <ToastContainer theme="colored" />
-        </Provider>
-      )}
+          </Suspense>
+        </BrowserRouter>
+        <ToastContainer theme="colored" />
+      </Provider>
     </div>
   );
 }

@@ -17,7 +17,7 @@ function RegisterRoute() {
 
     await axios.post('/routes', route);
     toast('Route Created successfully', { type: 'success' });
-    navigate('/dashboard/management');
+    return navigate('/dashboard/management');
   };
 
   return (

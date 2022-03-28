@@ -1,6 +1,6 @@
+import axios from '@utils/Api.js';
 import React from 'react';
 import { useLocation, useNavigate } from 'react-router-dom';
-import axios from 'axios';
 import { toast } from 'react-toastify';
 import Buses from '../components/forms/Buses.js';
 
@@ -9,9 +9,13 @@ const UpdateBus = () => {
   const { id, busType, plateNumber, company, seats } = location.state;
   const navigate = useNavigate();
   const updateBusInDB = async (newBusInfo) => {
-    await axios.patch(`/buses/${id}`, newBusInfo);
-    toast('Bus updated successfully', { type: 'success' });
-    navigate(-1);
+    try {
+      await axios.patch(`/buses/${id}`, newBusInfo);
+      toast('Bus updated successfully', { type: 'success' });
+      navigate(-1);
+    } catch (error) {
+      toast('Something went wrong', { type: 'error' });
+    }
   };
   return (
     <Buses

@@ -1,7 +1,10 @@
 import axios from '@utils/Api.js';
 import React, { useEffect, useState } from 'react';
-import DriversTable from '../../components/DriversTable.js';
+import TableSkeleton from '../../components/SkeletonUIs/TableSkeleton.js';
 
+const DriversTable = React.lazy(() =>
+  import('../../components/DriversTable.js')
+);
 
 const Drivers = () => {
   const [data, setdata] = useState([]);
@@ -14,7 +17,7 @@ const Drivers = () => {
   }, []);
   return (
     <div>
-      <DriversTable data={data} />
+      {data.length > 0 ? <DriversTable data={data} /> : <TableSkeleton />}
     </div>
   );
 };

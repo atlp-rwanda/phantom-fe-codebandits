@@ -1,13 +1,13 @@
 module.exports = {
-  content: ['./src/**/*.{js, jsx}'],
+  content: ['./src/**/*.{js, jsx}', './public/index.html'],
   theme: {
     extend: {
       fontFamily: {
         raleway: ['Raleway', 'sans-serif'],
         sans: ['Open Sans', 'sans-serif']
       },
-      borderRadius:{
-        circle: "50%"
+      borderRadius: {
+        circle: '50%'
       },
       colors: {
         primary: '#1B73E8',

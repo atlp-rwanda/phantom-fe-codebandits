@@ -2,6 +2,7 @@ import axios from '@utils/Api.js';
 import React, { useEffect, useState } from 'react';
 import BusManagement from './dropdowns/BusManagement.js';
 import ManagementTable from './ManagementTable.js';
+import TableSkeleton from './SkeletonUIs/TableSkeleton.js';
 const DriverLink = ({ row }) => {
   if (row.driver) {
     return <div>{row.driver}</div>;
@@ -53,12 +54,18 @@ const BusesTable = () => {
     fetchData();
   }, []);
   return (
-    <ManagementTable
-      tableColumns={busesTableColumns}
-      data={buses}
-      searchPlaceholder="Search buses..."
-      registerNewPath="bus/register"
-    />
+    <>
+      {buses.length > 0 ? (
+        <ManagementTable
+          tableColumns={busesTableColumns}
+          data={buses}
+          searchPlaceholder="Search buses..."
+          registerNewPath="bus/register"
+        />
+      ) : (
+        <TableSkeleton />
+      )}
+    </>
   );
 };
 export default BusesTable;
