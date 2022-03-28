@@ -4,7 +4,6 @@ import { Link, useNavigate } from 'react-router-dom';
 import { toast } from 'react-toastify';
 import dashIcon from '../images/dashboardIcon.png';
 import manageIcon from '../images/manageIcon.png';
-import notificationIcon from '../images/notificationIcon.png';
 import profileIcon from '../images/profileIcon.png';
 import profileImg from '../images/profileImg.jpg';
 import settingIcon from '../images/settingIcon.png';
@@ -63,11 +62,7 @@ const SideNav = ({ styles }) => {
               name="Management"
             />
             <SideNavLink image={profileIcon} linkTo="profile" name="Profile" />
-            <SideNavLink
-              image={notificationIcon}
-              linkTo="/dashboard/notifications"
-              name="Notifications"
-            />
+
             <CheckRole
               children={
                 <SideNavLink

@@ -20,12 +20,16 @@ exports[`Management routes Render companies 1`] = `
 
 exports[`Management routes Render drivers 1`] = `
 <div>
-  <DriversTable />
+  <DriversTable
+    data={Array []}
+  />
 </div>
 `;
 
 exports[`Management routes Render routes 1`] = `
 <div>
-  <RouteTable />
+  <RouteTable
+    data={Array []}
+  />
 </div>
 `;

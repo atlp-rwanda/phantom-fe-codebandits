@@ -93,7 +93,12 @@ Object {
               class="pr-5 py-4 border-b-2"
               role="cell"
             >
-              None
+              <a
+                class="text-primary"
+                href="/#buses"
+              >
+                RAB1000
+              </a>
             </td>
             <td
               class="pr-5 py-4 border-b-2"
@@ -115,7 +120,7 @@ Object {
                     Manage
                   </option>
                   <option
-                    value="vies"
+                    value="view"
                   >
                     View
                   </option>
@@ -152,12 +157,7 @@ Object {
               class="pr-5 py-4 border-b-2"
               role="cell"
             >
-              <a
-                class="text-primary"
-                href="/#buses"
-              >
-                RAB1234
-              </a>
+              None
             </td>
             <td
               class="pr-5 py-4 border-b-2"
@@ -179,7 +179,7 @@ Object {
                     Manage
                   </option>
                   <option
-                    value="vies"
+                    value="view"
                   >
                     View
                   </option>
@@ -192,100 +192,6 @@ Object {
             </td>
           </tr>
         </tbody>
-      </table>
-      <table
-        class=" mt-3 flex justify-center w-full bg-gray-300 bg-opacity-20 "
-      >
-        <tfoot>
-          <tr
-            class="p-1 flex-row flex items-center justify-center my-2 mx-auto w-full font-raleway"
-          >
-            <td
-              colspan="5"
-            >
-              <div
-                class="w-full justify-center flex mx-auto flex-row items-center overflow-x-scroll"
-              >
-                <button
-                  class="mx-2 rounded-circle font-bold flex items-center justify-center bg-primary h-[30px] w-[60px] cursor-pointer"
-                  disabled=""
-                >
-                  &lt;|
-                </button>
-                 
-                <button
-                  class="mx-2 font-bold font-raleway"
-                  disabled=""
-                >
-                  Prev
-                </button>
-                 
-                <button
-                  class="mx-2 font-bold font-raleway cursor-pointer"
-                  disabled=""
-                >
-                  Next
-                </button>
-                 
-                <button
-                  class="mx-2 rounded-circle font-bold flex items-center justify-center bg-primary h-[30px] w-[60px] cursor-pointer"
-                  disabled=""
-                >
-                  |&gt;
-                </button>
-                 
-                <div
-                  class="flex flex-row justify-center w-full"
-                >
-                  <span
-                    class="inline-block mx-2"
-                  >
-                    Page
-                     
-                    <strong>
-                      1
-                       of 
-                      1
-                    </strong>
-                     
-                  </span>
-                  <span
-                    class="inline-block mx-2"
-                  >
-                    | Go to page:
-                     
-                    <input
-                      class=" pl-2 outline-none border rounded-md border-primary"
-                      style="width: 50px;"
-                      type="number"
-                      value="1"
-                    />
-                  </span>
-                   
-                  <select
-                    class="px-1/2 md:px-2 font-raleway rounded-md border border-primary"
-                  >
-                    <option
-                      value="10"
-                    >
-                      Show 10
-                    </option>
-                    <option
-                      value="25"
-                    >
-                      Show 25
-                    </option>
-                    <option
-                      value="50"
-                    >
-                      Show 50
-                    </option>
-                  </select>
-                </div>
-              </div>
-            </td>
-          </tr>
-        </tfoot>
       </table>
     </div>
   </body>,
@@ -378,7 +284,12 @@ Object {
             class="pr-5 py-4 border-b-2"
             role="cell"
           >
-            None
+            <a
+              class="text-primary"
+              href="/#buses"
+            >
+              RAB1000
+            </a>
           </td>
           <td
             class="pr-5 py-4 border-b-2"
@@ -400,7 +311,7 @@ Object {
                   Manage
                 </option>
                 <option
-                  value="vies"
+                  value="view"
                 >
                   View
                 </option>
@@ -437,12 +348,7 @@ Object {
             class="pr-5 py-4 border-b-2"
             role="cell"
           >
-            <a
-              class="text-primary"
-              href="/#buses"
-            >
-              RAB1234
-            </a>
+            None
           </td>
           <td
             class="pr-5 py-4 border-b-2"
@@ -464,7 +370,7 @@ Object {
                   Manage
                 </option>
                 <option
-                  value="vies"
+                  value="view"
                 >
                   View
                 </option>
@@ -477,100 +383,6 @@ Object {
           </td>
         </tr>
       </tbody>
-    </table>
-    <table
-      class=" mt-3 flex justify-center w-full bg-gray-300 bg-opacity-20 "
-    >
-      <tfoot>
-        <tr
-          class="p-1 flex-row flex items-center justify-center my-2 mx-auto w-full font-raleway"
-        >
-          <td
-            colspan="5"
-          >
-            <div
-              class="w-full justify-center flex mx-auto flex-row items-center overflow-x-scroll"
-            >
-              <button
-                class="mx-2 rounded-circle font-bold flex items-center justify-center bg-primary h-[30px] w-[60px] cursor-pointer"
-                disabled=""
-              >
-                &lt;|
-              </button>
-               
-              <button
-                class="mx-2 font-bold font-raleway"
-                disabled=""
-              >
-                Prev
-              </button>
-               
-              <button
-                class="mx-2 font-bold font-raleway cursor-pointer"
-                disabled=""
-              >
-                Next
-              </button>
-               
-              <button
-                class="mx-2 rounded-circle font-bold flex items-center justify-center bg-primary h-[30px] w-[60px] cursor-pointer"
-                disabled=""
-              >
-                |&gt;
-              </button>
-               
-              <div
-                class="flex flex-row justify-center w-full"
-              >
-                <span
-                  class="inline-block mx-2"
-                >
-                  Page
-                   
-                  <strong>
-                    1
-                     of 
-                    1
-                  </strong>
-                   
-                </span>
-                <span
-                  class="inline-block mx-2"
-                >
-                  | Go to page:
-                   
-                  <input
-                    class=" pl-2 outline-none border rounded-md border-primary"
-                    style="width: 50px;"
-                    type="number"
-                    value="1"
-                  />
-                </span>
-                 
-                <select
-                  class="px-1/2 md:px-2 font-raleway rounded-md border border-primary"
-                >
-                  <option
-                    value="10"
-                  >
-                    Show 10
-                  </option>
-                  <option
-                    value="25"
-                  >
-                    Show 25
-                  </option>
-                  <option
-                    value="50"
-                  >
-                    Show 50
-                  </option>
-                </select>
-              </div>
-            </div>
-          </td>
-        </tr>
-      </tfoot>
     </table>
   </div>,
   "debug": [Function],

@@ -137,6 +137,7 @@
     "identity-obj-proxy": "^3.0.0",
     "jest": "^27.5.1",
     "jest-fetch-mock": "^3.0.3",
+    "jest-mock-axios": "^4.5.0",
     "jsdom": "^16.7.0",
     "jsdom-global": "^3.0.2",
     "lint-staged": "^12.3.3",

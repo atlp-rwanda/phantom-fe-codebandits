@@ -113,7 +113,6 @@ describe('Manage Dropdown', () => {
   });
   it('Should render the dropdown with change bus', async () => {
     rowData.original['assigned_bus'] = 'fabrice';
-    console.log(rowData);
     const elem = render(
       <ProviderWrapper children={<ManageDropdown row={rowData} />} />
     );

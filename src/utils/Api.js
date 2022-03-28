@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-const base = 'https://phantom-codebandits.herokuapp.com/api';
+const base = 'https://phantom-codebantis.herokuapp.com/api';
 export default axios.create({
   baseURL: base,
   withCredentials: false,

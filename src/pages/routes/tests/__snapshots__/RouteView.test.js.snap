@@ -2,7 +2,7 @@
 
 exports[`View Page should render the View component 1`] = `
 <div
-  className="p-4 bg-white"
+  className="p-4 bg-white w-[90vh] font-raleway"
 >
   <h2
     className="text-2xl text-center font-bold"
@@ -35,15 +35,17 @@ exports[`View Page should render the View component 1`] = `
   </div>
    
   <div
-    className="w-[400px] h-[300px] overflow-hidden px-4 py-4"
+    className=" h-[300px] overflow-hidden py-2"
   >
-    <h1>
+    <h1
+      className="font-raleway font-bold"
+    >
        Map 
     </h1>
      
     <hr />
     <div
-      className="w-full h-full"
+      className="h-full w-full mb-2"
     />
      
   </div>
