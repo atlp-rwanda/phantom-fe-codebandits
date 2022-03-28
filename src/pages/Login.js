@@ -5,6 +5,7 @@ import { useDispatch } from 'react-redux';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { toast } from 'react-toastify';
 import busMapImg from '../assets/busMap.png';
+import { ButtonLoading } from '../components/Button.js';
 import { loginUser } from '../redux/reducers/authReducer.js';
 const Login = () => {
   let navigate = useNavigate();
@@ -141,12 +142,21 @@ const Login = () => {
                 Unlock in 5 minutes
               </button>
             ) : (
-              <button
-                id="login-btn"
-                className="bg-primary px-5 py-2 rounded-md text-white w-fit mx-auto hover:bg-hover transition-all hover:transition-all"
-              >
-                {!loading ? 'Login' : 'Sending...'}
-              </button>
+              <>
+                {loading ? (
+                  <div className='mx-auto'>
+                     <ButtonLoading name={'sending...'} />
+                  </div>
+                 
+                ) : (
+                  <button
+                    id="login-btn"
+                    className="bg-primary px-5 py-2 rounded-md text-white w-fit mx-auto hover:bg-hover transition-all hover:transition-all"
+                  >
+                    Login
+                  </button>
+                )}
+              </>
             )}
           </form>
         </section>
