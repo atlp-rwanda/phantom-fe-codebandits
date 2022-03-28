@@ -1,5 +1,6 @@
 import axios from '@utils/Api.js';
 import React, { useEffect, useState } from 'react';
+import TableSkeleton from '../../components/SkeletonUIs/TableSkeleton.js';
 import RouteTable from '../routes/components/RouteTable.js';
 const Routes = () => {
   const [routes, setroutes] = useState([]);
@@ -12,7 +13,7 @@ const Routes = () => {
   }, []);
   return (
     <div>
-      <RouteTable data={routes} />
+      {routes.length > 0 ? <RouteTable data={routes} /> : <TableSkeleton />}
     </div>
   );
 };

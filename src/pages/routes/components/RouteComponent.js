@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { toast } from 'react-toastify';
-import Button from '../../../components/Button.js';
+import Button, { ButtonLoading } from '../../../components/Button.js';
 import options from './RouteOptions.js';
 import { routesDistance } from './RoutesDistance.js';
 
@@ -10,10 +10,12 @@ const RouteComponent = ({ formTitle, formAction, data }) => {
   const [destination1, setDestination1] = useState(null);
   const [destination2, setDestination2] = useState(null);
   const [distance, setDistance] = useState(null);
+  const [loading, setloading] = useState(false);
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    formAction(destination1, destination2, distance);
+    setloading(true);
+    await formAction(destination1, destination2, distance);
   };
 
   const distanceValue = (destination1, destination2) => {
@@ -102,10 +104,14 @@ const RouteComponent = ({ formTitle, formAction, data }) => {
           {distance || `${data.distance}`}
         </div>
         <div className="self-center mt-6">
-          <Button
-            name={formTitle}
-            styles="bg-primary text-sm text-white py-2 px-3 hover:bg-hover"
-          />
+          {loading ? (
+            <ButtonLoading name={'Sending'} />
+          ) : (
+            <Button
+              name={formTitle}
+              styles="bg-primary text-sm text-white py-2 px-3 hover:bg-hover"
+            />
+          )}
         </div>
       </form>
     </div>

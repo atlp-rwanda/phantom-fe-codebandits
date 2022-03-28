@@ -190,7 +190,7 @@ Object {
           >
             <div>
               <div
-                class="bg-background text-black font-bold font-raleway h-[400px] w-full mb-5"
+                class="bg-background text-black font-bold font-raleway h-[300px] w-full mb-5"
               >
                 <canvas
                   height="150"
@@ -204,50 +204,518 @@ Object {
                 <div
                   class="h-full w-full rounded-md bg-background flex flex-col items-center justify-center shadow-main mb-2"
                 >
-                  <h2
-                    class="text-4xl font-semibold font-raleway mb-1"
-                  />
-                  <p
-                    class="text-2xl"
+                  <svg
+                    aria-labelledby="buses-loader-aria"
+                    role="img"
+                    viewBox="0 0 340 84"
                   >
-                    Buses
-                  </p>
+                    <title
+                      id="buses-loader-aria"
+                    >
+                      Loading...
+                    </title>
+                    <rect
+                      clip-path="url(#buses-loader-diff)"
+                      height="100%"
+                      role="presentation"
+                      style="fill: url(#buses-loader-animated-diff);"
+                      width="100%"
+                      x="0"
+                      y="0"
+                    />
+                    <defs>
+                      <clippath
+                        id="buses-loader-diff"
+                      >
+                        <rect
+                          height="11"
+                          rx="3"
+                          width="67"
+                          x="0"
+                          y="0"
+                        />
+                        <rect
+                          height="11"
+                          rx="3"
+                          width="140"
+                          x="76"
+                          y="0"
+                        />
+                        <rect
+                          height="11"
+                          rx="3"
+                          width="53"
+                          x="127"
+                          y="48"
+                        />
+                        <rect
+                          height="11"
+                          rx="3"
+                          width="72"
+                          x="187"
+                          y="48"
+                        />
+                        <rect
+                          height="11"
+                          rx="3"
+                          width="100"
+                          x="18"
+                          y="48"
+                        />
+                        <rect
+                          height="11"
+                          rx="3"
+                          width="37"
+                          x="0"
+                          y="71"
+                        />
+                        <rect
+                          height="11"
+                          rx="3"
+                          width="140"
+                          x="18"
+                          y="23"
+                        />
+                        <rect
+                          height="11"
+                          rx="3"
+                          width="173"
+                          x="166"
+                          y="23"
+                        />
+                      </clippath>
+                      <lineargradient
+                        id="buses-loader-animated-diff"
+                      >
+                        <stop
+                          offset="0%"
+                          stop-color="#f5f6f7"
+                          stop-opacity="1"
+                        >
+                          <animate
+                            attributeName="offset"
+                            dur="1.2s"
+                            keyTimes="0; 0.25; 1"
+                            repeatCount="indefinite"
+                            values="-2; -2; 1"
+                          />
+                        </stop>
+                        <stop
+                          offset="50%"
+                          stop-color="#eee"
+                          stop-opacity="1"
+                        >
+                          <animate
+                            attributeName="offset"
+                            dur="1.2s"
+                            keyTimes="0; 0.25; 1"
+                            repeatCount="indefinite"
+                            values="-1; -1; 2"
+                          />
+                        </stop>
+                        <stop
+                          offset="100%"
+                          stop-color="#f5f6f7"
+                          stop-opacity="1"
+                        >
+                          <animate
+                            attributeName="offset"
+                            dur="1.2s"
+                            keyTimes="0; 0.25; 1"
+                            repeatCount="indefinite"
+                            values="0; 0; 3"
+                          />
+                        </stop>
+                      </lineargradient>
+                    </defs>
+                  </svg>
                 </div>
                 <div
                   class="h-full w-full bg-background flex flex-col items-center justify-center shadow-main mb-2"
                 >
-                  <h2
-                    class="text-4xl font-semibold font-raleway mb-1"
-                  />
-                  <p
-                    class="text-2xl"
+                  <svg
+                    aria-labelledby="routes-loader-aria"
+                    role="img"
+                    viewBox="0 0 340 84"
                   >
-                    Routes
-                  </p>
+                    <title
+                      id="routes-loader-aria"
+                    >
+                      Loading...
+                    </title>
+                    <rect
+                      clip-path="url(#routes-loader-diff)"
+                      height="100%"
+                      role="presentation"
+                      style="fill: url(#routes-loader-animated-diff);"
+                      width="100%"
+                      x="0"
+                      y="0"
+                    />
+                    <defs>
+                      <clippath
+                        id="routes-loader-diff"
+                      >
+                        <rect
+                          height="11"
+                          rx="3"
+                          width="67"
+                          x="0"
+                          y="0"
+                        />
+                        <rect
+                          height="11"
+                          rx="3"
+                          width="140"
+                          x="76"
+                          y="0"
+                        />
+                        <rect
+                          height="11"
+                          rx="3"
+                          width="53"
+                          x="127"
+                          y="48"
+                        />
+                        <rect
+                          height="11"
+                          rx="3"
+                          width="72"
+                          x="187"
+                          y="48"
+                        />
+                        <rect
+                          height="11"
+                          rx="3"
+                          width="100"
+                          x="18"
+                          y="48"
+                        />
+                        <rect
+                          height="11"
+                          rx="3"
+                          width="37"
+                          x="0"
+                          y="71"
+                        />
+                        <rect
+                          height="11"
+                          rx="3"
+                          width="140"
+                          x="18"
+                          y="23"
+                        />
+                        <rect
+                          height="11"
+                          rx="3"
+                          width="173"
+                          x="166"
+                          y="23"
+                        />
+                      </clippath>
+                      <lineargradient
+                        id="routes-loader-animated-diff"
+                      >
+                        <stop
+                          offset="0%"
+                          stop-color="#f5f6f7"
+                          stop-opacity="1"
+                        >
+                          <animate
+                            attributeName="offset"
+                            dur="1.2s"
+                            keyTimes="0; 0.25; 1"
+                            repeatCount="indefinite"
+                            values="-2; -2; 1"
+                          />
+                        </stop>
+                        <stop
+                          offset="50%"
+                          stop-color="#eee"
+                          stop-opacity="1"
+                        >
+                          <animate
+                            attributeName="offset"
+                            dur="1.2s"
+                            keyTimes="0; 0.25; 1"
+                            repeatCount="indefinite"
+                            values="-1; -1; 2"
+                          />
+                        </stop>
+                        <stop
+                          offset="100%"
+                          stop-color="#f5f6f7"
+                          stop-opacity="1"
+                        >
+                          <animate
+                            attributeName="offset"
+                            dur="1.2s"
+                            keyTimes="0; 0.25; 1"
+                            repeatCount="indefinite"
+                            values="0; 0; 3"
+                          />
+                        </stop>
+                      </lineargradient>
+                    </defs>
+                  </svg>
                 </div>
                 <div
                   class="h-full w-full bg-background flex flex-col items-center justify-center shadow-main mb-2"
                 >
-                  <h2
-                    class="text-4xl font-semibold font-raleway mb-1"
-                  />
-                  <p
-                    class="text-2xl"
+                  <svg
+                    aria-labelledby="drivers-loader-aria"
+                    role="img"
+                    viewBox="0 0 340 84"
                   >
-                    Drivers
-                  </p>
+                    <title
+                      id="drivers-loader-aria"
+                    >
+                      Loading...
+                    </title>
+                    <rect
+                      clip-path="url(#drivers-loader-diff)"
+                      height="100%"
+                      role="presentation"
+                      style="fill: url(#drivers-loader-animated-diff);"
+                      width="100%"
+                      x="0"
+                      y="0"
+                    />
+                    <defs>
+                      <clippath
+                        id="drivers-loader-diff"
+                      >
+                        <rect
+                          height="11"
+                          rx="3"
+                          width="67"
+                          x="0"
+                          y="0"
+                        />
+                        <rect
+                          height="11"
+                          rx="3"
+                          width="140"
+                          x="76"
+                          y="0"
+                        />
+                        <rect
+                          height="11"
+                          rx="3"
+                          width="53"
+                          x="127"
+                          y="48"
+                        />
+                        <rect
+                          height="11"
+                          rx="3"
+                          width="72"
+                          x="187"
+                          y="48"
+                        />
+                        <rect
+                          height="11"
+                          rx="3"
+                          width="100"
+                          x="18"
+                          y="48"
+                        />
+                        <rect
+                          height="11"
+                          rx="3"
+                          width="37"
+                          x="0"
+                          y="71"
+                        />
+                        <rect
+                          height="11"
+                          rx="3"
+                          width="140"
+                          x="18"
+                          y="23"
+                        />
+                        <rect
+                          height="11"
+                          rx="3"
+                          width="173"
+                          x="166"
+                          y="23"
+                        />
+                      </clippath>
+                      <lineargradient
+                        id="drivers-loader-animated-diff"
+                      >
+                        <stop
+                          offset="0%"
+                          stop-color="#f5f6f7"
+                          stop-opacity="1"
+                        >
+                          <animate
+                            attributeName="offset"
+                            dur="1.2s"
+                            keyTimes="0; 0.25; 1"
+                            repeatCount="indefinite"
+                            values="-2; -2; 1"
+                          />
+                        </stop>
+                        <stop
+                          offset="50%"
+                          stop-color="#eee"
+                          stop-opacity="1"
+                        >
+                          <animate
+                            attributeName="offset"
+                            dur="1.2s"
+                            keyTimes="0; 0.25; 1"
+                            repeatCount="indefinite"
+                            values="-1; -1; 2"
+                          />
+                        </stop>
+                        <stop
+                          offset="100%"
+                          stop-color="#f5f6f7"
+                          stop-opacity="1"
+                        >
+                          <animate
+                            attributeName="offset"
+                            dur="1.2s"
+                            keyTimes="0; 0.25; 1"
+                            repeatCount="indefinite"
+                            values="0; 0; 3"
+                          />
+                        </stop>
+                      </lineargradient>
+                    </defs>
+                  </svg>
                 </div>
                 <div
                   class="h-full w-full bg-background flex flex-col items-center justify-center shadow-main mb-2"
                 >
-                  <h2
-                    class="text-4xl font-semibold font-raleway mb-1"
-                  />
-                  <p
-                    class="text-2xl"
+                  <svg
+                    aria-labelledby="operator-loader-aria"
+                    role="img"
+                    viewBox="0 0 340 84"
                   >
-                    Operators
-                  </p>
+                    <title
+                      id="operator-loader-aria"
+                    >
+                      Loading...
+                    </title>
+                    <rect
+                      clip-path="url(#operator-loader-diff)"
+                      height="100%"
+                      role="presentation"
+                      style="fill: url(#operator-loader-animated-diff);"
+                      width="100%"
+                      x="0"
+                      y="0"
+                    />
+                    <defs>
+                      <clippath
+                        id="operator-loader-diff"
+                      >
+                        <rect
+                          height="11"
+                          rx="3"
+                          width="67"
+                          x="0"
+                          y="0"
+                        />
+                        <rect
+                          height="11"
+                          rx="3"
+                          width="140"
+                          x="76"
+                          y="0"
+                        />
+                        <rect
+                          height="11"
+                          rx="3"
+                          width="53"
+                          x="127"
+                          y="48"
+                        />
+                        <rect
+                          height="11"
+                          rx="3"
+                          width="72"
+                          x="187"
+                          y="48"
+                        />
+                        <rect
+                          height="11"
+                          rx="3"
+                          width="100"
+                          x="18"
+                          y="48"
+                        />
+                        <rect
+                          height="11"
+                          rx="3"
+                          width="37"
+                          x="0"
+                          y="71"
+                        />
+                        <rect
+                          height="11"
+                          rx="3"
+                          width="140"
+                          x="18"
+                          y="23"
+                        />
+                        <rect
+                          height="11"
+                          rx="3"
+                          width="173"
+                          x="166"
+                          y="23"
+                        />
+                      </clippath>
+                      <lineargradient
+                        id="operator-loader-animated-diff"
+                      >
+                        <stop
+                          offset="0%"
+                          stop-color="#f5f6f7"
+                          stop-opacity="1"
+                        >
+                          <animate
+                            attributeName="offset"
+                            dur="1.2s"
+                            keyTimes="0; 0.25; 1"
+                            repeatCount="indefinite"
+                            values="-2; -2; 1"
+                          />
+                        </stop>
+                        <stop
+                          offset="50%"
+                          stop-color="#eee"
+                          stop-opacity="1"
+                        >
+                          <animate
+                            attributeName="offset"
+                            dur="1.2s"
+                            keyTimes="0; 0.25; 1"
+                            repeatCount="indefinite"
+                            values="-1; -1; 2"
+                          />
+                        </stop>
+                        <stop
+                          offset="100%"
+                          stop-color="#f5f6f7"
+                          stop-opacity="1"
+                        >
+                          <animate
+                            attributeName="offset"
+                            dur="1.2s"
+                            keyTimes="0; 0.25; 1"
+                            repeatCount="indefinite"
+                            values="0; 0; 3"
+                          />
+                        </stop>
+                      </lineargradient>
+                    </defs>
+                  </svg>
                 </div>
               </div>
               <div
@@ -259,7 +727,132 @@ Object {
                   Notifications
                 </h1>
                 <hr />
-                <ul />
+                <svg
+                  aria-labelledby="notifications-aria"
+                  height="40"
+                  role="img"
+                  viewBox="0 0 340 84"
+                >
+                  <title
+                    id="notifications-aria"
+                  >
+                    Loading...
+                  </title>
+                  <rect
+                    clip-path="url(#notifications-diff)"
+                    height="100%"
+                    role="presentation"
+                    style="fill: url(#notifications-animated-diff);"
+                    width="100%"
+                    x="0"
+                    y="0"
+                  />
+                  <defs>
+                    <clippath
+                      id="notifications-diff"
+                    >
+                      <rect
+                        height="11"
+                        rx="3"
+                        width="67"
+                        x="0"
+                        y="0"
+                      />
+                      <rect
+                        height="11"
+                        rx="3"
+                        width="140"
+                        x="76"
+                        y="0"
+                      />
+                      <rect
+                        height="11"
+                        rx="3"
+                        width="53"
+                        x="127"
+                        y="48"
+                      />
+                      <rect
+                        height="11"
+                        rx="3"
+                        width="72"
+                        x="187"
+                        y="48"
+                      />
+                      <rect
+                        height="11"
+                        rx="3"
+                        width="100"
+                        x="18"
+                        y="48"
+                      />
+                      <rect
+                        height="11"
+                        rx="3"
+                        width="37"
+                        x="0"
+                        y="71"
+                      />
+                      <rect
+                        height="11"
+                        rx="3"
+                        width="140"
+                        x="18"
+                        y="23"
+                      />
+                      <rect
+                        height="11"
+                        rx="3"
+                        width="173"
+                        x="166"
+                        y="23"
+                      />
+                    </clippath>
+                    <lineargradient
+                      id="notifications-animated-diff"
+                    >
+                      <stop
+                        offset="0%"
+                        stop-color="#f5f6f7"
+                        stop-opacity="1"
+                      >
+                        <animate
+                          attributeName="offset"
+                          dur="1.2s"
+                          keyTimes="0; 0.25; 1"
+                          repeatCount="indefinite"
+                          values="-2; -2; 1"
+                        />
+                      </stop>
+                      <stop
+                        offset="50%"
+                        stop-color="#eee"
+                        stop-opacity="1"
+                      >
+                        <animate
+                          attributeName="offset"
+                          dur="1.2s"
+                          keyTimes="0; 0.25; 1"
+                          repeatCount="indefinite"
+                          values="-1; -1; 2"
+                        />
+                      </stop>
+                      <stop
+                        offset="100%"
+                        stop-color="#f5f6f7"
+                        stop-opacity="1"
+                      >
+                        <animate
+                          attributeName="offset"
+                          dur="1.2s"
+                          keyTimes="0; 0.25; 1"
+                          repeatCount="indefinite"
+                          values="0; 0; 3"
+                        />
+                      </stop>
+                    </lineargradient>
+                  </defs>
+                </svg>
               </div>
             </div>
           </div>
@@ -455,7 +1048,7 @@ Object {
         >
           <div>
             <div
-              class="bg-background text-black font-bold font-raleway h-[400px] w-full mb-5"
+              class="bg-background text-black font-bold font-raleway h-[300px] w-full mb-5"
             >
               <canvas
                 height="150"
@@ -469,50 +1062,518 @@ Object {
               <div
                 class="h-full w-full rounded-md bg-background flex flex-col items-center justify-center shadow-main mb-2"
               >
-                <h2
-                  class="text-4xl font-semibold font-raleway mb-1"
-                />
-                <p
-                  class="text-2xl"
+                <svg
+                  aria-labelledby="buses-loader-aria"
+                  role="img"
+                  viewBox="0 0 340 84"
                 >
-                  Buses
-                </p>
+                  <title
+                    id="buses-loader-aria"
+                  >
+                    Loading...
+                  </title>
+                  <rect
+                    clip-path="url(#buses-loader-diff)"
+                    height="100%"
+                    role="presentation"
+                    style="fill: url(#buses-loader-animated-diff);"
+                    width="100%"
+                    x="0"
+                    y="0"
+                  />
+                  <defs>
+                    <clippath
+                      id="buses-loader-diff"
+                    >
+                      <rect
+                        height="11"
+                        rx="3"
+                        width="67"
+                        x="0"
+                        y="0"
+                      />
+                      <rect
+                        height="11"
+                        rx="3"
+                        width="140"
+                        x="76"
+                        y="0"
+                      />
+                      <rect
+                        height="11"
+                        rx="3"
+                        width="53"
+                        x="127"
+                        y="48"
+                      />
+                      <rect
+                        height="11"
+                        rx="3"
+                        width="72"
+                        x="187"
+                        y="48"
+                      />
+                      <rect
+                        height="11"
+                        rx="3"
+                        width="100"
+                        x="18"
+                        y="48"
+                      />
+                      <rect
+                        height="11"
+                        rx="3"
+                        width="37"
+                        x="0"
+                        y="71"
+                      />
+                      <rect
+                        height="11"
+                        rx="3"
+                        width="140"
+                        x="18"
+                        y="23"
+                      />
+                      <rect
+                        height="11"
+                        rx="3"
+                        width="173"
+                        x="166"
+                        y="23"
+                      />
+                    </clippath>
+                    <lineargradient
+                      id="buses-loader-animated-diff"
+                    >
+                      <stop
+                        offset="0%"
+                        stop-color="#f5f6f7"
+                        stop-opacity="1"
+                      >
+                        <animate
+                          attributeName="offset"
+                          dur="1.2s"
+                          keyTimes="0; 0.25; 1"
+                          repeatCount="indefinite"
+                          values="-2; -2; 1"
+                        />
+                      </stop>
+                      <stop
+                        offset="50%"
+                        stop-color="#eee"
+                        stop-opacity="1"
+                      >
+                        <animate
+                          attributeName="offset"
+                          dur="1.2s"
+                          keyTimes="0; 0.25; 1"
+                          repeatCount="indefinite"
+                          values="-1; -1; 2"
+                        />
+                      </stop>
+                      <stop
+                        offset="100%"
+                        stop-color="#f5f6f7"
+                        stop-opacity="1"
+                      >
+                        <animate
+                          attributeName="offset"
+                          dur="1.2s"
+                          keyTimes="0; 0.25; 1"
+                          repeatCount="indefinite"
+                          values="0; 0; 3"
+                        />
+                      </stop>
+                    </lineargradient>
+                  </defs>
+                </svg>
               </div>
               <div
                 class="h-full w-full bg-background flex flex-col items-center justify-center shadow-main mb-2"
               >
-                <h2
-                  class="text-4xl font-semibold font-raleway mb-1"
-                />
-                <p
-                  class="text-2xl"
+                <svg
+                  aria-labelledby="routes-loader-aria"
+                  role="img"
+                  viewBox="0 0 340 84"
                 >
-                  Routes
-                </p>
+                  <title
+                    id="routes-loader-aria"
+                  >
+                    Loading...
+                  </title>
+                  <rect
+                    clip-path="url(#routes-loader-diff)"
+                    height="100%"
+                    role="presentation"
+                    style="fill: url(#routes-loader-animated-diff);"
+                    width="100%"
+                    x="0"
+                    y="0"
+                  />
+                  <defs>
+                    <clippath
+                      id="routes-loader-diff"
+                    >
+                      <rect
+                        height="11"
+                        rx="3"
+                        width="67"
+                        x="0"
+                        y="0"
+                      />
+                      <rect
+                        height="11"
+                        rx="3"
+                        width="140"
+                        x="76"
+                        y="0"
+                      />
+                      <rect
+                        height="11"
+                        rx="3"
+                        width="53"
+                        x="127"
+                        y="48"
+                      />
+                      <rect
+                        height="11"
+                        rx="3"
+                        width="72"
+                        x="187"
+                        y="48"
+                      />
+                      <rect
+                        height="11"
+                        rx="3"
+                        width="100"
+                        x="18"
+                        y="48"
+                      />
+                      <rect
+                        height="11"
+                        rx="3"
+                        width="37"
+                        x="0"
+                        y="71"
+                      />
+                      <rect
+                        height="11"
+                        rx="3"
+                        width="140"
+                        x="18"
+                        y="23"
+                      />
+                      <rect
+                        height="11"
+                        rx="3"
+                        width="173"
+                        x="166"
+                        y="23"
+                      />
+                    </clippath>
+                    <lineargradient
+                      id="routes-loader-animated-diff"
+                    >
+                      <stop
+                        offset="0%"
+                        stop-color="#f5f6f7"
+                        stop-opacity="1"
+                      >
+                        <animate
+                          attributeName="offset"
+                          dur="1.2s"
+                          keyTimes="0; 0.25; 1"
+                          repeatCount="indefinite"
+                          values="-2; -2; 1"
+                        />
+                      </stop>
+                      <stop
+                        offset="50%"
+                        stop-color="#eee"
+                        stop-opacity="1"
+                      >
+                        <animate
+                          attributeName="offset"
+                          dur="1.2s"
+                          keyTimes="0; 0.25; 1"
+                          repeatCount="indefinite"
+                          values="-1; -1; 2"
+                        />
+                      </stop>
+                      <stop
+                        offset="100%"
+                        stop-color="#f5f6f7"
+                        stop-opacity="1"
+                      >
+                        <animate
+                          attributeName="offset"
+                          dur="1.2s"
+                          keyTimes="0; 0.25; 1"
+                          repeatCount="indefinite"
+                          values="0; 0; 3"
+                        />
+                      </stop>
+                    </lineargradient>
+                  </defs>
+                </svg>
               </div>
               <div
                 class="h-full w-full bg-background flex flex-col items-center justify-center shadow-main mb-2"
               >
-                <h2
-                  class="text-4xl font-semibold font-raleway mb-1"
-                />
-                <p
-                  class="text-2xl"
+                <svg
+                  aria-labelledby="drivers-loader-aria"
+                  role="img"
+                  viewBox="0 0 340 84"
                 >
-                  Drivers
-                </p>
+                  <title
+                    id="drivers-loader-aria"
+                  >
+                    Loading...
+                  </title>
+                  <rect
+                    clip-path="url(#drivers-loader-diff)"
+                    height="100%"
+                    role="presentation"
+                    style="fill: url(#drivers-loader-animated-diff);"
+                    width="100%"
+                    x="0"
+                    y="0"
+                  />
+                  <defs>
+                    <clippath
+                      id="drivers-loader-diff"
+                    >
+                      <rect
+                        height="11"
+                        rx="3"
+                        width="67"
+                        x="0"
+                        y="0"
+                      />
+                      <rect
+                        height="11"
+                        rx="3"
+                        width="140"
+                        x="76"
+                        y="0"
+                      />
+                      <rect
+                        height="11"
+                        rx="3"
+                        width="53"
+                        x="127"
+                        y="48"
+                      />
+                      <rect
+                        height="11"
+                        rx="3"
+                        width="72"
+                        x="187"
+                        y="48"
+                      />
+                      <rect
+                        height="11"
+                        rx="3"
+                        width="100"
+                        x="18"
+                        y="48"
+                      />
+                      <rect
+                        height="11"
+                        rx="3"
+                        width="37"
+                        x="0"
+                        y="71"
+                      />
+                      <rect
+                        height="11"
+                        rx="3"
+                        width="140"
+                        x="18"
+                        y="23"
+                      />
+                      <rect
+                        height="11"
+                        rx="3"
+                        width="173"
+                        x="166"
+                        y="23"
+                      />
+                    </clippath>
+                    <lineargradient
+                      id="drivers-loader-animated-diff"
+                    >
+                      <stop
+                        offset="0%"
+                        stop-color="#f5f6f7"
+                        stop-opacity="1"
+                      >
+                        <animate
+                          attributeName="offset"
+                          dur="1.2s"
+                          keyTimes="0; 0.25; 1"
+                          repeatCount="indefinite"
+                          values="-2; -2; 1"
+                        />
+                      </stop>
+                      <stop
+                        offset="50%"
+                        stop-color="#eee"
+                        stop-opacity="1"
+                      >
+                        <animate
+                          attributeName="offset"
+                          dur="1.2s"
+                          keyTimes="0; 0.25; 1"
+                          repeatCount="indefinite"
+                          values="-1; -1; 2"
+                        />
+                      </stop>
+                      <stop
+                        offset="100%"
+                        stop-color="#f5f6f7"
+                        stop-opacity="1"
+                      >
+                        <animate
+                          attributeName="offset"
+                          dur="1.2s"
+                          keyTimes="0; 0.25; 1"
+                          repeatCount="indefinite"
+                          values="0; 0; 3"
+                        />
+                      </stop>
+                    </lineargradient>
+                  </defs>
+                </svg>
               </div>
               <div
                 class="h-full w-full bg-background flex flex-col items-center justify-center shadow-main mb-2"
               >
-                <h2
-                  class="text-4xl font-semibold font-raleway mb-1"
-                />
-                <p
-                  class="text-2xl"
+                <svg
+                  aria-labelledby="operator-loader-aria"
+                  role="img"
+                  viewBox="0 0 340 84"
                 >
-                  Operators
-                </p>
+                  <title
+                    id="operator-loader-aria"
+                  >
+                    Loading...
+                  </title>
+                  <rect
+                    clip-path="url(#operator-loader-diff)"
+                    height="100%"
+                    role="presentation"
+                    style="fill: url(#operator-loader-animated-diff);"
+                    width="100%"
+                    x="0"
+                    y="0"
+                  />
+                  <defs>
+                    <clippath
+                      id="operator-loader-diff"
+                    >
+                      <rect
+                        height="11"
+                        rx="3"
+                        width="67"
+                        x="0"
+                        y="0"
+                      />
+                      <rect
+                        height="11"
+                        rx="3"
+                        width="140"
+                        x="76"
+                        y="0"
+                      />
+                      <rect
+                        height="11"
+                        rx="3"
+                        width="53"
+                        x="127"
+                        y="48"
+                      />
+                      <rect
+                        height="11"
+                        rx="3"
+                        width="72"
+                        x="187"
+                        y="48"
+                      />
+                      <rect
+                        height="11"
+                        rx="3"
+                        width="100"
+                        x="18"
+                        y="48"
+                      />
+                      <rect
+                        height="11"
+                        rx="3"
+                        width="37"
+                        x="0"
+                        y="71"
+                      />
+                      <rect
+                        height="11"
+                        rx="3"
+                        width="140"
+                        x="18"
+                        y="23"
+                      />
+                      <rect
+                        height="11"
+                        rx="3"
+                        width="173"
+                        x="166"
+                        y="23"
+                      />
+                    </clippath>
+                    <lineargradient
+                      id="operator-loader-animated-diff"
+                    >
+                      <stop
+                        offset="0%"
+                        stop-color="#f5f6f7"
+                        stop-opacity="1"
+                      >
+                        <animate
+                          attributeName="offset"
+                          dur="1.2s"
+                          keyTimes="0; 0.25; 1"
+                          repeatCount="indefinite"
+                          values="-2; -2; 1"
+                        />
+                      </stop>
+                      <stop
+                        offset="50%"
+                        stop-color="#eee"
+                        stop-opacity="1"
+                      >
+                        <animate
+                          attributeName="offset"
+                          dur="1.2s"
+                          keyTimes="0; 0.25; 1"
+                          repeatCount="indefinite"
+                          values="-1; -1; 2"
+                        />
+                      </stop>
+                      <stop
+                        offset="100%"
+                        stop-color="#f5f6f7"
+                        stop-opacity="1"
+                      >
+                        <animate
+                          attributeName="offset"
+                          dur="1.2s"
+                          keyTimes="0; 0.25; 1"
+                          repeatCount="indefinite"
+                          values="0; 0; 3"
+                        />
+                      </stop>
+                    </lineargradient>
+                  </defs>
+                </svg>
               </div>
             </div>
             <div
@@ -524,7 +1585,132 @@ Object {
                 Notifications
               </h1>
               <hr />
-              <ul />
+              <svg
+                aria-labelledby="notifications-aria"
+                height="40"
+                role="img"
+                viewBox="0 0 340 84"
+              >
+                <title
+                  id="notifications-aria"
+                >
+                  Loading...
+                </title>
+                <rect
+                  clip-path="url(#notifications-diff)"
+                  height="100%"
+                  role="presentation"
+                  style="fill: url(#notifications-animated-diff);"
+                  width="100%"
+                  x="0"
+                  y="0"
+                />
+                <defs>
+                  <clippath
+                    id="notifications-diff"
+                  >
+                    <rect
+                      height="11"
+                      rx="3"
+                      width="67"
+                      x="0"
+                      y="0"
+                    />
+                    <rect
+                      height="11"
+                      rx="3"
+                      width="140"
+                      x="76"
+                      y="0"
+                    />
+                    <rect
+                      height="11"
+                      rx="3"
+                      width="53"
+                      x="127"
+                      y="48"
+                    />
+                    <rect
+                      height="11"
+                      rx="3"
+                      width="72"
+                      x="187"
+                      y="48"
+                    />
+                    <rect
+                      height="11"
+                      rx="3"
+                      width="100"
+                      x="18"
+                      y="48"
+                    />
+                    <rect
+                      height="11"
+                      rx="3"
+                      width="37"
+                      x="0"
+                      y="71"
+                    />
+                    <rect
+                      height="11"
+                      rx="3"
+                      width="140"
+                      x="18"
+                      y="23"
+                    />
+                    <rect
+                      height="11"
+                      rx="3"
+                      width="173"
+                      x="166"
+                      y="23"
+                    />
+                  </clippath>
+                  <lineargradient
+                    id="notifications-animated-diff"
+                  >
+                    <stop
+                      offset="0%"
+                      stop-color="#f5f6f7"
+                      stop-opacity="1"
+                    >
+                      <animate
+                        attributeName="offset"
+                        dur="1.2s"
+                        keyTimes="0; 0.25; 1"
+                        repeatCount="indefinite"
+                        values="-2; -2; 1"
+                      />
+                    </stop>
+                    <stop
+                      offset="50%"
+                      stop-color="#eee"
+                      stop-opacity="1"
+                    >
+                      <animate
+                        attributeName="offset"
+                        dur="1.2s"
+                        keyTimes="0; 0.25; 1"
+                        repeatCount="indefinite"
+                        values="-1; -1; 2"
+                      />
+                    </stop>
+                    <stop
+                      offset="100%"
+                      stop-color="#f5f6f7"
+                      stop-opacity="1"
+                    >
+                      <animate
+                        attributeName="offset"
+                        dur="1.2s"
+                        keyTimes="0; 0.25; 1"
+                        repeatCount="indefinite"
+                        values="0; 0; 3"
+                      />
+                    </stop>
+                  </lineargradient>
+                </defs>
+              </svg>
             </div>
           </div>
         </div>
