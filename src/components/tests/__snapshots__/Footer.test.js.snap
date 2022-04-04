@@ -15,7 +15,9 @@ exports[`Footer should render Footer 1`] = `
     <h3
       className="lg:ml-8 xl:ml-20 mt-6 xl:mt-2"
     >
-      ©copyright Codebandits 2022
+      ©
+      copyrights
+       Codebandits 2022
     </h3>
   </div>
   <div
@@ -33,14 +35,14 @@ exports[`Footer should render Footer 1`] = `
       href="/"
       onClick={[Function]}
     >
-      Terms of use
+      terms
     </a>
     <a
       className="xl:ml-28 lg:ml-12 mt-2 text-md hover:font-bold"
       href="/login"
       onClick={[Function]}
     >
-      Administration
+      administration
     </a>
   </div>
 </footer>
