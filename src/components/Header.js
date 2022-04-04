@@ -1,4 +1,5 @@
 import React, { forwardRef, useState } from 'react';
+import { useTranslation } from 'react-i18next';
 import { useSelector } from 'react-redux';
 import { Link } from 'react-router-dom';
 import phantom from '../assets/phantom.png';
@@ -22,6 +23,7 @@ const Header = forwardRef(({ open, setOpen }, ref) => {
       setIcon(<Burger />);
     }
   };
+  const { t } = useTranslation();
   return (
     <div className="flex bg-background border-b-4 pb-4 sticky top-0 z-20">
       <div>
@@ -40,10 +42,10 @@ const Header = forwardRef(({ open, setOpen }, ref) => {
             styles="bg-primary hover:bg-hover text-white rounded-xl mt-5 ml-6"
           />
         </Link>
-      
+
         <Link to="/tracking-page">
           <Button
-            name="Track Bus"
+            name={t('track_bus')}
             styles="border border-primary bg-background hover:bg-hover2 text-primary rounded-xl mt-5 ml-6 px-6"
           />
         </Link>

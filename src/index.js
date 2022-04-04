@@ -1,7 +1,8 @@
 import React, { Suspense } from 'react';
 import ReactDOM from 'react-dom';
-import SkeletonScreen from './components/SkeletonUIs/SkeletonScreen.js';
 import LandPageSkeleton from './components/SkeletonUIs/LandPageSkelUI.js';
+import SkeletonScreen from './components/SkeletonUIs/SkeletonScreen.js';
+import './i18n.js';
 
 const App = React.lazy(() => import('./App.js'));
 
