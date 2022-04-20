@@ -20,9 +20,9 @@ exports[`Check roles Return empty for for the operator 1`] = `
 
 exports[`Check roles Return empty for for the operator 2`] = `""`;
 
-exports[`Check roles Return the element for the admin 1`] = `<Roles />`;
+exports[`Check roles Return the element for the admin 1`] = `""`;
 
-exports[`Check roles Return the element for the operator 1`] = `<Roles />`;
+exports[`Check roles Return the element for the operator 1`] = `""`;
 
 exports[`Containers Render the dashboard routes 1`] = `
 Object {

@@ -50,7 +50,8 @@
     ],
     "coveragePathIgnorePatterns": [
       "<rootDir>/src/index.js",
-      "<rootDir>/src/server.js"
+      "<rootDir>/src/server.js",
+      "<rootDir>/src/utils/Api.js"
     ],
     "collectCoverage": true,
     "testEnvironment": "jsdom"

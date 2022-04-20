@@ -56,6 +56,7 @@ function ManageDropdown({ row }) {
           setloading(false);
           selectRef.current.innerHTML = `<b className="deleted mx-auto font-bold">Deleted</>`;
         } catch (error) {
+          /* nyc ignore next 3 */
           toast('Something went wrong');
           setloading(false);
         }
@@ -87,7 +88,7 @@ function ManageDropdown({ row }) {
           <select
             onChange={handleChange}
             name=""
-            id=""
+            id="select"
             role="select"
             className="py-1 px-1 font-rale font-bold bg-transparent border rounded-sm"
           >

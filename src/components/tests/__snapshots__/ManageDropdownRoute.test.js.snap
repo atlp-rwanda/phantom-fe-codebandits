@@ -10,7 +10,7 @@ Object {
       >
         <select
           class="py-1 px-3 font-rale font-bold bg-transparent border rounded-sm"
-          id=""
+          id="select"
           name=""
           role="select"
         >
@@ -47,7 +47,7 @@ Object {
     >
       <select
         class="py-1 px-3 font-rale font-bold bg-transparent border rounded-sm"
-        id=""
+        id="select"
         name=""
         role="select"
       >
@@ -137,7 +137,7 @@ exports[`ManageDropdownRoute component should render the ManageDropdownRoute com
 >
   <select
     className="py-1 px-3 font-rale font-bold bg-transparent border rounded-sm"
-    id=""
+    id="select"
     name=""
     onChange={[Function]}
     role="select"

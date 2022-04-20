@@ -36,7 +36,6 @@ function ManageDropdownRoute({ row }) {
       setloading(false);
 
       if (selectRef.current) {
-        console.log(selectRef.current);
         selectRef.current.innerHTML = `<b className="deleted mx-auto font-bold">Deleted</>`;
       }
     } catch (error) {
@@ -70,7 +69,7 @@ function ManageDropdownRoute({ row }) {
           role="select"
           onChange={handleChange}
           name=""
-          id=""
+          id="select"
           className="py-1 px-3 font-rale font-bold bg-transparent border rounded-sm"
         >
           <option hidden={true}> Manage </option>
