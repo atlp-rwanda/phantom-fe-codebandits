@@ -10,6 +10,7 @@ export const FormComponent = ({ type, inputs = [], callback, redirect }) => {
   const {
     register,
     handleSubmit,
+    setError,
     formState: { errors }
   } = useForm();
 

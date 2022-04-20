@@ -37,21 +37,8 @@ describe('Manage Dropdown', () => {
   spyOnUseSelector.mockReturnValue({
     authenticated: true,
     user: {
-      id: 2,
       firstName: 'Fabrice',
-      email: 'admin@me.com',
-      roles: {
-        name: 'admin',
-        permissions: [
-          {
-            driver: ['get', 'create', 'update', 'delete'],
-            routes: ['get', 'create', 'update', 'delete'],
-            buses: ['get', 'create', 'update', 'delete'],
-            operator: ['get', 'create', 'update', 'delete'],
-            company: ['get', 'create', 'update', 'delete']
-          }
-        ]
-      }
+      role: 'admin'
     }
   });
 
@@ -65,7 +52,7 @@ describe('Manage Dropdown', () => {
     const elem = render(
       <ProviderWrapper children={<ManageDropdown row={rowData} />} />
     );
-    fireEvent.change(await screen.getByRole('select'), {
+    fireEvent.change(screen.getByTestId('select'), {
       target: {
         value: 'edit'
       }
@@ -76,7 +63,7 @@ describe('Manage Dropdown', () => {
     const elem = render(
       <ProviderWrapper children={<ManageDropdown row={rowData} />} />
     );
-    fireEvent.change(await screen.getByRole('select'), {
+    fireEvent.change(screen.getByTestId('select'), {
       target: {
         value: 'assign'
       }
@@ -87,7 +74,7 @@ describe('Manage Dropdown', () => {
     const elem = render(
       <ProviderWrapper children={<ManageDropdown row={rowData} />} />
     );
-    fireEvent.change(await screen.getByRole('select'), {
+    fireEvent.change(screen.getByTestId('select'), {
       target: {
         value: 'perm'
       }
@@ -104,11 +91,13 @@ describe('Manage Dropdown', () => {
         }
       />
     );
-    fireEvent.change(await screen.getByRole('select'), {
+    fireEvent.change(screen.getByTestId('select'), {
       target: {
         value: 'delete'
       }
     });
+    expect(elem).toMatchSnapshot();
+    fireEvent.click(screen.getByText(/Yes, delete!/));
     expect(elem).toMatchSnapshot();
   });
   it('Should render the dropdown with change bus', async () => {
@@ -116,7 +105,7 @@ describe('Manage Dropdown', () => {
     const elem = render(
       <ProviderWrapper children={<ManageDropdown row={rowData} />} />
     );
-    fireEvent.change(await screen.getByRole('select'), {
+    fireEvent.change(screen.getByTestId('select'), {
       target: {
         value: 'nothing'
       }

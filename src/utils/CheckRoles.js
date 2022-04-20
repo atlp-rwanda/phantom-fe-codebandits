@@ -8,11 +8,12 @@ function CheckRole({ children, role, type }) {
   if (!authenticated) {
     return '';
   }
-  if (user.roles.name == 'admin') {
+  if (user.role === 'admin') {
     return children;
-  } else if (role.includes(user.roles.name)) {
+  } else if (role.includes(user.role)) {
+    /* istanbul ignore next */
     return children;
-  } else if (type == 'page' && !role.includes(user.roles.name)) {
+  } else if (type === 'page' && !role.includes(user.role)) {
     return (
       <div className="flex flex-col items-center justify-center">
         <h3 className="font-rale font-bold">

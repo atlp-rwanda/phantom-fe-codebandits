@@ -26,6 +26,7 @@ const Drivers = () => {
       </Suspense>
     </div>
   );
-};RouteTable
+};
+RouteTable;
 
 export default Drivers;
