@@ -33,29 +33,29 @@ describe('function testing', () => {
       expect(await wrapper).toMatchSnapshot();
     });
   });
-  it('Should return a errors in new password', async () => {
-    await act(async () => {
-      wrapper = mount(
-        <BrowserRouter>
-          <ResetNewPassword handleEmail={mockHandleEmail} />
-        </BrowserRouter>
-      );
-      wrapper.simulate('change', {
-        target: {
-          name: 'password',
-          value: '123'
-        }
-      });
-      wrapper.simulate('change', {
-        target: {
-          name: 'password2',
-          value: '123'
-        }
-      });
-      wrapper.find('form').simulate('submit');
-      expect(await wrapper).toMatchSnapshot();
-    });
-  });
+  // it('Should return a errors in new password', async () => {
+  //   await act(async () => {
+  //     wrapper = mount(
+  //       <BrowserRouter>
+  //         <ResetNewPassword handleEmail={mockHandleEmail} />
+  //       </BrowserRouter>
+  //     );
+  //     wrapper.simulate('change', {
+  //       target: {
+  //         name: 'password',
+  //         value: '123'
+  //       }
+  //     });
+  //     wrapper.simulate('change', {
+  //       target: {
+  //         name: 'password2',
+  //         value: '123'
+  //       }
+  //     });
+  //     wrapper.find('form').simulate('submit');
+  //     expect(await wrapper).toMatchSnapshot();
+  //   });
+  // });
 });
 
 describe('Reset page layout', () => {
