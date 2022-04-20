@@ -1,4 +1,4 @@
-import axios from '@utils/Api.js';
+import { axiosBase as axios } from '@utils/Api.js';
 import React, { useEffect, useState } from 'react';
 import { useForm } from 'react-hook-form';
 import { useDispatch } from 'react-redux';
@@ -24,24 +24,16 @@ const Login = () => {
   const onValid = async (data) => {
     setLoading(true);
     try {
-      const response = await axios.get('/users', {
-        params: {
-          email: data.email
-        }
+      const response = await axios.post('/accounts/login', data);
+      dispatch(loginUser(response.data.data));
+      toast(`Welcome ${response.data.data.first_name}`, {
+        type: 'info'
       });
-      if (response.data.length == 0) {
-        setErr('Invalid credentials');
-        setLoading(false);
-        return toast('Invalid credentials', { type: 'error' });
-      } else {
-        dispatch(loginUser(response.data[0]));
-        toast(response.data[0].name, { type: 'success' });
-        setLoading(false);
-        navigate(from);
-      }
+      navigate(from);
     } catch (error) {
-      setLoading(true);
-      toast('Something went wrong on our side');
+      setErr(error?.response?.data?.data?.message || error.message);
+    } finally {
+      setLoading(false);
     }
   };
 
@@ -86,7 +78,7 @@ const Login = () => {
                 </div>
               )}
             </p>
-            <p className="font-bold text-sm py-1">{err}</p>
+            <p className="font-bold capitalize text-red text-sm py-1">{err}</p>
             <label
               htmlFor="email"
               className="capitalize mb-1.5 font-semibold text-sm required"
@@ -144,10 +136,9 @@ const Login = () => {
             ) : (
               <>
                 {loading ? (
-                  <div className='mx-auto'>
-                     <ButtonLoading name={'sending...'} />
+                  <div className="mx-auto">
+                    <ButtonLoading name={'sending...'} />
                   </div>
-                 
                 ) : (
                   <button
                     id="login-btn"

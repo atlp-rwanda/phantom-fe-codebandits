@@ -24,18 +24,8 @@ Object {
           >
              View 
           </option>
-          <option
-            class="cursor-pointer"
-            value="edit"
-          >
-             Edit 
-          </option>
-          <option
-            class="cursor-pointer"
-            value="deleteRoute"
-          >
-             Delete 
-          </option>
+          
+          
            
         </select>
       </div>
@@ -61,18 +51,8 @@ Object {
         >
            View 
         </option>
-        <option
-          class="cursor-pointer"
-          value="edit"
-        >
-           Edit 
-        </option>
-        <option
-          class="cursor-pointer"
-          value="deleteRoute"
-        >
-           Delete 
-        </option>
+        
+        
          
       </select>
     </div>
@@ -152,22 +132,8 @@ exports[`ManageDropdownRoute component should render the ManageDropdownRoute com
     >
        View 
     </option>
-    <option
-      className="cursor-pointer"
-      value="edit"
-    >
-       
-      Edit
-       
-    </option>
-    <option
-      className="cursor-pointer"
-      value="deleteRoute"
-    >
-       
-      Delete
-       
-    </option>
+    
+    
      
   </select>
 </div>

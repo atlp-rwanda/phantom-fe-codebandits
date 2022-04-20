@@ -20,6 +20,7 @@ export const authReducer = createReducer(initialState, (builder) => {
           user: action.payload
         })
       );
+      localStorage.setItem('token', action.payload.access_token);
     })
     .addCase(logoutUser, (state, action) => {
       state.authenticated = false;

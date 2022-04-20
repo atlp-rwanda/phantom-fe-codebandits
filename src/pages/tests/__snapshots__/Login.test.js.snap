@@ -33,7 +33,7 @@ exports[`Login snapshot test should render Login 1`] = `
           className="font-bold text-sm font-raleway"
         />
         <p
-          className="font-bold text-sm py-1"
+          className="font-bold capitalize text-red text-sm py-1"
         >
           
         </p>
