@@ -78,3 +78,9 @@ export default axios.create({
     'Content-Type': 'application/json'
   }
 });
+
+export const axiosBase = axios.create({
+  baseURL: 'https://phantom-codebandits.herokuapp.com/api/v1',
+  withCredentials: false,
+  headers: { 'Content-Type': 'application/json' }
+});

@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { useForm } from 'react-hook-form';
 import { Link, useNavigate } from 'react-router-dom';
 import { toast } from 'react-toastify';
-import Sleep from '../../utils/Sleep.js';
+import { axiosBase as axios } from '../../utils/Api.js';
 import { Button } from './AccountRouter.js';
 
 const img =
@@ -22,17 +22,20 @@ function ResetFormPage() {
     mode: 'onChange'
   });
 
-  const handleEmail = () => {
-    Sleep(3000).then(() => {
-      toast('You account was found');
+  const handleEmail = async (data) => {
+    try {
+      await axios.post('/accounts/forgot-password', data);
+      navigate('/accounts/reset-email', { state: { email: data.email } });
+    } catch (error) {
+      toast(error?.response?.data?.data || error.message, { type: 'error' });
+    } finally {
       setloading(false);
-      navigate('/accounts/reset-email/abcd-1234-ghyi-567/123456');
-    });
+    }
   };
 
-  const onSubmit = () => {
+  const onSubmit = (data) => {
     setloading(true);
-    handleEmail();
+    handleEmail(data);
   };
 
   return (

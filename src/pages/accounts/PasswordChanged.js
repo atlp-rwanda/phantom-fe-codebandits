@@ -10,7 +10,7 @@ function PasswordChanged() {
       <hr />
       <div className="text-left">
         <p className="py-1 mb-2  text-sm">
-          Dear <b>Fabrice</b>, you got yourself a new password.
+          Dear, you got yourself a new password.
         </p>
         <Link
           to="/login"
