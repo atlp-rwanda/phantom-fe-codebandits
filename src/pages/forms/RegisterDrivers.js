@@ -5,19 +5,15 @@ import { toast } from 'react-toastify';
 import { driverInputs } from './FormInputs.js';
 
 const registerDriverToDB = async (driverInfo) => {
-  const defaultValues = { assigned_bus: null, assigned_route: null };
-  const fullName = driverInfo.firstname + ' ' + driverInfo.lastname;
-  delete driverInfo.firstname;
-  delete driverInfo.lastname;
-  const fullDriverInfo = JSON.stringify(
-    Object.assign({}, driverInfo, { name: fullName }, defaultValues)
-  );
   try {
-    await axios.post('/drivers', fullDriverInfo);
+    console.log(driverInfo);
+    await axios.post('/drivers', driverInfo);
     toast('Driver registered successful', { type: 'success' });
+    return response?.data;
   } catch (error) {
-    toast('error occured' + error.message, { type: 'error' });
-    return;
+    console.log(error);
+    toast(error?.response?.data?.message || error.message, { type: 'error' });
+    throw error;
   }
 };
 function RegisterDriver() {

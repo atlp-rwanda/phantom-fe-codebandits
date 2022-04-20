@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { useForm } from 'react-hook-form';
 import { useNavigate } from 'react-router-dom';
+import { toast } from 'react-toastify';
 import { ButtonA as Button, ButtonLoading } from './Button.js';
 import LabelComponent from './LabelComponent.js';
 
@@ -15,11 +16,23 @@ export const FormComponent = ({ type, inputs = [], callback, redirect }) => {
   } = useForm();
 
   const onValid = async (data) => {
-    setloading(true);
-    callback(data).then(() => {
-      setloading(false);
+    try {
+      setloading(true);
+      const response = await callback(data);
       navigate(redirect);
-    });
+      return;
+    } catch (error) {
+      toast(error?.response?.data || error.message);
+      const data = error.response.data;
+      console.log(data);
+      if (data.data.length > 0) {
+        Object.keys(data.data).forEach((key) => {
+          setError(key, data.data[key]);
+        });
+      }
+    } finally {
+      setloading(false);
+    }
   };
   const inpuStyles =
     'appearance-none border font-raleway rounded w-full py-2 px-3 text-grey-darker bg-gray-200 text-md outline-hidden';

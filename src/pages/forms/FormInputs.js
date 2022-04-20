@@ -5,7 +5,7 @@ export const driverInputs = [
       pattern: /^[a-zA-Z][a-zA-Z ]{3,32}$/i,
       labelName: 'First name',
       type: 'text',
-      name: 'firstname',
+      name: 'firstName',
       message: 'A valid firstname is required',
       placeholder: 'Vedaste'
     },
@@ -14,7 +14,7 @@ export const driverInputs = [
       pattern: /^[a-zA-Z][a-zA-Z ]{3,32}$/i,
       labelName: 'Last name',
       type: 'text',
-      name: 'lastname',
+      name: 'lastName',
       message: 'A valid last name is required',
       placeholder: 'Hategekimana'
     }
@@ -69,7 +69,7 @@ export const driverInputs = [
       id: 'nationalid',
       pattern: /^[1-3](19|20)\d{2}[7-8]\d{7}[0-9]\d{2}$/,
       labelName: 'National ID',
-      name: 'nationalid',
+      name: 'nationalID',
       message: 'A valid national ID is required',
       placeholder: '1 119950030880 0 40'
     },
@@ -90,7 +90,7 @@ export const operatorInputs = driverInputs.slice().fill(
       id: 'nationalid',
       pattern: /^[1-3](19|20)\d{2}[7-8]\d{7}[0-9]\d{2}$/,
       labelName: 'National ID',
-      name: 'nationalid',
+      name: 'nationalID',
       message: 'A valid national ID is required',
       placeholder: '1 119950030880 0 40'
     }

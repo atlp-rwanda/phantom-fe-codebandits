@@ -1,4 +1,5 @@
 import { createAction, createReducer } from '@reduxjs/toolkit';
+import { axiosBase as axios } from '../../utils/Api.js';
 
 export const loginUser = createAction('auth/login');
 export const logoutUser = createAction('auth/logout');
@@ -25,6 +26,8 @@ export const authReducer = createReducer(initialState, (builder) => {
     .addCase(logoutUser, (state, action) => {
       state.authenticated = false;
       state.user = null;
+      axios.get('/accounts/logout');
       localStorage.removeItem('auth');
+      localStorage.removeItem('token');
     });
 });

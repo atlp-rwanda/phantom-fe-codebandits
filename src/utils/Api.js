@@ -2,10 +2,10 @@ import axios from 'axios';
 
 const host = `${window.location.protocol}//${window.location.host}`;
 
-const base = 'https://phantom-be-codebandits-staging.herokuapp.com/api/v1';
+const base = 'https://phantom-codebandits.herokuapp.com/api/v1';
 const axiosBase = axios.create({
   baseURL: base,
-  withCredentials: false,
+  withCredentials: true,
   headers: {
     'Content-Type': 'application/json',
     'accept-language': 'en',
