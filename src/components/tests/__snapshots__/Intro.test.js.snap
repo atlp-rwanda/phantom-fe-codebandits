@@ -9,25 +9,25 @@ exports[`Intro should render Intro 1`] = `
       className="flex flex-col text-3xl md:text-5xl xl:text-5xl font-raleway font-extrabold mx-12 xl:mx-28 mt-24 md:mt-32 xl:mt-32"
     >
       <span>
-        Track bus location,
+        hero_head_1
       </span>
       <span
         className="md:ml-10 ml-4"
       >
-        Save your time.
+        hero_head_2
       </span>
     </h1>
     <div
       className="flex flex-col text-sm md:text-xl xl:text-base mx-20 md:ml-32 xl:ml-52 mt-10"
     >
       <p>
-        Check the location of the buses
+        hero_text_1
       </p>
       <div>
         <p
           className="ml-4"
         >
-          on their respective routes
+          hero_text_2
         </p>
       </div>
     </div>
@@ -40,7 +40,7 @@ exports[`Intro should render Intro 1`] = `
           className="bg-primary hover:bg-hover text-white rounded-3xl mt-12 px-12 xl:px-12 py-2 ml-28 md:ml-48 xl:ml-64 rounded-xl py-2 text-base md:text-sm px-5"
           type="submit"
         >
-          Start
+          hero_btn
         </button>
       </div>
     </a>
