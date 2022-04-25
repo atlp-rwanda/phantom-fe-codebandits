@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { toast } from 'react-toastify';
 import camera from '../../assets/camera-solid.svg';
@@ -6,6 +6,7 @@ import { ButtonA as Button } from '../../components/Button.js';
 import Input from '../../components/Input.js';
 import profileImg from '../../images/profileImg.jpg';
 import { editInfo, saveInfo } from '../../redux/reducers/profileReducer.js';
+import { axiosBase } from '../../utils/Api.js';
 
 const Profile = ({
   firstName,
@@ -38,6 +39,13 @@ const Profile = ({
     };
     reader.readAsDataURL(file);
   };
+  useEffect(() => {
+    const fetchData = async () => {
+      const response = await axiosBase.get('/accounts/refresh');
+      const res = await axiosBase.get('/drivers');
+    };
+    fetchData();
+  }, []);
 
   return (
     <div className="bg-white rounded  w-full shadow-md min-h-[70vh] mt-6 pb-10">

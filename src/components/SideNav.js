@@ -43,9 +43,9 @@ const SideNav = ({ styles }) => {
           <div className="text-center font-black text-lg">
             <h1 className="font-raleway">
               <span className="capitalize font-bold text-primary">
-                {user?.roles?.name}:{' '}
+                {user?.role}:{' '}
               </span>
-              {user?.firstName}
+              {user?.first_name}
             </h1>
           </div>
         </div>

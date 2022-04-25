@@ -109,7 +109,7 @@ Object {
               >
                 <select
                   class="py-1 px-1 font-rale font-bold bg-transparent border rounded-sm"
-                  id=""
+                  id="select"
                   name=""
                   role="select"
                 >
@@ -168,7 +168,7 @@ Object {
               >
                 <select
                   class="py-1 px-1 font-rale font-bold bg-transparent border rounded-sm"
-                  id=""
+                  id="select"
                   name=""
                   role="select"
                 >
@@ -300,7 +300,7 @@ Object {
             >
               <select
                 class="py-1 px-1 font-rale font-bold bg-transparent border rounded-sm"
-                id=""
+                id="select"
                 name=""
                 role="select"
               >
@@ -359,7 +359,7 @@ Object {
             >
               <select
                 class="py-1 px-1 font-rale font-bold bg-transparent border rounded-sm"
-                id=""
+                id="select"
                 name=""
                 role="select"
               >
