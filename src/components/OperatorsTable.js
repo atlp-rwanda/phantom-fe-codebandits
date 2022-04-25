@@ -1,26 +1,25 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { useGlobalFilter, usePagination, useTable } from 'react-table';
+import { useSelector } from 'react-redux';
 import CheckRole from '../utils/CheckRoles.js';
 import Button from './Button.js';
+import ManageDropDownOperator from './ManageDropDownOperator.js';
 import SearchFilter from './SearchFilter.js';
 import { TableColumns } from './tableColumns.js';
-import ManageDropdown from './ManageDropdown.js';
-import { LinkBus } from './LinkBus.js';
 
-const DriversTable = ({ data }) => {
-  const cellValue = ({ row }) => <LinkBus row={row} />;
-  const manageCellValue = ({ row }) => <ManageDropdown row={row} />;
+const OperatorsTable = ({ data }) => {
+  const { user, authenticated } = useSelector((state) => state?.auth);
+  const manageCellValue = ({ row }) => (
+    <ManageDropDownOperator user={user} row={row} />
+  );
   const columns = TableColumns(
-    'License',
-    'license',
-    'Assigned Bus',
-    'assigned_bus',
+    'Mobile Number',
+    'mobileNumber',
+    'Company',
+    'company',
     manageCellValue
   );
-
-  columns[3].Cell = cellValue;
-
   const {
     getTableProps,
     getTableBodyProps,
@@ -54,18 +53,18 @@ const DriversTable = ({ data }) => {
         <SearchFilter
           filter={globalFilter}
           setfilter={setGlobalFilter}
-          placeholder="Search Drivers..."
+          placeholder="Search Operators..."
         />
         <CheckRole
           children={
-            <Link to="driver/register">
+            <Link to="operator/register">
               <Button
                 name="Register new"
                 styles="bg-primary text-white py-1 text-xs"
               />
             </Link>
           }
-          role={['operator']}
+          role={['admin']}
         />
       </section>
       <table
@@ -184,4 +183,4 @@ const DriversTable = ({ data }) => {
   );
 };
 
-export default DriversTable;
+export default OperatorsTable;
