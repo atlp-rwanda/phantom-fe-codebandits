@@ -44,26 +44,30 @@ exports[`App test  Should render app 1`] = `
             className="border border-primary bg-background hover:bg-hover2 text-primary rounded-xl mt-5 ml-6 px-6 rounded-xl py-2 text-base md:text-sm px-5"
             type="submit"
           >
-            Track Bus
+            track_bus
           </button>
         </div>
       </a>
       <div>
         <select
           className="bg-background border outline-none md:ml-6 lg:ml-6 xl:ml-6 mt-5 flex py-2 px-4 text-sm hover:font-bold"
+          onChange={[Function]}
         >
           <option
             className=" border-none bg-background w-full cursor-pointer"
+            value="en"
           >
             English
           </option>
           <option
             className=" border-none bg-background w-full cursor-pointer"
+            value="fr"
           >
             French
           </option>
           <option
             className=" border-none bg-background cursor-pointer"
+            value="kn"
           >
             Kinyarwanda
           </option>
@@ -103,25 +107,25 @@ exports[`App test  Should render app 1`] = `
             className="flex flex-col text-3xl md:text-5xl xl:text-5xl font-raleway font-extrabold mx-12 xl:mx-28 mt-24 md:mt-32 xl:mt-32"
           >
             <span>
-              Track bus location,
+              hero_head_1
             </span>
             <span
               className="md:ml-10 ml-4"
             >
-              Save your time.
+              hero_head_2
             </span>
           </h1>
           <div
             className="flex flex-col text-sm md:text-xl xl:text-base mx-20 md:ml-32 xl:ml-52 mt-10"
           >
             <p>
-              Check the location of the buses
+              hero_text_1
             </p>
             <div>
               <p
                 className="ml-4"
               >
-                on their respective routes
+                hero_text_2
               </p>
             </div>
           </div>
@@ -134,7 +138,7 @@ exports[`App test  Should render app 1`] = `
                 className="bg-primary hover:bg-hover text-white rounded-3xl mt-12 px-12 xl:px-12 py-2 ml-28 md:ml-48 xl:ml-64 rounded-xl py-2 text-base md:text-sm px-5"
                 type="submit"
               >
-                Start
+                hero_btn
               </button>
             </div>
           </a>
@@ -154,7 +158,7 @@ exports[`App test  Should render app 1`] = `
         <h1
           className="text-4xl font-raleway font-extrabold mt-28 xl:mt-44 mb-10 text-center"
         >
-          How this Works
+          how_it_work
         </h1>
         <div
           className=" flex flex-col lg:flex-row xl:flex-row mt-12 mb-32"
@@ -170,12 +174,12 @@ exports[`App test  Should render app 1`] = `
             <h3
               className="font-raley mt-2 font-extrabold text-sm"
             >
-              1. Start
+              1. start
             </h3>
             <p
               className="font-sans text-center text-sm my-2"
             >
-              Click the starting button, to begin tracking buses
+              step_1_text
             </p>
           </div>
           <div
@@ -189,16 +193,16 @@ exports[`App test  Should render app 1`] = `
             <h3
               className="font-raley mt-2 font-extrabold text-sm"
             >
-              2. Enter location & destination
+              2. step_2
             </h3>
             <p
               className="font-sans text-center text-sm my-2"
             >
-              In the respective fields, enter your current location and destination
+              step_2_text
             </p>
           </div>
           <div
-            className="undefined border w-52 h-52 px-4 text-center flex flex-col justify-center items-center rounded-lg shadow-md"
+            className=" border w-52 h-52 px-4 text-center flex flex-col justify-center items-center rounded-lg shadow-md"
           >
             <img
               alt="globe"
@@ -208,12 +212,12 @@ exports[`App test  Should render app 1`] = `
             <h3
               className="font-raley mt-2 font-extrabold text-sm"
             >
-              1. View the location of the nearest bus
+              3. step_3
             </h3>
             <p
               className="font-sans text-center text-sm my-2"
             >
-              Through the map, you will see the location of the buses you want to track
+              step_3_text
             </p>
           </div>
         </div>
@@ -234,7 +238,9 @@ exports[`App test  Should render app 1`] = `
       <h3
         className="lg:ml-8 xl:ml-20 mt-6 xl:mt-2"
       >
-        ©copyright Codebandits 2022
+        ©
+        copyrights
+         Codebandits 2022
       </h3>
     </div>
     <div
@@ -252,14 +258,14 @@ exports[`App test  Should render app 1`] = `
         href="/"
         onClick={[Function]}
       >
-        Terms of use
+        terms
       </a>
       <a
         className="xl:ml-28 lg:ml-12 mt-2 text-md hover:font-bold"
         href="/login"
         onClick={[Function]}
       >
-        Administration
+        administration
       </a>
     </div>
   </footer>

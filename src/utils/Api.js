@@ -1,4 +1,5 @@
 import axios from 'axios';
+import getLanguage from './getLanguage.js';
 
 const host = `${window.location.protocol}//${window.location.host}`;
 
@@ -20,7 +21,7 @@ axiosBase.interceptors.request.use(
       user: null,
       authenticated: false
     };
-    config.headers['accept-language'] = 'fr';
+    config.headers['accept-language'] = getLanguage();
     if (user && authenticated === true) {
       config.headers['Authorization'] = `Bearer ${localStorage.getItem(
         'token'
@@ -73,5 +74,7 @@ export { axiosBase };
 export default axios.create({
   baseURL: 'https://phantom-codebantis.herokuapp.com/api',
   withCredentials: false,
-  headers: { 'Content-Type': 'application/json' }
+  headers: {
+    'Content-Type': 'application/json'
+  }
 });

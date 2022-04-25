@@ -1,9 +1,11 @@
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 import { useSelector } from 'react-redux';
 import { Link } from 'react-router-dom';
 import codebandits from '../assets/codebandits.png';
 
 const Footer = () => {
+  const { t } = useTranslation();
   const { authenticated, user } = useSelector((state) => state?.auth);
   return (
     <footer className="flex bg-primary z-20 xl:justify-center md:text-xl text-background font-sans font-sm py-8 lg:py-2 xl:py-2 mt-auto">
@@ -14,7 +16,7 @@ const Footer = () => {
           className="w-24 ml-2 lg:ml-8 lg:mt-4 xl:mt-2"
         />
         <h3 className="lg:ml-8 xl:ml-20 mt-6 xl:mt-2">
-          &copy;copyright Codebandits 2022
+          &copy;{t('copyrights')} Codebandits 2022
         </h3>
       </div>
       <div className="flex flex-col md:text-xl lg:flex-row xl:flex-row lg:mt-7 xl:mt-3 mr-16 md:mx-20 xl:ml-20 ml-auto md:ml-auto">
@@ -28,13 +30,13 @@ const Footer = () => {
           to="/#"
           className="xl:ml-28 lg:ml-12 mt-2 text-md mb-4 hover:font-bold"
         >
-          Terms of use
+          {t('terms')}
         </Link>
         <Link
           to={!authenticated ? '/login' : '/dashboard'}
           className="xl:ml-28 lg:ml-12 mt-2 text-md hover:font-bold"
         >
-          Administration
+          {t('administration')}
         </Link>
       </div>
     </footer>
