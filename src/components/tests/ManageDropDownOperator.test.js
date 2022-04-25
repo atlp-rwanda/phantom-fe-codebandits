@@ -3,7 +3,7 @@ import ProviderWrapper from '@utils/TestUtil.js';
 import React from 'react';
 import * as redux from 'react-redux';
 import Swal from 'sweetalert2';
-import ManageDropdown from '../ManageDropdown.js';
+import ManageDropDownOperator from '../ManageDropDownOperator.js';
 
 let spyOnUseSelector;
 
@@ -46,13 +46,17 @@ describe('Manage Dropdown', () => {
 
   it('Should render the dropdown', async () => {
     const elem = render(
-      <ProviderWrapper children={<ManageDropdown row={rowData} />} />
+      <ProviderWrapper>
+        <ManageDropDownOperator row={rowData} />
+      </ProviderWrapper>
     );
     expect(elem).toMatchSnapshot();
   });
   it('Should call the edit', async () => {
     const elem = render(
-      <ProviderWrapper children={<ManageDropdown row={rowData} />} />
+      <ProviderWrapper>
+        <ManageDropDownOperator row={rowData} />
+      </ProviderWrapper>
     );
     fireEvent.change(screen.getByTestId('select'), {
       target: {
@@ -63,7 +67,9 @@ describe('Manage Dropdown', () => {
   });
   it('Should call the assign', async () => {
     const elem = render(
-      <ProviderWrapper children={<ManageDropdown row={rowData} />} />
+      <ProviderWrapper>
+        <ManageDropDownOperator row={rowData} />
+      </ProviderWrapper>
     );
     fireEvent.change(screen.getByTestId('select'), {
       target: {
@@ -74,7 +80,9 @@ describe('Manage Dropdown', () => {
   });
   it('Should call the permissions', async () => {
     const elem = render(
-      <ProviderWrapper children={<ManageDropdown row={rowData} />} />
+      <ProviderWrapper>
+        <ManageDropDownOperator row={rowData} />
+      </ProviderWrapper>
     );
     fireEvent.change(screen.getByTestId('select'), {
       target: {
@@ -85,13 +93,9 @@ describe('Manage Dropdown', () => {
   });
   it('Should call the delete option', async () => {
     const elem = render(
-      <ProviderWrapper
-        children={
-          <>
-            <ManageDropdown row={rowData} />
-          </>
-        }
-      />
+      <ProviderWrapper>
+        <ManageDropDownOperator row={rowData} />
+      </ProviderWrapper>
     );
     fireEvent.change(screen.getByTestId('select'), {
       target: {
@@ -103,9 +107,11 @@ describe('Manage Dropdown', () => {
     expect(elem).toMatchSnapshot();
   });
   it('Should render the dropdown with change bus', async () => {
-    rowData.original['assigned_bus'] = 'fabrice';
+    rowData.original.assigned_bus = 'fabrice';
     const elem = render(
-      <ProviderWrapper children={<ManageDropdown row={rowData} />} />
+      <ProviderWrapper>
+        <ManageDropDownOperator row={rowData} />
+      </ProviderWrapper>
     );
     fireEvent.change(screen.getByTestId('select'), {
       target: {

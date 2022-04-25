@@ -6,9 +6,9 @@ import Swal from 'sweetalert2';
 import CheckRole from '../utils/CheckRoles.js';
 import { ButtonLoading } from './Button.js';
 
-function ManageDropdown({ row }) {
-  const { user, license, assigned_bus, id } = row.original;
-  const navigate = useNavigate();
+function ManageDropDownOperator({ row }) {
+  const { user, mobileNumber, nationalID, company, id } = row.original;
+  const navigate = useNavigate()
   const selectRef = useRef();
   const [loading, setloading] = useState(false);
   const handleEdit = () => {
@@ -18,38 +18,34 @@ function ManageDropdown({ row }) {
   const data = {
     name: user.firstName,
     email: user.email,
-    license,
-    plate: assigned_bus
+    mobileNumber,
+    nationalID,
+    company
   };
   const handlePermissions = () => {
     selectRef.current.value = 'manage';
-    navigate(`/dashboard/modal/permission/change/${license}`, {
+    navigate(`/dashboard/modal/permission/change/${nationalID}`, {
       state: data
     });
   };
-  const handleAssign = () => {
-    selectRef.current.value = 'manage';
-    navigate(`/dashboard/modal/driver/assign/${license}`, {
-      state: data
-    });
-  };
+
   const handleDelete = async () => {
     selectRef.current.value = 'manage';
     Swal.fire({
       title: 'Are you sure?',
-      html: `Driver <b>${data.name}</b> will be deleted.`,
-      text: 'This driver will be deleted!',
+      html: `Operator <b>${data.name}</b> will be deleted.`,
+      text: 'This operator will be deleted!',
       icon: 'warning',
       showCancelButton: true,
       confirmButtonColor: '#3085d6',
       cancelButtonColor: '#d33',
       confirmButtonText: 'Yes, delete!'
     }).then(async (result) => {
-      /* istanbul ignore next */
       if (result.isConfirmed) {
         setloading(true);
+        /* istanbul ignore next */
         try {
-          await axios.delete(`/drivers/${id}`);
+          await axios.delete(`/operators/${id}`);
           setloading(false);
           selectRef.current.innerHTML = `<b className="deleted mx-auto font-bold">Deleted</>`;
         } catch (error) {
@@ -61,8 +57,6 @@ function ManageDropdown({ row }) {
   };
   const handleChange = (e) => {
     switch (e.target.value) {
-      case 'assign':
-        return handleAssign();
       case 'perm':
         return handlePermissions();
       case 'edit':
@@ -99,7 +93,7 @@ function ManageDropdown({ row }) {
                 Edit
               </option>
             }
-            role={['operator']}
+            role={['admin']}
           />
           <CheckRole
             children={
@@ -107,15 +101,7 @@ function ManageDropdown({ row }) {
                 Delete
               </option>
             }
-            role={['operator']}
-          />
-          <CheckRole
-            children={
-              <option className="cursor-pointer" value="assign">
-                {assigned_bus ? 'Change bus' : 'Assign bus'}
-              </option>
-            }
-            role={['operator']}
+            role={['admin']}
           />
 
           <CheckRole
@@ -132,4 +118,4 @@ function ManageDropdown({ row }) {
   );
 }
 
-export default ManageDropdown;
+export default ManageDropDownOperator;
