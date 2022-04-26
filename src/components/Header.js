@@ -35,6 +35,7 @@ const Header = forwardRef(({ open, setOpen }, ref) => {
           />
         </Link>
       </div>
+
       <div className="hidden md:flex xl:flex ml-auto mr-20">
         <Link to={!authenticated ? '/login' : '/dashboard'}>
           <Button
@@ -42,7 +43,6 @@ const Header = forwardRef(({ open, setOpen }, ref) => {
             styles="bg-primary hover:bg-hover text-white rounded-xl mt-5 ml-6"
           />
         </Link>
-
         <Link to="/tracking-page">
           <Button
             name={t('track_bus')}

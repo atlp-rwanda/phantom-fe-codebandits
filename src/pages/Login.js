@@ -15,13 +15,17 @@ const Login = () => {
   const [err, setErr] = useState('');
   const [attempts, setAttempts] = useState(0);
   const [loading, setLoading] = useState(false);
-  const from = location?.state || '/dashboard/main';
+  const [passwordShown, setPasswordShown] = useState(false);
+  let from = location?.state || '/dashboard/main';
   const {
     register,
     handleSubmit,
     formState: { errors }
   } = useForm();
 
+  const togglePassword = () => {
+    setPasswordShown(!passwordShown);
+  };
   /* istanbul ignore next */
   const onValid = async (data) => {
     setLoading(true);
@@ -88,7 +92,7 @@ const Login = () => {
               Email:
             </label>
             <input
-              type="text"
+              type="email"
               id="email"
               name="email"
               placeholder="Enter email"
@@ -112,7 +116,7 @@ const Login = () => {
               Password:
             </label>
             <input
-              type="password"
+              type={passwordShown ? 'text' : 'password'}
               id="password"
               name="password"
               placeholder="Enter password"
@@ -122,6 +126,12 @@ const Login = () => {
             <p className="text-red-600 text-sm">
               {errors?.password && errors.password.message}
             </p>
+            <div>
+              <input onChange={(e)=>togglePassword(e)} type="checkbox" name="" id="show" />
+              <label className='font-raleway font-bold mx-1 text-sm' htmlFor="show">Show password</label>
+            </div>
+
+           
             <Link to="/accounts/reset-password">
               <h4 className="text-primary text-right mb-5 text-sm font-bold">
                 Forgot password?

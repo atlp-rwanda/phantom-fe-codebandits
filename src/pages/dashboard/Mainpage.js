@@ -3,7 +3,9 @@ import { Chart, registerables } from 'chart.js';
 import React, { Suspense, useEffect, useState } from 'react';
 import { Bar } from 'react-chartjs-2';
 import { Code } from 'react-content-loader';
+import { useSelector } from 'react-redux';
 import SkeletonScreen from '../../components/SkeletonUIs/SkeletonScreen.js';
+import DriverPage from './DriverPage.js';
 
 try {
   Chart.register(...registerables);
@@ -226,11 +228,12 @@ export const DetailPane = () => {
 };
 
 export const MainPage = () => {
+  const { authenticated, user } = useSelector((state) => state?.auth);
   return (
     <div>
       <Suspense fallback={<SkeletonScreen />}>
-        <MainPageGraph />
         <DetailPane />
+        {user?.role === 'driver' ? <DriverPage /> : <MainPageGraph />}
       </Suspense>
     </div>
   );

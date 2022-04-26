@@ -1,3 +1,4 @@
+import mockAxios from 'axios';
 import React from 'react';
 import renderer from 'react-test-renderer';
 import { mount } from 'enzyme';
@@ -24,11 +25,17 @@ describe('Route table Page', () => {
     }
   ];
   it('should render the Route table component', () => {
+    mockAxios.post.mockImplementationOnce(() => {
+      return Promise.resolve({
+        status: 200,
+        data: { data: routes }
+      });
+    });
     const elem = renderer
       .create(
         <Provider store={store}>
           <MemoryRouter>
-            <RouteTable data={data} />
+            <RouteTable />
           </MemoryRouter>
         </Provider>
       )

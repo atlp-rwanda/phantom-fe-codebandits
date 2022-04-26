@@ -1,10 +1,13 @@
 import { configureStore } from '@reduxjs/toolkit';
 import { authReducer } from './reducers/authReducer.js';
+import { busMovementReducer } from './reducers/busMovementReducer.js';
 import { counterReducer } from './reducers/counterReducer.js';
-import { updateProfileReducer } from './reducers/updateProfileReducer.js';
-import { profileReducer } from './reducers/profileReducer.js';
-import { managementReducer } from './reducers/managementReducer.js';
 import { dashboardReducer } from './reducers/dashboardReducer.js';
+import { managementReducer } from './reducers/managementReducer.js';
+import { profileReducer } from './reducers/profileReducer.js';
+import { simulateReducer } from './reducers/simulateReducer.js';
+import { socketReducer } from './reducers/socketReducer.js';
+import { updateProfileReducer } from './reducers/updateProfileReducer.js';
 
 export const store = configureStore({
   reducer: {
@@ -13,6 +16,9 @@ export const store = configureStore({
     profileInfo: profileReducer,
     auth: authReducer,
     management: managementReducer,
-    dashboard: dashboardReducer
+    dashboard: dashboardReducer,
+    socket: socketReducer,
+    simulate: simulateReducer,
+    movement: busMovementReducer
   }
 });

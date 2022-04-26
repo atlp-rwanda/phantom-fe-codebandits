@@ -1,3 +1,4 @@
+import mockAxios from 'axios';
 import { mount } from 'enzyme';
 import React from 'react';
 import { Provider } from 'react-redux';
@@ -8,6 +9,12 @@ import Routes from '../Routes.js';
 
 describe('Route component', () => {
   describe('Should render the Routes components', () => {
+    mockAxios.post.mockImplementationOnce(() => {
+      return Promise.reject({
+        status: 400,
+        data: { data: { message: 'Email not found' } }
+      });
+    });
     const elem = renderer
       .create(
         <Provider store={store}>
@@ -17,6 +24,7 @@ describe('Route component', () => {
         </Provider>
       )
       .toJSON();
+
     expect(elem).toMatchSnapshot();
   });
 

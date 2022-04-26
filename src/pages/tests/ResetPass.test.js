@@ -1,4 +1,5 @@
 import { fireEvent, render, screen } from '@testing-library/react';
+import mockAxios from 'axios';
 import { mount, shallow } from 'enzyme';
 import React from 'react';
 import { BrowserRouter } from 'react-router-dom';
@@ -33,29 +34,6 @@ describe('function testing', () => {
       expect(await wrapper).toMatchSnapshot();
     });
   });
-  // it('Should return a errors in new password', async () => {
-  //   await act(async () => {
-  //     wrapper = mount(
-  //       <BrowserRouter>
-  //         <ResetNewPassword handleEmail={mockHandleEmail} />
-  //       </BrowserRouter>
-  //     );
-  //     wrapper.simulate('change', {
-  //       target: {
-  //         name: 'password',
-  //         value: '123'
-  //       }
-  //     });
-  //     wrapper.simulate('change', {
-  //       target: {
-  //         name: 'password2',
-  //         value: '123'
-  //       }
-  //     });
-  //     wrapper.find('form').simulate('submit');
-  //     expect(await wrapper).toMatchSnapshot();
-  //   });
-  // });
 });
 
 describe('Reset page layout', () => {
@@ -128,10 +106,10 @@ describe('NotFound', () => {
     expect(elem).toMatchSnapshot();
   });
 });
-
 describe('Testing Library', () => {
+  let elem;
   beforeEach(() => {
-    render(
+    elem = render(
       <BrowserRouter>
         <ResetFormPage handleEmail={mockHandleEmail} />
       </BrowserRouter>
@@ -159,10 +137,28 @@ describe('Testing Library', () => {
       }
     });
     fireEvent.submit(screen.getByTestId('form'));
-    expect(await screen.findAllByText('SENDING...')).toHaveLength(1);
-    await new Promise((r) => setTimeout(r, 3500));
-    expect(await screen.queryAllByText(/You account was found/i)).toHaveLength(
-      0
-    );
+    mockAxios.post.mockImplementationOnce(() => {
+      return Promise.reject({
+        status: 400,
+        data: { data: { message: 'Email not found' } }
+      });
+    });
+    expect(await screen.findAllByText('Sending')).toHaveLength(1);
+  });
+  it('Should submit the form and raise an error when email not found', async () => {
+    fireEvent.input(screen.getByRole('textbox', { name: /email/i }), {
+      target: {
+        value: 'fab@me.com'
+      }
+    });
+    fireEvent.submit(screen.getByTestId('form'));
+    expect(await screen.findAllByText('Sending')).toHaveLength(1);
+    mockAxios.post.mockImplementationOnce(() => {
+      return Promise.resolve({
+        status: 200,
+        data: { data: { message: 'Link is sent' } }
+      });
+    });
+    expect(elem).toMatchSnapshot();
   });
 });

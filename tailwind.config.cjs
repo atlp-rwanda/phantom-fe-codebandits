@@ -4,7 +4,8 @@ module.exports = {
     extend: {
       fontFamily: {
         raleway: ['Raleway', 'sans-serif'],
-        sans: ['Open Sans', 'sans-serif']
+        sans: ['Open Sans', 'sans-serif'],
+        lexend: ['Lexend', 'sans-serif']
       },
       borderRadius: {
         circle: '50%'
@@ -18,6 +19,7 @@ module.exports = {
         sidebar: '#F4F4F4',
         active: '#E2E6EB',
         hovercancel: '#9B1A1B',
+        cancel: '#9B1A1A',
         get: '#008B8B',
         create: '#228B22',
         delete: '#de3929',

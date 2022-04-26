@@ -189,15 +189,6 @@ Object {
           >
             <div>
               <div
-                class="bg-background text-black font-bold font-raleway h-[300px] w-full mb-5"
-              >
-                <canvas
-                  height="150"
-                  role="img"
-                  width="300"
-                />
-              </div>
-              <div
                 class=" w-[99%] z-10 mx-auto h-full md:h-[150px] rounded-md mt-[-5px] px-4 py-2 flex flex-col md:grid md:grid-cols-4 md:gap-3"
               >
                 <div
@@ -727,6 +718,15 @@ Object {
                   </svg>
                 </div>
               </div>
+              <div
+                class="bg-background text-black font-bold font-raleway h-[300px] w-full mb-5"
+              >
+                <canvas
+                  height="150"
+                  role="img"
+                  width="300"
+                />
+              </div>
             </div>
           </div>
           <div
@@ -919,15 +919,6 @@ Object {
           class="min-h-full px-2 py-2"
         >
           <div>
-            <div
-              class="bg-background text-black font-bold font-raleway h-[300px] w-full mb-5"
-            >
-              <canvas
-                height="150"
-                role="img"
-                width="300"
-              />
-            </div>
             <div
               class=" w-[99%] z-10 mx-auto h-full md:h-[150px] rounded-md mt-[-5px] px-4 py-2 flex flex-col md:grid md:grid-cols-4 md:gap-3"
             >
@@ -1458,6 +1449,15 @@ Object {
                 </svg>
               </div>
             </div>
+            <div
+              class="bg-background text-black font-bold font-raleway h-[300px] w-full mb-5"
+            >
+              <canvas
+                height="150"
+                role="img"
+                width="300"
+              />
+            </div>
           </div>
         </div>
         <div
@@ -1552,7 +1552,7 @@ Object {
         class="fixed top-0 bottom-0 left-0 right-0 flex justify-center bg-gray-600 bg-opacity-50"
       >
         <div
-          class="relative bg-white rounded-md px-2 py-2 min-w-md h-fit my-auto"
+          class="relative bg-white rounded-md px-2 py-2 w-100 h-fit my-auto"
         >
           <div
             class="absolute top-[-15px] right-[-15px] font-raleway text-white bg-red rounded-circle w-[30px] h-[30px] flex justify-center items-center font-bold cursor-pointer"
@@ -1568,7 +1568,7 @@ Object {
       class="fixed top-0 bottom-0 left-0 right-0 flex justify-center bg-gray-600 bg-opacity-50"
     >
       <div
-        class="relative bg-white rounded-md px-2 py-2 min-w-md h-fit my-auto"
+        class="relative bg-white rounded-md px-2 py-2 w-100 h-fit my-auto"
       >
         <div
           class="absolute top-[-15px] right-[-15px] font-raleway text-white bg-red rounded-circle w-[30px] h-[30px] flex justify-center items-center font-bold cursor-pointer"

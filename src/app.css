@@ -71,3 +71,58 @@
     transform: rotate(360deg);
   }
 }
+
+
+.popCustom .card {
+  width: 200px;
+  height: 100px;
+  box-shadow: 0px 0px 2px 2px green;
+  font-family: "Lexend";
+  font-size: small;
+  padding: .2rem;
+  position: relative;
+}
+
+.popCustom .card div {
+  padding: .1rem;
+}
+
+
+.popCustom .text-uppercase {
+  text-transform: uppercase;
+}
+
+.popupCustom .live {
+  height: 20px;
+  width: 20px;
+  position: absolute;
+  bottom: 0px;
+  right: 0px;
+  border-radius: 50%;
+  margin: 5px;
+}
+
+.popupCustom .live::after {
+  content: "";
+  border-radius: 50%;
+  position: absolute;
+  right: 0px;
+  height: 25px;
+  width: 25px;
+  margin: 1px;
+  bottom: 0px;
+  background-color: rgb(21, 126, 61);
+  animation: blink 2s linear 1s infinite forwards;
+  box-shadow: 0px 0px 3px 3px rgba(0, 87, 128, 0.863);
+}
+
+@keyframes blink {
+  0% {
+    opacity: 0.5;
+  }
+
+  100% {
+    opacity: 1;
+  }
+
+}

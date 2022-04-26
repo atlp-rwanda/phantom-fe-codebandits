@@ -2,16 +2,15 @@ import React from 'react';
 import { useLocation, useParams } from 'react-router-dom';
 import { toast } from 'react-toastify';
 import { axiosBase as axios } from '../../utils/Api.js';
-import RouteComponent from './components/RouteComponent.js';
+import RouteComponentEdit from './components/RouteComponentEdit.js';
 
 const RouteEdit = () => {
   const location = useLocation();
   const routeInfo = location.state?.route;
   const { id } = useParams();
-  const handleEdit = async (destination1, destination2, distance) => {
+  const handleEdit = async (data) => {
     try {
-      const route = { destination1, destination2, distance };
-      await axios.put(`/routes/${id}`, route);
+      await axios.put(`/routes/${id}`, data);
       toast('Route updated successfully', { type: 'success' });
       return;
     } catch (error) {
@@ -20,10 +19,10 @@ const RouteEdit = () => {
   };
 
   return (
-    <RouteComponent
+    <RouteComponentEdit
       formAction={handleEdit}
       formTitle="Update Route"
-      data={routeInfo}
+      instance={routeInfo}
     />
   );
 };

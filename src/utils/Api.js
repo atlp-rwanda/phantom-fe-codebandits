@@ -1,11 +1,14 @@
+/* eslint-disable no-underscore-dangle */
 import axios from 'axios';
+import { toast } from 'react-toastify';
 import getLanguage from './getLanguage.js';
 
 const host = `${window.location.protocol}//${window.location.host}`;
 
-const base = 'https://phantom-be-codebandits-staging.herokuapp.com/api/v1';
+const base = 'https://phantom-be-codebandits-staging.herokuapp.com';
+
 const axiosBase = axios.create({
-  baseURL: base,
+  baseURL: `${base}/api/v1`,
   withCredentials: true,
   headers: {
     'Content-Type': 'application/json',
@@ -39,35 +42,33 @@ const refreshToken = async () => {
       return response.data.data.access_token;
     }
   } catch (error) {
-    throw error;
-  }
-};
-
-axiosBase.interceptors.response.use(
-  async (response) => {
-    return response;
-  },
-  async (error) => {
-    const originalRequest = error.config;
-    if (
-      error?.response?.status === 401 &&
-      !originalRequest._retry &&
-      originalRequest.headers.Authorization
-    ) {
-      originalRequest._retry = true;
-      const accessToken = await refreshToken();
-      originalRequest.headers.Authorization = `Bearer ${accessToken}`;
-      return axiosBase(originalRequest);
-    }
-    if (error?.response?.status === 403) {
-      window.location = '/login';
-      return;
+    if (error?.response?.status === 400) {
+      toast('Your refresh token has expired');
+      localStorage.removeItem('auth');
+      localStorage.removeItem('token');
+      // eslint-disable-next-line no-return-assign
+      return (window.location = '/login');
     }
     return Promise.reject(error);
   }
-);
+};
 
-export { axiosBase };
+axiosBase.interceptors.response.use(null, async (error) => {
+  const originalRequest = error.config;
+  if (error.config && error.response && error.response.status === 401) {
+    if (originalRequest._retry === undefined) {
+      originalRequest._retry = true;
+      const accessToken = await refreshToken();
+      originalRequest.headers.Authorization = `Bearer ${accessToken}`;
+      return axiosBase.request(originalRequest);
+    }
+  }
+  if (error?.response?.status === 403) {
+    window.location = '/login';
+    return Promise.reject(error);
+  }
+  return Promise.reject(error);
+});
 
 export default axios.create({
   baseURL: 'https://phantom-codebantis.herokuapp.com/api',
@@ -76,3 +77,6 @@ export default axios.create({
     'Content-Type': 'application/json'
   }
 });
+
+export { base };
+export { axiosBase };
