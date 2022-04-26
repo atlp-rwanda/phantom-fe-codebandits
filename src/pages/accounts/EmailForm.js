@@ -1,3 +1,7 @@
+<<<<<<< Updated upstream
+=======
+import { axiosBase as axios } from '../../utils/Api.js';
+>>>>>>> Stashed changes
 import React, { useState } from 'react';
 import { useForm } from 'react-hook-form';
 import { Link, useNavigate } from 'react-router-dom';
@@ -13,21 +17,28 @@ function ResetFormPage() {
   let navigate = useNavigate();
   const [loading, setloading] = useState(false);
 
-  const {
-    register,
-    handleSubmit,
-    formState: { errors }
-  } = useForm({
+  const { register, handleSubmit, formState: { errors }} = useForm({
     reValidateMode: 'onChange',
     mode: 'onChange'
   });
 
-  const handleEmail = () => {
-    Sleep(3000).then(() => {
-      toast('You account was found');
-      setloading(false);
-      navigate('/accounts/reset-email/abcd-1234-ghyi-567/123456');
-    });
+  const handleEmail = async (data) => {
+    const forgotUrl = "/accounts/forgot-password"
+    try {
+      await axios.post(forgotUrl, data);
+      toast('Route Created successfully', { type: 'success' });
+      console.log(data)
+      return navigate('/accounts/reset-email');
+      
+    } catch (error) {
+      toast(error?.response?.data?.message || error.message)
+      console.log("oops",error)
+    }
+    // Sleep(3000).then(() => {
+    //   toast('You account was found');
+    //   setloading(false);
+    //   navigate('/accounts/reset-email/abcd-1234-ghyi-567/123456');
+    // });
   };
 
   const onSubmit = () => {
