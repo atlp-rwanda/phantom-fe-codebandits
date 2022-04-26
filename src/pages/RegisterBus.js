@@ -6,7 +6,7 @@ import Buses from '../components/forms/Buses.js';
 
 const RegisterBus = () => {
   const navigate = useNavigate();
-
+  // registeration
   const registerBusToDB = async (busInfo) => {
     const busInDb = await axios.get('/buses', {
       params: {
