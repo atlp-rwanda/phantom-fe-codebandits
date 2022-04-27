@@ -62,85 +62,32 @@ exports[`Reset password layout should render all routes 1`] = `
 `;
 
 exports[`Reset password layout should render the email Form 1`] = `
-<form
-  onSubmit={[Function]}
->
+<div>
+   
   <h3
-    className="text-2xl font-bold font-rale text-center py-4"
+    className="text-2xl font-bold text-center py-3 font-rale"
   >
-    New Password
+    You are not authorized
   </h3>
-  <div
-    className="relative w-full"
+  <p
+    className="mb-3 text-sm"
   >
-    <label
-      className="font-bold text-sm"
-      htmlFor="password"
-    >
-      Password 
-      <span
-        className="text-red-500 font-bold"
-      >
-        *
-      </span>
-      :
-       
-    </label>
-    <input
-      className="w-full rounded-md placeholder:text-sm placeholder:font-light  border-2 focus:outline-none px-2 py-1 font-bold  border-green-500 "
-      id="password"
-      name="password"
-      onBlur={[Function]}
-      onChange={[Function]}
-      placeholder="New password"
-      required={true}
-      type="Password"
-    />
-    <div
-      className="text-xs py-1/2 text-red-500 opacity-0"
-    >
-      
-    </div>
-  </div>
-  <div
-    className="relative w-full mb-2"
+    You don't have access or your access has expired
+  </p>
+  <div />
+  <a
+    href="/accounts/reset-password"
+    onClick={[Function]}
   >
-    <label
-      className="font-bold text-sm"
-      htmlFor="password2"
-    >
-      Confirm password 
-      <span
-        className="text-red-500 font-bold"
-      >
-        *
-      </span>
-      :
-    </label>
-    <input
-      className="w-full rounded-md placeholder:text-sm placeholder:font-light  border-2 focus:outline-none px-2 py-1 font-bold 
-              border-green-500 
-              "
-      id="password2"
-      name="password2"
-      onBlur={[Function]}
-      onChange={[Function]}
-      placeholder="Confirm password"
-      required={true}
-      type="password"
-    />
-    <div
-      className="text-xs py-1/2 text-red-500 opacity-0"
-    >
-      
-    </div>
-  </div>
-  <button
-    className="py-1 px-3 text-center bg-primary hover:bg-hover transition-all hover:transition-all uppercase text-white font-bold rounded-md"
+    Try again
+  </a>
+  <a
+    href="/"
+    onClick={[Function]}
   >
-    SUBMIT
-  </button>
-</form>
+    Cancel
+  </a>
+</div>
 `;
 
 exports[`Reset password layout should render the email sent notification 1`] = `
@@ -161,10 +108,9 @@ Array [
     <p
       className="mb-2 text-justify text-sm"
     >
-      A link to reset your password has been sent to 
-      <b>
-        "fab@me.com"
-      </b>
+      A link to reset your password has been sent to
+       
+      <b />
     </p>
     <p
       className=" text-justify text-sm"
@@ -192,85 +138,32 @@ Array [
 `;
 
 exports[`Reset password layout should render the new password form 1`] = `
-<form
-  onSubmit={[Function]}
->
+<div>
+   
   <h3
-    className="text-2xl font-bold font-rale text-center py-4"
+    className="text-2xl font-bold text-center py-3 font-rale"
   >
-    New Password
+    You are not authorized
   </h3>
-  <div
-    className="relative w-full"
+  <p
+    className="mb-3 text-sm"
   >
-    <label
-      className="font-bold text-sm"
-      htmlFor="password"
-    >
-      Password 
-      <span
-        className="text-red-500 font-bold"
-      >
-        *
-      </span>
-      :
-       
-    </label>
-    <input
-      className="w-full rounded-md placeholder:text-sm placeholder:font-light  border-2 focus:outline-none px-2 py-1 font-bold  border-green-500 "
-      id="password"
-      name="password"
-      onBlur={[Function]}
-      onChange={[Function]}
-      placeholder="New password"
-      required={true}
-      type="Password"
-    />
-    <div
-      className="text-xs py-1/2 text-red-500 opacity-0"
-    >
-      
-    </div>
-  </div>
-  <div
-    className="relative w-full mb-2"
+    You don't have access or your access has expired
+  </p>
+  <div />
+  <a
+    href="/accounts/reset-password"
+    onClick={[Function]}
   >
-    <label
-      className="font-bold text-sm"
-      htmlFor="password2"
-    >
-      Confirm password 
-      <span
-        className="text-red-500 font-bold"
-      >
-        *
-      </span>
-      :
-    </label>
-    <input
-      className="w-full rounded-md placeholder:text-sm placeholder:font-light  border-2 focus:outline-none px-2 py-1 font-bold 
-              border-green-500 
-              "
-      id="password2"
-      name="password2"
-      onBlur={[Function]}
-      onChange={[Function]}
-      placeholder="Confirm password"
-      required={true}
-      type="password"
-    />
-    <div
-      className="text-xs py-1/2 text-red-500 opacity-0"
-    >
-      
-    </div>
-  </div>
-  <button
-    className="py-1 px-3 text-center bg-primary hover:bg-hover transition-all hover:transition-all uppercase text-white font-bold rounded-md"
+    Try again
+  </a>
+  <a
+    href="/"
+    onClick={[Function]}
   >
-    SUBMIT
-  </button>
-</form>
+    Cancel
+  </a>
+</div>
 `;
 
 exports[`Reset password layout should render the success message 1`] = `
@@ -287,11 +180,7 @@ Array [
     <p
       className="py-1 mb-2  text-sm"
     >
-      Dear 
-      <b>
-        Fabrice
-      </b>
-      , you got yourself a new password.
+      Dear, you got yourself a new password.
     </p>
     <a
       className="py-1 px-3  bg-primary hover:bg-hover text-white rounded-md font-bold mt-5 mx-auto"
@@ -427,123 +316,6 @@ exports[`function testing Should return a errors 1`] = `
         </div>
       </form>
     </ResetFormPage>
-  </Router>
-</BrowserRouter>
-`;
-
-exports[`function testing Should return a errors in new password 1`] = `
-<BrowserRouter>
-  <Router
-    location={
-      Object {
-        "hash": "",
-        "key": "default",
-        "pathname": "/",
-        "search": "",
-        "state": null,
-      }
-    }
-    navigationType="POP"
-    navigator={
-      Object {
-        "action": "POP",
-        "back": [Function],
-        "block": [Function],
-        "createHref": [Function],
-        "forward": [Function],
-        "go": [Function],
-        "listen": [Function],
-        "location": Object {
-          "hash": "",
-          "key": "default",
-          "pathname": "/",
-          "search": "",
-          "state": null,
-        },
-        "push": [Function],
-        "replace": [Function],
-      }
-    }
-  >
-    <ResetNewPassword
-      handleEmail={[MockFunction]}
-    >
-      <form
-        onSubmit={[Function]}
-      >
-        <h3
-          className="text-2xl font-bold font-rale text-center py-4"
-        >
-          New Password
-        </h3>
-        <div
-          className="relative w-full"
-        >
-          <label
-            className="font-bold text-sm"
-            htmlFor="password"
-          >
-            Password 
-            <span
-              className="text-red-500 font-bold"
-            >
-              *
-            </span>
-            :
-             
-          </label>
-          <input
-            className="w-full rounded-md placeholder:text-sm placeholder:font-light  border-2 focus:outline-none px-2 py-1 font-bold  border-green-500 "
-            id="password"
-            name="password"
-            onBlur={[Function]}
-            onChange={[Function]}
-            placeholder="New password"
-            required={true}
-            type="Password"
-          />
-          <div
-            className="text-xs py-1/2 text-red-500 opacity-0"
-          />
-        </div>
-        <div
-          className="relative w-full mb-2"
-        >
-          <label
-            className="font-bold text-sm"
-            htmlFor="password2"
-          >
-            Confirm password 
-            <span
-              className="text-red-500 font-bold"
-            >
-              *
-            </span>
-            :
-          </label>
-          <input
-            className="w-full rounded-md placeholder:text-sm placeholder:font-light  border-2 focus:outline-none px-2 py-1 font-bold 
-              border-green-500 
-              "
-            id="password2"
-            name="password2"
-            onBlur={[Function]}
-            onChange={[Function]}
-            placeholder="Confirm password"
-            required={true}
-            type="password"
-          />
-          <div
-            className="text-xs py-1/2 text-red-500 opacity-0"
-          />
-        </div>
-        <button
-          className="py-1 px-3 text-center bg-primary hover:bg-hover transition-all hover:transition-all uppercase text-white font-bold rounded-md"
-        >
-          SUBMIT
-        </button>
-      </form>
-    </ResetNewPassword>
   </Router>
 </BrowserRouter>
 `;

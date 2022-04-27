@@ -1,52 +1,25 @@
-import React, { useMemo } from 'react';
-import { useSelector } from 'react-redux';
+import React from 'react';
 import { Link } from 'react-router-dom';
 import { useGlobalFilter, usePagination, useTable } from 'react-table';
 import CheckRole from '../utils/CheckRoles.js';
 import Button from './Button.js';
-import ManageDropdown from './ManageDropdown.js';
 import SearchFilter from './SearchFilter.js';
-
-const LinkBus = ({ row }) => {
-  const { assigned_bus } = row.original;
-  if (assigned_bus)
-    return (
-      <Link className="text-primary" to="#buses">
-        {assigned_bus}
-      </Link>
-    );
-
-  return 'None';
-};
+import { TableColumns } from './tableColumns.js';
+import ManageDropdown from './ManageDropdown.js';
+import { LinkBus } from './LinkBus.js';
 
 const DriversTable = ({ data }) => {
-  const { user, authenticated } = useSelector((state) => state?.auth);
-  const tableColumns = [
-    {
-      Header: 'Names',
-      accessor: 'name'
-    },
-    {
-      Header: 'Email',
-      accessor: 'email'
-    },
-    {
-      Header: 'License',
-      accessor: 'license'
-    },
-    {
-      Header: 'Assigned Bus',
-      accessor: 'assigned_bus',
-      Cell: ({ row }) => <LinkBus row={row} />
-    },
-    {
-      Header: 'Management',
-      accessor: 'management',
-      Cell: ({ row }) => <ManageDropdown user={user} row={row} />
-    }
-  ];
+  const cellValue = ({ row }) => <LinkBus row={row} />;
+  const manageCellValue = ({ row }) => <ManageDropdown row={row} />;
+  const columns = TableColumns(
+    'License',
+    'license',
+    'Assigned Bus',
+    'assigned_bus',
+    manageCellValue
+  );
 
-  const columns = useMemo(() => tableColumns, []);
+  columns[3].Cell = cellValue;
 
   const {
     getTableProps,
@@ -87,13 +60,13 @@ const DriversTable = ({ data }) => {
           children={
             <Link to="driver/register">
               <Button
-                name={'Register new'}
-                styles={'bg-primary text-white py-1 text-xs'}
+                name="Register new"
+                styles="bg-primary text-white py-1 text-xs"
               />
             </Link>
           }
           role={['operator']}
-        ></CheckRole>
+        />
       </section>
       <table
         {...getTableProps()}

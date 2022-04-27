@@ -15,6 +15,7 @@ import RegisterBus from '../pages/RegisterBus.js';
 import RegisterRoute from '../pages/routes/RegisterRoute.js';
 import UpdateBus from '../pages/UpdateBus.js';
 import ModalRoutes from './ModalRoutes.js';
+
 function DashRoutes() {
   return (
     <div className="flex fixed top-0 left-0 right-0 bottom-0 z-0 min-h-screen font-sans antialiased bg-grey-lightest w-full overflow-hidden">
@@ -23,13 +24,10 @@ function DashRoutes() {
         <div className="min-h-full px-2 py-2">
           <Routes>
             <Route path="modal/*" exact={false} element={<ModalRoutes />} />
-            <Route path="main" element={<MainPage title={'dashboard'} />} />
-            <Route path="/" element={<MainPage title={'dashboard'} />} />
+            <Route path="main" element={<MainPage title="dashboard" />} />
+            <Route path="/" element={<MainPage title="dashboard" />} />
             <Route path="roles" element={<Roles />} />
-            <Route
-              path="settings"
-              element={<ComingSoon title={'settings'} />}
-            />
+            <Route path="settings" element={<ComingSoon title="settings" />} />
             <Route path="profile" element={<OperatorProfile />} />
             <Route path="management">
               <Route
@@ -40,14 +38,15 @@ function DashRoutes() {
               <Route path="driver/update" element={<UpdateDriver />} />
               <Route path="bus/register" element={<RegisterBus />} />
               <Route path="bus/update/:id" element={<UpdateBus />} />
-              <Route path="operator/register" element={<RegisterOperator />} />
+              <Route
+                path="operator/register"
+                base="management"
+                element={<RegisterOperator />}
+              />
               <Route path="route/edit/:id" element={<RouteEdit />} />
-
-              <Route path="operator/register" element={<RegisterOperator />} />
               <Route path="route/register" element={<RegisterRoute />} />
-
               <Route path="operator/update" element={<UpdateOperator />} />
-              <Route path="" element={<Management />}></Route>
+              <Route path="" element={<Management />} />
             </Route>
 
             <Route

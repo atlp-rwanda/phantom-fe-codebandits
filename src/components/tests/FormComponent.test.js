@@ -68,8 +68,8 @@ describe('Form Component Action', () => {
     render(
       <BrowserRouter>
         <FormComponent
-          type={'Test'}
-          redirect={'/test'}
+          type="Test"
+          redirect="/test"
           inputs={inputs}
           callback={callbackMock}
         />
@@ -131,9 +131,9 @@ describe('Testingfull form', () => {
     render(
       <BrowserRouter>
         <FormComponent
-          redirect={'/test'}
+          redirect="/test"
           callback={jest.fn()}
-          type={'Test'}
+          type="Test"
           inputs={inputs}
         />
       </BrowserRouter>

@@ -1,18 +1,25 @@
-
-import React, { useMemo } from 'react';
+import React from 'react';
 import { Link } from 'react-router-dom';
 import { useGlobalFilter, usePagination, useTable } from 'react-table';
-import Button from './Button.js';
-import SearchFilter from './SearchFilter.js';
+import { useSelector } from 'react-redux';
 import CheckRole from '../utils/CheckRoles.js';
+import Button from './Button.js';
+import ManageDropDownOperator from './ManageDropDownOperator.js';
+import SearchFilter from './SearchFilter.js';
+import { TableColumns } from './tableColumns.js';
 
-const ManagementTable = ({
-  tableColumns,
-  data,
-  searchPlaceholder,
-  registerNewPath
-}) => {
-  const columns = useMemo(() => tableColumns, []);
+const OperatorsTable = ({ data }) => {
+  const { user, authenticated } = useSelector((state) => state?.auth);
+  const manageCellValue = ({ row }) => (
+    <ManageDropDownOperator user={user} row={row} />
+  );
+  const columns = TableColumns(
+    'Mobile Number',
+    'mobileNumber',
+    'Company',
+    'company',
+    manageCellValue
+  );
   const {
     getTableProps,
     getTableBodyProps,
@@ -42,32 +49,35 @@ const ManagementTable = ({
 
   return (
     <>
-      <section className="flex justify-between content-center pb-7 font-raleway">
+      <section className="flex justify-between content-center pb-7">
         <SearchFilter
           filter={globalFilter}
           setfilter={setGlobalFilter}
-          placeholder={searchPlaceholder}
+          placeholder="Search Operators..."
         />
         <CheckRole
           children={
-            <Link to={registerNewPath}>
+            <Link to="operator/register">
               <Button
-                name={'Register new'}
-                styles={'bg-primary text-white py-2 text-xs font-raleway'}
+                name="Register new"
+                styles="bg-primary text-white py-1 text-xs"
               />
             </Link>
           }
-          role={['operator']}
-        ></CheckRole>
+          role={['admin']}
+        />
       </section>
-      <table {...getTableProps()} className="w-full">
+      <table
+        {...getTableProps()}
+        className="w-full overflow-x-scroll font-raleway"
+      >
         <thead>
           {headerGroups.map((headerGroup) => (
             <tr {...headerGroup.getHeaderGroupProps()} className="pb-10 ">
               {headerGroup.headers.map((column) => (
                 <th
                   {...column.getHeaderProps()}
-                  className="text-left font-extrabold pr-5 border-b-2 pb-4 font-raleway"
+                  className="text-left font-extrabold pr-5 border-b-2 pb-4"
                 >
                   {column.render('Header')}
                 </th>
@@ -84,7 +94,7 @@ const ManagementTable = ({
                   return (
                     <td
                       {...cell.getCellProps()}
-                      className="pr-5 py-4 border-b-2 font-raleway"
+                      className="pr-5 py-4 border-b-2"
                     >
                       {cell.render('Cell')}
                     </td>
@@ -173,4 +183,4 @@ const ManagementTable = ({
   );
 };
 
-export default ManagementTable;
+export default OperatorsTable;

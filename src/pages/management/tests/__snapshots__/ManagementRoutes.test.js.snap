@@ -2,7 +2,13 @@
 
 exports[`Management routes Render Operators 1`] = `
 <div>
-  Operators management
+  <Suspense
+    fallback={<TableSkeleton />}
+  >
+    <lazy
+      data={Array []}
+    />
+  </Suspense>
 </div>
 `;
 

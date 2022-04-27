@@ -47,6 +47,5 @@ describe('Route table Page', () => {
 		  </Provider>
    )
    
-   expect(wrapper.find('SearchFilter').length).toEqual(1)
   });
 });
