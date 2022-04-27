@@ -10,14 +10,13 @@ Array [
         className="p-1 rounded-md border-2"
         name="search"
         onChange={[Function]}
+        placeholder="Search routes..."
         type="text"
         value=""
       />
     </div>
-     
     
   </section>,
-  " ",
   <table
     className="w-full"
     role="table"
@@ -66,124 +65,7 @@ Array [
     </thead>
     <tbody
       role="rowgroup"
-    >
-      <tr
-        role="row"
-      >
-        <td
-          className="pr-5 py-4 border-b-2"
-          role="cell"
-        >
-          Kabuga
-        </td>
-        <td
-          className="pr-5 py-4 border-b-2"
-          role="cell"
-        >
-          Nyanza
-        </td>
-        <td
-          className="pr-5 py-4 border-b-2"
-          role="cell"
-        >
-          22km
-        </td>
-        <td
-          className="pr-5 py-4 border-b-2"
-          role="cell"
-        >
-          100
-        </td>
-        <td
-          className="pr-5 py-4 border-b-2"
-          role="cell"
-        >
-          <div
-            className="z-10"
-          >
-            <select
-              className="py-1 px-3 font-rale font-bold bg-transparent border rounded-sm"
-              id="select"
-              name=""
-              onChange={[Function]}
-              role="select"
-            >
-              <option
-                hidden={true}
-              >
-                 Manage 
-              </option>
-              <option
-                value="view"
-              >
-                 View 
-              </option>
-              
-              
-               
-            </select>
-          </div>
-        </td>
-      </tr>
-      <tr
-        role="row"
-      >
-        <td
-          className="pr-5 py-4 border-b-2"
-          role="cell"
-        >
-          Kabuga
-        </td>
-        <td
-          className="pr-5 py-4 border-b-2"
-          role="cell"
-        >
-          Nyabugogo
-        </td>
-        <td
-          className="pr-5 py-4 border-b-2"
-          role="cell"
-        >
-          20km
-        </td>
-        <td
-          className="pr-5 py-4 border-b-2"
-          role="cell"
-        >
-          100
-        </td>
-        <td
-          className="pr-5 py-4 border-b-2"
-          role="cell"
-        >
-          <div
-            className="z-10"
-          >
-            <select
-              className="py-1 px-3 font-rale font-bold bg-transparent border rounded-sm"
-              id="select"
-              name=""
-              onChange={[Function]}
-              role="select"
-            >
-              <option
-                hidden={true}
-              >
-                 Manage 
-              </option>
-              <option
-                value="view"
-              >
-                 View 
-              </option>
-              
-              
-               
-            </select>
-          </div>
-        </td>
-      </tr>
-    </tbody>
+    />
   </table>,
 ]
 `;

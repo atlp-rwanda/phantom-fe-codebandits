@@ -10,14 +10,13 @@ exports[` 1`] = `
         className="p-1 rounded-md border-2"
         name="search"
         onChange={[Function]}
+        placeholder="Search routes..."
         type="text"
         value=""
       />
     </div>
-     
     
   </section>
-   
   <table
     className="w-full"
     role="table"
