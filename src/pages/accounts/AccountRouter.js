@@ -45,11 +45,11 @@ function ResetRouterLayout() {
                 element={<ResetSuccess></ResetSuccess>}
               ></Route>
               <Route
-                path="reset-password/:uuid/:token"
+                path="reset-password/:token"
                 element={<ResetNewPassword></ResetNewPassword>}
               ></Route>
               <Route
-                path="reset-email/:uuid/:token"
+                path="reset-email/"
                 element={<ResetEmail />}
               ></Route>
               <Route path="*" element={<NotFoundAccount />}></Route>

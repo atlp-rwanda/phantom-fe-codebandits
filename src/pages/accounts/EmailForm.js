@@ -2,11 +2,9 @@ import React, { useState } from 'react';
 import { useForm } from 'react-hook-form';
 import { Link, useNavigate } from 'react-router-dom';
 import { toast } from 'react-toastify';
-import Sleep from '../../utils/Sleep.js';
+import { axiosBase as axios } from '../../utils/Api.js';
 import { Button } from './AccountRouter.js';
 
-const img =
-  'https://res.cloudinary.com/feyton/image/upload/v1645616111/Codebandits/Phantom_icon_1_tpjkws.png';
 const EM_RGX = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
 
 function ResetFormPage() {
@@ -22,17 +20,17 @@ function ResetFormPage() {
     mode: 'onChange'
   });
 
-  const handleEmail = () => {
-    Sleep(3000).then(() => {
-      toast('You account was found');
+  /* istanbul ignore next */
+  const onSubmit = async (data) => {
+    try {
+      setloading(true);
+      await axios.post('/accounts/forgot-password', data);
+      navigate('/accounts/reset-email', { state: { email: data.email } });
+    } catch (error) {
+      toast(error.response.data.data || error.message, { type: 'error' });
+    } finally {
       setloading(false);
-      navigate('/accounts/reset-email/abcd-1234-ghyi-567/123456');
-    });
-  };
-
-  const onSubmit = () => {
-    setloading(true);
-    handleEmail();
+    }
   };
 
   return (
@@ -64,17 +62,17 @@ function ResetFormPage() {
               }
             })}
             className={`block w-full rounded-md border-2 placeholder:text-gray-400 placeholder:text-small py-1 px-3 focus:outline-none ${
-              !errors?.email ? 'border-green-500' : ''
-            } ${errors?.email ? 'border-red-500' : ''}`}
+              !errors.email ? 'border-green-500' : ''
+            } ${errors.email ? 'border-red-500' : ''}`}
           />
           {
             <p
               role={'alert'}
               className={`text-sm text-red-900 font-bold py-1/2 pl-2 ${
-                errors?.email ? 'opacity-100' : 'opacity-0'
+                errors.email ? 'opacity-100' : 'opacity-0'
               }`}
             >
-              {errors?.email && errors.email.message}
+              {errors.email && errors.email.message}
             </p>
           }
         </div>
