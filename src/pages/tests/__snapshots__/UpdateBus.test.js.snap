@@ -78,12 +78,12 @@ exports[`RegisterBus component test it should render update bus page 1`] = `
         Kigali Bus Service
       </option>
       <option
-        value="Royal_express"
+        value="Royal express"
       >
         Royal Express
       </option>
       <option
-        value="Virunga_express"
+        value="Virunga express"
       >
         Virunga Express
       </option>

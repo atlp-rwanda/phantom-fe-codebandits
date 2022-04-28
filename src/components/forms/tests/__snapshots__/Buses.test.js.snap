@@ -74,12 +74,12 @@ exports[`Buses form component test it should render Buses form component 1`] = `
         Kigali Bus Service
       </option>
       <option
-        value="Royal_express"
+        value="Royal express"
       >
         Royal Express
       </option>
       <option
-        value="Virunga_express"
+        value="Virunga express"
       >
         Virunga Express
       </option>

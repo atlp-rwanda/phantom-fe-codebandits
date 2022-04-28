@@ -1,7 +1,8 @@
-import axios from '@utils/Api.js';
 import React, { useRef, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { toast } from 'react-toastify';
+import Swal from 'sweetalert2';
+import { axiosBase as axios } from '../../utils/Api.js';
 import { ButtonLoading } from '../Button.js';
 
 const BusManagement = ({ row }) => {
@@ -13,25 +14,38 @@ const BusManagement = ({ row }) => {
     });
   };
   const selectRef = useRef();
-  const handleDelete = async (busId) => {
-    setloading(true);
-    try {
-      await axios.delete(`/buses/${busId}`);
-      toast('Bus deleted successfully', { type: 'success' });
-      setloading(false);
-      selectRef.current.innerHTML = `<b className="deleted mx-auto font-bold">Deleted</>`;
-    } catch (error) {
-      toast('Error occured', { type: 'error' });
-      setloading(false);
+  const handleDelete = async (busInfo) => {
+    const results = await Swal.fire({
+      title: 'Are you sure?',
+      html: `Bus <b>${busInfo.plateNumber}</b> will be deleted.`,
+      text: 'This driver will be deleted!',
+      icon: 'warning',
+      showCancelButton: true,
+      confirmButtonColor: '#3085d6',
+      cancelButtonColor: '#d33',
+      confirmButtonText: 'Yes, delete!'
+    });
+    if (results.isConfirmed) {
+      setloading(true);
+      try {
+        await axios.delete(`/buses/${busInfo.id}`);
+        toast('Bus deleted successfully', { type: 'success' });
+        setloading(false);
+        selectRef.current.innerHTML = `<p class="mx-auto font-bold text-red font-raleway">Deleted</p>`;
+      } catch (error) {
+        const errors = error.response.data || error.message;
+        toast(errors, { type: 'error' });
+      } finally {
+        setloading(false);
+      }
     }
   };
-
   const handleChange = (e) => {
     switch (e.target.value) {
       case 'edit':
         return handleEdit(row.original);
       case 'delete':
-        return handleDelete(row.original.id);
+        return handleDelete(row.original);
     }
   };
   return (
