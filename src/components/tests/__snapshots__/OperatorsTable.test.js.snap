@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Driver Table Render the table 1`] = `
+exports[`Operator Table Renders the table 1`] = `
 Object {
   "asFragment": [Function],
   "baseElement": <body>
@@ -12,7 +12,7 @@ Object {
           <input
             class="p-1 rounded-md border-2"
             name="search"
-            placeholder="Search Drivers..."
+            placeholder="Search Operators..."
             type="text"
             value=""
           />
@@ -47,14 +47,14 @@ Object {
               colspan="1"
               role="columnheader"
             >
-              License
+              Mobile Number
             </th>
             <th
               class="text-left font-extrabold pr-5 border-b-2 pb-4"
               colspan="1"
               role="columnheader"
             >
-              Assigned Bus
+              Company
             </th>
             <th
               class="text-left font-extrabold pr-5 border-b-2 pb-4"
@@ -87,13 +87,13 @@ Object {
               class="pr-5 py-4 border-b-2"
               role="cell"
             >
-              1200080081693164
+              0788352746
             </td>
             <td
               class="pr-5 py-4 border-b-2"
               role="cell"
             >
-              None
+              Kigali Bus Services
             </td>
             <td
               class="pr-5 py-4 border-b-2"
@@ -119,7 +119,6 @@ Object {
                   >
                     View
                   </option>
-                  
                   
                   
                   
@@ -146,13 +145,13 @@ Object {
               class="pr-5 py-4 border-b-2"
               role="cell"
             >
-              1200080081693164
+              0785552746
             </td>
             <td
               class="pr-5 py-4 border-b-2"
               role="cell"
             >
-              None
+              Kigali Bus Services
             </td>
             <td
               class="pr-5 py-4 border-b-2"
@@ -181,7 +180,6 @@ Object {
                   
                   
                   
-                  
                 </select>
               </div>
             </td>
@@ -198,7 +196,7 @@ Object {
         <input
           class="p-1 rounded-md border-2"
           name="search"
-          placeholder="Search Drivers..."
+          placeholder="Search Operators..."
           type="text"
           value=""
         />
@@ -233,14 +231,14 @@ Object {
             colspan="1"
             role="columnheader"
           >
-            License
+            Mobile Number
           </th>
           <th
             class="text-left font-extrabold pr-5 border-b-2 pb-4"
             colspan="1"
             role="columnheader"
           >
-            Assigned Bus
+            Company
           </th>
           <th
             class="text-left font-extrabold pr-5 border-b-2 pb-4"
@@ -273,13 +271,13 @@ Object {
             class="pr-5 py-4 border-b-2"
             role="cell"
           >
-            1200080081693164
+            0788352746
           </td>
           <td
             class="pr-5 py-4 border-b-2"
             role="cell"
           >
-            None
+            Kigali Bus Services
           </td>
           <td
             class="pr-5 py-4 border-b-2"
@@ -305,7 +303,6 @@ Object {
                 >
                   View
                 </option>
-                
                 
                 
                 
@@ -332,13 +329,13 @@ Object {
             class="pr-5 py-4 border-b-2"
             role="cell"
           >
-            1200080081693164
+            0785552746
           </td>
           <td
             class="pr-5 py-4 border-b-2"
             role="cell"
           >
-            None
+            Kigali Bus Services
           </td>
           <td
             class="pr-5 py-4 border-b-2"
@@ -364,7 +361,6 @@ Object {
                 >
                   View
                 </option>
-                
                 
                 
                 
