@@ -1,7 +1,6 @@
-import axios from '@utils/Api.js';
+import { axiosBase as axios } from '@utils/Api.js';
 import React, { Suspense, useEffect, useState } from 'react';
 import TableSkeleton from '../../components/SkeletonUIs/TableSkeleton.js';
-import RouteTable from '../routes/components/RouteTable.js';
 
 const DriversTable = React.lazy(() =>
   import('../../components/DriversTable.js')
@@ -14,7 +13,7 @@ const Drivers = () => {
     const fetchData = async () => {
       setloading(true);
       const response = await axios.get('/drivers');
-      setdata(response.data);
+      setdata(response.data.data);
       setloading(false);
     };
     fetchData();
@@ -27,6 +26,5 @@ const Drivers = () => {
     </div>
   );
 };
-RouteTable;
 
 export default Drivers;

@@ -6,34 +6,42 @@ import React from 'react';
 describe('Driver Table', () => {
   const data = [
     {
+      address: 'Kabuga, Kigali',
+      company: 'Kigali Bus Services',
       id: 2,
-      name: 'Muhire Girbert',
-      nationalid: '1199721772809249',
-      mobileNumber: '0788251891',
-      email: 'ctruswell1@histats.com',
-      license: '1195510237288508',
-      address: 'Kimihurura',
-      assigned_bus: 'RAB1000',
-      assigned_route: null
+      license: '1200080081693164',
+      mobileNumber: '0788352746',
+      nationalID: '1200080081391164',
+      user: {
+        email: 'feyton@hotmail.com',
+        firstName: 'testName',
+        id: 13,
+        lastName: 'testname2',
+        role: 'driver'
+      }
     },
     {
-      email: 'driver@me.com',
-      mobileNumber: '0788498955',
-      company: 'roy',
-      address: 'Nyamirambo',
-      nationalid: '1199780030880040',
-      license: '1199780030880040',
-      name: 'Fabrice Hategekimana',
-      assigned_bus: null,
-      assigned_route: null,
-      id: 5
+      address: 'Kabuga, Kigali',
+      company: 'Kigali Bus Services',
+      id: 2,
+      license: '1200080081693164',
+      mobileNumber: '0785552746',
+      nationalID: '1200080085591164',
+      user: {
+        email: 'driver@hotmail.com',
+        firstName: 'feyton',
+        id: 13,
+        lastName: 'testname2',
+        role: 'driver'
+      }
     }
   ];
+
   it('Render the table', () => {
     const elem = render(
-      <ProviderWrapper
-        children={<DriversTable data={data} />}
-      ></ProviderWrapper>
+      <ProviderWrapper>
+        <DriversTable data={data} />
+      </ProviderWrapper>
     );
     expect(elem).toMatchSnapshot();
   });

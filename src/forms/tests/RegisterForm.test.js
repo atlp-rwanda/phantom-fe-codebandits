@@ -148,7 +148,7 @@ describe('Testing functionality for operator', () => {
         value: 'Kigali'
       }
     });
-    fireEvent.input(screen.getByTestId('nationalid'), {
+    fireEvent.input(screen.getByTestId('nationalID'), {
       target: {
         value: '1199080030000040'
       }
