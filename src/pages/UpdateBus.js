@@ -1,20 +1,20 @@
-import axios from '@utils/Api.js';
 import React from 'react';
-import { useLocation, useNavigate } from 'react-router-dom';
+import { useLocation } from 'react-router-dom';
 import { toast } from 'react-toastify';
 import Buses from '../components/forms/Buses.js';
+import { axiosBase as axios } from '../utils/Api.js';
 
 const UpdateBus = () => {
   const location = useLocation();
   const { id, busType, plateNumber, company, seats } = location.state;
-  const navigate = useNavigate();
+  /* istanbul ignore next */
   const updateBusInDB = async (newBusInfo) => {
     try {
-      await axios.patch(`/buses/${id}`, newBusInfo);
+      await axios.put(`/buses/${id}`, newBusInfo);
       toast('Bus updated successfully', { type: 'success' });
-      navigate(-1);
+      return;
     } catch (error) {
-      toast('Something went wrong', { type: 'error' });
+      return Promise.reject(error);
     }
   };
   return (

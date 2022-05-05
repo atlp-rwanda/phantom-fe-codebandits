@@ -1,9 +1,13 @@
 /* eslint-disable jsx-a11y/label-has-associated-control */
 /* eslint-disable react/jsx-props-no-spreading */
+
 import React, { useState } from 'react';
 import { useForm } from 'react-hook-form';
+import { useNavigate } from 'react-router-dom';
+import { toast } from 'react-toastify';
 import Button, { ButtonLoading } from '../Button.js';
 
+/* istanbul ignore next */
 const Buses = ({
   formTitle,
   formAction,
@@ -12,6 +16,7 @@ const Buses = ({
   seats,
   plateNumber
 }) => {
+  const navigate = useNavigate();
   const {
     register,
     handleSubmit,
@@ -22,9 +27,23 @@ const Buses = ({
   });
   const [loading, setloading] = useState(false);
   const onValid = async (data) => {
-    setloading(true);
-    await formAction(data);
-    setloading(false);
+    try {
+      setloading(true);
+      await formAction(data);
+      setloading(false);
+      navigate(-1);
+    } catch (error) {
+      const validationErrors = error.response.data.data;
+      if (validationErrors) {
+        for (let field in validationErrors) {
+          toast(`${field}: ${validationErrors[field]}`, {
+            type: 'error'
+          });
+        }
+      }
+    } finally {
+      setloading(false);
+    }
   };
   const inputClassStyles = 'rounded-sm px-3 py-3 mb-2 bg-[#EFEFEF]';
   const errorStyles = 'text-rose-500 mb-2';
@@ -69,8 +88,8 @@ const Buses = ({
             Select company
           </option>
           <option value="KBS">Kigali Bus Service</option>
-          <option value="Royal_express">Royal Express</option>
-          <option value="Virunga_express">Virunga Express</option>
+          <option value="Royal express">Royal Express</option>
+          <option value="Virunga express">Virunga Express</option>
         </select>
         <p className={errorStyles}>
           {errors?.company && errors.company.message}
@@ -105,7 +124,7 @@ const Buses = ({
           {...register('plateNumber', {
             required: 'Bus plate number is required',
             pattern: {
-              value: /^[A-Za-z0-9]*$/,
+              value: /^(r|R)[A-Za-z]{2}[0-9]{3}[A-Za-z]{1}$/,
               message: 'Enter a valid plate number'
             }
           })}
