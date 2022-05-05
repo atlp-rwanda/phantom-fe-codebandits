@@ -1,9 +1,10 @@
-import CheckRole from '@utils/CheckRoles.js';
+
 import React, { useMemo } from 'react';
 import { Link } from 'react-router-dom';
 import { useGlobalFilter, usePagination, useTable } from 'react-table';
 import Button from './Button.js';
 import SearchFilter from './SearchFilter.js';
+import CheckRole from '../utils/CheckRoles.js';
 
 const ManagementTable = ({
   tableColumns,

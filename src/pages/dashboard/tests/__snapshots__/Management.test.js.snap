@@ -22,11 +22,38 @@ Object {
             
             
           </ul>
-          
-          
-          
-          
-          
+          <div
+            aria-labelledby="react-tabs-0"
+            class="react-tabs__tab-panel react-tabs__tab-panel--selected"
+            id="react-tabs-1"
+            role="tabpanel"
+          >
+            
+          </div>
+          <div
+            aria-labelledby="react-tabs-2"
+            class="react-tabs__tab-panel"
+            id="react-tabs-3"
+            role="tabpanel"
+          />
+          <div
+            aria-labelledby="react-tabs-4"
+            class="react-tabs__tab-panel"
+            id="react-tabs-5"
+            role="tabpanel"
+          />
+          <div
+            aria-labelledby="react-tabs-6"
+            class="react-tabs__tab-panel"
+            id="react-tabs-7"
+            role="tabpanel"
+          />
+          <div
+            aria-labelledby="react-tabs-8"
+            class="react-tabs__tab-panel"
+            id="react-tabs-9"
+            role="tabpanel"
+          />
         </div>
       </main>
     </div>
@@ -49,11 +76,38 @@ Object {
           
           
         </ul>
-        
-        
-        
-        
-        
+        <div
+          aria-labelledby="react-tabs-0"
+          class="react-tabs__tab-panel react-tabs__tab-panel--selected"
+          id="react-tabs-1"
+          role="tabpanel"
+        >
+          
+        </div>
+        <div
+          aria-labelledby="react-tabs-2"
+          class="react-tabs__tab-panel"
+          id="react-tabs-3"
+          role="tabpanel"
+        />
+        <div
+          aria-labelledby="react-tabs-4"
+          class="react-tabs__tab-panel"
+          id="react-tabs-5"
+          role="tabpanel"
+        />
+        <div
+          aria-labelledby="react-tabs-6"
+          class="react-tabs__tab-panel"
+          id="react-tabs-7"
+          role="tabpanel"
+        />
+        <div
+          aria-labelledby="react-tabs-8"
+          class="react-tabs__tab-panel"
+          id="react-tabs-9"
+          role="tabpanel"
+        />
       </div>
     </main>
   </div>,

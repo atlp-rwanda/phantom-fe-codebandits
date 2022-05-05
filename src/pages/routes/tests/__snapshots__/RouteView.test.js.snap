@@ -7,33 +7,26 @@ exports[`View Page should render the View component 1`] = `
   <h2
     className="text-2xl text-center font-bold"
   >
-     Route informations 
+    Route informations
   </h2>
   <div
     className="mt-5"
   >
     <ul>
       <li>
-         
         <b>
-           First Destination: 
+           Origin: 
         </b>
-         
-        Remera
          
       </li>
       <li>
-         
         <b>
-           Second Destination: 
+           Destination: 
         </b>
-         
-        Kacyiru
          
       </li>
     </ul>
   </div>
-   
   <div
     className=" h-[300px] overflow-hidden py-2"
   >
@@ -47,7 +40,6 @@ exports[`View Page should render the View component 1`] = `
     <div
       className="h-full w-full mb-2"
     />
-     
   </div>
 </div>
 `;

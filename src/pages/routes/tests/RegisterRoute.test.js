@@ -58,4 +58,15 @@ describe('Register Page', () => {
 
     expect(global.fetch.mock.calls.length).toEqual(0);
   });
+  it('It should test the registerRouteToDB function', () => {
+    const registerRouteToDB = jest.fn();
+    const component = mount(
+      <MemoryRouter>
+        <RegisterRoute registerRouteToDB={registerRouteToDB()} />
+      </MemoryRouter>
+    );
+    const form = component.find('form');
+    form.simulate('submit');
+    expect(registerRouteToDB).toBeCalledTimes(1);
+  });
 });

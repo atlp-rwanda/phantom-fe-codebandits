@@ -14,10 +14,10 @@ const Management = () => {
   const dispatch = useDispatch();
   const allTabs = [
     { name: 'Drivers', roles: ['operator', 'admin', 'driver'] },
-    { name: 'Companies', roles: ['admin'] },
-    { name: 'Operators', roles: ['admin'] },
     { name: 'Buses', roles: ['operator', 'admin'] },
-    { name: 'Routes', roles: ['admin', 'operator'] }
+    { name: 'Routes', roles: ['admin', 'operator'] },
+    { name: 'Companies', roles: ['admin'] },
+    { name: 'Operators', roles: ['admin'] }
   ];
   const handleSelect = (index) => {
     dispatch(setActiveTab(index));
@@ -49,49 +49,33 @@ const Management = () => {
             ></CheckRole>
           ))}
         </TabList>
+        <TabPanel>
+          <CheckRole
+            children={<Drivers />}
+            role={['operator', 'admin', 'driver']}
+          ></CheckRole>
+        </TabPanel>
 
-        <CheckRole
-          children={
-            <TabPanel>
-              <Drivers />
-            </TabPanel>
-          }
-          role={['operator', 'admin', 'driver']}
-        ></CheckRole>
-        <CheckRole
-          children={
-            <TabPanel>
-              <Companies />
-            </TabPanel>
-          }
-          role={['admin']}
-        ></CheckRole>
-        <CheckRole
-          children={
-            <TabPanel>
-              <Operators />
-            </TabPanel>
-          }
-          role={['admin']}
-        ></CheckRole>
-
-        <CheckRole
-          children={
-            <TabPanel>
-              <Buses />
-            </TabPanel>
-          }
-          type={'page'}
-          role={['operator', 'admin']}
-        ></CheckRole>
-        <CheckRole
-          children={
-            <TabPanel>
-              <Routes />
-            </TabPanel>
-          }
-          role={['admin', 'operator']}
-        ></CheckRole>
+        <TabPanel>
+          <CheckRole
+            children={<Buses />}
+            type={'page'}
+            role={['operator', 'admin']}
+          ></CheckRole>
+        </TabPanel>
+        <TabPanel>
+          <CheckRole
+            children={<Routes />}
+            role={['admin', 'operator']}
+          ></CheckRole>
+        </TabPanel>
+        <TabPanel>
+          <CheckRole children={<Companies />} role={['admin']}></CheckRole>
+        </TabPanel>
+        <TabPanel>
+          {' '}
+          <CheckRole children={<Operators />} role={['admin']}></CheckRole>{' '}
+        </TabPanel>
       </Tabs>
     </main>
   );

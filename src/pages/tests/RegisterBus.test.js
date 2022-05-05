@@ -3,6 +3,7 @@ import { MemoryRouter } from 'react-router-dom';
 import renderer from 'react-test-renderer';
 import { fireEvent, render, screen, waitFor } from '@testing-library/react';
 import RegisterBus from '../RegisterBus.js';
+import { mount } from 'enzyme';
 
 describe('RegisterBus component test', () => {
   it('it should render Register bus page', () => {
@@ -30,5 +31,17 @@ describe('RegisterBus component test', () => {
         <RegisterBus registerBusToDB={registerBusToDBMock(busInfo)} />
       </MemoryRouter>
     );
+    expect(elem).toMatchSnapshot();
+  });
+  it('It should test the registerBusToDB function', () => {
+    const registerBusToDB = jest.fn();
+    const component = mount(
+      <MemoryRouter>
+        <RegisterBus registerBusToDB={registerBusToDB()} />
+      </MemoryRouter>
+    );
+    const form = component.find('form');
+    form.simulate('submit');
+    expect(registerBusToDB).toBeCalledTimes(1);
   });
 });

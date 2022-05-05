@@ -1,25 +1,26 @@
-import axios from '@utils/Api.js';
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import { toast } from 'react-toastify';
+import { axiosBase as axios } from '../../utils/Api.js';
 import RouteComponent from './components/RouteComponent.js';
 
 function RegisterRoute() {
   const navigate = useNavigate();
-  const registerRouteToDB = async (destination1, destination2, distance) => {
-    const total_buses = '100';
-    if (destination1 === null || destination2 === null) {
+  const registerRouteToDB = async (origin, destination, distance) => {
+    if (origin === null || destination === null) {
       toast('Make sure all destinations are selected', { type: 'error' });
       return;
     }
-
-    const route = { destination1, destination2, distance, total_buses };
-
-    await axios.post('/routes', route);
-    toast('Route Created successfully', { type: 'success' });
-    return navigate('/dashboard/management');
+    const routeInfo = { origin, destination, distance };
+    try {
+      console.log(routeInfo);
+      await axios.post('/routes', routeInfo);
+      toast('Route Created successfully', { type: 'success' });
+      return;
+    } catch (error) {
+      return Promise.reject(error);
+    }
   };
-
   return (
     <RouteComponent formAction={registerRouteToDB} formTitle="Register Route" />
   );

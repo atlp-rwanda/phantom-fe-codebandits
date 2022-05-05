@@ -1,7 +1,8 @@
-import axios from '@utils/Api.js';
 import React, { useRef, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { toast } from 'react-toastify';
+import Swal from 'sweetalert2';
+import { axiosBase as axios } from '../utils/Api.js';
 import CheckRole from '../utils/CheckRoles.js';
 import { ButtonLoading } from './Button.js';
 
@@ -10,7 +11,6 @@ function ManageDropdownRoute({ row }) {
   const { id } = row;
   const navigate = useNavigate();
   const [loading, setloading] = useState(false);
-
   const handleEdit = () => {
     navigate(`route/edit/${id}`, {
       state: {
@@ -18,7 +18,6 @@ function ManageDropdownRoute({ row }) {
       }
     });
   };
-
   const handleView = () => {
     navigate(`/dashboard/modal/routes/view/${id}`, {
       state: {
@@ -26,21 +25,30 @@ function ManageDropdownRoute({ row }) {
       }
     });
   };
-
   const handleDelete = async () => {
-    setloading(true);
-    try {
-      await axios.delete(`/routes/${id}`);
-      toast('Route Deleted successfully', { type: 'success' });
-      navigate('/dashboard/management');
-      setloading(false);
-
-      if (selectRef.current) {
-        selectRef.current.innerHTML = `<b className="deleted mx-auto font-bold">Deleted</>`;
+    const results = await Swal.fire({
+      title: 'Are you sure?',
+      html: `Route <b>${row.origin}-${row.destination}</b> will be deleted.`,
+      text: 'This Route will be deleted!',
+      icon: 'warning',
+      showCancelButton: true,
+      confirmButtonColor: '#3085d6',
+      cancelButtonColor: '#d33',
+      confirmButtonText: 'Yes, delete!'
+    });
+    if (results.isConfirmed) {
+      setloading(true);
+      try {
+        await axios.delete(`/routes/${id}`);
+        toast('Route Deleted successfully', { type: 'success' });
+        setloading(false);
+        if (selectRef.current) {
+          selectRef.current.innerHTML = `<p class="font-raleway mx-auto font-bold text-red">Deleted</p>`;
+        }
+      } catch (error) {
+        toast(error.message, { type: 'error' });
+        setloading(false);
       }
-    } catch (error) {
-      toast('Something went wrong', { type: 'error' });
-      setloading(false);
     }
   };
 

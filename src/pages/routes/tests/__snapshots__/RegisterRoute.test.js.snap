@@ -15,7 +15,7 @@ exports[`Register Page should render the register component 1`] = `
     </h1>
     <label
       className="font-bold mb-2"
-      htmlFor="FirstDestination"
+      htmlFor="origin"
     >
        
       First Destination
@@ -23,7 +23,7 @@ exports[`Register Page should render the register component 1`] = `
     </label>
     <select
       className="rounded-sm px-3 py-4 mb-5 bg-[#EFEFEF]"
-      name="FirstDestination"
+      name="origin"
       onChange={[Function]}
     >
       <option
@@ -87,7 +87,7 @@ exports[`Register Page should render the register component 1`] = `
     </select>
     <label
       className="font-bold mb-2"
-      htmlFor="busType"
+      htmlFor="destination"
     >
        
       Second Destination
@@ -95,7 +95,7 @@ exports[`Register Page should render the register component 1`] = `
     </label>
     <select
       className="rounded-sm px-3 py-4 mb-5 bg-[#EFEFEF]"
-      name="secondDestination"
+      name="destination"
       onChange={[Function]}
     >
       <option
@@ -158,7 +158,7 @@ exports[`Register Page should render the register component 1`] = `
     </select>
     <label
       className="font-bold mb-2"
-      htmlFor="seats"
+      htmlFor="distance"
     >
       Distance
        

@@ -1,39 +1,60 @@
 import React, { useEffect, useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import { toast } from 'react-toastify';
 import Button, { ButtonLoading } from '../../../components/Button.js';
 import options from './RouteOptions.js';
 import { routesDistance } from './RoutesDistance.js';
 
 const RouteComponent = ({ formTitle, formAction, data }) => {
+  const navigate = useNavigate();
   const inputClassStyles = 'rounded-sm px-3 py-4 mb-5 bg-[#EFEFEF]';
-
-  const [destination1, setDestination1] = useState(null);
-  const [destination2, setDestination2] = useState(null);
+  const [origin, setOrigin] = useState(null);
+  const [destination, setDestination] = useState(null);
   const [distance, setDistance] = useState(null);
   const [loading, setloading] = useState(false);
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    setloading(true);
-    await formAction(destination1, destination2, distance);
-    setloading(false);
+    try {
+      setloading(true);
+      await formAction(origin, destination, distance);
+      navigate(-1);
+    } catch (error) {
+      const validationErrors = error.response.data.data;
+      if (validationErrors) {
+        if (validationErrors instanceof Object) {
+          for (let field in validationErrors) {
+            toast(`${field}: ${validationErrors[field]}`, {
+              type: 'error'
+            });
+          }
+          return;
+        }
+        toast(validationErrors, { type: 'error' });
+        return;
+      }
+      toast(error.message, { type: 'error' });
+    } finally {
+      setloading(false);
+    }
   };
 
-  const distanceValue = (destination1, destination2) => {
-    if (destination1 && destination2) {
-      if (destination1 === destination2) {
-        toast("Destination one and Destination two can't match", {
+  const distanceValue = (origin, destination) => {
+    if (origin && destination) {
+      if (origin === destination) {
+        toast("Origin and Destination  can't match", {
           type: 'error'
         });
         return;
       }
+
       const selectedRoute = routesDistance.filter((entry) => {
         return (
-          entry.route.includes(destination1) &&
-          entry.route.includes(destination2)
+          entry.route.includes(origin) && entry.route.includes(destination)
         );
       });
-      if (selectedRoute) {
+      console.log(selectedRoute)
+      if (selectedRoute.length >0) {
         setDistance(selectedRoute[0].distance);
         return;
       }
@@ -41,8 +62,16 @@ const RouteComponent = ({ formTitle, formAction, data }) => {
   };
 
   useEffect(() => {
-    distanceValue(destination1, destination2);
-  }, [destination2, destination1]);
+    distanceValue(origin, destination);
+  }, [destination, origin]);
+
+  useEffect(() => {
+    if (data) {
+      console.log(data);
+      setOrigin(data.origin);
+      setDestination(data.destination);
+    }
+  }, []);
 
   return (
     <div>
@@ -52,52 +81,52 @@ const RouteComponent = ({ formTitle, formAction, data }) => {
       >
         <h1 className="font-bold text-xl pb-8 text-center "> {formTitle} </h1>
 
-        <label htmlFor="FirstDestination" className="font-bold mb-2">
+        <label htmlFor="origin" className="font-bold mb-2">
           {' '}
           First Destination{' '}
         </label>
 
         <select
-          name="FirstDestination"
+          name="origin"
           onChange={(e) => {
-            setDestination1(e.target.value);
+            setOrigin(e.target.value);
           }}
           className={inputClassStyles}
         >
-          <option hidden> {data.destination1} </option>{' '}
+          <option hidden> {data.origin} </option>{' '}
           {options.map((option) => {
             return (
-              <option value={option.destination1} key={option.id}>
+              <option value={option.origin} key={option.id}>
                 {' '}
-                {option.destination1}{' '}
+                {option.origin}{' '}
               </option>
             );
           })}{' '}
         </select>
 
-        <label htmlFor="busType" className="font-bold mb-2">
+        <label htmlFor="destination" className="font-bold mb-2">
           {' '}
           Second Destination{' '}
         </label>
         <select
-          name="secondDestination"
+          name="destination"
           onChange={(e) => {
-            setDestination2(e.target.value);
+            setDestination(e.target.value);
           }}
           className={inputClassStyles}
         >
-          <option hidden> {data.destination2} </option>{' '}
+          <option hidden> {data.destination} </option>{' '}
           {options.map((option) => {
             return (
-              <option value={option.destination2} key={option.id}>
+              <option value={option.destination} key={option.id}>
                 {' '}
-                {option.destination2}{' '}
+                {option.destination}{' '}
               </option>
             );
           })}
         </select>
 
-        <label htmlFor="seats" className="font-bold mb-2">
+        <label htmlFor="distance" className="font-bold mb-2">
           Distance{' '}
         </label>
 
@@ -121,8 +150,8 @@ const RouteComponent = ({ formTitle, formAction, data }) => {
 
 RouteComponent.defaultProps = {
   data: {
-    destination1: 'Select first destination',
-    destination2: 'Select second destination',
+    origin: 'Select first destination',
+    destination: 'Select second destination',
     distance: 'Distance'
   }
 };
