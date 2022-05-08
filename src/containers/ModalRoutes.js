@@ -1,6 +1,7 @@
 import React from 'react';
 import { Route, Routes, useNavigate } from 'react-router-dom';
 import AssignBusModal from '../Modals/AssignBus.js';
+import AssignRouteModal from '../Modals/AssignRoute.js';
 import ChangeRole from '../Modals/ChangeRole.js';
 import RouteView from '../pages/routes/RouteView.js';
 import UpdateBus from '../pages/UpdateBus.js';
@@ -23,6 +24,10 @@ function ModalRoutes() {
           <Route
             path="driver/assign/:id"
             element={<AssignBusModal handleClose={handleBack} />}
+          />
+          <Route
+            path="bus/assign/:code"
+            element={<AssignRouteModal handleClose={handleBack} />}
           />
           <Route path="bus/update/:id" element={<UpdateBus />} />
           <Route path="permission/change/:id" element={<ChangeRole />} />
