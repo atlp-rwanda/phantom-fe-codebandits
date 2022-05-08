@@ -4,7 +4,25 @@ import { useNavigate } from 'react-router-dom';
 import { toast } from 'react-toastify';
 import { ButtonLoading } from '../Button.js';
 
+busType: "Minibus"
+company: "KBS"
+driver: null
+id: 5
+plateNumber: "RAT230A"
+route: null
+seats: "50"
+
 const BusManagement = ({ row }) => {
+  const { plateNumber, busType, seats, driver, route, company, id } = row.original;
+  const data = {
+    plateNumber,
+    busType,
+    seats,
+    driver,
+    route,
+    company,
+    id
+  };
   const navigate = useNavigate();
   const [loading, setloading] = useState(false);
   const handleEdit = (busInfo) => {
@@ -25,6 +43,11 @@ const BusManagement = ({ row }) => {
       setloading(false);
     }
   };
+  const handleAssignRoute = (busInfo) => {
+    navigate(`/dashboard/modal/bus/assign/${plateNumber}`, {
+      state: data
+    });
+  }
 
   const handleChange = (e) => {
     switch (e.target.value) {
@@ -32,6 +55,8 @@ const BusManagement = ({ row }) => {
         return handleEdit(row.original);
       case 'delete':
         return handleDelete(row.original.id);
+      case 'assign_route':
+        return handleAssignRoute(row.original);
     }
   };
   return (
@@ -47,6 +72,9 @@ const BusManagement = ({ row }) => {
           className="py-1 px-3 font-rale font-bold bg-transparent border rounded-sm"
         >
           <option hidden={true}>Manage</option>
+          <option className="cursor-pointer" value="assign_route">
+            Assign Route
+          </option>
           <option className="cursor-pointer" value="edit">
             Edit
           </option>
