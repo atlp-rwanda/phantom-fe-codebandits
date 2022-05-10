@@ -10,7 +10,6 @@ const EM_RGX = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
 function ResetFormPage() {
   let navigate = useNavigate();
   const [loading, setloading] = useState(false);
-
   const {
     register,
     handleSubmit,

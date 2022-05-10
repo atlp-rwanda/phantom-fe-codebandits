@@ -13,6 +13,7 @@ export const assignBusToDriver = async (busInfo, driverInfo) => {
   });
 };
 
+/* istanbul ignore next */
 export const AssignBusModal = ({ handleClose }) => {
   const navigate = useNavigate();
   const [loading, setloading] = useState(false);

@@ -1,5 +1,7 @@
-import axios from '@utils/Api.js';
 import React, { useEffect, useState } from 'react';
+import { toast } from 'react-toastify';
+import { axiosBase as axios } from '../utils/Api.js';
+import { ButtonA } from './Button.js';
 import BusManagement from './dropdowns/BusManagement.js';
 import ManagementTable from './ManagementTable.js';
 import TableSkeleton from './SkeletonUIs/TableSkeleton.js';
@@ -45,26 +47,41 @@ const busesTableColumns = [
 ];
 
 const BusesTable = () => {
-  const [buses, setbuses] = useState([]);
+  const [buses, setbuses] = useState();
   const [loading, setloading] = useState(false);
   useEffect(() => {
     const fetchData = async () => {
-      setloading(true);
-      const response = await axios.get('/buses');
-      setbuses(response.data);
-      setloading(false);
+      try {
+        setloading(true);
+        const response = await axios.get('/buses');
+        setbuses(response.data.data);
+      } catch (error) {
+        toast(error.message, { type: 'error' });
+      } finally {
+        setloading(false);
+      }
     };
     fetchData();
   }, []);
   return (
     <>
       {!loading ? (
-        <ManagementTable
-          tableColumns={busesTableColumns}
-          data={buses}
-          searchPlaceholder="Search buses..."
-          registerNewPath="bus/register"
-        />
+        buses ? (
+          <ManagementTable
+            tableColumns={busesTableColumns}
+            data={buses}
+            searchPlaceholder="Search buses..."
+            registerNewPath="bus/register"
+          />
+        ) : (
+          <div className="flex  content-center flex-col">
+            <h1 className="font-bold font-raleway text-red">Error occured</h1>
+            <ButtonA
+              name={'Try again'}
+              onClick={() => window.location.reload()}
+            />
+          </div>
+        )
       ) : (
         <TableSkeleton />
       )}
