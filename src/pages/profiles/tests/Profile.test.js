@@ -1,10 +1,9 @@
-import React from 'react';
-import renderer, { act } from 'react-test-renderer';
-import { MemoryRouter } from 'react-router-dom';
-import { Provider } from 'react-redux';
-import * as ReactRedux from 'react-redux';
-import { mount } from 'enzyme';
 import { fireEvent, render, screen } from '@testing-library/react';
+import { mount } from 'enzyme';
+import React from 'react';
+import { Provider } from 'react-redux';
+import { MemoryRouter } from 'react-router-dom';
+import renderer, { act } from 'react-test-renderer';
 import { store } from '../../../redux/store.js';
 import Profile from '../Profile.js';
 
@@ -76,7 +75,7 @@ describe('Profile page functionality tests', () => {
   it('calls handleSubmit function on form submit', () => {
     act(() => {
       uploadBtn.simulate('change', event);
-      expect(onChangeMock).toBeCalledTimes(2);
+      expect(onChangeMock).toBeCalledTimes(1);
     });
   });
 });

@@ -13,7 +13,9 @@ const Input = forwardRef(
       defaultValue,
       wrapperStyles,
       id,
-      disabled
+      disabled,
+      pattern,
+      required
     },
     ref
   ) => {
@@ -35,11 +37,12 @@ const Input = forwardRef(
           name={name}
           ref={ref}
           id={id}
+          required={required || false}
+          pattern={pattern}
         />
       </div>
     );
   }
 );
-
 
 export default Input;

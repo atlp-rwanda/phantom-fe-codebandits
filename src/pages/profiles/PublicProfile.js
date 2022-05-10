@@ -3,6 +3,7 @@ import stars from '../../assets/stars.png';
 import profileImg from '../../images/profileImg.jpg';
 
 const PublicProfile = () => {
+
   return (
     <div className="mx-auto items-center w-full h-full p-8 pt-0 top-8 right-2 mb-12">
       <div className="bg-white rounded-xl shadow-xl z-10">

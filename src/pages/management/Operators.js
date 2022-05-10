@@ -1,7 +1,6 @@
 import { axiosBase as axios } from '@utils/Api.js';
 import React, { Suspense, useEffect, useState } from 'react';
 import TableSkeleton from '../../components/SkeletonUIs/TableSkeleton.js';
-import RouteTable from '../routes/components/RouteTable.js';
 
 const OperatorsTable = React.lazy(() =>
   import('../../components/OperatorsTable.js')
@@ -26,6 +25,6 @@ const Operators = () => {
       </Suspense>
     </div>
   );
-};RouteTable
+};
 
 export default Operators;

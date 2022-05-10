@@ -49,6 +49,7 @@ exports[`UpdateOperator should render the UpdateOperator component 1`] = `
                     id="firstName"
                     name="firstName"
                     onChange={[Function]}
+                    required={false}
                     type="text"
                   />
                 </div>
@@ -71,6 +72,7 @@ exports[`UpdateOperator should render the UpdateOperator component 1`] = `
                     id="mobileNumber"
                     name="mobileNumber"
                     onChange={[Function]}
+                    required={false}
                     type="text"
                   />
                 </div>
@@ -93,6 +95,7 @@ exports[`UpdateOperator should render the UpdateOperator component 1`] = `
                     id="address"
                     name="address"
                     onChange={[Function]}
+                    required={false}
                     type="text"
                   />
                 </div>
@@ -119,6 +122,7 @@ exports[`UpdateOperator should render the UpdateOperator component 1`] = `
                     id="lastName"
                     name="lastName"
                     onChange={[Function]}
+                    required={false}
                     type="text"
                   />
                 </div>
@@ -185,6 +189,7 @@ exports[`UpdateOperator should render the UpdateOperator component 1`] = `
                     id="nationalID"
                     name="nationalID"
                     onChange={[Function]}
+                    required={false}
                     type="text"
                   />
                 </div>
@@ -208,6 +213,7 @@ exports[`UpdateOperator should render the UpdateOperator component 1`] = `
                 id="driverLicense"
                 name="driverLicense"
                 onChange={[Function]}
+                required={false}
                 type="text"
               />
             </div>

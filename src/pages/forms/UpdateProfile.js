@@ -1,22 +1,13 @@
 import React from 'react';
 import { useForm } from 'react-hook-form';
-import { useSelector, useDispatch } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 import { toast } from 'react-toastify';
 import bus2 from '../../assets/bus2.jpg';
 import Button from '../../components/Button.js';
-import { updateProfile } from '../../redux/reducers/updateProfileReducer.js';
 import Input from '../../components/Input.js';
+import { updateProfile } from '../../redux/reducers/updateProfileReducer.js';
 
-const UpdateProfile = ({
-  addressInfo,
-  companyInfo,
-  firstNameInfo,
-  lastNameInfo,
-  mobileNumberInfo,
-  nationalIDInfo,
-  driverLicenseInfo,
-  position,
-  wrapperStyles
+const UpdateProfile = ({addressInfo, companyInfo, firstNameInfo,lastNameInfo, mobileNumberInfo, nationalIDInfo, driverLicenseInfo, position, wrapperStyles
 }) => {
   const {
     register,
@@ -33,10 +24,13 @@ const UpdateProfile = ({
     nationalID,
     driverLicense
   } = useSelector((state) => state?.profileUpdates);
-
+  const userData = ()=>{
+    
+  }
   const dispatch = useDispatch();
 
   const handleUpdate = (data) => {
+    console.log('oops: ', data);
     dispatch(updateProfile(data.profileUpdates));
     toast('Profile Updated', { type: 'success' });
   };

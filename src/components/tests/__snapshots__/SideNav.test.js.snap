@@ -26,9 +26,8 @@ exports[`SideNav should render the SideNav component 1`] = `
         className="rounded-full mx-auto flex items-center justify-center h-12 w-12 mb-5"
       >
         <img
-          alt="Image"
+          alt=""
           className="rounded-full object-cover h-12 w-12"
-          src="profileImg.jpg"
         />
       </span>
       <div

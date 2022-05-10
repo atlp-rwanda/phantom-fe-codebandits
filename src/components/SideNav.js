@@ -5,7 +5,6 @@ import { toast } from 'react-toastify';
 import dashIcon from '../images/dashboardIcon.png';
 import manageIcon from '../images/manageIcon.png';
 import profileIcon from '../images/profileIcon.png';
-import profileImg from '../images/profileImg.jpg';
 import settingIcon from '../images/settingIcon.png';
 import supportIcon from '../images/supportIcon.png';
 import { logoutUser } from '../redux/reducers/authReducer.js';
@@ -35,8 +34,8 @@ const SideNav = ({ styles }) => {
         <div className=" mb-6 mt-8">
           <span className="rounded-full mx-auto flex items-center justify-center h-12 w-12 mb-5">
             <img
-              src={profileImg}
-              alt="Image"
+              src={user?.image}
+              alt=""
               className="rounded-full object-cover h-12 w-12"
             />
           </span>
