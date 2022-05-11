@@ -25,6 +25,12 @@ Object {
           </option>
           <option
             class="cursor-pointer"
+            value="assign_route"
+          >
+            Assign Route
+          </option>
+          <option
+            class="cursor-pointer"
             value="edit"
           >
             Edit
@@ -209,6 +215,12 @@ Object {
         </option>
         <option
           class="cursor-pointer"
+          value="assign_route"
+        >
+          Assign Route
+        </option>
+        <option
+          class="cursor-pointer"
           value="edit"
         >
           Edit
@@ -298,6 +310,12 @@ Object {
             hidden=""
           >
             Manage
+          </option>
+          <option
+            class="cursor-pointer"
+            value="assign_route"
+          >
+            Assign Route
           </option>
           <option
             class="cursor-pointer"
@@ -484,6 +502,12 @@ Object {
         </option>
         <option
           class="cursor-pointer"
+          value="assign_route"
+        >
+          Assign Route
+        </option>
+        <option
+          class="cursor-pointer"
           value="edit"
         >
           Edit
@@ -569,6 +593,12 @@ exports[`BusManagement Should render bus management page 1`] = `
     </option>
     <option
       className="cursor-pointer"
+      value="assign_route"
+    >
+      Assign Route
+    </option>
+    <option
+      className="cursor-pointer"
       value="edit"
     >
       Edit
@@ -604,6 +634,12 @@ Object {
           </option>
           <option
             class="cursor-pointer"
+            value="assign_route"
+          >
+            Assign Route
+          </option>
+          <option
+            class="cursor-pointer"
             value="edit"
           >
             Edit
@@ -632,6 +668,12 @@ Object {
           hidden=""
         >
           Manage
+        </option>
+        <option
+          class="cursor-pointer"
+          value="assign_route"
+        >
+          Assign Route
         </option>
         <option
           class="cursor-pointer"

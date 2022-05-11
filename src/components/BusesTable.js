@@ -13,8 +13,10 @@ const DriverLink = ({ row }) => {
 };
 
 const RouteLink = ({ row }) => {
-  if (row.route) {
-    return <div>{row.route}</div>;
+  console.log(row)
+  if (row.routeId) {
+
+    return <div>{row.route.origin} - {row.route.destination}</div>;
   }
   return <div className="text-red">No route assigned</div>;
 };
@@ -53,10 +55,14 @@ const BusesTable = () => {
     const fetchData = async () => {
       try {
         setloading(true);
-        const response = await axios.get('/buses');
+        const response = await axios.get('/buses', {
+          params: {
+            relation: true
+          }
+        });
         setbuses(response.data.data);
       } catch (error) {
-        toast(error.message, { type: 'error' });
+        toast(error?.response?.data?.data?.message);
       } finally {
         setloading(false);
       }
