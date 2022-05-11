@@ -27,54 +27,47 @@ const Management = () => {
       <Tabs
         selectedIndex={tabIndex}
         onSelect={(index) => handleSelect(index)}
-        selectedTabClassName={'border-b-2 border-primary h-full mb-0'}
+        selectedTabClassName="border-b-2 border-primary h-full mb-0"
       >
-        <TabList
-          className={'flex border-b-2 mb-5 w-full justify-around shadow-main'}
-        >
+        <TabList className="flex border-b-2 mb-5 w-full justify-around shadow-main">
           {allTabs.map((tab) => (
             <CheckRole
               key={tab.name}
               children={
                 <Tab
-                  className={
-                    'mr-16 font-bold py-2 w-full px-3 text-center cursor-pointer outline-none focus:outline-none font-raleway'
-                  }
+                  className="mr-16 font-bold py-2 w-full px-3 text-center cursor-pointer outline-none focus:outline-none font-raleway"
                   key={tab.name}
                 >
                   {tab.name}
                 </Tab>
               }
               role={tab.roles}
-            ></CheckRole>
+            />
           ))}
         </TabList>
         <TabPanel>
           <CheckRole
             children={<Drivers />}
             role={['operator', 'admin', 'driver']}
-          ></CheckRole>
+          />
         </TabPanel>
 
         <TabPanel>
           <CheckRole
             children={<Buses />}
-            type={'page'}
+            type="page"
             role={['operator', 'admin']}
-          ></CheckRole>
+          />
         </TabPanel>
         <TabPanel>
-          <CheckRole
-            children={<Routes />}
-            role={['admin', 'operator']}
-          ></CheckRole>
+          <CheckRole children={<Routes />} role={['admin', 'operator']} />
         </TabPanel>
         <TabPanel>
-          <CheckRole children={<Companies />} role={['admin']}></CheckRole>
+          <CheckRole children={<Companies />} role={['admin']} />
         </TabPanel>
         <TabPanel>
           {' '}
-          <CheckRole children={<Operators />} role={['admin']}></CheckRole>{' '}
+          <CheckRole children={<Operators />} role={['admin']} />{' '}
         </TabPanel>
       </Tabs>
     </main>

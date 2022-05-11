@@ -18,10 +18,6 @@ const tableColumns = [
     accessor: 'distance'
   },
   {
-    Header: 'Total buses in Route',
-    accessor: 'total_buses'
-  },
-  {
     Header: 'Management',
     accessor: 'management',
     Cell: ({ row }) => <ManageDropdown row={row.original} />

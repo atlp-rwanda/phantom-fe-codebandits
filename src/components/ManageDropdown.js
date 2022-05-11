@@ -7,7 +7,7 @@ import CheckRole from '../utils/CheckRoles.js';
 import { ButtonLoading } from './Button.js';
 
 function ManageDropdown({ row }) {
-  const { user, license, assigned_bus, id } = row.original;
+  const { user, license, bus, id } = row.original;
   const navigate = useNavigate();
   const selectRef = useRef();
   const [loading, setloading] = useState(false);
@@ -16,10 +16,11 @@ function ManageDropdown({ row }) {
   };
 
   const data = {
+    id,
     name: user.firstName,
     email: user.email,
     license,
-    plate: assigned_bus
+    bus
   };
   const handlePermissions = () => {
     selectRef.current.value = 'manage';
@@ -112,7 +113,7 @@ function ManageDropdown({ row }) {
           <CheckRole
             children={
               <option className="cursor-pointer" value="assign">
-                {assigned_bus ? 'Change bus' : 'Assign bus'}
+                {bus ? 'Change bus' : 'Assign bus'}
               </option>
             }
             role={['operator']}

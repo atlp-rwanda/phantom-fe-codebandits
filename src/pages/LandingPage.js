@@ -44,7 +44,7 @@ const LandingPage = () => {
               <Card
                 image={card.image}
                 alt={card.alt}
-                title={`${index +1}. ${t(card.title)}`}
+                title={`${index + 1}. ${t(card.title)}`}
                 text={t(card.text)}
                 styles={card.style}
               />

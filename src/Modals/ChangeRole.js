@@ -15,7 +15,7 @@ function ChangeRole() {
   ];
   const handleSubmit = (e) => {
     e.preventDefault();
-    const value = e.target.permission.value;
+    const { value } = e.target.permission;
     const role = roles.filter((entry) => {
       return entry.value == value;
     });
@@ -29,7 +29,7 @@ function ChangeRole() {
         Change user's role
       </h1>
       <hr />
-      <div className='mt-2'>
+      <div className="mt-2">
         <ul>
           <li>
             <b>Name</b>: {name}
@@ -61,7 +61,7 @@ function ChangeRole() {
         </label>
         <select
           required
-          aria-required={true}
+          aria-required
           name="permission"
           id="permissions"
           className="bg-gray-300 block my-2 border px-2 py-1 rounded-sm placeholder:font-raleway uppercase"
@@ -77,7 +77,7 @@ function ChangeRole() {
             );
           })}
         </select>
-        <PrimaryButton type={'submit'} name={'Continue'} />
+        <PrimaryButton type="submit" name="Continue" />
       </form>
     </div>
   );

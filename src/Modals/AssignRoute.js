@@ -9,23 +9,23 @@ export const assignRouteToBus = async (data) => {
   try {
     await axios.post(`/bus-to-routes/${data.plateNumber}/${data.route}`);
     return true;
-  } catch(error) {
+  } catch (error) {
     toast('Something went wrong on our end');
   }
 };
 
 export const AssignRouteModal = ({ handleClose }) => {
   const navigate = useNavigate();
-  const [routes, setRoutes] = useState()
+  const [routes, setRoutes] = useState();
   const [loading, setloading] = useState(false);
   const location = useLocation();
   const { plateNumber, busType, seats, route, id } = location?.state;
   const onSubmit = async (e) => {
     e.preventDefault();
     const data = {
-      plateNumber: plateNumber,
+      plateNumber,
       route: e.target.route.value
-    }
+    };
     try {
       setloading(true);
       if (route) {
@@ -54,7 +54,6 @@ export const AssignRouteModal = ({ handleClose }) => {
         toast('The bus has been assigned a new route.', { type: 'success' });
         navigate('/dashboard/management');
       }
-
     } catch (error) {
       toast(error?.response?.data?.data?.message);
     } finally {
@@ -68,8 +67,7 @@ export const AssignRouteModal = ({ handleClose }) => {
         setloading(true);
         const response = await axios.get('/routes');
         setRoutes(response.data.data);
-      }
-      catch (error) {
+      } catch (error) {
         toast(error?.response?.data?.data?.message);
       } finally {
         setloading(false);
@@ -97,7 +95,9 @@ export const AssignRouteModal = ({ handleClose }) => {
         </li>
         <li>
           <span>Assigned route: </span>
-          <b>{route?.origin} - {route?.destination}</b>
+          <b>
+            {route?.origin} - {route?.destination}
+          </b>
         </li>
       </ul>
       <hr />
@@ -119,24 +119,24 @@ export const AssignRouteModal = ({ handleClose }) => {
             name="route"
           >
             <option id="origin-select">Select route</option>
-            {routes && routes.map((route) => {
-              return (
-                <option
-                  value={route.code}
-                  key={route.code}
-                  className="cursor-pointer bg-transparent font-bold font-raleway disabled:text-gray-400 disabled:bg-gray-100"
-                >
-                  {route.origin} - {route.destination}
-                </option>
-              );
-            })}
+            {routes &&
+              routes.map((route) => {
+                return (
+                  <option
+                    value={route.code}
+                    key={route.code}
+                    className="cursor-pointer bg-transparent font-bold font-raleway disabled:text-gray-400 disabled:bg-gray-100"
+                  >
+                    {route.origin} - {route.destination}
+                  </option>
+                );
+              })}
           </select>
           {loading ? (
-            <ButtonLoading name={'Loading...'} />
+            <ButtonLoading name="Loading..." />
           ) : (
-            <PrimaryButton type={'submit'} name={'Assign'}></PrimaryButton>
+            <PrimaryButton type="submit" name="Assign" />
           )}
-
         </form>
       </div>
     </div>

@@ -2,7 +2,7 @@ import React from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 
 function ComingSoon({ title }) {
-  let navigate = useNavigate();
+  const navigate = useNavigate();
   return (
     <div className="justify-self-center w-full h-full relative bg-gray-300 md:min-w-[300px] min-h-[300px] p-9">
       <div className="flex flex-col items-center justify-center top-0 left-0 right-0 bottom-0">

@@ -23,9 +23,7 @@ function Roles() {
           </div>
           <div className="border-b-2">
             {roles.map((role) => {
-              return (
-                <RoleComponent key={role.name} role={role}></RoleComponent>
-              );
+              return <RoleComponent key={role.name} role={role} />;
             })}
           </div>
         </div>

@@ -32,14 +32,22 @@ export default Button;
 export const ButtonLoading = ({ name }) => {
   return (
     <div className="flex w-fit py-1 px-3 bg-primary font-raleway font-bold rounded-md">
-      <div className="loader mr-1"></div><button className='ml-1 font-raleway text-white font-bold'> {name}</button>
+      <div className="loader mr-1" />
+      <button className="ml-1 font-raleway text-white font-bold">
+        {' '}
+        {name}
+      </button>
     </div>
   );
 };
 
-export const PrimaryButton = ({ name, type="button", ...options }) => {
+export const PrimaryButton = ({ name, type = 'button', ...options }) => {
   return (
-    <button {...options} type={type} className="bg-primary rounded-md text-white font-bold font-raleway py-2 px-3 hover:bg-hover transition-all block hover:transition-all">
+    <button
+      {...options}
+      type={type}
+      className="bg-primary rounded-md text-white font-bold font-raleway py-2 px-3 hover:bg-hover transition-all block hover:transition-all"
+    >
       {name}
     </button>
   );

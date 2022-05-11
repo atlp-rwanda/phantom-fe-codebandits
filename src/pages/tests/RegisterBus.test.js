@@ -2,8 +2,8 @@ import React from 'react';
 import { MemoryRouter } from 'react-router-dom';
 import renderer from 'react-test-renderer';
 import { fireEvent, render, screen, waitFor } from '@testing-library/react';
-import RegisterBus from '../RegisterBus.js';
 import { mount } from 'enzyme';
+import RegisterBus from '../RegisterBus.js';
 
 describe('RegisterBus component test', () => {
   it('it should render Register bus page', () => {

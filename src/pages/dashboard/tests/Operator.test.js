@@ -4,6 +4,7 @@ import { BrowserRouter } from 'react-router-dom';
 import renderer from 'react-test-renderer';
 import Driver from '../Driver.js';
 import Operator from '../Operator.js';
+
 describe('Registration', () => {
   describe('Operators', () => {
     it('Should render the operator form', () => {

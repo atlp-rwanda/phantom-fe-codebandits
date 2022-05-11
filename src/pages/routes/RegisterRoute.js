@@ -13,7 +13,6 @@ function RegisterRoute() {
     }
     const routeInfo = { origin, destination, distance };
     try {
-      console.log(routeInfo);
       await axios.post('/routes', routeInfo);
       toast('Route Created successfully', { type: 'success' });
       return;

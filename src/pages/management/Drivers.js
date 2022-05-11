@@ -12,7 +12,11 @@ const Drivers = () => {
   useEffect(() => {
     const fetchData = async () => {
       setloading(true);
-      const response = await axios.get('/drivers');
+      const response = await axios.get('/drivers', {
+        params: {
+          relation: true
+        }
+      });
       setdata(response.data.data);
       setloading(false);
     };

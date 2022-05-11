@@ -5,18 +5,23 @@ import { ButtonA } from './Button.js';
 import BusManagement from './dropdowns/BusManagement.js';
 import ManagementTable from './ManagementTable.js';
 import TableSkeleton from './SkeletonUIs/TableSkeleton.js';
+
 const DriverLink = ({ row }) => {
   if (row.driver) {
-    return <div>{row.driver}</div>;
+    return (
+      <div>{`${row.driver.user.firstName} ${row.driver.user.lastName}`}</div>
+    );
   }
   return <div className="text-red">No driver</div>;
 };
 
 const RouteLink = ({ row }) => {
-  console.log(row)
-  if (row.routeId) {
-
-    return <div>{row.route.origin} - {row.route.destination}</div>;
+  if (row.route) {
+    return (
+      <div>
+        {row.route.origin} - {row.route.destination}
+      </div>
+    );
   }
   return <div className="text-red">No route assigned</div>;
 };
@@ -83,7 +88,7 @@ const BusesTable = () => {
           <div className="flex  content-center flex-col">
             <h1 className="font-bold font-raleway text-red">Error occured</h1>
             <ButtonA
-              name={'Try again'}
+              name="Try again"
               onClick={() => window.location.reload()}
             />
           </div>

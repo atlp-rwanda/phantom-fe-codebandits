@@ -3,7 +3,7 @@ import userEvent from '@testing-library/user-event';
 import axios from 'axios';
 import React from 'react';
 import { MemoryRouter } from 'react-router-dom';
-import AssignModal, { assignBusToDriver } from '../AssignBus.js';
+import AssignModal from '../AssignBus.js';
 import ChangeRole from '../ChangeRole.js';
 
 jest.mock('axios');
@@ -49,7 +49,7 @@ describe('Modal tests', () => {
         <AssignModal
           handleSubmit={handleSubmitMock}
           handleClose={handleCloseMock}
-        ></AssignModal>
+        />
       </MemoryRouter>
     );
     // expect(await screen.findAllByText(/fabrice@me.com/i)).toHaveLength();
@@ -70,12 +70,12 @@ describe('Change Roles', () => {
     const elem = render(
       <MemoryRouter>
         <ChangeRole
-          name={'Fabrice'}
-          email={'fabrice@me.com'}
+          name="Fabrice"
+          email="fabrice@me.com"
           handleSubmit={handleSubmitMock()}
           SearchPlate={SearchPlateMock}
           handleClose={handleCloseMock}
-        ></ChangeRole>
+        />
       </MemoryRouter>
     );
     // expect(await screen.findAllByText(/fabrice@me.com/i)).toHaveLength();

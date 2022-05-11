@@ -26,6 +26,7 @@ const Operators = () => {
       </Suspense>
     </div>
   );
-};RouteTable
+};
+RouteTable;
 
 export default Operators;

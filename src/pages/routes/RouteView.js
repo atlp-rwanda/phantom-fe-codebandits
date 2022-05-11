@@ -10,9 +10,7 @@ const RouteView = () => {
     <>
       {routeInfo ? (
         <div className="p-4 bg-white w-[90vh] font-raleway">
-          <h2 className="text-2xl text-center font-bold">
-            Route informations
-          </h2>
+          <h2 className="text-2xl text-center font-bold">Route informations</h2>
           <div className="mt-5">
             <ul>
               <li>

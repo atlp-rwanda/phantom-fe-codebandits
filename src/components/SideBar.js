@@ -19,9 +19,7 @@ const SideBar = forwardRef(({ open, setOpen }, ref) => {
           {!open && (
             <Burger
               styles=" ml-2 bg-black"
-              bgStyles={
-                'fixed top-2 left-[-10px] bg-gray-300 p-1 opacity-[0.5]'
-              }
+              bgStyles="fixed top-2 left-[-10px] bg-gray-300 p-1 opacity-[0.5]"
             />
           )}
           {open && (

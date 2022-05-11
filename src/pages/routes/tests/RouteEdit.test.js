@@ -4,7 +4,8 @@ import React from 'react';
 import { MemoryRouter } from 'react-router-dom';
 import renderer from 'react-test-renderer';
 import RouteEdit from '../RouteEdit.js';
-let axiosSpy = jest.spyOn(axios, 'get');
+
+const axiosSpy = jest.spyOn(axios, 'get');
 axiosSpy.mockReturnValue(() => {
   return {
     id: 1,

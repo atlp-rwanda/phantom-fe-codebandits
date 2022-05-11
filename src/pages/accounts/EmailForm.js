@@ -8,7 +8,7 @@ import { Button } from './AccountRouter.js';
 const EM_RGX = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
 
 function ResetFormPage() {
-  let navigate = useNavigate();
+  const navigate = useNavigate();
   const [loading, setloading] = useState(false);
   const {
     register,
@@ -40,7 +40,7 @@ function ResetFormPage() {
       <p className="mb-3 text-sm">
         Enter your email to receive a password reset link
       </p>
-      <form id="form" onSubmit={handleSubmit(onSubmit)} role={'form'}>
+      <form id="form" onSubmit={handleSubmit(onSubmit)} role="form">
         <div className="relative w-full">
           <label
             htmlFor="email"
@@ -64,25 +64,23 @@ function ResetFormPage() {
               !errors.email ? 'border-green-500' : ''
             } ${errors.email ? 'border-red-500' : ''}`}
           />
-          {
-            <p
-              role={'alert'}
-              className={`text-sm text-red-900 font-bold py-1/2 pl-2 ${
-                errors.email ? 'opacity-100' : 'opacity-0'
-              }`}
-            >
-              {errors.email && errors.email.message}
-            </p>
-          }
+          <p
+            role="alert"
+            className={`text-sm text-red-900 font-bold py-1/2 pl-2 ${
+              errors.email ? 'opacity-100' : 'opacity-0'
+            }`}
+          >
+            {errors.email && errors.email.message}
+          </p>
         </div>
         <div className="flex flex-row justify-between mt-2">
-          <Button name={loading ? 'SENDING...' : 'SUBMIT'} type={'submit'} />
+          <Button name={loading ? 'SENDING...' : 'SUBMIT'} type="submit" />
           <Link to="/">
             <Button
-              name={'CANCEL'}
-              type={'button'}
-              icon={'cancel'}
-              styles={'hover:bg-hovercancel hover:transition-all'}
+              name="CANCEL"
+              type="button"
+              icon="cancel"
+              styles="hover:bg-hovercancel hover:transition-all"
             />
           </Link>
         </div>

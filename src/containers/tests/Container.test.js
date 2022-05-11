@@ -9,6 +9,7 @@ import PrivateRoute from '../../utils/PrivateRoute.js';
 import DashRoutes from '../DashboardRouter.js';
 import MainRoutes from '../MainRoutes.js';
 import ModalRoutes from '../ModalRoutes.js';
+
 let spyOnUseSelector;
 
 const mockUseLocationValue = {
@@ -29,15 +30,11 @@ describe('Containers', () => {
     expect(elem).toMatchSnapshot();
   });
   it('Render the dashboard routes', () => {
-    const elem = render(
-      <ProviderWrapper children={<DashRoutes />}></ProviderWrapper>
-    );
+    const elem = render(<ProviderWrapper children={<DashRoutes />} />);
     expect(elem).toMatchSnapshot();
   });
   it('Render the dashboard routes', () => {
-    const elem = render(
-      <ProviderWrapper children={<ModalRoutes />}></ProviderWrapper>
-    );
+    const elem = render(<ProviderWrapper children={<ModalRoutes />} />);
     expect(elem).toMatchSnapshot();
   });
 });
@@ -50,7 +47,7 @@ describe('Private roles', () => {
       user: null
     });
 
-    const elem = shallow(<PrivateRoute children={<Roles></Roles>} />);
+    const elem = shallow(<PrivateRoute children={<Roles />} />);
     expect(elem).toMatchSnapshot();
   });
 
@@ -61,7 +58,7 @@ describe('Private roles', () => {
       user: {}
     });
 
-    const elem = shallow(<PrivateRoute children={<Roles></Roles>} />);
+    const elem = shallow(<PrivateRoute children={<Roles />} />);
     expect(elem).toMatchSnapshot();
   });
 });
@@ -77,7 +74,7 @@ describe('Private State', () => {
         }
       })
     );
-    const elem = shallow(<PrivateRoute children={<Roles></Roles>} />);
+    const elem = shallow(<PrivateRoute children={<Roles />} />);
     expect(elem).toMatchSnapshot();
   });
 });
@@ -105,9 +102,7 @@ describe('Check roles', () => {
         }
       }
     });
-    const elem = shallow(
-      <CheckRole role={['admin']} children={<Roles></Roles>} />
-    );
+    const elem = shallow(<CheckRole role={['admin']} children={<Roles />} />);
     expect(elem).toMatchSnapshot();
   });
   it('Return the element for the operator', () => {
@@ -132,7 +127,7 @@ describe('Check roles', () => {
       }
     });
     const elem = shallow(
-      <CheckRole role={['operator']} children={<Roles></Roles>} />
+      <CheckRole role={['operator']} children={<Roles />} />
     );
     expect(elem).toMatchSnapshot();
   });
@@ -158,7 +153,7 @@ describe('Check roles', () => {
       }
     });
     const elem = shallow(
-      <CheckRole type={'page'} role={['admin']} children={<Roles></Roles>} />
+      <CheckRole type="page" role={['admin']} children={<Roles />} />
     );
     expect(elem).toMatchSnapshot();
   });
@@ -183,9 +178,7 @@ describe('Check roles', () => {
         }
       }
     });
-    const elem = shallow(
-      <CheckRole role={['admin']} children={<Roles></Roles>} />
-    );
+    const elem = shallow(<CheckRole role={['admin']} children={<Roles />} />);
     expect(elem).toMatchSnapshot();
   });
 });

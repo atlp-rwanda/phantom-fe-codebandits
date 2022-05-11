@@ -20,20 +20,14 @@ const RouteComponent = ({ formTitle, formAction, data }) => {
       await formAction(origin, destination, distance);
       navigate(-1);
     } catch (error) {
-      const validationErrors = error.response.data.data;
-      if (validationErrors) {
-        if (validationErrors instanceof Object) {
-          for (let field in validationErrors) {
-            toast(`${field}: ${validationErrors[field]}`, {
-              type: 'error'
-            });
-          }
-          return;
-        }
-        toast(validationErrors, { type: 'error' });
+      if (error.response.data) {
+        const errorData = error.response.data.data;
+        Object.keys(errorData).forEach((key) => {
+          toast(`${key}: ${errorData[key]}`, { type: 'error' });
+        });
         return;
       }
-      toast(error.message, { type: 'error' });
+      toast(error.message);
     } finally {
       setloading(false);
     }
@@ -53,10 +47,8 @@ const RouteComponent = ({ formTitle, formAction, data }) => {
           entry.route.includes(origin) && entry.route.includes(destination)
         );
       });
-      console.log(selectedRoute)
-      if (selectedRoute.length >0) {
+      if (selectedRoute.length > 0) {
         setDistance(selectedRoute[0].distance);
-        return;
       }
     }
   };
@@ -67,7 +59,6 @@ const RouteComponent = ({ formTitle, formAction, data }) => {
 
   useEffect(() => {
     if (data) {
-      console.log(data);
       setOrigin(data.origin);
       setDestination(data.destination);
     }
@@ -135,7 +126,7 @@ const RouteComponent = ({ formTitle, formAction, data }) => {
         </div>
         <div className="self-center mt-6">
           {loading ? (
-            <ButtonLoading name={'Sending'} />
+            <ButtonLoading name="Sending" />
           ) : (
             <Button
               name={formTitle}

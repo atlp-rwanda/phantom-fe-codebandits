@@ -33,14 +33,14 @@ const Buses = ({
       setloading(false);
       navigate(-1);
     } catch (error) {
-      const validationErrors = error.response.data.data;
-      if (validationErrors) {
-        for (let field in validationErrors) {
-          toast(`${field}: ${validationErrors[field]}`, {
-            type: 'error'
-          });
-        }
+      if (error.response.data) {
+        const errorData = error.response.data.data;
+        Object.keys(errorData).forEach((key) => {
+          toast(`${key}: ${errorData[key]}`, { type: 'error' });
+        });
+        return;
       }
+      toast(error.message);
     } finally {
       setloading(false);
     }
@@ -134,7 +134,7 @@ const Buses = ({
         </p>
         <div className="self-center">
           {loading ? (
-            <ButtonLoading name={'Sending...'} />
+            <ButtonLoading name="Sending..." />
           ) : (
             <Button
               name={formTitle}

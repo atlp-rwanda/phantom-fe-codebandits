@@ -11,8 +11,6 @@ const UpdateOperator = () => {
     formState: { errors }
   } = useForm();
 
-  const handleRegistration = (data) => console.log(data);
-
   return (
     <div>
       <div className="flex lg:mx-24 xl:mx-24 border rounded-xl my-8">
