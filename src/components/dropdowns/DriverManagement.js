@@ -31,7 +31,7 @@ function DriverManagement() {
         id=""
         className="py-1 px-3 font-rale font-bold bg-transparent border rounded-sm"
       >
-        <option hidden={true}>Manage</option>
+        <option hidden>Manage</option>
         <option className="cursor-pointer" value="edit">
           Edit
         </option>

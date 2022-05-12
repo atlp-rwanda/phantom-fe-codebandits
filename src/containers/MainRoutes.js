@@ -7,6 +7,7 @@ import PublicProfile from '@pages/profiles/PublicProfile.js';
 import TrackingPage from '@pages/TrackingPage.js';
 import React from 'react';
 import { Route, Routes } from 'react-router-dom';
+
 function MainRoutes() {
   return (
     <>

@@ -1,8 +1,8 @@
 import React from 'react';
+
 function RoleComponent({ role }) {
   const { name, permissions } = role;
-  const handleEdit = () => {
-  };
+  const handleEdit = () => {};
 
   return (
     <ul className="font-raleway capitalize grid grid-cols-[30%_60%] gap-1 border-b-2 py-1">

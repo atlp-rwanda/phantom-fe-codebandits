@@ -13,8 +13,8 @@ const mockUseLocationValue = {
     busType: 'coaster',
     seats: 25,
     route: {
-        origin: "Nyabugogo",
-        destination: "Remera"
+      origin: 'Nyabugogo',
+      destination: 'Remera'
     }
   }
 };
@@ -45,20 +45,20 @@ describe('Modal tests', () => {
   it('Should render the assign modal', async () => {
     const onSubmitMock = jest.fn();
     const handleCloseMock = jest.fn();
-    
+
     const elem = render(
       <MemoryRouter>
         <AssignRouteModal
           onSubmit={onSubmitMock}
           handleClose={handleCloseMock}
-        ></AssignRouteModal>
+        />
       </MemoryRouter>
     );
 
     fireEvent.change(screen.getByTestId('bus-route'), {
-        target: {
-            value: 'RN45'
-        }
+      target: {
+        value: 'RN45'
+      }
     });
 
     fireEvent.submit(screen.getByTestId('assign-form'), {
@@ -66,8 +66,7 @@ describe('Modal tests', () => {
         route: { value: 'some value' }
       }
     });
-    
+
     expect(elem).toMatchSnapshot();
   });
 });
-

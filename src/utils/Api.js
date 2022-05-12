@@ -23,9 +23,7 @@ axiosBase.interceptors.request.use(
     };
     config.headers['accept-language'] = getLanguage();
     if (user && authenticated === true) {
-      config.headers['Authorization'] = `Bearer ${localStorage.getItem(
-        'token'
-      )}`;
+      config.headers.Authorization = `Bearer ${localStorage.getItem('token')}`;
     }
     return config;
   },
@@ -58,7 +56,7 @@ axiosBase.interceptors.response.use(
     ) {
       originalRequest._retry = true;
       const accessToken = await refreshToken();
-      originalRequest.headers['Authorization'] = `Bearer ${accessToken}`;
+      originalRequest.headers.Authorization = `Bearer ${accessToken}`;
       return axiosBase(originalRequest);
     }
     if (error?.response?.status === 403) {
@@ -78,4 +76,3 @@ export default axios.create({
     'Content-Type': 'application/json'
   }
 });
-

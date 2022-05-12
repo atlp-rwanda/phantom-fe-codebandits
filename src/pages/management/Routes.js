@@ -3,6 +3,7 @@ import { toast } from 'react-toastify';
 import TableSkeleton from '../../components/SkeletonUIs/TableSkeleton.js';
 import { axiosBase as axios } from '../../utils/Api.js';
 import RouteTable from '../routes/components/RouteTable.js';
+
 const Routes = () => {
   const [routes, setroutes] = useState([]);
   const [loading, setloading] = useState(false);

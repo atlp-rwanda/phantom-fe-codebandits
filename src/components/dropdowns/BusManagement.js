@@ -8,7 +8,8 @@ import { ButtonLoading } from '../Button.js';
 /* istanbul ignore next */
 
 const BusManagement = ({ row }) => {
-  const { plateNumber, busType, seats, driver, route, company, id } = row.original;
+  const { plateNumber, busType, seats, driver, route, company, id } =
+    row.original;
   const data = {
     plateNumber,
     busType,
@@ -52,11 +53,11 @@ const BusManagement = ({ row }) => {
       }
     }
   };
-  const handleAssignRoute = (busInfo) => {
+  const handleAssignRoute = () => {
     navigate(`/dashboard/modal/bus/assign/${plateNumber}`, {
       state: data
     });
-  }
+  };
 
   const handleChange = (e) => {
     switch (e.target.value) {
@@ -71,7 +72,7 @@ const BusManagement = ({ row }) => {
   return (
     <div className="z-10" ref={selectRef}>
       {loading ? (
-        <ButtonLoading name={'Sending'} />
+        <ButtonLoading name="Sending" />
       ) : (
         <select
           onChange={handleChange}
@@ -80,7 +81,7 @@ const BusManagement = ({ row }) => {
           id=""
           className="py-1 px-3 font-rale font-bold bg-transparent border rounded-sm"
         >
-          <option hidden={true}>Manage</option>
+          <option hidden>Manage</option>
           <option className="cursor-pointer" value="assign_route">
             Assign Route
           </option>

@@ -19,15 +19,12 @@ const config = {
     compress: true,
     port: 3000,
     watchFiles: ['./src/**/*.{js,jsx, css, scss}'],
-    historyApiFallback: true,
     hot: true
-   
   },
   watchOptions: {
-    ignored: ["src/database/database.json"]
+    ignored: ['src/database/database.json']
   },
   resolve: {
-    
     alias: {
       '@': path.resolve(__dirname, 'src'),
       '@pages': path.resolve(__dirname, 'src/pages'),
@@ -36,7 +33,7 @@ const config = {
       '@reducers': path.resolve(__dirname, 'src/redux/reducers'),
       '@forms': path.resolve(__dirname, 'src/forms')
     },
-    modules: ['node_modules'],
+    modules: ['node_modules']
   },
   module: {
     rules: [

@@ -71,7 +71,7 @@ function ManageDropdownRoute({ row }) {
   return (
     <div className="z-10" ref={selectRef}>
       {loading ? (
-        <ButtonLoading name={'Sending'} />
+        <ButtonLoading name="Sending" />
       ) : (
         <select
           role="select"
@@ -80,7 +80,7 @@ function ManageDropdownRoute({ row }) {
           id="select"
           className="py-1 px-3 font-rale font-bold bg-transparent border rounded-sm"
         >
-          <option hidden={true}> Manage </option>
+          <option hidden> Manage </option>
           <option value="view"> View </option>
           <CheckRole
             children={
@@ -90,7 +90,7 @@ function ManageDropdownRoute({ row }) {
               </option>
             }
             role={['operator']}
-          ></CheckRole>
+          />
           <CheckRole
             children={
               <option className="cursor-pointer" value="deleteRoute">
@@ -99,7 +99,7 @@ function ManageDropdownRoute({ row }) {
               </option>
             }
             role={['operator']}
-          ></CheckRole>{' '}
+          />{' '}
         </select>
       )}
     </div>

@@ -122,7 +122,7 @@ describe('NotFound', () => {
   it('It renders without', () => {
     const elem = renderer.create(
       <BrowserRouter>
-        <NotFound></NotFound>
+        <NotFound />
       </BrowserRouter>
     );
     expect(elem).toMatchSnapshot();

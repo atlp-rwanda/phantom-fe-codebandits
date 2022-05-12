@@ -1,10 +1,10 @@
 import React from 'react';
 import { MemoryRouter } from 'react-router-dom';
 import renderer from 'react-test-renderer';
+import { Provider } from 'react-redux';
 import Buses from '../Buses.js';
 import Companies from '../Companies.js';
 import Drivers from '../Drivers.js';
-import { Provider } from 'react-redux';
 import { store } from '../../../redux/store.js';
 import Operators from '../Operators.js';
 import Routes from '../Routes.js';

@@ -8,7 +8,7 @@ import { ButtonLoading } from './Button.js';
 
 function ManageDropDownOperator({ row }) {
   const { user, mobileNumber, nationalID, company, id } = row.original;
-  const navigate = useNavigate()
+  const navigate = useNavigate();
   const selectRef = useRef();
   const [loading, setloading] = useState(false);
   const handleEdit = () => {

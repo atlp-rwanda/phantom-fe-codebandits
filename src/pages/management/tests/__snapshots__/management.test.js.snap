@@ -736,13 +736,6 @@ exports[`Management tests it should render Routes Management page 1`] = `
           colSpan={1}
           role="columnheader"
         >
-          Total buses in Route
-        </th>
-        <th
-          className="text-left font-extrabold pr-5 border-b-2 pb-4 font-raleway"
-          colSpan={1}
-          role="columnheader"
-        >
           Management
         </th>
       </tr>

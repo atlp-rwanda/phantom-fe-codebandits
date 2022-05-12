@@ -1,51 +1,48 @@
 import React from 'react';
 import renderer from 'react-test-renderer';
-import {  mount } from 'enzyme';
+import { mount } from 'enzyme';
 import { MemoryRouter } from 'react-router-dom';
-import RouteTable from '../RouteTable.js'
 import { Provider } from 'react-redux';
-import {store} from '../../../../redux/store.js'
-
+import RouteTable from '../RouteTable.js';
+import { store } from '../../../../redux/store.js';
 
 describe('Route table Page', () => {
-  const data =[
+  const data = [
     {
-      "destination1": "Kabuga",
-      "destination2": "Nyanza",
-      "distance": "22km",
-      "total_buses": "100",
-      "id": 35
+      destination1: 'Kabuga',
+      destination2: 'Nyanza',
+      distance: '22km',
+      total_buses: '100',
+      id: 35
     },
     {
-      "destination1": "Kabuga",
-      "destination2": "Nyabugogo",
-      "distance": "20km",
-      "total_buses": "100",
-      "id": 36
+      destination1: 'Kabuga',
+      destination2: 'Nyabugogo',
+      distance: '20km',
+      total_buses: '100',
+      id: 36
     }
-  ]
+  ];
   it('should render the Route table component', () => {
     const elem = renderer
       .create(
-		  <Provider store={store}>
+        <Provider store={store}>
           <MemoryRouter>
             <RouteTable data={data} />
           </MemoryRouter>
-		  </Provider>
+        </Provider>
       )
       .toJSON();
     expect(elem).toMatchSnapshot();
   });
 
   it('should render the button component', () => {
-    
-   const wrapper = mount(
-	  <Provider store={store}>
-          <MemoryRouter>
-            <RouteTable data={data} />
-          </MemoryRouter>
-		  </Provider>
-   )
-   
+    const wrapper = mount(
+      <Provider store={store}>
+        <MemoryRouter>
+          <RouteTable data={data} />
+        </MemoryRouter>
+      </Provider>
+    );
   });
 });

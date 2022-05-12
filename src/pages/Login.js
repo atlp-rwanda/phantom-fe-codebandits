@@ -9,13 +9,13 @@ import { ButtonLoading } from '../components/Button.js';
 import { loginUser } from '../redux/reducers/authReducer.js';
 
 const Login = () => {
-  let navigate = useNavigate();
-  let location = useLocation();
+  const navigate = useNavigate();
+  const location = useLocation();
   const dispatch = useDispatch();
   const [err, setErr] = useState('');
   const [attempts, setAttempts] = useState(0);
   const [loading, setLoading] = useState(false);
-  let from = location?.state || '/dashboard/main';
+  const from = location?.state || '/dashboard/main';
   const {
     register,
     handleSubmit,
@@ -139,7 +139,7 @@ const Login = () => {
               <>
                 {loading ? (
                   <div className="mx-auto">
-                    <ButtonLoading name={'sending...'} />
+                    <ButtonLoading name="sending..." />
                   </div>
                 ) : (
                   <button

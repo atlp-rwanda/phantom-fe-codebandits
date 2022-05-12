@@ -6,7 +6,7 @@ const LanguageButton = () => {
   const lanRef = useRef();
   const lan = getLanguage();
   const handleChange = (e) => {
-    const value = e.target.value;
+    const { value } = e.target;
     i18next.changeLanguage(value);
   };
   useEffect(() => {

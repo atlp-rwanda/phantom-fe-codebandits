@@ -1,6 +1,7 @@
 import { PrimaryButton } from '@components/Button.js';
 import React from 'react';
 import { Link, useLocation, useParams } from 'react-router-dom';
+
 const img =
   'https://cdn.pixabay.com/photo/2012/04/18/19/01/check-37583_960_720.png';
 
@@ -24,8 +25,8 @@ function EmailSent() {
         </p>
       </div>
 
-      <Link to={`/`} className={'w-fit my-2'}>
-        <PrimaryButton name={'Home'} />
+      <Link to="/" className="w-fit my-2">
+        <PrimaryButton name="Home" />
       </Link>
     </>
   );

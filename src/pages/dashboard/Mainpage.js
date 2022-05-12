@@ -4,6 +4,7 @@ import React, { Suspense, useEffect, useState } from 'react';
 import { Bar } from 'react-chartjs-2';
 import { Code } from 'react-content-loader';
 import SkeletonScreen from '../../components/SkeletonUIs/SkeletonScreen.js';
+
 try {
   Chart.register(...registerables);
 } catch (error) {}
@@ -115,27 +116,25 @@ export const NotificationPane = () => {
           style={{ width: '100%', padding: '1rem' }}
         />
       ) : (
-        <>
-          <ul>
-            {notifications.map((notification) => (
-              <li
-                className={`bg-${notification.category} bg-opacity-20 rounded-sm border-b py-2 bg-lightest m-1 px-2 flex justify-between`}
-                key={notification.id}
-              >
-                <span>{notification.message}</span>{' '}
-                {notification.read ? (
-                  <span className="cursor-pointer font-bold text-red text-sm">
-                    Delete
-                  </span>
-                ) : (
-                  <span className="cursor-pointer font-bold text-primary text-sm">
-                    Mark as read
-                  </span>
-                )}
-              </li>
-            ))}
-          </ul>
-        </>
+        <ul>
+          {notifications.map((notification) => (
+            <li
+              className={`bg-${notification.category} bg-opacity-20 rounded-sm border-b py-2 bg-lightest m-1 px-2 flex justify-between`}
+              key={notification.id}
+            >
+              <span>{notification.message}</span>{' '}
+              {notification.read ? (
+                <span className="cursor-pointer font-bold text-red text-sm">
+                  Delete
+                </span>
+              ) : (
+                <span className="cursor-pointer font-bold text-primary text-sm">
+                  Mark as read
+                </span>
+              )}
+            </li>
+          ))}
+        </ul>
       )}
     </div>
   );
@@ -151,80 +150,78 @@ export const DetailPane = () => {
     fetchInfo();
   }, []);
   return (
-    <>
-      <div className=" w-[99%] z-10 mx-auto h-full md:h-[150px] rounded-md mt-[-5px] px-4 py-2 flex flex-col md:grid md:grid-cols-4 md:gap-3">
-        <div className="h-full w-full rounded-md bg-background flex flex-col items-center justify-center shadow-main mb-2">
-          {data.buses ? (
-            <>
-              <h2 className="text-4xl font-semibold font-raleway mb-1">
-                {data.buses}
-              </h2>
-              <p className="text-2xl">Buses</p>
-            </>
-          ) : (
-            <Code
-              width={100}
-              height={100}
-              viewBox="0 0 100 100"
-              style={{ width: '100%' }}
-              uniqueKey="buses-loader"
-            />
-          )}
-        </div>
-        <div className="h-full w-full bg-background flex flex-col items-center justify-center shadow-main mb-2">
-          {data.routes ? (
-            <>
-              <h2 className="text-4xl font-semibold font-raleway mb-1">
-                {data.routes}
-              </h2>
-              <p className="text-2xl">Routes</p>
-            </>
-          ) : (
-            <Code
-              width={100}
-              height={100}
-              viewBox="0 0 100 100"
-              style={{ width: '100%' }}
-              uniqueKey="routes-loader"
-            />
-          )}
-        </div>
-        <div className="h-full w-full bg-background flex flex-col items-center justify-center shadow-main mb-2">
-          {data.drivers ? (
-            <>
-              <h2 className="text-4xl font-semibold font-raleway mb-1">
-                {data.drivers}
-              </h2>
-              <p className="text-2xl">Drivers</p>
-            </>
-          ) : (
-            <Code
-              height={100}
-              viewBox="0 0 100 100"
-              style={{ width: '100%' }}
-              uniqueKey="drivers-loader"
-            />
-          )}
-        </div>
-        <div className="h-full w-full bg-background flex flex-col items-center justify-center shadow-main mb-2">
-          {data.operators ? (
-            <>
-              <h2 className="text-4xl font-semibold font-raleway mb-1">
-                {data.operators}
-              </h2>
-              <p className="text-2xl">Operators</p>
-            </>
-          ) : (
-            <Code
-              height={100}
-              viewBox="0 0 100 100"
-              style={{ width: '100%' }}
-              uniqueKey="operator-loader"
-            />
-          )}
-        </div>
+    <div className=" w-[99%] z-10 mx-auto h-full md:h-[150px] rounded-md mt-[-5px] px-4 py-2 flex flex-col md:grid md:grid-cols-4 md:gap-3">
+      <div className="h-full w-full rounded-md bg-background flex flex-col items-center justify-center shadow-main mb-2">
+        {data.buses ? (
+          <>
+            <h2 className="text-4xl font-semibold font-raleway mb-1">
+              {data.buses}
+            </h2>
+            <p className="text-2xl">Buses</p>
+          </>
+        ) : (
+          <Code
+            width={100}
+            height={100}
+            viewBox="0 0 100 100"
+            style={{ width: '100%' }}
+            uniqueKey="buses-loader"
+          />
+        )}
       </div>
-    </>
+      <div className="h-full w-full bg-background flex flex-col items-center justify-center shadow-main mb-2">
+        {data.routes ? (
+          <>
+            <h2 className="text-4xl font-semibold font-raleway mb-1">
+              {data.routes}
+            </h2>
+            <p className="text-2xl">Routes</p>
+          </>
+        ) : (
+          <Code
+            width={100}
+            height={100}
+            viewBox="0 0 100 100"
+            style={{ width: '100%' }}
+            uniqueKey="routes-loader"
+          />
+        )}
+      </div>
+      <div className="h-full w-full bg-background flex flex-col items-center justify-center shadow-main mb-2">
+        {data.drivers ? (
+          <>
+            <h2 className="text-4xl font-semibold font-raleway mb-1">
+              {data.drivers}
+            </h2>
+            <p className="text-2xl">Drivers</p>
+          </>
+        ) : (
+          <Code
+            height={100}
+            viewBox="0 0 100 100"
+            style={{ width: '100%' }}
+            uniqueKey="drivers-loader"
+          />
+        )}
+      </div>
+      <div className="h-full w-full bg-background flex flex-col items-center justify-center shadow-main mb-2">
+        {data.operators ? (
+          <>
+            <h2 className="text-4xl font-semibold font-raleway mb-1">
+              {data.operators}
+            </h2>
+            <p className="text-2xl">Operators</p>
+          </>
+        ) : (
+          <Code
+            height={100}
+            viewBox="0 0 100 100"
+            style={{ width: '100%' }}
+            uniqueKey="operator-loader"
+          />
+        )}
+      </div>
+    </div>
   );
 };
 
@@ -234,7 +231,6 @@ export const MainPage = () => {
       <Suspense fallback={<SkeletonScreen />}>
         <MainPageGraph />
         <DetailPane />
-        <NotificationPane />
       </Suspense>
     </div>
   );

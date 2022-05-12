@@ -1131,7 +1131,7 @@ Object {
             class="cursor-pointer"
             value="assign"
           >
-            Change bus
+            Assign bus
           </option>
           <option
             class="cursor-pointer"
@@ -1180,7 +1180,7 @@ Object {
           class="cursor-pointer"
           value="assign"
         >
-          Change bus
+          Assign bus
         </option>
         <option
           class="cursor-pointer"

@@ -85,13 +85,7 @@ describe('Manage Dropdown', () => {
   });
   it('Should call the delete option', async () => {
     const elem = render(
-      <ProviderWrapper
-        children={
-          <>
-            <ManageDropdown row={rowData} />
-          </>
-        }
-      />
+      <ProviderWrapper children={<ManageDropdown row={rowData} />} />
     );
     fireEvent.change(screen.getByTestId('select'), {
       target: {
@@ -103,7 +97,7 @@ describe('Manage Dropdown', () => {
     expect(elem).toMatchSnapshot();
   });
   it('Should render the dropdown with change bus', async () => {
-    rowData.original['assigned_bus'] = 'fabrice';
+    rowData.original.assigned_bus = 'fabrice';
     const elem = render(
       <ProviderWrapper children={<ManageDropdown row={rowData} />} />
     );

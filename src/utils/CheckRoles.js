@@ -10,10 +10,12 @@ function CheckRole({ children, role, type }) {
   }
   if (user.role === 'admin') {
     return children;
-  } else if (role.includes(user.role)) {
+  }
+  if (role.includes(user.role)) {
     /* istanbul ignore next */
     return children;
-  } else if (type === 'page' && !role.includes(user.role)) {
+  }
+  if (type === 'page' && !role.includes(user.role)) {
     return (
       <div className="flex flex-col items-center justify-center">
         <h3 className="font-rale font-bold text-3xl mb-4 mt-5">
@@ -27,9 +29,8 @@ function CheckRole({ children, role, type }) {
         </Link>
       </div>
     );
-  } else {
-    return '';
   }
+  return '';
 }
 
 export default CheckRole;

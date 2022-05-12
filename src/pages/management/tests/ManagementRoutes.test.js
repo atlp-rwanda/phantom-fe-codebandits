@@ -24,7 +24,7 @@ describe('Management routes', () => {
     expect(elem).toMatchSnapshot();
   });
   it('Render Operators', () => {
-    const elem = shallow(<Operators/>);
+    const elem = shallow(<Operators />);
     expect(elem).toMatchSnapshot();
   });
 });

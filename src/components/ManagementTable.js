@@ -1,4 +1,3 @@
-
 import React, { useMemo } from 'react';
 import { Link } from 'react-router-dom';
 import { useGlobalFilter, usePagination, useTable } from 'react-table';
@@ -52,13 +51,13 @@ const ManagementTable = ({
           children={
             <Link to={registerNewPath}>
               <Button
-                name={'Register new'}
-                styles={'bg-primary text-white py-2 text-xs font-raleway'}
+                name="Register new"
+                styles="bg-primary text-white py-2 text-xs font-raleway"
               />
             </Link>
           }
           role={['operator']}
-        ></CheckRole>
+        />
       </section>
       <table {...getTableProps()} className="w-full">
         <thead>

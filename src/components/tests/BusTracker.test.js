@@ -30,4 +30,3 @@ describe('BusTracker Page', () => {
     expect(elem).toMatchSnapshot();
   });
 });
-

@@ -72,7 +72,7 @@ const SideNav = ({ styles }) => {
                 />
               }
               role={['admin']}
-            ></CheckRole>
+            />
 
             <SideNavLink
               image={settingIcon}

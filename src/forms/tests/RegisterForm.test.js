@@ -52,9 +52,7 @@ describe('Registration', () => {
   });
 
   describe('Component', () => {
-    const wrapper = shallow(
-      <LabelComponent htmlFor={'test'} name={'test'}></LabelComponent>
-    );
+    const wrapper = shallow(<LabelComponent htmlFor="test" name="test" />);
     it('Should return test', () => {
       expect(wrapper.text()).toEqual('test');
     });
