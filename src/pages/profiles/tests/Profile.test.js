@@ -76,7 +76,7 @@ describe('Profile page functionality tests', () => {
   it('calls handleSubmit function on form submit', () => {
     act(() => {
       uploadBtn.simulate('change', event);
-      expect(onChangeMock).toBeCalledTimes(2);
+      expect(onChangeMock).toBeCalledTimes(1);
     });
   });
 });
