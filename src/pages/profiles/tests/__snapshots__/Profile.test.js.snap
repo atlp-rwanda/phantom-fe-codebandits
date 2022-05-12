@@ -23,9 +23,8 @@ Object {
                 >
                   <img
                     alt="profile-img"
-                    class=" rounded-full object-cover w-20 h-20 md:w-24 lg:w-24 xl:w-24 md:h-24 lg:h-24 xl:h-24"
+                    class=" opacity-100 rounded-full object-cover w-20 h-20 md:w-24 lg:w-24 xl:w-24 md:h-24 lg:h-24 xl:h-24"
                     id="profile-img"
-                    src="profileImg.jpg"
                   />
                   <div
                     class="hidden absolute bg-gray-100 rounded-full w-5 h-5 left-7 md:left-10 lg:left-10 xl:left-20 top-7 md:top-8 lg:top-16 xl:top-18 cursor-pointer"
@@ -48,13 +47,16 @@ Object {
               class="h-20 flex flex-col items-center md:items-baseline lg:items-baseline xl:items-baseline"
             >
               <h1
-                class="font-black text-lg md:text-3xl lg:text-3xl xl:text-3xl "
+                class="font-black text-lg md:text-2xl lg:text-3xl xl:text-3xl "
               >
                  
               </h1>
               <h2
                 class="font-bold text-sm md:text-base lg:text-base xl:text-base "
               >
+                <b
+                  class="capitalize text-primary"
+                />
                  at 
               </h2>
               <h3 />
@@ -74,6 +76,211 @@ Object {
         </div>
         <div
           class="flex flex-col items-center"
+        >
+          <form
+            action=""
+          >
+            <section
+              class="flex flex-col items-center lg:flex-row xl:flex-row"
+            >
+              <div
+                class="ml-8"
+              >
+                <div
+                  class="mb-4 block font-raleway"
+                >
+                  <div
+                    class="undefined mb-2 block font-raleway"
+                  >
+                    <label
+                      class="block text-grey-darker text-sm font-bold font-rale mb-2"
+                      for="FirstName"
+                    >
+                      First Name
+                    </label>
+                    <input
+                      class="font-rale border-none rounded w-full py-2 px-3 text-grey-darker outline-hidden bg-white text-md appearance-none border font-rale rounded w-full py-2 px-3 text-grey-darker bg-gray-200 text-md outline-hidden"
+                      disabled=""
+                      id="firstName"
+                      name="firstName"
+                      value=""
+                    />
+                  </div>
+                </div>
+                <div
+                  class="mb-4 block font-raleway"
+                >
+                  <div
+                    class="undefined mb-2 block font-raleway"
+                  >
+                    <label
+                      class="block text-grey-darker text-sm font-bold font-rale mb-2"
+                      for="LastName"
+                    >
+                      Last name 
+                    </label>
+                    <input
+                      class="font-rale border-none rounded w-full py-2 px-3 text-grey-darker outline-hidden bg-white text-md appearance-none border font-rale rounded w-full py-2 px-3 text-grey-darker bg-gray-200 text-md outline-hidden"
+                      disabled=""
+                      id="lastName"
+                      name="lastName"
+                      type="text"
+                      value=""
+                    />
+                  </div>
+                </div>
+              </div>
+              <div
+                class="pl-10 lg:pl-24 xl:pl-24"
+              >
+                <div
+                  class="mb-4 block font-raleway"
+                >
+                  <div
+                    class="undefined mb-2 block font-raleway"
+                  >
+                    <label
+                      class="block text-grey-darker text-sm font-bold font-rale mb-2"
+                      for="mobileNumber"
+                    >
+                      Mobile Number 
+                    </label>
+                    <input
+                      class="font-rale border-none rounded w-full py-2 px-3 text-grey-darker outline-hidden bg-white text-md appearance-none border font-rale rounded w-full py-2 px-3 text-grey-darker bg-gray-200 text-md outline-hidden"
+                      disabled=""
+                      id="mobileNumber"
+                      name="mobileNumber"
+                      pattern="^07[0-9]{8}$"
+                      required=""
+                      type="text"
+                      value=""
+                    />
+                  </div>
+                </div>
+                <div
+                  class="mb-4 block font-raleway"
+                >
+                  <div
+                    class="undefined mb-2 block font-raleway"
+                  >
+                    <label
+                      class="block text-grey-darker text-sm font-bold font-rale mb-2"
+                      for="address"
+                    >
+                      Address
+                    </label>
+                    <input
+                      class="font-rale border-none rounded w-full py-2 px-3 text-grey-darker outline-hidden bg-white text-md appearance-none border font-rale rounded w-full py-2 px-3 text-grey-darker bg-gray-200 text-md outline-hidden"
+                      disabled=""
+                      id="address"
+                      name="address"
+                      type="text"
+                      value=""
+                    />
+                  </div>
+                </div>
+              </div>
+            </section>
+            <div
+              class="flex"
+            >
+              <div>
+                <button
+                  class="hidden bg-red text-white px-10 ml-8 mt-16 bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded-xl m-2 "
+                  type="button"
+                >
+                  cancel
+                </button>
+              </div>
+              <div>
+                <button
+                  class="hidden text-white px-10 ml-8 mt-16 bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded-xl m-2 "
+                  type="submit"
+                >
+                  Save
+                </button>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </body>,
+  "container": <div>
+    <div
+      class="bg-white rounded  w-full shadow-md min-h-[70vh] mt-6 pb-10"
+    >
+      <div>
+        <div
+          class="flex flex-col tex-center md:flex-row lg:flex-row xl:flex-row items-center justify-center bg-gray-100 mb-10 h-80 md:h-60 lg:h-60 xl:h-60 pb-10 font-raleway"
+        >
+          <span
+            class="w-20 h-20 my-8 md:w-24 lg:w-24 xl:w-24 md:h-24 lg:h-24 xl:h-24 mr-6"
+          >
+            <div
+              class="relative"
+            >
+              <label
+                for=""
+              >
+                <img
+                  alt="profile-img"
+                  class=" opacity-100 rounded-full object-cover w-20 h-20 md:w-24 lg:w-24 xl:w-24 md:h-24 lg:h-24 xl:h-24"
+                  id="profile-img"
+                />
+                <div
+                  class="hidden absolute bg-gray-100 rounded-full w-5 h-5 left-7 md:left-10 lg:left-10 xl:left-20 top-7 md:top-8 lg:top-16 xl:top-18 cursor-pointer"
+                >
+                  <img
+                    alt=""
+                    class="w-3 h-3 m-1"
+                    src="camera-solid.svg"
+                  />
+                </div>
+              </label>
+            </div>
+            <input
+              accept=".jpg, .jpeg, .png"
+              id="photo-upload"
+              type="file"
+            />
+          </span>
+          <div
+            class="h-20 flex flex-col items-center md:items-baseline lg:items-baseline xl:items-baseline"
+          >
+            <h1
+              class="font-black text-lg md:text-2xl lg:text-3xl xl:text-3xl "
+            >
+               
+            </h1>
+            <h2
+              class="font-bold text-sm md:text-base lg:text-base xl:text-base "
+            >
+              <b
+                class="capitalize text-primary"
+              />
+               at 
+            </h2>
+            <h3 />
+            <div
+              class=""
+            >
+              <div>
+                <button
+                  class="flex text-white text-sm md:text-base lg:text-base xl:text-base mt-4 px-4 md:px-6 lg:px-6 xl:px-6 bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded-xl m-2 "
+                >
+                  Edit profile
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div
+        class="flex flex-col items-center"
+      >
+        <form
+          action=""
         >
           <section
             class="flex flex-col items-center lg:flex-row xl:flex-row"
@@ -97,7 +304,7 @@ Object {
                     class="font-rale border-none rounded w-full py-2 px-3 text-grey-darker outline-hidden bg-white text-md appearance-none border font-rale rounded w-full py-2 px-3 text-grey-darker bg-gray-200 text-md outline-hidden"
                     disabled=""
                     id="firstName"
-                    name="FirstName"
+                    name="firstName"
                     value=""
                   />
                 </div>
@@ -118,52 +325,8 @@ Object {
                     class="font-rale border-none rounded w-full py-2 px-3 text-grey-darker outline-hidden bg-white text-md appearance-none border font-rale rounded w-full py-2 px-3 text-grey-darker bg-gray-200 text-md outline-hidden"
                     disabled=""
                     id="lastName"
-                    name="LastName"
+                    name="lastName"
                     type="text"
-                    value=""
-                  />
-                </div>
-              </div>
-              <div
-                class="mb-4 block font-raleway"
-              >
-                <div
-                  class="undefined mb-2 block font-raleway"
-                >
-                  <label
-                    class="block text-grey-darker text-sm font-bold font-rale mb-2"
-                    for="dateOfBirth"
-                  >
-                    Date Of Birth
-                  </label>
-                  <input
-                    class="font-rale border-none rounded w-full py-2 px-3 text-grey-darker outline-hidden bg-white text-md appearance-none border font-rale rounded w-full py-2 px-3 text-grey-darker bg-gray-200 text-md outline-hidden"
-                    disabled=""
-                    id="dateOfBirth"
-                    name="dateOfBirth"
-                    type="date"
-                    value=""
-                  />
-                </div>
-              </div>
-              <div
-                class="mb-5 block font-raleway"
-              >
-                <div
-                  class="undefined mb-2 block font-raleway"
-                >
-                  <label
-                    class="block text-grey-darker text-sm font-bold font-rale mb-2"
-                    for="email"
-                  >
-                    Email
-                  </label>
-                  <input
-                    class="font-rale border-none rounded w-full py-2 px-3 text-grey-darker outline-hidden bg-white text-md border-none appearance-none border font-rale rounded w-full py-2 px-3 text-grey-darker bg-gray-200 text-md outline-hidden"
-                    disabled=""
-                    id="email"
-                    name="email"
-                    type="email"
                     value=""
                   />
                 </div>
@@ -180,28 +343,6 @@ Object {
                 >
                   <label
                     class="block text-grey-darker text-sm font-bold font-rale mb-2"
-                    for="company"
-                  >
-                    Company
-                  </label>
-                  <input
-                    class="font-rale border-none rounded w-full py-2 px-3 text-grey-darker outline-hidden bg-white text-md border-none appearance-none border font-rale rounded w-full py-2 px-3 text-grey-darker bg-gray-200 text-md outline-hidden"
-                    disabled=""
-                    id="company"
-                    name="company"
-                    type="text"
-                    value=""
-                  />
-                </div>
-              </div>
-              <div
-                class="mb-4 block font-raleway"
-              >
-                <div
-                  class="undefined mb-2 block font-raleway"
-                >
-                  <label
-                    class="block text-grey-darker text-sm font-bold font-rale mb-2"
                     for="mobileNumber"
                   >
                     Mobile Number 
@@ -209,30 +350,10 @@ Object {
                   <input
                     class="font-rale border-none rounded w-full py-2 px-3 text-grey-darker outline-hidden bg-white text-md appearance-none border font-rale rounded w-full py-2 px-3 text-grey-darker bg-gray-200 text-md outline-hidden"
                     disabled=""
-                    id="company"
-                    name="company"
-                    type="text"
-                    value=""
-                  />
-                </div>
-              </div>
-              <div
-                class="mb-4 block font-raleway"
-              >
-                <div
-                  class="undefined mb-2 block font-raleway"
-                >
-                  <label
-                    class="block text-grey-darker text-sm font-bold font-rale mb-2"
-                    for="nationalId"
-                  >
-                    National ID
-                  </label>
-                  <input
-                    class="font-rale border-none rounded w-full py-2 px-3 text-grey-darker outline-hidden bg-white text-md border-none appearance-none border font-rale rounded w-full py-2 px-3 text-grey-darker bg-gray-200 text-md outline-hidden"
-                    disabled=""
-                    id="nationalId"
-                    name="nationalid"
+                    id="mobileNumber"
+                    name="mobileNumber"
+                    pattern="^07[0-9]{8}$"
+                    required=""
                     type="text"
                     value=""
                   />
@@ -268,6 +389,7 @@ Object {
             <div>
               <button
                 class="hidden bg-red text-white px-10 ml-8 mt-16 bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded-xl m-2 "
+                type="button"
               >
                 cancel
               </button>
@@ -275,291 +397,13 @@ Object {
             <div>
               <button
                 class="hidden text-white px-10 ml-8 mt-16 bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded-xl m-2 "
+                type="submit"
               >
                 Save
               </button>
             </div>
           </div>
-        </div>
-      </div>
-    </div>
-  </body>,
-  "container": <div>
-    <div
-      class="bg-white rounded  w-full shadow-md min-h-[70vh] mt-6 pb-10"
-    >
-      <div>
-        <div
-          class="flex flex-col tex-center md:flex-row lg:flex-row xl:flex-row items-center justify-center bg-gray-100 mb-10 h-80 md:h-60 lg:h-60 xl:h-60 pb-10 font-raleway"
-        >
-          <span
-            class="w-20 h-20 my-8 md:w-24 lg:w-24 xl:w-24 md:h-24 lg:h-24 xl:h-24 mr-6"
-          >
-            <div
-              class="relative"
-            >
-              <label
-                for=""
-              >
-                <img
-                  alt="profile-img"
-                  class=" rounded-full object-cover w-20 h-20 md:w-24 lg:w-24 xl:w-24 md:h-24 lg:h-24 xl:h-24"
-                  id="profile-img"
-                  src="profileImg.jpg"
-                />
-                <div
-                  class="hidden absolute bg-gray-100 rounded-full w-5 h-5 left-7 md:left-10 lg:left-10 xl:left-20 top-7 md:top-8 lg:top-16 xl:top-18 cursor-pointer"
-                >
-                  <img
-                    alt=""
-                    class="w-3 h-3 m-1"
-                    src="camera-solid.svg"
-                  />
-                </div>
-              </label>
-            </div>
-            <input
-              accept=".jpg, .jpeg, .png"
-              id="photo-upload"
-              type="file"
-            />
-          </span>
-          <div
-            class="h-20 flex flex-col items-center md:items-baseline lg:items-baseline xl:items-baseline"
-          >
-            <h1
-              class="font-black text-lg md:text-3xl lg:text-3xl xl:text-3xl "
-            >
-               
-            </h1>
-            <h2
-              class="font-bold text-sm md:text-base lg:text-base xl:text-base "
-            >
-               at 
-            </h2>
-            <h3 />
-            <div
-              class=""
-            >
-              <div>
-                <button
-                  class="flex text-white text-sm md:text-base lg:text-base xl:text-base mt-4 px-4 md:px-6 lg:px-6 xl:px-6 bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded-xl m-2 "
-                >
-                  Edit profile
-                </button>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div
-        class="flex flex-col items-center"
-      >
-        <section
-          class="flex flex-col items-center lg:flex-row xl:flex-row"
-        >
-          <div
-            class="ml-8"
-          >
-            <div
-              class="mb-4 block font-raleway"
-            >
-              <div
-                class="undefined mb-2 block font-raleway"
-              >
-                <label
-                  class="block text-grey-darker text-sm font-bold font-rale mb-2"
-                  for="FirstName"
-                >
-                  First Name
-                </label>
-                <input
-                  class="font-rale border-none rounded w-full py-2 px-3 text-grey-darker outline-hidden bg-white text-md appearance-none border font-rale rounded w-full py-2 px-3 text-grey-darker bg-gray-200 text-md outline-hidden"
-                  disabled=""
-                  id="firstName"
-                  name="FirstName"
-                  value=""
-                />
-              </div>
-            </div>
-            <div
-              class="mb-4 block font-raleway"
-            >
-              <div
-                class="undefined mb-2 block font-raleway"
-              >
-                <label
-                  class="block text-grey-darker text-sm font-bold font-rale mb-2"
-                  for="LastName"
-                >
-                  Last name 
-                </label>
-                <input
-                  class="font-rale border-none rounded w-full py-2 px-3 text-grey-darker outline-hidden bg-white text-md appearance-none border font-rale rounded w-full py-2 px-3 text-grey-darker bg-gray-200 text-md outline-hidden"
-                  disabled=""
-                  id="lastName"
-                  name="LastName"
-                  type="text"
-                  value=""
-                />
-              </div>
-            </div>
-            <div
-              class="mb-4 block font-raleway"
-            >
-              <div
-                class="undefined mb-2 block font-raleway"
-              >
-                <label
-                  class="block text-grey-darker text-sm font-bold font-rale mb-2"
-                  for="dateOfBirth"
-                >
-                  Date Of Birth
-                </label>
-                <input
-                  class="font-rale border-none rounded w-full py-2 px-3 text-grey-darker outline-hidden bg-white text-md appearance-none border font-rale rounded w-full py-2 px-3 text-grey-darker bg-gray-200 text-md outline-hidden"
-                  disabled=""
-                  id="dateOfBirth"
-                  name="dateOfBirth"
-                  type="date"
-                  value=""
-                />
-              </div>
-            </div>
-            <div
-              class="mb-5 block font-raleway"
-            >
-              <div
-                class="undefined mb-2 block font-raleway"
-              >
-                <label
-                  class="block text-grey-darker text-sm font-bold font-rale mb-2"
-                  for="email"
-                >
-                  Email
-                </label>
-                <input
-                  class="font-rale border-none rounded w-full py-2 px-3 text-grey-darker outline-hidden bg-white text-md border-none appearance-none border font-rale rounded w-full py-2 px-3 text-grey-darker bg-gray-200 text-md outline-hidden"
-                  disabled=""
-                  id="email"
-                  name="email"
-                  type="email"
-                  value=""
-                />
-              </div>
-            </div>
-          </div>
-          <div
-            class="pl-10 lg:pl-24 xl:pl-24"
-          >
-            <div
-              class="mb-4 block font-raleway"
-            >
-              <div
-                class="undefined mb-2 block font-raleway"
-              >
-                <label
-                  class="block text-grey-darker text-sm font-bold font-rale mb-2"
-                  for="company"
-                >
-                  Company
-                </label>
-                <input
-                  class="font-rale border-none rounded w-full py-2 px-3 text-grey-darker outline-hidden bg-white text-md border-none appearance-none border font-rale rounded w-full py-2 px-3 text-grey-darker bg-gray-200 text-md outline-hidden"
-                  disabled=""
-                  id="company"
-                  name="company"
-                  type="text"
-                  value=""
-                />
-              </div>
-            </div>
-            <div
-              class="mb-4 block font-raleway"
-            >
-              <div
-                class="undefined mb-2 block font-raleway"
-              >
-                <label
-                  class="block text-grey-darker text-sm font-bold font-rale mb-2"
-                  for="mobileNumber"
-                >
-                  Mobile Number 
-                </label>
-                <input
-                  class="font-rale border-none rounded w-full py-2 px-3 text-grey-darker outline-hidden bg-white text-md appearance-none border font-rale rounded w-full py-2 px-3 text-grey-darker bg-gray-200 text-md outline-hidden"
-                  disabled=""
-                  id="company"
-                  name="company"
-                  type="text"
-                  value=""
-                />
-              </div>
-            </div>
-            <div
-              class="mb-4 block font-raleway"
-            >
-              <div
-                class="undefined mb-2 block font-raleway"
-              >
-                <label
-                  class="block text-grey-darker text-sm font-bold font-rale mb-2"
-                  for="nationalId"
-                >
-                  National ID
-                </label>
-                <input
-                  class="font-rale border-none rounded w-full py-2 px-3 text-grey-darker outline-hidden bg-white text-md border-none appearance-none border font-rale rounded w-full py-2 px-3 text-grey-darker bg-gray-200 text-md outline-hidden"
-                  disabled=""
-                  id="nationalId"
-                  name="nationalid"
-                  type="text"
-                  value=""
-                />
-              </div>
-            </div>
-            <div
-              class="mb-4 block font-raleway"
-            >
-              <div
-                class="undefined mb-2 block font-raleway"
-              >
-                <label
-                  class="block text-grey-darker text-sm font-bold font-rale mb-2"
-                  for="address"
-                >
-                  Address
-                </label>
-                <input
-                  class="font-rale border-none rounded w-full py-2 px-3 text-grey-darker outline-hidden bg-white text-md appearance-none border font-rale rounded w-full py-2 px-3 text-grey-darker bg-gray-200 text-md outline-hidden"
-                  disabled=""
-                  id="address"
-                  name="address"
-                  type="text"
-                  value=""
-                />
-              </div>
-            </div>
-          </div>
-        </section>
-        <div
-          class="flex"
-        >
-          <div>
-            <button
-              class="hidden bg-red text-white px-10 ml-8 mt-16 bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded-xl m-2 "
-            >
-              cancel
-            </button>
-          </div>
-          <div>
-            <button
-              class="hidden text-white px-10 ml-8 mt-16 bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded-xl m-2 "
-            >
-              Save
-            </button>
-          </div>
-        </div>
+        </form>
       </div>
     </div>
   </div>,
@@ -636,9 +480,8 @@ exports[`Profile should render the Profile component 1`] = `
           >
             <img
               alt="profile-img"
-              className=" rounded-full object-cover w-20 h-20 md:w-24 lg:w-24 xl:w-24 md:h-24 lg:h-24 xl:h-24"
+              className=" opacity-100 rounded-full object-cover w-20 h-20 md:w-24 lg:w-24 xl:w-24 md:h-24 lg:h-24 xl:h-24"
               id="profile-img"
-              src="profileImg.jpg"
             />
             <div
               className="hidden absolute bg-gray-100 rounded-full w-5 h-5 left-7 md:left-10 lg:left-10 xl:left-20 top-7 md:top-8 lg:top-16 xl:top-18 cursor-pointer"
@@ -662,13 +505,16 @@ exports[`Profile should render the Profile component 1`] = `
         className="h-20 flex flex-col items-center md:items-baseline lg:items-baseline xl:items-baseline"
       >
         <h1
-          className="font-black text-lg md:text-3xl lg:text-3xl xl:text-3xl "
+          className="font-black text-lg md:text-2xl lg:text-3xl xl:text-3xl "
         >
            
         </h1>
         <h2
           className="font-bold text-sm md:text-base lg:text-base xl:text-base "
         >
+          <b
+            className="capitalize text-primary"
+          />
            at 
         </h2>
         <h3 />
@@ -690,204 +536,131 @@ exports[`Profile should render the Profile component 1`] = `
   <div
     className="flex flex-col items-center"
   >
-    <section
-      className="flex flex-col items-center lg:flex-row xl:flex-row"
+    <form
+      action=""
+      onSubmit={[Function]}
     >
-      <div
-        className="ml-8"
+      <section
+        className="flex flex-col items-center lg:flex-row xl:flex-row"
       >
         <div
-          className="mb-4 block font-raleway"
+          className="ml-8"
         >
           <div
-            className="undefined mb-2 block font-raleway"
+            className="mb-4 block font-raleway"
           >
-            <label
-              className="block text-grey-darker text-sm font-bold font-rale mb-2"
-              htmlFor="FirstName"
+            <div
+              className="undefined mb-2 block font-raleway"
             >
-              First Name
-            </label>
-            <input
-              className="font-rale border-none rounded w-full py-2 px-3 text-grey-darker outline-hidden bg-white text-md appearance-none border font-rale rounded w-full py-2 px-3 text-grey-darker bg-gray-200 text-md outline-hidden"
-              disabled={true}
-              id="firstName"
-              name="FirstName"
-            />
+              <label
+                className="block text-grey-darker text-sm font-bold font-rale mb-2"
+                htmlFor="FirstName"
+              >
+                First Name
+              </label>
+              <input
+                className="font-rale border-none rounded w-full py-2 px-3 text-grey-darker outline-hidden bg-white text-md appearance-none border font-rale rounded w-full py-2 px-3 text-grey-darker bg-gray-200 text-md outline-hidden"
+                disabled={true}
+                id="firstName"
+                name="firstName"
+                required={false}
+              />
+            </div>
+          </div>
+          <div
+            className="mb-4 block font-raleway"
+          >
+            <div
+              className="undefined mb-2 block font-raleway"
+            >
+              <label
+                className="block text-grey-darker text-sm font-bold font-rale mb-2"
+                htmlFor="LastName"
+              >
+                Last name 
+              </label>
+              <input
+                className="font-rale border-none rounded w-full py-2 px-3 text-grey-darker outline-hidden bg-white text-md appearance-none border font-rale rounded w-full py-2 px-3 text-grey-darker bg-gray-200 text-md outline-hidden"
+                disabled={true}
+                id="lastName"
+                name="lastName"
+                required={false}
+                type="text"
+              />
+            </div>
           </div>
         </div>
         <div
-          className="mb-4 block font-raleway"
+          className="pl-10 lg:pl-24 xl:pl-24"
         >
           <div
-            className="undefined mb-2 block font-raleway"
+            className="mb-4 block font-raleway"
           >
-            <label
-              className="block text-grey-darker text-sm font-bold font-rale mb-2"
-              htmlFor="LastName"
+            <div
+              className="undefined mb-2 block font-raleway"
             >
-              Last name 
-            </label>
-            <input
-              className="font-rale border-none rounded w-full py-2 px-3 text-grey-darker outline-hidden bg-white text-md appearance-none border font-rale rounded w-full py-2 px-3 text-grey-darker bg-gray-200 text-md outline-hidden"
-              disabled={true}
-              id="lastName"
-              name="LastName"
-              type="text"
-            />
+              <label
+                className="block text-grey-darker text-sm font-bold font-rale mb-2"
+                htmlFor="mobileNumber"
+              >
+                Mobile Number 
+              </label>
+              <input
+                className="font-rale border-none rounded w-full py-2 px-3 text-grey-darker outline-hidden bg-white text-md appearance-none border font-rale rounded w-full py-2 px-3 text-grey-darker bg-gray-200 text-md outline-hidden"
+                disabled={true}
+                id="mobileNumber"
+                name="mobileNumber"
+                pattern="^07[0-9]{8}$"
+                required={true}
+                type="text"
+              />
+            </div>
           </div>
-        </div>
-        <div
-          className="mb-4 block font-raleway"
-        >
           <div
-            className="undefined mb-2 block font-raleway"
+            className="mb-4 block font-raleway"
           >
-            <label
-              className="block text-grey-darker text-sm font-bold font-rale mb-2"
-              htmlFor="dateOfBirth"
+            <div
+              className="undefined mb-2 block font-raleway"
             >
-              Date Of Birth
-            </label>
-            <input
-              className="font-rale border-none rounded w-full py-2 px-3 text-grey-darker outline-hidden bg-white text-md appearance-none border font-rale rounded w-full py-2 px-3 text-grey-darker bg-gray-200 text-md outline-hidden"
-              disabled={true}
-              id="dateOfBirth"
-              name="dateOfBirth"
-              type="date"
-            />
+              <label
+                className="block text-grey-darker text-sm font-bold font-rale mb-2"
+                htmlFor="address"
+              >
+                Address
+              </label>
+              <input
+                className="font-rale border-none rounded w-full py-2 px-3 text-grey-darker outline-hidden bg-white text-md appearance-none border font-rale rounded w-full py-2 px-3 text-grey-darker bg-gray-200 text-md outline-hidden"
+                disabled={true}
+                id="address"
+                name="address"
+                required={false}
+                type="text"
+              />
+            </div>
           </div>
         </div>
-        <div
-          className="mb-5 block font-raleway"
-        >
-          <div
-            className="undefined mb-2 block font-raleway"
-          >
-            <label
-              className="block text-grey-darker text-sm font-bold font-rale mb-2"
-              htmlFor="email"
-            >
-              Email
-            </label>
-            <input
-              className="font-rale border-none rounded w-full py-2 px-3 text-grey-darker outline-hidden bg-white text-md border-none appearance-none border font-rale rounded w-full py-2 px-3 text-grey-darker bg-gray-200 text-md outline-hidden"
-              disabled={true}
-              id="email"
-              name="email"
-              type="email"
-            />
-          </div>
-        </div>
-      </div>
+      </section>
       <div
-        className="pl-10 lg:pl-24 xl:pl-24"
+        className="flex"
       >
-        <div
-          className="mb-4 block font-raleway"
-        >
-          <div
-            className="undefined mb-2 block font-raleway"
+        <div>
+          <button
+            className="hidden bg-red text-white px-10 ml-8 mt-16 bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded-xl m-2 "
+            type="button"
           >
-            <label
-              className="block text-grey-darker text-sm font-bold font-rale mb-2"
-              htmlFor="company"
-            >
-              Company
-            </label>
-            <input
-              className="font-rale border-none rounded w-full py-2 px-3 text-grey-darker outline-hidden bg-white text-md border-none appearance-none border font-rale rounded w-full py-2 px-3 text-grey-darker bg-gray-200 text-md outline-hidden"
-              disabled={true}
-              id="company"
-              name="company"
-              type="text"
-            />
-          </div>
+            cancel
+          </button>
         </div>
-        <div
-          className="mb-4 block font-raleway"
-        >
-          <div
-            className="undefined mb-2 block font-raleway"
+        <div>
+          <button
+            className="hidden text-white px-10 ml-8 mt-16 bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded-xl m-2 "
+            type="submit"
           >
-            <label
-              className="block text-grey-darker text-sm font-bold font-rale mb-2"
-              htmlFor="mobileNumber"
-            >
-              Mobile Number 
-            </label>
-            <input
-              className="font-rale border-none rounded w-full py-2 px-3 text-grey-darker outline-hidden bg-white text-md appearance-none border font-rale rounded w-full py-2 px-3 text-grey-darker bg-gray-200 text-md outline-hidden"
-              disabled={true}
-              id="company"
-              name="company"
-              type="text"
-            />
-          </div>
-        </div>
-        <div
-          className="mb-4 block font-raleway"
-        >
-          <div
-            className="undefined mb-2 block font-raleway"
-          >
-            <label
-              className="block text-grey-darker text-sm font-bold font-rale mb-2"
-              htmlFor="nationalId"
-            >
-              National ID
-            </label>
-            <input
-              className="font-rale border-none rounded w-full py-2 px-3 text-grey-darker outline-hidden bg-white text-md border-none appearance-none border font-rale rounded w-full py-2 px-3 text-grey-darker bg-gray-200 text-md outline-hidden"
-              disabled={true}
-              id="nationalId"
-              name="nationalid"
-              type="text"
-            />
-          </div>
-        </div>
-        <div
-          className="mb-4 block font-raleway"
-        >
-          <div
-            className="undefined mb-2 block font-raleway"
-          >
-            <label
-              className="block text-grey-darker text-sm font-bold font-rale mb-2"
-              htmlFor="address"
-            >
-              Address
-            </label>
-            <input
-              className="font-rale border-none rounded w-full py-2 px-3 text-grey-darker outline-hidden bg-white text-md appearance-none border font-rale rounded w-full py-2 px-3 text-grey-darker bg-gray-200 text-md outline-hidden"
-              disabled={true}
-              id="address"
-              name="address"
-              type="text"
-            />
-          </div>
+            Save
+          </button>
         </div>
       </div>
-    </section>
-    <div
-      className="flex"
-    >
-      <div>
-        <button
-          className="hidden bg-red text-white px-10 ml-8 mt-16 bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded-xl m-2 "
-        >
-          cancel
-        </button>
-      </div>
-      <div>
-        <button
-          className="hidden text-white px-10 ml-8 mt-16 bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded-xl m-2 "
-          onClick={[Function]}
-        >
-          Save
-        </button>
-      </div>
-    </div>
+    </form>
   </div>
 </div>
 `;

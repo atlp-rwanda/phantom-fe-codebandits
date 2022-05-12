@@ -1,19 +1,60 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
+import { toast } from 'react-toastify';
+import TableSkeleton from '../../components/SkeletonUIs/TableSkeleton.js';
+import { axiosBase } from '../../utils/Api.js';
 import Profile from './Profile.js';
 
 const OperatorProfile = () => {
+  const [userInfo, setUserInfo] = useState([]);
+  const [publicInfo, setPublicInfo] = useState([]);
+  const [loading, setloading] = useState(false);
+
+  useEffect(() => {
+    const fetchData = async () => {
+      setloading(true);
+      try {
+        const response = await axiosBase.get('/accounts/profile');
+
+        setUserInfo(response.data.data.user);
+        setPublicInfo(response.data.data);
+        setloading(false);
+      } catch (error) {
+        toast('Something went wrong');
+        if (error.response.data) {
+          const errorData = error.response.data.data;
+          Object.keys(errorData).forEach((key) => {
+            toast(`${key}: ${errorData[key]}`, { type: 'error' });
+          });
+          return;
+        }
+        toast(error.message);
+      } finally {
+        setloading(false);
+      }
+    };
+    fetchData();
+  }, []);
+
   return (
-    <Profile
-      firstName="Patrick"
-      lastName="NGABO"
-      company="Kigali Bus Service (KBS)"
-      mobileNumber="0789989655"
-      address="Kacyiru, Kigali"
-      dob="12/06/1997"
-      id="1199780020002120"
-      position="Operator"
-      email="patrickngabo@gmail.com"
-    />
+    <div>
+      {!loading ? (
+        <Profile
+          firstName={userInfo.firstName}
+          lastName={userInfo.lastName}
+          company={publicInfo.company}
+          mobileNumber={publicInfo.mobileNumber}
+          address={publicInfo.address}
+          id={publicInfo.nationalID}
+          position={userInfo.role}
+          email={userInfo.email}
+          image={userInfo.image}
+        />
+      ) : (
+        <div>
+          <TableSkeleton />
+        </div>
+      )}
+    </div>
   );
 };
 
