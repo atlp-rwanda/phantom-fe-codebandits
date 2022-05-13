@@ -58,7 +58,9 @@ exports[`DriverProfile should render the DriverProfile component 1`] = `
           >
             Driver
           </b>
+           
            at 
+           
           Kigali Bus Service (KBS)
         </h2>
         <h3>

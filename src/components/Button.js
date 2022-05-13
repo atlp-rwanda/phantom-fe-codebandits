@@ -29,7 +29,7 @@ export const ButtonA = ({ name, onClick, styles, type }) => {
 
 export default Button;
 
-export const ButtonLoading = ({ name }) => {
+export const ButtonLoading = ({ name, styles }) => {
   return (
     <div className="flex w-fit py-1 px-3 bg-primary font-raleway font-bold rounded-md">
       <div className="loader mr-1" />

@@ -1,9 +1,9 @@
-import React from 'react';
-import renderer, { act } from 'react-test-renderer';
-import { MemoryRouter } from 'react-router-dom';
-import { Provider } from 'react-redux';
-import { mount } from 'enzyme';
 import { fireEvent, render, screen, waitFor } from '@testing-library/react';
+import { mount } from 'enzyme';
+import React from 'react';
+import { Provider } from 'react-redux';
+import { MemoryRouter } from 'react-router-dom';
+import renderer, { act } from 'react-test-renderer';
 import { store } from '../../../redux/store.js';
 import UpdateProfile from '../UpdateProfile.js';
 
@@ -38,7 +38,7 @@ describe('UpdateProfile page functionality tests', () => {
   const wrapper = mount(
     <Provider store={store}>
       <MemoryRouter>
-        <UpdateProfile handleUpdate={handleUpdate()} />)
+        <UpdateProfile handleUpdate={handleUpdate()} />
       </MemoryRouter>
     </Provider>
   );

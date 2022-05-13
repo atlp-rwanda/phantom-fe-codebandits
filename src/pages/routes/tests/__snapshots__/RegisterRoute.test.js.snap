@@ -1,172 +1,64 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Register Page should render the register component 1`] = `
-<div>
+<div
+  className="w-full px-5"
+>
   <form
-    className="p-8 shadow-main px-4 flex flex-col w-full md:max-w-lg md:mx-auto"
+    className="p-8 shadow-main px-4 flex flex-col w-100 mx-auto"
     onSubmit={[Function]}
   >
     <h1
-      className="font-bold text-xl pb-8 text-center "
+      className="font-bold text-xl pb-8 text-center font-raleway"
     >
        
       Register Route
        
     </h1>
-    <label
-      className="font-bold mb-2"
-      htmlFor="origin"
-    >
-       
-      First Destination
-       
-    </label>
-    <select
-      className="rounded-sm px-3 py-4 mb-5 bg-[#EFEFEF]"
-      name="origin"
-      onChange={[Function]}
-    >
-      <option
-        hidden={true}
-      >
-         
-        Select first destination
-         
-      </option>
-       
-      <option
-        value="Remera"
-      >
-         
-        Remera
-         
-      </option>
-      <option
-        value="Kabuga"
-      >
-         
-        Kabuga
-         
-      </option>
-      <option
-        value="Kacyiru"
-      >
-         
-        Kacyiru
-         
-      </option>
-      <option
-        value="DownTown"
-      >
-         
-        DownTown
-         
-      </option>
-      <option
-        value="Nyabugogo"
-      >
-         
-        Nyabugogo
-         
-      </option>
-      <option
-        value="Remera"
-      >
-         
-        Remera
-         
-      </option>
-      <option
-        value="Kimironko"
-      >
-         
-        Kimironko
-         
-      </option>
-       
-    </select>
-    <label
-      className="font-bold mb-2"
-      htmlFor="destination"
-    >
-       
-      Second Destination
-       
-    </label>
-    <select
-      className="rounded-sm px-3 py-4 mb-5 bg-[#EFEFEF]"
-      name="destination"
-      onChange={[Function]}
-    >
-      <option
-        hidden={true}
-      >
-         
-        Select second destination
-         
-      </option>
-       
-      <option
-        value="Nyanza"
-      >
-         
-        Nyanza
-         
-      </option>
-      <option
-        value="Nyabugogo"
-      >
-         
-        Nyabugogo
-         
-      </option>
-      <option
-        value="Kabuga"
-      >
-         
-        Kabuga
-         
-      </option>
-      <option
-        value="Remera"
-      >
-         
-        Remera
-         
-      </option>
-      <option
-        value="DownTown"
-      >
-         
-        DownTown
-         
-      </option>
-      <option
-        value="Kimironko"
-      >
-         
-        Kimironko
-         
-      </option>
-      <option
-        value="Kacyiru"
-      >
-         
-        Kacyiru
-         
-      </option>
-    </select>
-    <label
-      className="font-bold mb-2"
-      htmlFor="distance"
-    >
-      Distance
-       
-    </label>
     <div
-      className="cursor-not-allowed rounded-sm p-2 mb-5 bg-[#EFEFEF] disabled:"
+      className="block mb-4 xl:flex xl:justify-center md:grid md:grid-cols-2 md:gap-2"
     >
-      Distance
+      <div
+        className=""
+      >
+        <label
+          className="block text-grey-darker text-sm font-bold mb-2"
+          htmlFor="origin"
+        >
+          Origin:
+        </label>
+        <input
+          className="appearance-none border font-raleway rounded w-full py-2 px-3 text-grey-darker bg-gray-200 text-md outline-hidden"
+          name="origin"
+          onChange={[Function]}
+          placeholder="Ex: Nyabugogo"
+          required={true}
+        />
+      </div>
+      <div>
+        <label
+          className="block text-grey-darker text-sm font-bold mb-2"
+          htmlFor="destination"
+          name="distance"
+        >
+          Destination
+        </label>
+        <input
+          className="appearance-none border font-raleway rounded w-full py-2 px-3 text-grey-darker bg-gray-200 text-md outline-hidden"
+          name="destination"
+          onChange={[Function]}
+          placeholder="Ex: Down-Town"
+          required={true}
+          type="text"
+        />
+      </div>
+    </div>
+    <div
+      className="h-100 w-100 p-2 m-3 "
+    >
+      <div
+        className="h-screen md:h-[60vh] w-[100%]"
+      />
     </div>
     <div
       className="self-center mt-6"

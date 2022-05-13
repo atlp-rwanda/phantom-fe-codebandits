@@ -14,8 +14,12 @@ const OperatorProfile = () => {
       setloading(true);
       try {
         const response = await axiosBase.get('/accounts/profile');
+        if (response.data?.data?.user) {
+          setUserInfo(response.data.data.user);
+        } else {
+          setUserInfo(response.data.data);
+        }
 
-        setUserInfo(response.data.data.user);
         setPublicInfo(response.data.data);
         setloading(false);
       } catch (error) {
@@ -48,6 +52,7 @@ const OperatorProfile = () => {
           position={userInfo.role}
           email={userInfo.email}
           image={userInfo.image}
+          role={userInfo.role}
         />
       ) : (
         <div>

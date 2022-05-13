@@ -16,7 +16,8 @@ const Profile = ({
   address,
   position,
   email,
-  image
+  image,
+  role
 }) => {
   const [src, setSrc] = useState(image);
   const [loading, setloading] = useState(false);
@@ -122,7 +123,7 @@ const Profile = ({
               {firstName} {lastName}
             </h1>
             <h2 className="font-bold text-sm md:text-base lg:text-base xl:text-base ">
-              <b className="capitalize text-primary">{position}</b> at {company}
+              <b className="capitalize text-primary">{position}</b> {company && " at "} {company}
             </h2>
             <h3>{email}</h3>
             <div className="">
@@ -164,35 +165,40 @@ const Profile = ({
                 />
               </div>
             </div>
-            <div className="pl-10 lg:pl-24 xl:pl-24">
-              <div className="mb-4 block font-raleway">
-                <Input
-                  htmlFor="mobileNumber"
-                  labelName="Mobile Number "
-                  type="text"
-                  name="mobileNumber"
-                  styles={styles}
-                  defaultValue={mobileNumber}
-                  id="mobileNumber"
-                  disabled={disabled}
-                  required
-                  pattern="^07[0-9]{8}$"
-                />
-              </div>
 
-              <div className="mb-4 block font-raleway">
-                <Input
-                  htmlFor="address"
-                  labelName="Address"
-                  type="text"
-                  name="address"
-                  styles={styles}
-                  defaultValue={address}
-                  id="address"
-                  disabled={disabled}
-                />
+            {role === 'admin' || role === 'user' ? (
+              ''
+            ) : (
+              <div className="pl-10 lg:pl-24 xl:pl-24">
+                <div className="mb-4 block font-raleway">
+                  <Input
+                    htmlFor="mobileNumber"
+                    labelName="Mobile Number "
+                    type="text"
+                    name="mobileNumber"
+                    styles={styles}
+                    defaultValue={mobileNumber}
+                    id="mobileNumber"
+                    disabled={disabled}
+                    required
+                    pattern="^07[0-9]{8}$"
+                  />
+                </div>
+
+                <div className="mb-4 block font-raleway">
+                  <Input
+                    htmlFor="address"
+                    labelName="Address"
+                    type="text"
+                    name="address"
+                    styles={styles}
+                    defaultValue={address}
+                    id="address"
+                    disabled={disabled}
+                  />
+                </div>
               </div>
-            </div>
+            )}
           </section>
           <div className="flex">
             <Button

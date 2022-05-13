@@ -50,7 +50,7 @@ exports[`Login snapshot test should render Login 1`] = `
           onBlur={[Function]}
           onChange={[Function]}
           placeholder="Enter email"
-          type="text"
+          type="email"
         />
         <p
           className="text-red-600 text-sm pb-3"
@@ -74,6 +74,20 @@ exports[`Login snapshot test should render Login 1`] = `
         <p
           className="text-red-600 text-sm"
         />
+        <div>
+          <input
+            id="show"
+            name=""
+            onChange={[Function]}
+            type="checkbox"
+          />
+          <label
+            className="font-raleway font-bold mx-1 text-sm"
+            htmlFor="show"
+          >
+            Show password
+          </label>
+        </div>
         <a
           href="/accounts/reset-password"
           onClick={[Function]}

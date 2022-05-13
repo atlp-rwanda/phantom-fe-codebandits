@@ -1,17 +1,28 @@
-import axios from '@utils/Api.js';
 import { mount } from 'enzyme';
 import React from 'react';
 import { MemoryRouter } from 'react-router-dom';
 import renderer from 'react-test-renderer';
 import RouteEdit from '../RouteEdit.js';
 
-const axiosSpy = jest.spyOn(axios, 'get');
-axiosSpy.mockReturnValue(() => {
-  return {
-    id: 1,
-    destination1: 'Gakenke'
-  };
-});
+const route = {
+  origin: 'Kimironko',
+  destination: 'Down-town',
+  distance: 30
+};
+
+const mockUseLocationValue = {
+  pathname: '/testroute',
+  search: '',
+  hash: '',
+  state: { route }
+};
+jest.mock('react-router-dom', () => ({
+  ...jest.requireActual('react-router-dom'),
+  useLocation: jest.fn().mockImplementation(() => {
+    return mockUseLocationValue;
+  })
+}));
+
 describe('Edit Page', () => {
   it('should render the Edit component', () => {
     const elem = renderer

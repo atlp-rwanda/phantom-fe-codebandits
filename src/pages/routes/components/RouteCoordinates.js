@@ -10,10 +10,13 @@ const createRoutingMachineLayer = ({ origin, destination }) => {
     },
     show: true,
     addWaypoints: true,
-    routeWhileDragging: true,
-    draggableWaypoints: true,
+    routeWhileDragging: false,
+    draggableWaypoints: false,
     fitSelectedRoutes: false,
-    showAlternatives: false
+    showAlternatives: false,
+    createMarker: function () {
+      return null;
+    }
   });
 
   return instance;

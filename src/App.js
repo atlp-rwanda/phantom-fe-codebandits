@@ -5,6 +5,7 @@ import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import './app.css';
 import SkeletonScreen from './components/SkeletonUIs/SkeletonScreen.js';
+import SocketState from './components/socketState.js';
 import MainRoutes from './containers/MainRoutes.js';
 import { store } from './redux/store.js';
 import PrivateRoute from './utils/PrivateRoute.js';
@@ -32,6 +33,7 @@ function App() {
             </Routes>
           </Suspense>
         </BrowserRouter>
+        <SocketState />
         <ToastContainer theme="colored" />
       </Provider>
     </div>

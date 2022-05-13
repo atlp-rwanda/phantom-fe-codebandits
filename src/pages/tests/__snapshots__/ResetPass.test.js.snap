@@ -198,6 +198,189 @@ Array [
 ]
 `;
 
+exports[`Testing Library Should submit the form and raise an error when email not found 1`] = `
+Object {
+  "asFragment": [Function],
+  "baseElement": <body>
+    <div>
+      <h3
+        class="text-2xl font-bold text-center py-3 font-rale"
+      >
+        RESET PASSWORD
+      </h3>
+      <p
+        class="mb-3 text-sm"
+      >
+        Enter your email to receive a password reset link
+      </p>
+      <form
+        id="form"
+        role="form"
+      >
+        <div
+          class="relative w-full"
+        >
+          <label
+            class="block font-bold mb-2 focus:outline-none required"
+            for="email"
+          >
+            Email:
+          </label>
+          <input
+            class="block w-full rounded-md border-2 placeholder:text-gray-400 placeholder:text-small py-1 px-3 focus:outline-none border-green-500 "
+            id="email"
+            name="email"
+            placeholder="Your email"
+            type="email"
+          />
+          <p
+            class="text-sm text-red-900 font-bold py-1/2 pl-2 opacity-0"
+            role="alert"
+          />
+        </div>
+        <div
+          class="flex flex-row justify-between mt-2"
+        >
+          <div>
+            <button
+              class="rounded-md transition-all text-white py-1 px-5 mt-2 bg-primary hover:bg-hover hover:transition-all font-bold undefined"
+              type="submit"
+            >
+              SUBMIT
+            </button>
+          </div>
+          <a
+            href="/"
+          >
+            <div>
+              <button
+                class="rounded-md transition-all text-white py-1 px-5 mt-2 bg-red-500 hover:bg-hover hover:transition-all font-bold hover:bg-hovercancel bg-cancel hover:transition-all"
+                type="button"
+              >
+                CANCEL
+              </button>
+            </div>
+          </a>
+        </div>
+      </form>
+    </div>
+  </body>,
+  "container": <div>
+    <h3
+      class="text-2xl font-bold text-center py-3 font-rale"
+    >
+      RESET PASSWORD
+    </h3>
+    <p
+      class="mb-3 text-sm"
+    >
+      Enter your email to receive a password reset link
+    </p>
+    <form
+      id="form"
+      role="form"
+    >
+      <div
+        class="relative w-full"
+      >
+        <label
+          class="block font-bold mb-2 focus:outline-none required"
+          for="email"
+        >
+          Email:
+        </label>
+        <input
+          class="block w-full rounded-md border-2 placeholder:text-gray-400 placeholder:text-small py-1 px-3 focus:outline-none border-green-500 "
+          id="email"
+          name="email"
+          placeholder="Your email"
+          type="email"
+        />
+        <p
+          class="text-sm text-red-900 font-bold py-1/2 pl-2 opacity-0"
+          role="alert"
+        />
+      </div>
+      <div
+        class="flex flex-row justify-between mt-2"
+      >
+        <div>
+          <button
+            class="rounded-md transition-all text-white py-1 px-5 mt-2 bg-primary hover:bg-hover hover:transition-all font-bold undefined"
+            type="submit"
+          >
+            SUBMIT
+          </button>
+        </div>
+        <a
+          href="/"
+        >
+          <div>
+            <button
+              class="rounded-md transition-all text-white py-1 px-5 mt-2 bg-red-500 hover:bg-hover hover:transition-all font-bold hover:bg-hovercancel bg-cancel hover:transition-all"
+              type="button"
+            >
+              CANCEL
+            </button>
+          </div>
+        </a>
+      </div>
+    </form>
+  </div>,
+  "debug": [Function],
+  "findAllByAltText": [Function],
+  "findAllByDisplayValue": [Function],
+  "findAllByLabelText": [Function],
+  "findAllByPlaceholderText": [Function],
+  "findAllByRole": [Function],
+  "findAllByTestId": [Function],
+  "findAllByText": [Function],
+  "findAllByTitle": [Function],
+  "findByAltText": [Function],
+  "findByDisplayValue": [Function],
+  "findByLabelText": [Function],
+  "findByPlaceholderText": [Function],
+  "findByRole": [Function],
+  "findByTestId": [Function],
+  "findByText": [Function],
+  "findByTitle": [Function],
+  "getAllByAltText": [Function],
+  "getAllByDisplayValue": [Function],
+  "getAllByLabelText": [Function],
+  "getAllByPlaceholderText": [Function],
+  "getAllByRole": [Function],
+  "getAllByTestId": [Function],
+  "getAllByText": [Function],
+  "getAllByTitle": [Function],
+  "getByAltText": [Function],
+  "getByDisplayValue": [Function],
+  "getByLabelText": [Function],
+  "getByPlaceholderText": [Function],
+  "getByRole": [Function],
+  "getByTestId": [Function],
+  "getByText": [Function],
+  "getByTitle": [Function],
+  "queryAllByAltText": [Function],
+  "queryAllByDisplayValue": [Function],
+  "queryAllByLabelText": [Function],
+  "queryAllByPlaceholderText": [Function],
+  "queryAllByRole": [Function],
+  "queryAllByTestId": [Function],
+  "queryAllByText": [Function],
+  "queryAllByTitle": [Function],
+  "queryByAltText": [Function],
+  "queryByDisplayValue": [Function],
+  "queryByLabelText": [Function],
+  "queryByPlaceholderText": [Function],
+  "queryByRole": [Function],
+  "queryByTestId": [Function],
+  "queryByText": [Function],
+  "queryByTitle": [Function],
+  "rerender": [Function],
+  "unmount": [Function],
+}
+`;
+
 exports[`function testing Should return a errors 1`] = `
 <BrowserRouter>
   <Router
@@ -299,12 +482,12 @@ exports[`function testing Should return a errors 1`] = `
               <Button
                 icon="cancel"
                 name="CANCEL"
-                styles="hover:bg-hovercancel hover:transition-all"
+                styles="hover:bg-hovercancel bg-cancel hover:transition-all"
                 type="button"
               >
                 <div>
                   <button
-                    className="rounded-md transition-all text-white py-1 px-5 mt-2 bg-red-500 hover:bg-hover hover:transition-all font-bold hover:bg-hovercancel hover:transition-all"
+                    className="rounded-md transition-all text-white py-1 px-5 mt-2 bg-red-500 hover:bg-hover hover:transition-all font-bold hover:bg-hovercancel bg-cancel hover:transition-all"
                     type="button"
                   >
                     CANCEL

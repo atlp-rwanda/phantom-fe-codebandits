@@ -42,6 +42,7 @@ const LandingPage = () => {
           <div className=" flex flex-col lg:flex-row xl:flex-row mt-12 mb-32">
             {cards.map((card, index) => (
               <Card
+                key={index}
                 image={card.image}
                 alt={card.alt}
                 title={`${index + 1}. ${t(card.title)}`}

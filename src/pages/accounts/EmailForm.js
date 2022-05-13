@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { useForm } from 'react-hook-form';
 import { Link, useNavigate } from 'react-router-dom';
 import { toast } from 'react-toastify';
+import { ButtonLoading } from '../../components/Button.js';
 import { axiosBase as axios } from '../../utils/Api.js';
 import { Button } from './AccountRouter.js';
 
@@ -19,14 +20,15 @@ function ResetFormPage() {
     mode: 'onChange'
   });
 
-  /* istanbul ignore next */
   const onSubmit = async (data) => {
     try {
       setloading(true);
       await axios.post('/accounts/forgot-password', data);
       navigate('/accounts/reset-email', { state: { email: data.email } });
     } catch (error) {
-      toast(error.response.data.data || error.message, { type: 'error' });
+      toast(error?.response?.data?.data?.message || error.message, {
+        type: 'error'
+      });
     } finally {
       setloading(false);
     }
@@ -74,13 +76,18 @@ function ResetFormPage() {
           </p>
         </div>
         <div className="flex flex-row justify-between mt-2">
-          <Button name={loading ? 'SENDING...' : 'SUBMIT'} type="submit" />
+          {loading ? (
+            <ButtonLoading name={'Sending'} />
+          ) : (
+            <Button name={'SUBMIT'} type={'submit'} />
+          )}
+
           <Link to="/">
             <Button
-              name="CANCEL"
-              type="button"
-              icon="cancel"
-              styles="hover:bg-hovercancel hover:transition-all"
+              name={'CANCEL'}
+              type={'button'}
+              icon={'cancel'}
+              styles={'hover:bg-hovercancel bg-cancel hover:transition-all'}
             />
           </Link>
         </div>

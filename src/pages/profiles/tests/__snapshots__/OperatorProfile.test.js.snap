@@ -55,7 +55,8 @@ exports[`OperatorProfile should render the OperatorProfile component 1`] = `
             <b
               className="capitalize text-primary"
             />
-             at 
+             
+             
           </h2>
           <h3 />
           <div
