@@ -83,16 +83,9 @@ export const MainPageGraph = () => {
 };
 
 export const fetchDashboardData = async () => {
-  const resDrivers = await axios.get('/drivers');
-  const resBuses = await axios.get('/buses');
-  const resRoutes = await axios.get('/routes');
-  const resOperator = await axios.get('/operators');
-  return {
-    drivers: resDrivers.data.length,
-    buses: resBuses.data.length,
-    routes: resRoutes.data.length,
-    operators: resOperator.data.length
-  };
+  const res = await axios.get('/info');
+  console.log(res.data);
+  return res.data?.data;
 };
 
 export const NotificationPane = () => {

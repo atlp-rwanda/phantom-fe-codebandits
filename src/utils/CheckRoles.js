@@ -1,10 +1,9 @@
 import React from 'react';
 import { useSelector } from 'react-redux';
-import { Link, useLocation } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
 function CheckRole({ children, role, type }) {
   const { authenticated, user } = useSelector((state) => state?.auth);
-  const location = useLocation();
   if (!authenticated) {
     return '';
   }

@@ -1,11 +1,9 @@
 /* eslint-disable no-underscore-dangle */
 import axios from 'axios';
-import { toast } from 'react-toastify';
 import getLanguage from './getLanguage.js';
 
 const host = `${window.location.protocol}//${window.location.host}`;
-
-const base = 'https://phantom-be-codebandits-staging.herokuapp.com';
+let base = 'http://18.159.109.99';
 
 const axiosBase = axios.create({
   baseURL: `${base}/api/v1`,
@@ -43,7 +41,6 @@ const refreshToken = async () => {
     }
   } catch (error) {
     if (error?.response?.status === 400) {
-      toast('Your refresh token has expired');
       localStorage.removeItem('auth');
       localStorage.removeItem('token');
       // eslint-disable-next-line no-return-assign
@@ -70,13 +67,5 @@ axiosBase.interceptors.response.use(null, async (error) => {
   return Promise.reject(error);
 });
 
-export default axios.create({
-  baseURL: 'https://phantom-codebantis.herokuapp.com/api',
-  withCredentials: false,
-  headers: {
-    'Content-Type': 'application/json'
-  }
-});
-
-export { base };
-export { axiosBase };
+export { axiosBase, base };
+export default axiosBase;

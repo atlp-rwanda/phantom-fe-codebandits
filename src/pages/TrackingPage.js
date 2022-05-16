@@ -20,12 +20,10 @@ const TrackingPage = () => {
   const { BaseLayer } = LayersControl;
   const rMachine = useRef();
 
-
   const handleRoute = async (e) => {
     e.preventDefault();
     options.filter((option) => {
       const route = option.code === e.target.origin.value;
-      console.log(route)
       if (route) {
         setloading(true);
         if (rMachine.current) {
@@ -43,11 +41,6 @@ const TrackingPage = () => {
           setActiveRoute(option);
           setloading(false);
         }
-
-        // Joining rooms
-      } else {
-        setloading(false);
-        toast("This route hasn't been added yet");
       }
     });
   };
@@ -58,7 +51,6 @@ const TrackingPage = () => {
         setloading(true);
         const res = await axiosBase.get('/simulate/options');
         setoptions(res.data.data.options);
-        console.log(res.data.data.options)
       } catch (error) {
         toast('Something went wrong on the server', { type: 'error' });
       } finally {

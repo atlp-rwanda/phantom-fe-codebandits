@@ -19,12 +19,23 @@ const Intro = () => {
             <p className="ml-4">{t('hero_text_2')}</p>
           </div>
         </div>
-        <Link to="tracking-page">
-          <Button
-            name={t('hero_btn')}
-            styles="bg-primary hover:bg-hover text-white rounded-3xl mt-12 px-12 xl:px-12 py-2 ml-28 md:ml-48 xl:ml-64"
-          />
-        </Link>
+        <div className="flex flex-row justify-center w-fit">
+          <Link to="tracking-page">
+            <Button
+              name={t('hero_btn')}
+              styles="bg-primary hover:bg-hover text-white rounded-3xl mt-12 px-12 xl:px-12 py-2 ml-18 md:ml-28 xl:ml-44"
+            />
+          </Link>
+          <a
+            target="_blank"
+            href="https://ravesandbox.flutterwave.com/donate/gx21gjah9ieo"
+          >
+            <Button
+              name={t('DONATE')}
+              styles="bg-transparent text-primary font-bold border border-primary hover:border-danger rounded-3xl mt-12 px-12 xl:px-12 py-2 ml-4"
+            />
+          </a>
+        </div>
       </div>
       <div className="w-full px-20 lg:w-80 xl:w-96 lg:ml-auto xl:ml-auto lg:mr-36 xl:mr-36 lg:px-0 xl:px-0 mt-28">
         <img src={bus} alt="Bus" />

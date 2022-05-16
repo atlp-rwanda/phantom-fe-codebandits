@@ -12,6 +12,12 @@ import {
 } from '../../redux/reducers/busMovementReducer.js';
 import socket from '../../utils/socket.js';
 
+function getRandomInt(min, max) {
+  min = Math.ceil(min);
+  max = Math.floor(max);
+  return Math.floor(Math.random() * (max - min) + min);
+}
+
 function BusMovement({ bus }) {
   const [loading, setloading] = useState(false);
   const [coordinates, setCoordinates] = useState();
@@ -20,11 +26,14 @@ function BusMovement({ bus }) {
     (state) => state?.movement
   );
 
+  let locationHistory = JSON.parse(localStorage.getItem('progres')) || [];
+
   const handleStart = async () => {
     if (coordinates) {
       toast('You are already on you way');
       return;
     }
+
     const { value: onboard } = await Swal.fire({
       title: 'Initial passengers',
       icon: 'question',
@@ -55,40 +64,91 @@ function BusMovement({ bus }) {
         setloading(true);
         const res = await axiosBase.post('/simulate', { passengers: onboard });
         let { num } = res.data.data.bus;
-        const coor = res.data.data.coordinates;
+        const coors = res.data.data.coordinates;
+        const rd = getRandomInt(1, 9);
+        let coor;
+        if (rd % 2 === 0) {
+          coor = coors;
+        } else {
+          coor = coors.reverse();
+        }
 
         dispatch(setEntityId(res.data?.data?.bus?.entityId));
         const serverId = res.data?.data?.bus?.entityId;
-
-        const locationUpdate = setInterval(() => {
-          if (num > coor.length - 2) {
-            socket.emit('finished', {
-              id: serverId,
+        let useLocation, locWatch;
+        if ('geolocation' in navigator) {
+          useLocation = confirm(
+            'Your browser support using real time location. If you want to use that press ok else press cancel'
+          );
+        }
+        if (useLocation) {
+          console.log('Using location');
+          locWatch = navigator.geolocation.watchPosition(
+            (position) => {
+              const locObj = {
+                lat: position.coords.latitude,
+                lng: position.coords.longitude
+              };
+              console.log(locObj);
+              socket.emit('location_update', {
+                bus,
+                id: serverId,
+                num,
+                location: locObj
+              });
+              setCoordinates(locObj);
+              const loc = {
+                position: {
+                  latitude: position.coords.latitude,
+                  longitude: position.coords.longitude
+                },
+                accuracy: position.coords.accuracy,
+                lat: position.coords.latitude,
+                lon: position.coords.longitude,
+                sentAt: position.timestamp
+              };
+              locationHistory.push(loc);
+            },
+            (err) => {
+              console.log(err);
+            },
+            {
+              maximumAge: 0,
+              enableHighAccuracy: true
+            }
+          );
+        } else {
+          const locationUpdate = setInterval(() => {
+            if (num > coor.length - 2) {
+              socket.emit('finished', {
+                id: serverId,
+                bus,
+                code: bus.route.code,
+                history: locationHistory
+              });
+              clearInterval(locationUpdate);
+              setCoordinates(null);
+              setTimeout(() => {
+                location.reload();
+              }, 2000);
+              return;
+            }
+            num++;
+            setCoordinates(JSON.parse(coor[num]));
+            socket.emit('location_update', {
               bus,
-              code: bus.route.code
+              id: serverId,
+              num,
+              location: JSON.parse(coor[num])
             });
-            clearInterval(locationUpdate);
-            setCoordinates(null);
-            setTimeout(() => {
-              location.reload();
-            }, 2000);
-            return;
-          }
-          num++;
-          setCoordinates(JSON.parse(coor[num]));
-          socket.emit('location_update', {
-            bus,
-            id: serverId,
-            num,
-            location: JSON.parse(coor[num])
-          });
-        }, 2000);
+          }, 2000);
 
-        inProgress
-          ? toast('Trip resumed', { type: 'info' })
-          : toast('Trip started', { type: 'info' });
+          inProgress
+            ? toast('Trip resumed', { type: 'info' })
+            : toast('Trip started', { type: 'info' });
 
-        dispatch(setIntervalId(locationUpdate));
+          dispatch(setIntervalId(locationUpdate));
+        }
       } catch (error) {
         toast(error.message);
       } finally {
@@ -171,7 +231,8 @@ function BusMovement({ bus }) {
           socket.emit('finished', {
             id: entityId,
             bus,
-            code: bus.route.code
+            code: bus.route.code,
+            history: locationHistory
           });
           toast('Trip has been marked as complete');
           if (intervalId) {
